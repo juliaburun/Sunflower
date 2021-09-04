@@ -1,9 +1,17 @@
-Es un sitio dedicado a la comercialización de productos de vivero. El sitio apunta a hombres y mujeres de más de 20 años.
-Descripción del equipo:
+SUNFLOWER
+
+Acerca del proyecto: Es un sitio dedicado a la comercialización de productos de vivero. 
+
+Público objetivo: El sitio apunta a hombres y mujeres de más de 20 años.
+
+Integrantes del equipo:
 Julia Burundarena,
-Johanna,
-Ariel,
-Yolfer
+Johanna Niño,
+Ariel Cruz,
+Yolfer Villalobos
+
+wireframes: https://www.figma.com/file/sBjmJkEsVOPOP7fw0O2rJm/SUNFLOWER?node-id=0%3A1
+
 
 Sitios de referencia:
 https://tienda.viveromario.com.ar/ --> referente de mismo nicho productivo
@@ -12,3 +20,4 @@ https://domicilios.hornitos.co/?step=2&stepName=selector_de_tipo_de_servico --> 
 http://www.buenosairesbakery.com.ar/ --> referente de diseño
 https://bellroy.com/ --> referente de diseño
 
+Paleta de colores: https://github.com/juliaburun/grupo_2_sunflower/design/paleta_de_colores-sunflower.jpg
