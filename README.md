@@ -20,4 +20,4 @@ https://domicilios.hornitos.co/?step=2&stepName=selector_de_tipo_de_servico --> 
 http://www.buenosairesbakery.com.ar/ --> referente de diseño
 https://bellroy.com/ --> referente de diseño
 
-Paleta de colores: https://github.com/juliaburun/grupo_2_sunflower/design/paleta_de_colores-sunflower.jpg
+Paleta de colores: https://github.com/juliaburun/grupo_2_sunflower/blob/main/design/paleta%20de%20colores-sunflower.jpg
