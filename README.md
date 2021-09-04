@@ -7,5 +7,8 @@ Yolfer
 
 Sitios de referencia:
 https://tienda.viveromario.com.ar/ --> referente de mismo nicho productivo
-https://ysya.com.ar/home --> buen diseño, el carousel de imagenes y la imagen de baja opacidad de fondo se ven bien
-mercadon.org --> diseño simplista y apunta al mismo target
+https://www.viverotierranegra.com/ --> referente de mismo nicho y diseño agradable
+https://domicilios.hornitos.co/?step=2&stepName=selector_de_tipo_de_servico --> referente de diseño
+http://www.buenosairesbakery.com.ar/ --> referente de diseño
+https://bellroy.com/ --> referente de diseño
+
