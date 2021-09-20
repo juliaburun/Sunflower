@@ -19,5 +19,6 @@ https://www.viverotierranegra.com/ --> referente de mismo nicho y diseño agrada
 https://domicilios.hornitos.co/?step=2&stepName=selector_de_tipo_de_servico --> referente de diseño
 http://www.buenosairesbakery.com.ar/ --> referente de diseño
 https://bellroy.com/ --> referente de diseño
+https://growplantshop.com/ --> referente al diseño y funcionalidad
 
-Paleta de colores: https://github.com/juliaburun/grupo_2_sunflower/blob/main/design/paleta%20de%20colores-sunflower.jpg
+
