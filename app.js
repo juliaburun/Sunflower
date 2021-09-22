@@ -20,21 +20,21 @@ app.get('/',(req, res)=> {
 });
 
 // Página login
-app.get('/login.html',(req, res)=> {
+app.get('/login',(req, res)=> {
     res.sendFile(path.resolve(__dirname, './views/login.html'));
 });
 
 // Página registro de usuario
-app.get('/register.html',(req, res)=> {
+app.get('/register',(req, res)=> {
     res.sendFile(path.resolve(__dirname, './views/register.html'));
 });
 
 // Página detalle producto
-app.get('/products.html',(req, res)=> {
+app.get('/products',(req, res)=> {
     res.sendFile(path.resolve(__dirname, './views/products.html'));
 });
 
 // carrito de compras
-app.get('/cart.html',(req, res)=> {
+app.get('/cart',(req, res)=> {
     res.sendFile(path.resolve(__dirname, './views/cart.html'));
 });
