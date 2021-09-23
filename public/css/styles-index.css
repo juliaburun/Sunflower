@@ -7,12 +7,17 @@
     display:flex;
     flex-direction: row;
     background-color: #edafa4;
-    align-items: flex-start;
     padding: 10px;
 }
 
+nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+}
+
 .logo {
-    max-width: 200px;
+    width: 50%;
 }
 
 a {
@@ -23,13 +28,17 @@ a {
     margin: 10px;
     margin-top: 10px;
 }
-
+                        /* ARREGLAR LUPAAAA */
 .buscar{
     border-radius: 5px;
     width: 100px;
     margin-top: 5px;
     max-width: 70px;
+    padding: 3px;
+    background-repeat: no-repeat;
+    background-image: url('/images/lupa.svg')
 }
+
 .carrito {
     margin:10px;
     margin-top: 10px;
@@ -138,40 +147,78 @@ main {
     text-align: center;
 }
 
+
 main img {
     width: 80%;
     margin: auto;
 }
 
+.destacados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .producto-destacado {
-    max-width: 100%;
+    width: 70%;
+    margin: auto;
     margin-bottom: 30px;
     box-shadow: 0.5px 0.5px 4px 1px #edafa4;
-    display:block;
-}
-
-.footer div {
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
-footer h2 {
-    text-align: center;
+.producto-destacado img {
+    width: 100%;
 }
 
-.fa-credit-card {
+.articulo-pie {
+    display: flex;
+    flex-direction: column;
+}
+
+.nombre-planta {
+    font-size: 22px;
+}
+
+.nombre-cienti {
+    font-size: 16px;
+    font-style: italic;
+}
+.precio {
     color: #edafa4;
-    margin-bottom: 16px;
-    margin-left: 10px;
 }
 
-.fab {
+.footer {
+    display: flex;
+    flex-direction: row !important ;
+    font-size: 15px;
+}
+
+footer i {
     color: #edafa4;
 }
+
 
 .redes i {
     margin-right: 10px;
     margin-bottom: 15px;
 }
 
+@media (min-width:768px) {
+    .producto-destacado {
+        margin: 20px;
+    }
+    .dos-articulos {
+        display: flex;
+    }
+
+}
+
+@media (min-width:1200px) {
+    .cuatro-articulos {
+        display: flex;
+    }
+
+}

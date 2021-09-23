@@ -15,17 +15,18 @@
 <body>
  <header>
   <div class="container-header">
-    <div>
-     <img src="images/logo.png" class="logo">
-    </div>
+     <div>
+      <img src="images/sunflowerLogo.png" class="logo">
+     </div>
+    <nav class="navbar">
     <div class="login">
        <a href><i class="fas fa-user"></i></a>
     </div>
     <div>
-        <input type="text" class="buscar" placeholder="Buscar..."></i>
-        <button type="submit" class="searchButton">
-        <i class="fas fa-search"></i>
-        </button>
+      <form action="/" method="POST">   
+        <input class="buscar" type="text" placeholder="Buscar...">
+        <button type="submit"><i class="fas fa-search lupa"></i></button>
+      </form>
     </div>
     <div class="carrito">
        <a href><i class="fas fa-shopping-cart"></i></a>
@@ -34,6 +35,7 @@
        <a href><i class="fas fa-bars" id="menu"></i></a>
     </div>
   </div>
+</nav>
  </header>
  <!--Carousel arreglar tema link-->
  <div class="container">
@@ -65,28 +67,80 @@
  </div>
  <!--Carousel-->
 <main>
+  <!--Sección productos destacados-->
 <h2 class="productos-destacados">Productos destacados</h2>
-<section class="destacados">
- <div>
-  <img src="/images/geranio.png" class="producto-destacado">
- </div>
- <div>
-    <img src="/images/sanseviera.png" class="producto-destacado">
- </div>
- <div>
-    <img src="/images/treboles.png" class="producto-destacado">
- </div>
+  <section class="destacados">
+  <div class="cuatro-articulos">
+    <div class="dos-articulos">
+    <div class="producto-destacado">
+     <article>
+       <img src="/images/geranio.png">
+       <div class="articulo-pie">
+         <p class="nombre-planta">Geranio</p>
+         <p class="nombre-cienti">Pelargonium peltatum</p>
+         <p class="precio">$470</p>
+       </div>
+     </article>
+    </div>
+
+    <div class="producto-destacado">
+      <article>
+        <img src="/images/sanseviera.png">
+        <div class="articulo-pie">
+          <p class="nombre-planta">Sanseviera</p>
+          <p class="nombre-cienti">Dracaena trifasciata</p>
+          <p class="precio">$750</p>
+        </div>
+      </article>
+     </div>
+    </div>
+
+    <div class="dos-articulos">
+     <div class="producto-destacado">
+      <article>
+        <img src="/images/treboles.png">
+        <div class="articulo-pie">
+          <p class="nombre-planta">Oxalis rubra</p>
+          <p class="nombre-cienti">Oxalis corniculata</p>
+          <p class="precio">$580</p>
+        </div>
+      </article>
+     </div>
+
+     <div class="producto-destacado">
+      <article>
+        <img src="/images/erica.png">
+        <div class="articulo-pie">
+          <p class="nombre-planta">Erica</p>
+          <p class="nombre-cienti">Cuphea hyssopifolia</p>
+          <p class="precio">$160</p>
+        </div>
+      </article>
+     </div>
+     </div>
+    </div>
+
 </section>
 </main>
+<!--Footer-->
 <footer>
-   <div>
-    <section class="footer">
-      <h2>.</h2>
-       <div>
-        <div>
+    <section>
+
+       <div class="footer">
+        <div class="medios-pago">
             <p>Medios de pago</p>
-            <i class="fas fa-credit-card"></i>
+            <i class="fab fa-cc-paypal"></i>
+            <i class="fab fa-cc-visa"></i>
         </div>
+
+        <div class="contacto">
+          <p><i class="fas fa-envelope"></i>palermo@viverosunflower.com</p>
+            <p><i class="fas fa-phone"></i>11 4573 5972</p>
+            <p><i class="fas fa-map-marker-alt"></i>Av. Caseros 3445</p>
+        </div>
+
+
+  <!--redes-->      
       <div class="redes">
         <div>
             <i class="fab fa-instagram"></i>
@@ -97,7 +151,6 @@
       </div>
      </div>
     </section>
-   </div>
 </footer>    
 </body>
 </html>
