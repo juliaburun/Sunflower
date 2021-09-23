@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box; 
+ }
+ 
+ img{
+     width: 100%;
+     
+ }
+ 
+ header{
+     background-color: #edafa4;
+     
+ }
+ .div-main-logo img{
+     width: 50%;
+ }
+ 
+ 
+ .space-between-header-main{
+     background-color: #ebebeb;
+     height: 5px;
+ }
+
+ /*###############DESDE ACA COMIENZA MI CODIGO###############*/
+body{
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-family:quicksand;
+
+}
+/*CONTIENE TODOS LOS ELEMENTOS DEL CUERPO DE MI CODIGO*/
+.container{
+    width: 100vw;
+    padding: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+/*TEXTO DEL REGISTRO*/
+h3{
+    text-align: center;
+    position: relative;
+}
+/*LINEA INFERIOR DEL LOGIN*/
+h3::after{
+    content:"";
+    position: absolute;
+    bottom: -10px;
+    right: 48%;
+    width: 40px;
+    height: 2px;
+    background-color: #edafa4;    
+}
+/*CONTIENE LAS CAJAS USUARIO Y CONTRASEÑA*/
+.caja-datos{
+    width: 40%;
+    height: 300px;
+    padding: 10px;
+    margin: auto;
+}
+input[type="name"],
+input[type="surname"],
+input[type="email"],
+input[type="phone"],
+input[type="password"]
+{
+    font-size: 10px;
+    width: 100%;
+    height: 35px;
+    padding: 10px;
+    border: solid 1px #B0B3AF;
+    margin-bottom: 10px;
+    background-color: #F8F4F4;
+}
+/*CAJA CONTENEDORA DEL BOTON ENVIAR*/
+.caja-botonenviar{
+    width: 40%;
+    padding: 10px;
+    margin: auto;
+}
+/*BOTON ENVIAR*/
+.boton-enviar{
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 12px;
+    background: #edafa4;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/*MANITO CUANDO PASAS SOBRE EL BOTON ENVIAR*/
+.boton-enviar:hover{
+    background: #B0B3AF;
+}
