@@ -10,7 +10,7 @@ body {
 }
 
 img {
-    width: 100%;
+    width: 60%;
 }
 
 .div-main-logo img {
@@ -40,7 +40,7 @@ header {
 }
 
 .items-img {
-    border: 1px solid brown;
+    /*    border: 1px solid brown;*/
     width: 50%;
     margin: auto;
     display: flex;
@@ -55,6 +55,7 @@ header {
 
 .items-desc div p {
     font-size: 12px;
+    font-weight: bold;
 }
 
 .amount {
@@ -196,7 +197,7 @@ header {
         display: flex;
     }
     .items-img {
-        border: 1px solid brown;
+        /*    border: 1px solid brown; */
         width: 50%;
         margin: auto;
         display: flex;
@@ -336,7 +337,7 @@ header {
         display: flex;
     }
     .items-img {
-        border: 1px solid brown;
+        /*    border: 1px solid brown;*/
         width: 50%;
         margin: auto;
         display: flex;
@@ -474,19 +475,14 @@ header {
             display: flex;
         }
         .items-img {
-            border: 1px solid brown;
+            /*    border: 1px solid brown;*/
             width: 50%;
             margin: auto;
             display: flex;
             margin-top: 15px;
         }
-        .items-desc {
-            width: 100%;
-            margin-left: 5px;
-            /*    border: 1px solid green; */
-        }
         .items-desc div p {
-            font-size: 12px;
+            font-size: 18px;
         }
         .amount {
             width: 50%;
