@@ -11,6 +11,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/lightslider.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/lightslider.js"></script>
+    <script src="/js/script.js"></script>
 </head>
 
 <body>
@@ -38,36 +42,30 @@
   </div>
 </nav>
  </header>
- <!--Carousel arreglar tema link-->
- <div class="container">
-   <ul class="slider">
-     <li id="slide1">
-       <img src="/images/balcon.jpg"/>
-     </li>
-     <li id="slide2">
-       <img src="/images/orquidea.jpg"/>
-     </li>
-     <li id="slide3">
-       <h1>Conectate con la naturaleza</h1>
-       <p class="frase">"El amor por la jardinería es una semilla que una vez sembrada nunca muere."</p>
-       <p class="autora-frase">Gertrude Jekyll</p>
-     </li>
-   </ul>
-   
-   <ul class="menu">
-     <li>
-       <a href="#slide1"></a>
-     </li>
-     <li>
-       <a href="#slide2"></a>
-     </li>
-      <li>
-       <a href="#slide3"></a>
-     </li>
-   </ul>
- </div>
- <!--Carousel-->
+ <!--Carrusel-->
+ <div class="carrusel">
+   <ul id="autoWidth" class="cs-hidden">
+    <li class="item-a">
+      <div><img src="/img/paleta.png"/></div>
+    </li>
+    <li class="item-b">
+      <div><img src="/img/jazminb.png"/></div>
+    </li>
+    <li class="item-c">
+      <div><img src="/img/crisantemo.png"></div>
+    </li>
+    <li class="item-d">
+      <div><img src="/img/equisetum.png"></div>
+    </li>
+  </ul>
+</div>
 <main>
+  <div>       
+      <h1 class="copy">Conectate con la naturaleza</h1>
+      <p class="frase">"El amor por la jardinería es una semilla que una vez sembrada nunca muere."</p>
+      <p class="autora-frase">Gertrude Jekyll</p>
+  </div>
+
   <!--Sección productos destacados-->
 <h2 class="productos-destacados">Productos destacados</h2>
   <section class="destacados">
@@ -129,7 +127,7 @@
 
        <div class="footer">
         <div class="medios-pago">
-            <p>Medios de pago</p>
+            <p>Medios de pago:</p>
             <i class="fab fa-cc-paypal"></i>
             <i class="fab fa-cc-visa"></i>
         </div>
@@ -140,84 +138,18 @@
             <p><i class="fas fa-map-marker-alt"></i>Av. Caseros 3445</p>
         </div>
 
-
-  <!--redes-->      
-      <div class="redes">
-        <div>
-            <i class="fab fa-instagram"></i>
+        <div class="redes">
+          <div>
+              <i class="fab fa-instagram"></i>
+          </div>
+          <div>
+            <i class="fab fa-facebook"></i>
+          </div>
         </div>
-    </header>
-    <!--Carousel arreglar tema link-->
-    <div class="container">
-        <ul class="slider">
-            <li id="slide1">
-                <img src="/images/balcon.jpg" />
-            </li>
-            <li id="slide2">
-                <img src="/images/orquidea.jpg" />
-            </li>
-            <li id="slide3">
-                <h1>Conectate con la naturaleza</h1>
-                <p class="frase">"El amor por la jardinería es una semilla que una vez sembrada nunca muere."</p>
-                <p class="autora-frase">Gertrude Jekyll</p>
-            </li>
-        </ul>
-
-        <ul class="menu">
-            <li>
-                <a href="#slide1"></a>
-            </li>
-            <li>
-                <a href="#slide2"></a>
-            </li>
-            <li>
-                <a href="#slide3"></a>
-            </li>
-        </ul>
-    </div>
-    <!--Carousel-->
-    <main>
-        <h2 class="productos-destacados">Productos destacados</h2>
-        <section class="destacados">
-            <div>
-                <img src="/images/geranio.png" class="producto-destacado">
-            </div>
-            <div>
-                <img src="/images/sanseviera.png" class="producto-destacado">
-            </div>
-            <div>
-                <img src="/images/treboles.png" class="producto-destacado">
-            </div>
+      </div>
         </section>
     </main>
-    <footer>
-        <div>
-            <section class="footer">
-                <h2>.</h2>
-                <div>
-                    <div>
-                        <p>Medios de pago</p>
-                        <i class="fas fa-credit-card"></i>
-                    </div>
-                    <div class="redes">
-                        <div>
-                            <i class="fab fa-instagram"></i>
-                        </div>
-                        <div>
-                            <i class="fab fa-facebook"></i>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-<<<<<<< HEAD
-      </div>
-     </div>
-    </section>
 </footer>    
-=======
-    </footer>
->>>>>>> e70acf1e918b87a6caf88015685b560e7dbdd5ad
 </body>
 
 </html>
