@@ -18,7 +18,6 @@ body{
     margin: 0;
 }
 
-
 .div-main-logo img{
     width: 50%;
 }
@@ -31,7 +30,7 @@ body{
 
 .bar-carrusel{
     width: 100%;
-    border: solid 2px gold ;
+    /* border: solid 2px gold ; */
 }
 
 .carrusel-principal{
@@ -47,7 +46,7 @@ body{
     justify-content: center;
     /* padding: 5px; */
     margin-bottom: 0;
-    border: tomato solid 2px;
+   /*  border: tomato solid 2px; */
     /* margin-left: 3px; */
     object-fit: cover;
 }
@@ -57,7 +56,7 @@ body{
     width: 60%;
     justify-content: center;
     margin-left: 15px;
-    border: green solid 2px;
+    /* border: green solid 2px; */
 }
 
 .carrusel-secundario div{
@@ -150,6 +149,7 @@ body{
 
 .main-description{
     margin: 0 20px;
+    margin-bottom: 30px;
 }
 
 .article-description ul {
@@ -165,14 +165,101 @@ body{
     margin-bottom: 6px;
 }
 
+/*****************************
+    MAIN OTHER PRODUCTS
+******************************/
+.main-section-otherProducts{
+    width: 100%;
+}
+.article-otherProducts{
+    box-shadow : 0px 0px 10px #edafa4;
+    /* border: #edafa4 solid 1px; */
+    width: 80%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+/* Título */
+.title-otherproducts{
+    width: 90%;
+    /* border: solid 4px aqua; */
+    border-top: #edafa4 solid 1px;
+    font-size: 12px;
+    color: #666666;
+    font-weight: bold;
+    margin: auto;
+    
+}
+
+.title-otherproducts h3{
+    width: 100%;
+    margin: auto;
+    /* border: blue solid 2px; */
+    margin-top: 20px;
+    margin-bottom: 50px ;
+    text-align: center;
+}
+
+/* Imágenes */
+.div-img-otherProducts{
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    /* border: blue solid 4px; */
+}
+.div-img-otherProducts img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name-otherProducts{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+    
+   /*  border: red solid 4px; */
+}
+
+.name-otherProducts h1 {
+    width: 100%;
+    /* border: palegreen solid 4px; */
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin: auto;
+    margin: 10px 0
+}
+
+.name-otherProducts h3{
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    /* border: palevioletred solid 4px; */
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.article-otherProducts:hover{
+    box-shadow : 0px 0px 10px rgb(100, 100 , 100 );
+}
+
+
+/*****************************
+          FOOTER
+******************************/
+
 footer{
 margin-top: 20px;
 background-color: #edafa4;
 }
 
+/*      BREAKPOINT TABLET     */
+@media (min-width:481px) {
 
-@media (min-width:768px) {
-
+    body main{
+        width: 100%;
+    }
    .main principal .main-principal-carrusel{
         width: 100%;
         height: 100%;
@@ -183,7 +270,7 @@ background-color: #edafa4;
     .bar-carrusel{
         display: flex;
         flex-direction: row-reverse;
-        width: 70%;
+        width: 85%;
         height: 500px;
         align-items: flex-start;
         justify-content: center;
@@ -244,29 +331,67 @@ background-color: #edafa4;
     }
 
     .product-add .quantity{
-        width: 15%;
+        width: 100px;
+    }
+
+   
+    /* CSS OTHER PRODUCTS */
+
+
+    .main-section-otherProducts {
+        display: flex;
+        width: 100%;
+    }
+
+    .main-section-otherProducts .div-otherProducts{
+        width: 100%;
+    }
+
+   
+    .main-otherProducts{
+        display: flex;
+        width: 90%;
+        /* border: BLACK solid 6px; */
+        margin: auto;
+    }
+
+    .article-otherProducts{
+        width: 60%;
+        height: 100%;
+       /*  border: olive solid 4px; */
+        margin: 6px;
+        margin-bottom: 50px;
+    }
+
+    .div-img-otherProducts{
+        width: 100%;
+        height: 200px;
+    }
+
+    .name-otherProducts{
+        width: 100%;
     }
    
 }  
 
-    
+/*      BREAKPOINT PC     */    
 
-@media (min-width:1200px){
+@media (min-width:769px){
 
-    .main-header-top-bar{
+    /* .main-header-top-bar{
         max-width: 1200px;
     }
-
+ */
     .main-principal .main-principal-carrusel{
         display: flex;
-        border: yellow solid 3px;
+       /*  border: yellow solid 3px; */
         height:600px;
     }
 
     .main-principal-carrusel .bar-carrusel{
-        width: 50%;
+        width: 60%;
         height: 100%;
-        border: blue 2px solid;
+        /* border: blue 2px solid; */
     }
 
     .main-principal-carrusel .main-secundario-products{
@@ -274,15 +399,12 @@ background-color: #edafa4;
         height: 100%;
         margin: auto;
         margin-top: 0;
-        border: red solid 3px;
+        /* border: red solid 3px; */
     }
 
     .carrusel-secundario img{
         width: 100%;
     }
-   
-
-  
 
     .main-secundario-products .name-product{
         height:30%;
@@ -290,7 +412,7 @@ background-color: #edafa4;
 
     .main-secundario-products .product-add{
         height:40%;
-        border: lawngreen solid 4px;
+       /*  border: lawngreen solid 4px; */
     }
 
     .name-product h1{
@@ -303,10 +425,23 @@ background-color: #edafa4;
         font-size: 20px;
     }
 
-   /*  .product-add{
-        height: 20%;
-        border: lawngreen solid 4px;
-    } */
+   
+    .div-otherProducts{
+        display: flex;
+    }
+
+    .main-section-otherProducts .div-otherProducts{
+        width: 90%;
+        margin: auto;
+    }
+
+    .div-img-otherProducts{
+        width: 100%;
+        height: 100%;
+    }
+
+    
+
     
     
  
