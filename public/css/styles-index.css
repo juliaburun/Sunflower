@@ -35,8 +35,8 @@ a {
     margin-top: 5px;
     max-width: 70px;
     padding: 3px;
-    background-repeat: no-repeat;
-    background-image: url('/images/lupa.svg')
+ /*   background-repeat: no-repeat;  Lupa que queda dentro, pero no es un botón.
+    background-image: url('/images/lupa.svg')*/
 }
 
 .carrito {
@@ -157,6 +157,17 @@ main img {
 footer i {
     color: #edafa4;
     margin-right: 5px;
+}
+
+.redes i {
+    font-size: 20px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+.medios-pago i {
+    font-size: 20px;
+    margin-left: 8px;
 }
 
 @media (min-width:768px) {
