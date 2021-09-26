@@ -30,13 +30,13 @@ app.get('/register', (req, res) => {
 });
 
 // Página detalle producto
-app.get('/products', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/products.html'));
+app.get('/productDetail', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/productDetail.html'));
 });
 
 // carrito de compras
-app.get('/cart', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/cart.html'));
+app.get('/productCart', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/productCart.html'));
 });
 
 // checkout
