@@ -139,38 +139,11 @@ main img {
     font-style: italic;
 }
 .precio {
-    color: #edafa4;
+    color: black;
 }
 
-.footer {
-    display: flex;
-    font-size: 15px;
-    justify-content: space-between;
-    font-size: 12px;
-}
 
-.redes {
-    display:flex;
-    align-items: flex-end;
-}
-
-footer i {
-    color: #edafa4;
-    margin-right: 5px;
-}
-
-.redes i {
-    font-size: 20px;
-    margin-right: 10px;
-    margin-bottom: 15px;
-}
-
-.medios-pago i {
-    font-size: 20px;
-    margin-left: 8px;
-}
-
-@media (min-width:768px) {
+@media (min-width:481px) {
     .producto-destacado {
         margin: 20px;
     }
@@ -180,7 +153,7 @@ footer i {
 
 }
 
-@media (min-width:1200px) {
+@media (min-width:769px) {
     .cuatro-articulos {
         display: flex;
     }
