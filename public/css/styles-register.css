@@ -1,74 +1,109 @@
-*{
-    box-sizing: border-box; 
- }
- 
- img{
-     width: 100%;
-     
- }
- 
- header{
-     background-color: #edafa4;
-     
- }
- .div-main-logo img{
-     width: 50%;
- }
- 
- 
- .space-between-header-main{
-     background-color: #ebebeb;
-     height: 5px;
- }
-
- /*###############DESDE ACA COMIENZA MI CODIGO###############*/
-body{
-    background-color: #ffffff;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    font-family:quicksand;
-
+* {
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;;
 }
+
+.container-header {
+    display:flex;
+    flex-direction: row;
+    background-color: #edafa4;
+    padding: 10px;/*quitado*/
+    width: 100%;/*agregado**/
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+.logo {
+    width: 50%;
+}
+
+a {
+    text-decoration: none;
+    color: white
+}
+.login {
+    margin: 10px;
+    margin-top: 10px;
+}
+                        /* ARREGLAR LUPAAAA */
+.buscar{
+    border-radius: 5px;
+    width: 100px;
+    margin-top: 5px;
+    max-width: 70px;
+    padding: 3px;
+ /*   background-repeat: no-repeat;  Lupa que queda dentro, pero no es un botón.
+    background-image: url('/images/lupa.svg')*/
+}
+
+.carrito {
+    margin:10px;
+    margin-top: 10px;
+}
+
+#menu {
+    margin:10px;
+    margin-top: 13px;
+}
+
+body {
+    background-color: white;
+}
+
+.menu{
+    text-align: center;
+    margin: 20px;
+}
+  
+.menu li{
+    display: inline-block;
+    text-align: center;
+}
+  
+.menu li a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: #edafa4;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    border-radius: 100%;
+  }
+ /*############################### LINEA DIVISORA ENTRE EL ENCABEZADO Y EL CUERPO  #########################*/
+
 /*CONTIENE TODOS LOS ELEMENTOS DEL CUERPO DE MI CODIGO*/
 .container{
-    width: 100vw;
+    width: 100%;
     padding: 15px;
     max-width: 1000px;
     margin: 0 auto;
-    border: 2px solid blue; /*QUITAR ESTO*/
+
 }
 /*TEXTO DEL REGISTRO*/
 h3{
     text-align: center;
     position: relative;
-    border: 2px solid grey; /*QUITAR ESTO*/
 }
 /*LINEA INFERIOR DEL LOGIN*/
 
 hr{
     width: 25%;
     position: relative;
+    color: #edafa4;
 }
-/*h3::after{
-    content:"";
-    position: absolute;
-    bottom: -10px;
-    right: 38%;
-    width: 65px;
-    height: 2px;
-    background-color: #edafa4;    
-}
-*/
+
 /*CONTIENE LAS CAJAS USUARIO Y CONTRASEÑA*/
 .caja-datos{
     width: 90%;
     height: 300px;
     padding: 10px;
     margin: auto;
-    border: 2px solid red; /*QUITAR ESTO*/
 }
 input[type="name"],
 input[type="surname"],
@@ -83,7 +118,6 @@ input[type="password"]
     border: solid 1px #B0B3AF;
     margin-bottom: 10px;
     background-color: #F8F4F4;
-    border: 2px solid green; /*QUITAR ESTO*/
 }
 /*CAJA CONTENEDORA DEL BOTON ENVIAR*/
 .caja-botonenviar{
@@ -107,9 +141,7 @@ input[type="password"]
     background: #B0B3AF;
 }
 
-
-
-/*MEDIA QUERIES*/
+/*============================== MEDIA QUERIES ===============================*/
 
 @media (min-width:768px){
  /*CONTIENE LAS CAJAS USUARIO Y CONTRASEÑA*/   
@@ -148,4 +180,32 @@ input[type="password"]
     font-size: 14px;
 }
 
+}
+/*############################### LINEA DIVISORA ENTRE EL CUERPO Y EL FOOTER #########################*/
+.footer {
+    display: flex;
+    font-size: 15px;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.redes {
+    display:flex;
+    align-items: flex-end;
+}
+
+footer i {
+    color: #edafa4;
+    margin-right: 5px;
+}
+
+.redes i {
+    font-size: 20px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+.medios-pago i {
+    font-size: 20px;
+    margin-left: 8px;
 }
