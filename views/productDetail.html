@@ -11,211 +11,287 @@
     <title>Products</title>
     <!--Enlazando con el css styles_products-->
     <link rel="stylesheet" href="/css/styles-products.css">
+    <link rel="stylesheet" href="/css/colores.css">
     <!--Enlazando con el css de fonts.google fuente Quicksand Regular 400-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <!--link a los íconos de fontawesome-->
     <script src="https://kit.fontawesome.com/606e397101.js" crossorigin="anonymous"></script>
-
-
 </head>
 
 <!--==========================
             BODY
 ============================-->
 <body>
-
-<!--==========================
-           HEADER
-============================--> 
-<header>
-    <div class="main-header-top-bar">
-        <div class="main-header-div">
-            <div class="div-main-logo">
-                <img src="/images/sunflowerLogo.png" alt="logo sunflower">
-            </div>
-            <div  class="main-div-search">
-                <div class="div-search">
-                    <div>
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="div-main-busqueda">
-                        <input class="input-busqueda" type="search" name="busqueda" ></input>
-                        <button class="ilupa"><i class="fas fa-search"></i></button>
-                    </div>
-                    <div>
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-
+    <!--==========================
+               MAIN HEADER
+    ============================--> 
+    <header class="main-header">
+        <div class="main-header-top-bar">
+            <div class="main-header-div">
+                <div class="div-main-logo">
+                    <img src="/img/sunflowerLogo.png" alt="logo sunflower">
+                </div>
+                <div class="login">
+                    <a href><i class="fas fa-user"></i></a>
+                </div>
+                <div>
+                    <form action="/search" method="POST" class="main-div-search">
+                        <div class="div-search">
+                            <div class="div-main-busqueda">
+                                <input class="input-busqueda" type="search" name="busqueda" ></input>
+                                <button type="submit" class="ilupa"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="carrito">
+                    <a href><i class="fas fa-shopping-cart"></i></a>
                 </div>
             </div>
         </div>
-      </div>
+        <!--==========================
+                MENÚ HAMBURGUESA
+        ============================-->    
+        <a href="" class="hamburguer-buttom">
+            <i class="fas fa-bars"></i>
+        </a>
+         <!--==========================
+                MENÚ NAVEGACIÓN
+        ============================-->
+        <nav class="main-navbar">
+            <ul> 
+                <li> <a href="">Inicio</a> </li>
+                <li> <a href="">Productos</a> </li>
+                <li> <a href="">Acerca de nosotros</a> </li>
+                <li> <a href="">Contacto</a> </li>
+            </ul>
+        </nav>
+        
+        <br/>    
+            
+    </header>
+   <!--==========================
+       BORDE ENTRE HEADER Y MAIN
+    ============================-->      
 
-</header>   
+    <div class="space-between-header-main">
 
-<div class="space-between-header-main">
-
-</div>
+    </div>
 
 <!--==========================
            MAIN
 ============================--> 
-<main>
+    <main>
 
-    <div class="main-principal">
-        <div class="main-principal-carrusel">
-            <div class="bar-carrusel">
-                <div class="carrusel-principal">
-                    <img src="/img/5A7A8242_2048x2048.jpg" alt="Homalomena 'Selby'1">
-                </div>
-                <div class="carrusel-secundario">
-                    <div>
-                        <img src="/img/IMG_4795-2_2048x2048.jpg" alt="Homalomena 'Selby'2">
+        <div class="main-principal">
+            <div class="main-principal-carrusel">
+                <div class="bar-carrusel">
+                    <div class="carrusel-principal">
+                        <img src="/img/5A7A8242_2048x2048.jpg" alt="Homalomena 'Selby'1">
                     </div>
-                    <div>
-                        <img src="/img/IMG_4794-2_2048x2048.jpg" alt="Homalomena 'Selby'3">
-                    </div>
-                    <div>
-                        <img src="/img/IMG_4793_2048x2048.jpg" alt="Homalomena 'Selby'4">
-                    </div>
+                    <div class="carrusel-secundario">
+                        <div>
+                            <img src="/img/IMG_4795-2_2048x2048.jpg" alt="Homalomena 'Selby'2">
+                        </div>
+                        <div>
+                            <img src="/img/IMG_4794-2_2048x2048.jpg" alt="Homalomena 'Selby'3">
+                        </div>
+                        <div>
+                            <img src="/img/IMG_4793_2048x2048.jpg" alt="Homalomena 'Selby'4">
+                        </div>
 
-                </div>
-            </div>
-            <div class="main-secundario-products">
-                <div class="name-product">
-                    <h1>Homalomena 'Selby'</h1>
-                    <div class="cost-product">
-                        <span>$25.00</span>
                     </div>
                 </div>
-        
-                <div class="product-add">
-                    <div class="quantity">
-                        <a href="#" data-quantity="down">-</a>
-                        <input type="text" id="quantity" name="quantity" value="1">
-                        <a href="#" data-quantity="up">+</a>
+                <div class="main-secundario-products">
+                    <div class="name-product">
+                        <h1>Homalomena 'Selby'</h1>
+                        <div class="cost-product">
+                            <span>$25.00</span>
+                        </div>
                     </div>
-                    <div class="product-detail-action">
-                        <button type="submit" name="add">Add to cart</button>
+            
+                    <div class="product-add">
+                        <div class="quantity">
+                            <a href="#" data-quantity="down">-</a>
+                            <input type="text" id="quantity" name="quantity" value="1">
+                            <a href="#" data-quantity="up">+</a>
+                        </div>
+                        <div class="product-detail-action">
+                            <button type="submit" name="add">Add to cart</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        
-    </div>
-    
-    
-
-    <div class="main-description">
-        <section class="description-bar">
-            <article class="article-description">
-                <ul>
-                    <li><b> Iluminación:</b> Poca luz - Luz brillante e indirecta</li>
-                    <li><b>Agua:</b>  Una vez que las dos pulgadas superiores se hayan secado. Aproximadamente cada 5-6 días.</li>
-                    <li> <b>Humedad:</b>  Tolerante a la humedad doméstica estándar.</li>
-                    <li><b>Familia:</b>  Aracaea</li>
-                    <li><b>Origen nativo:</b>  Sudeste de Asia</li>
-                </ul>
-            </article>
-            <article class="article-description">
-                <h3>Creciendo en Interiores</h3>
-                <div>
-                    Homalomena es una planta muy tranquila con un follaje llamativo. Son fanáticos de la luz 
-                    indirecta e incluso pueden tolerar niveles de luz más bajos. Mantenga su planta alejada del 
-                    sol directo. Encontrará a estos géneros creciendo felizmente en el subsuelo de las selvas 
-                    tropicales del sudeste asiático, lo que significa que disfrutan de una nebulización diaria o 
-                    un humidificador funcionando cerca. Asegúrese de retener un nivel uniforme de humedad en su 
-                    mezcla para macetas para mantener la planta feliz y el follaje exuberante.
-                </div>
-            </article>
-            <article class="article-description">
-                <h3>Creciendo al aire libre</h3>
-                <div>
-                    Homalomena cultivada al aire libre en el norte de Texas debe mantenerse a la sombra. 
-                    No recomendamos mantener su planta al aire libre durante períodos de calor o frío extremos. 
-                    Se recomienda regar con regularidad, especialmente si su región es relativamente 
-                    seca (en comparación con los neotrópicos). Nunca deje que su Homalomena se exponga a
-                     temperaturas bajo cero. Cuando las temperaturas alcancen los 55 grados o menos, asegúrese de 
-                     trasladar sus plantas al interior a un ambiente cálido y brillante.
-                </div>
-            </article>
-        </section>
-    </div>
-
-    <div class="title-otherproducts">
-        <h3>Las personas que vieron este producto también vieron</h3>
-    </div>
-
-    <section class="main-section-otherProducts">
-        <div class="div-otherProducts">
-            <div class="main-otherProducts">
-                <article class="article-otherProducts">
-                    <div class="div-img-otherProducts">
-                        <img src="/img/geranio.png" alt="">
-                    </div>
-                    <div class="name-otherProducts">
-                        <h1>Geranio</h1>
-                        <h3>$54.00</h3>
-                    </div>
-                </article>
-
-                <article class="article-otherProducts">
-                    <div class="div-img-otherProducts">
-                        <img src="/img/jazminb.png" alt="">
-                    </div>
-                    <div class="name-otherProducts">
-                        <h1>Jazmin</h1>
-                        <h3>$90.00</h3>
-                        
-                    </div>
-                </article>
             </div>
             
+        </div>
+        
+        
 
-            <div class="main-otherProducts">
-                <article class="article-otherProducts">
-                    <div class="div-img-otherProducts">
-                        <img src="/img/orquidea.png" alt="">
-                    </div>
-                    <div class="name-otherProducts">
-                        <h1>Orquidea</h1>
-                        <h3>$78.00</h3>
-                        
+        <div class="main-description">
+            <section class="description-bar">
+                <article class="article-description">
+                    <ul>
+                        <li><b> Iluminación:</b> Poca luz - Luz brillante e indirecta</li>
+                        <li><b>Agua:</b>  Una vez que las dos pulgadas superiores se hayan secado. Aproximadamente cada 5-6 días.</li>
+                        <li> <b>Humedad:</b>  Tolerante a la humedad doméstica estándar.</li>
+                        <li><b>Familia:</b>  Aracaea</li>
+                        <li><b>Origen nativo:</b>  Sudeste de Asia</li>
+                    </ul>
+                </article>
+                <article class="article-description">
+                    <h3>Creciendo en Interiores</h3>
+                    <div>
+                        Homalomena es una planta muy tranquila con un follaje llamativo. Son fanáticos de la luz 
+                        indirecta e incluso pueden tolerar niveles de luz más bajos. Mantenga su planta alejada del 
+                        sol directo. Encontrará a estos géneros creciendo felizmente en el subsuelo de las selvas 
+                        tropicales del sudeste asiático, lo que significa que disfrutan de una nebulización diaria o 
+                        un humidificador funcionando cerca. Asegúrese de retener un nivel uniforme de humedad en su 
+                        mezcla para macetas para mantener la planta feliz y el follaje exuberante.
                     </div>
                 </article>
-
-                <article class="article-otherProducts">
-                    <div class="div-img-otherProducts">
-                        <img src="/img/equisetum.png" alt="">
-                    </div>
-                    <div class="name-otherProducts">
-                        <h1>Equisetum</h1>
-                        <h3>$44.00</h3>
+                <article class="article-description">
+                    <h3>Creciendo al aire libre</h3>
+                    <div>
+                        Homalomena cultivada al aire libre en el norte de Texas debe mantenerse a la sombra. 
+                        No recomendamos mantener su planta al aire libre durante períodos de calor o frío extremos. 
+                        Se recomienda regar con regularidad, especialmente si su región es relativamente 
+                        seca (en comparación con los neotrópicos). Nunca deje que su Homalomena se exponga a
+                        temperaturas bajo cero. Cuando las temperaturas alcancen los 55 grados o menos, asegúrese de 
+                        trasladar sus plantas al interior a un ambiente cálido y brillante.
                     </div>
                 </article>
-            </div>
+            </section>
         </div>
 
-    </section>
+        <div class="title-otherproducts">
+            <h3>Las personas que vieron este producto también vieron</h3>
+        </div>
+
+        <section class="main-section-otherProducts">
+            <div class="div-otherProducts">
+                <div class="main-otherProducts">
+                    <article class="article-otherProducts">
+                        <div class="div-img-otherProducts">
+                            <img src="/img/geranio.png" alt="">
+                        </div>
+                        <div class="name-otherProducts">
+                            <h1>Geranio</h1>
+                            <h3>$54.00</h3>
+                        </div>
+                    </article>
+
+                    <article class="article-otherProducts">
+                        <div class="div-img-otherProducts">
+                            <img src="/img/jazminb.png" alt="">
+                        </div>
+                        <div class="name-otherProducts">
+                            <h1>Jazmin</h1>
+                            <h3>$90.00</h3>
+                            
+                        </div>
+                    </article>
+                </div>
+                
+
+                <div class="main-otherProducts">
+                    <article class="article-otherProducts">
+                        <div class="div-img-otherProducts">
+                            <img src="/img/orquidea.png" alt="">
+                        </div>
+                        <div class="name-otherProducts">
+                            <h1>Orquidea</h1>
+                            <h3>$78.00</h3>
+                            
+                        </div>
+                    </article>
+
+                    <article class="article-otherProducts">
+                        <div class="div-img-otherProducts">
+                            <img src="/img/equisetum.png" alt="">
+                        </div>
+                        <div class="name-otherProducts">
+                            <h1>Equisetum</h1>
+                            <h3>$44.00</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+        </section>
 
 
 
 
-</main>
+    </main>
 
-<!--==========================
-           FOOTER
-============================--> 
-<footer>
-    <section class="section-footer" >
-        <i class="isection fas fa-credit-card"></i>
-        <h4 class="h4section-footer" >Pagá con tarjeta o en efectivo</h4>
-        <p class="psection-footer">Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en
-            puntos de pago. ¡Y siempre es seguro!</p>
-    </section>
-</footer>
+
+<!--=====================================
+    F O O T E R
+======================================-->
+    <footer>
+        <div class="main-content2">
+        <div class="left2 box2">
+            <h2>Sobre Nosotros</h2>
+            <div class="content2">
+            <p>Creamos Sunflower porque, simplemente, amamos las plantas. Al inaugurar nuestra tienda, queríamos crear un espacio cálido y acogedor para todos, desde los admiradores de las plantas hasta los cultivadores expertos. </p>
+            <p>Una de nuestras partes favoritas del funcionamiento de Sunflower es obtener las plantas más hermosas y exóticas que podamos tener en nuestras manos y, por supuesto, compartirlas con todos ustedes.</p>
+            <div class="social2">
+                <a href="https://facebook.com/pablomartin.morrone"><span class="fa fa-facebook-f"></span></a>
+                <a href="http://twitter.com/"><span class="fa fa-twitter"></span></a>
+                <a href="https://instagram.com/"><span class="fa fa-instagram"></span></a>
+                <a href="https://youtube.com/"><span class="fa fa-youtube"></span></a>
+            </div>
+            </div>
+        </div>
+        <div class="center2 box2">
+            <h2>Direccion</h2>
+            <div class="content2">
+                <div class="place2">
+                    <span class="fa fa-map-marker"></span>
+                    <span class="text2">Av. Corrientes 348</span>
+                </div>
+                <div class="phone2">
+                    <span class="fa fa-phone"></span>
+                    <span class="text2">+5411- 4321-0000</span>
+                </div>
+                <div class="email2">
+                    <span class="fa fa-envelope"></span>
+                    <span class="text2">sunflower@gmail.com</span>
+                </div>
+            </div>
+        </div>
+        <div class="right2 box2">
+            <h2>Contacta con nosotros</h2>
+            <div class="content2">
+            <form action="#">
+                <div class="email2">
+                <div class="text2">Email *</div>
+                <input type="email" required>
+                </div>
+                <div class="msg2">
+                <div class="text2">Mensaje *</div>
+                <textarea rows="2" cols="25" required></textarea>
+                </div>
+                <div class="btn2">
+                <button type="submit">Enviar</button>
+                </div>
+            </form>
+            </div>
+        </div>
+        </div>
+        <!-- <div class="container-map2">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.843800421494!2d-58.83752258502619!3d-34.63338736657504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc93fbdd82d7b1%3A0x6a5d8a92f152c39!2sEl%20Arreo%20250%2C%20La%20Reja%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1613067829897!5m2!1ses-419!2sar" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div> -->
+        <div class="bottom2">
+        <center>
+            <span class="credit2">Creado por <a href="#">Sunflower</a> | </span>
+            <span class="fa fa-copyright"></span><span> 2021 Todos los derechos reservados.</span>
+        </center>
+        </div>
+    </footer>
+    
 
 </body>
 </html>
