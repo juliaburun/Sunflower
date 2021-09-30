@@ -1,89 +1,42 @@
-* {
-    box-sizing: border-box;
-    font-family: 'Quicksand', sans-serif;;
-}
+*{
+    box-sizing: border-box; 
+ }
+ 
+ img{
+     width: 100%;
+     
+ }
+ 
+ header{
+     background-color:var(--rosa);
+     
+ }
+ /*****************************
+           HEADER
+ ******************************/
+ body{
+     font-family: 'Quicksand', sans-serif;
+     font-size: 14px;
+     margin: 0;
+ }
+ 
+ 
+ /*****************************
+ BARRA ENTRE EL HEADER Y EL MAIN
+ ******************************/
+ .space-between-header-main{
+     background-color: var(--grisClaro);
+     height: 5px;
+ }
 
-.container-header {
-    display:flex;
-    flex-direction: row;
-    background-color: #edafa4;
-    padding: 10px;/*quitado*/
-    width: 100%;/*agregado**/
-}
-
-nav {
-    display: flex;
-    justify-content: flex-end;
-    width: 50%;
-}
-
-.logo {
-    width: 50%;
-}
-
-a {
-    text-decoration: none;
-    color: white
-}
-.login {
-    margin: 10px;
-    margin-top: 10px;
-}
-                        /* ARREGLAR LUPAAAA */
-.buscar{
-    border-radius: 5px;
-    width: 100px;
-    margin-top: 5px;
-    max-width: 70px;
-    padding: 3px;
- /*   background-repeat: no-repeat;  Lupa que queda dentro, pero no es un botón.
-    background-image: url('/images/lupa.svg')*/
-}
-
-.carrito {
-    margin:10px;
-    margin-top: 10px;
-}
-
-#menu {
-    margin:10px;
-    margin-top: 13px;
-}
-
-body {
-    background-color: white;
-}
-
-.menu{
-    text-align: center;
-    margin: 20px;
-}
-  
-.menu li{
-    display: inline-block;
-    text-align: center;
-}
-  
-.menu li a{
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    background-color: #edafa4;
-    padding: 10px;
-    width: 20px;
-    height: 20px;
-    font-size: 20px;
-    border-radius: 100%;
-  }
  /*############################### LINEA DIVISORA ENTRE EL ENCABEZADO Y EL CUERPO  #########################*/
 
-/*CONTIENE TODOS LOS ELEMENTOS DEL CUERPO DE MI CODIGO*/
+/*CONTIENE TODOS LOS ELEMENTOS DEL CUERPO*/
 .container{
     width: 100%;
     padding: 15px;
     max-width: 1000px;
     margin: 0 auto;
-
 }
 /*TEXTO DEL REGISTRO*/
 h3{
@@ -91,13 +44,10 @@ h3{
     position: relative;
 }
 /*LINEA INFERIOR DEL LOGIN*/
-
 hr{
     width: 25%;
     position: relative;
-    color: #edafa4;
 }
-
 /*CONTIENE LAS CAJAS USUARIO Y CONTRASEÑA*/
 .caja-datos{
     width: 90%;
@@ -105,6 +55,7 @@ hr{
     padding: 10px;
     margin: auto;
 }
+/*FORMULARIOS*/
 input[type="name"],
 input[type="surname"],
 input[type="email"],
@@ -135,77 +86,78 @@ input[type="password"]
     padding: 10px 20px;
     cursor: pointer;
 }
-
 /*MANITO CUANDO PASAS SOBRE EL BOTON ENVIAR*/
 .boton-enviar:hover{
     background: #B0B3AF;
+    color: black;
 }
 
 /*============================== MEDIA QUERIES ===============================*/
 
-@media (min-width:768px){
- /*CONTIENE LAS CAJAS USUARIO Y CONTRASEÑA*/   
-.caja-datos{
-    width: 60%;
+@media (min-width:481px){
+
+    /*LINEA BAJO EL H3 REGISTRATE*/
+    hr{
+        width: 10%;
+        position: relative;
+    }
+    /*CONTIENE LAS CAJAS USUARIO Y CONTRASEÑA*/   
+    .caja-datos{
+        width: 60%;
+    }
+    /*FORMULARIOS*/
+    input[type="name"],
+    input[type="surname"],
+    input[type="email"],
+    input[type="phone"],
+    input[type="password"]
+    {
+        font-size: 14px; 
+    }
+    /*BOTON ENVIAR*/
+    .boton-enviar{
+        font-size: 14px;
+    }
 }
 
-input[type="name"],
-input[type="surname"],
-input[type="email"],
-input[type="phone"],
-input[type="password"]
-{
-    font-size: 14px; 
+@media (min-width:769px){
+
+    /*LINEA BAJO EL H3 REGISTRATE*/
+    hr{
+        width: 8%;
+        position: relative;
+    }
+    /*CONTIENE LAS CAJAS USUARIO Y CONTRASEÑA*/
+    .caja-datos{
+        width: 40%;
+    }
+    /*CAJA CONTENEDORA DEL BOTON ENVIAR*/
+    .caja-botonenviar{
+        width: 30%;
+    }
+    /*BOTON ENVIAR*/
+    .boton-enviar{
+        font-size: 14px;
+    }
 }
 
-/*BOTON ENVIAR*/
-.boton-enviar{
-    font-size: 14px;
-}
-}
-
-@media (min-width:1200px){
-/*CONTIENE LAS CAJAS USUARIO Y CONTRASEÑA*/
-.caja-datos{
-    width: 40%;
-}
-
-/*BOTON ENVIAR*/
-/*CAJA CONTENEDORA DEL BOTON ENVIAR*/
-.caja-botonenviar{
-    width: 30%;
-}
-
-.boton-enviar{
-    font-size: 14px;
-}
-
-}
 /*############################### LINEA DIVISORA ENTRE EL CUERPO Y EL FOOTER #########################*/
-.footer {
-    display: flex;
-    font-size: 15px;
-    justify-content: space-between;
-    font-size: 12px;
-}
 
-.redes {
-    display:flex;
-    align-items: flex-end;
-}
+/****************************
+BREAKPOINT FOOTER
+****************************/
+@media screen and (max-width: 767px) {
+    footer {
+        position: relative;
+        bottom: 0px; 
+    }
 
-footer i {
-    color: #edafa4;
-    margin-right: 5px;
-}
+    .main-content2 {
+        flex-wrap: wrap;
+        flex-direction: column; 
+    }
+    .main-content2 .box2 {
+        margin: 5px 0; 
+    } 
 
-.redes i {
-    font-size: 20px;
-    margin-right: 10px;
-    margin-bottom: 15px;
-}
-
-.medios-pago i {
-    font-size: 20px;
-    margin-left: 8px;
 }
