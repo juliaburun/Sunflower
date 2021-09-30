@@ -1,3 +1,23 @@
+*{
+    box-sizing: border-box; 
+}
+ 
+img{
+     width: 100%;
+     
+}
+
+body{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    margin: 0;
+}
+
+
+/*************************************************
+                   FOOTER
+**************************************************/
+
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
 footer {
@@ -7,7 +27,7 @@ footer {
     font-family: 'Poppins', sans-serif;
     /* margin-top: 40px; */
 }
- 
+  
 .main-content2 {
     color: #d9d9d9;
     display: flex; 
@@ -167,20 +187,4 @@ footer {
   
 .bottom2 center a:hover {
     text-decoration: underline; 
-}
-  
-@media screen and (max-width: 767px) {
-    footer {
-        position: relative;
-        bottom: 0px; 
-    }
-
-    .main-content2 {
-        flex-wrap: wrap;
-        flex-direction: column; 
-    }
-    .main-content2 .box2 {
-        margin: 5px 0; 
-    } 
-
 }

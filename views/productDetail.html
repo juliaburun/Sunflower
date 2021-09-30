@@ -12,6 +12,8 @@
     <!--Enlazando con el css styles_products-->
     <link rel="stylesheet" href="/css/styles-products.css">
     <link rel="stylesheet" href="/css/colores.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <!--Enlazando con el css de fonts.google fuente Quicksand Regular 400-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,46 +33,52 @@
         <div class="main-header-top-bar">
             <div class="main-header-div">
                 <div class="div-main-logo">
-                    <img src="/img/sunflowerLogo.png" alt="logo sunflower">
+                   <a href="/"> <img src="/img/sunflowerLogo.png" alt="logo sunflower"> </a>
                 </div>
-                <div class="login">
-                    <a href><i class="fas fa-user"></i></a>
-                </div>
-                <div>
-                    <form action="/search" method="POST" class="main-div-search">
-                        <div class="div-search">
-                            <div class="div-main-busqueda">
-                                <input class="input-busqueda" type="search" name="busqueda" ></input>
-                                <button type="submit" class="ilupa"><i class="fas fa-search"></i></button>
+                 <!--==========================
+                        MENÚ NAVEGACIÓN
+                  ============================-->
+                <nav class="main-navbar">
+                    <ul> 
+                        <li> <a href="/">Inicio</a> </li>
+                        <li> <a href="">Productos</a> </li>
+                        <li> <a href="">Acerca de nosotros</a> </li>
+                    </ul>
+                </nav>
+
+                <div class="div-main-iconos">
+                    <div class="main-div-search">
+                            <div class="div-search"> 
+                                <form action="/search" method="POST" >   
+                                    <div class="div-main-busqueda">
+                                        <input class="input-busqueda" type="search" name="busqueda" ></input>
+                                        <button type="submit" class="ilupa"><i class="fas fa-search"></i></button>
+                                    </div>
+                                </form>
                             </div>
+                    </div>
+                    <div class="div-secundario-iconos">
+                        <div class="login">
+                            <a href="" >
+                                <i class="fas fa-user"></i>
+                            </a>
                         </div>
-                    </form>
-                </div>
-                <div class="carrito">
-                    <a href><i class="fas fa-shopping-cart"></i></a>
+                        <div class="carrito">
+                            <a href="">
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+                        </div>
+                        <div class="hamburguer-buttom">
+                            <a href="" >
+                                <i class="fas fa-bars"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <!--==========================
-                MENÚ HAMBURGUESA
-        ============================-->    
-        <a href="" class="hamburguer-buttom">
-            <i class="fas fa-bars"></i>
-        </a>
-         <!--==========================
-                MENÚ NAVEGACIÓN
-        ============================-->
-        <nav class="main-navbar">
-            <ul> 
-                <li> <a href="">Inicio</a> </li>
-                <li> <a href="">Productos</a> </li>
-                <li> <a href="">Acerca de nosotros</a> </li>
-                <li> <a href="">Contacto</a> </li>
-            </ul>
-        </nav>
+       
         
-        <br/>    
-            
     </header>
    <!--==========================
        BORDE ENTRE HEADER Y MAIN
@@ -119,7 +127,7 @@
                             <a href="#" data-quantity="up">+</a>
                         </div>
                         <div class="product-detail-action">
-                            <button type="submit" name="add">Add to cart</button>
+                            <button type="submit" name="add">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
@@ -238,7 +246,7 @@
             <p>Creamos Sunflower porque, simplemente, amamos las plantas. Al inaugurar nuestra tienda, queríamos crear un espacio cálido y acogedor para todos, desde los admiradores de las plantas hasta los cultivadores expertos. </p>
             <p>Una de nuestras partes favoritas del funcionamiento de Sunflower es obtener las plantas más hermosas y exóticas que podamos tener en nuestras manos y, por supuesto, compartirlas con todos ustedes.</p>
             <div class="social2">
-                <a href="https://facebook.com/pablomartin.morrone"><span class="fa fa-facebook-f"></span></a>
+                <a href="https://facebook.com/"><span class="fa fa-facebook-f"></span></a>
                 <a href="http://twitter.com/"><span class="fa fa-twitter"></span></a>
                 <a href="https://instagram.com/"><span class="fa fa-instagram"></span></a>
                 <a href="https://youtube.com/"><span class="fa fa-youtube"></span></a>
