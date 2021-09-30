@@ -188,3 +188,22 @@ footer {
 .bottom2 center a:hover {
     text-decoration: underline; 
 }
+
+/****************************
+   BREAKPOINT FOOTER
+****************************/
+@media screen and (max-width: 767px) {
+    footer {
+        position: relative;
+        bottom: 0px; 
+    }
+
+    .main-content2 {
+        flex-wrap: wrap;
+        flex-direction: column; 
+    }
+    .main-content2 .box2 {
+        margin: 5px 0; 
+    } 
+
+}

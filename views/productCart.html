@@ -11,12 +11,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito</title>
     <!--Enlazando con el css styles_products-->
-    <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/styles-cart.css">
+    <link rel="stylesheet" href="/css/colores.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <!--Enlazando con el css de fonts.google fuente Quicksand Regular 400-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+
     <!--link a los íconos de fontawesome-->
     <script src="https://kit.fontawesome.com/606e397101.js" crossorigin="anonymous"></script>
 
@@ -32,16 +37,57 @@
     <!--==========================
            HEADER
 ============================-->
-    <header>
+    <header class="main-header">
         <div class="main-header-top-bar">
             <div class="main-header-div">
                 <div class="div-main-logo">
-                    <img src="/images/sunflowerLogo.png" alt="logo sunflower">
+                <a href="/"> <img src="/img/sunflowerLogo.png" alt="logo sunflower"> </a>
+                </div>
+                <!--==========================
+                        MENÚ NAVEGACIÓN
+                ============================-->
+                <nav class="main-navbar">
+                    <ul> 
+                        <li> <a href="/">Inicio</a> </li>
+                        <li> <a href="">Productos</a> </li>
+                        <li> <a href="">Acerca de nosotros</a> </li>
+                    </ul>
+                </nav>
+
+                <div class="div-main-iconos">
+                    <div class="main-div-search">
+                            <div class="div-search"> 
+                                <form action="/search" method="POST" >   
+                                    <div class="div-main-busqueda">
+                                        <input class="input-busqueda" type="search" name="busqueda" ></input>
+                                        <button type="submit" class="ilupa"><i class="fas fa-search"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                    </div>
+                    <div class="div-secundario-iconos">
+                        <div class="login">
+                            <a href="" >
+                                <i class="fas fa-user"></i>
+                            </a>
+                        </div>
+                        <div class="carrito">
+                            <a href="">
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+                        </div>
+                        <div class="hamburguer-buttom">
+                            <a href="" >
+                                <i class="fas fa-bars"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    
+        
     </header>
-
     <div class="space-between-header-main">
 
     </div>
@@ -64,20 +110,20 @@
                 </div>
                 <div class="items-desc">
                     <div>
-                        <p>Plantita</p>
+                        <p>Homalomena 'Selby'</p>
                     </div>
                     <!-- <div>
                         <p>6"</p>
                     </div> -->
-                    <div>
-                        <p>1733.00</p>
+                    <div class="cost">
+                        <p>$1.250,25</p>
                     </div>
                 </div>
             </div>
             <div class="amount">
                 <div class="amount-button">
                     <div class="amount-group">
-                        <button>+</button>
+                        <button>-</button>
                         <input type="text" value="1">
                         <button>+</button>
                     </div>
@@ -97,46 +143,88 @@
         </div>
 
         <div class="subtotal_final">
-            <h2>1733.00$</h2>
+            <h2>$1.250,25</h2>
         </div>
 
         <div class="instrucciones">
             <h2>Escribe alguna instrucción al vendedor:</h2>
         </div>
-
-        <div class="textarea">
-            <textarea name="textarea" rows="10" cols="36">...</textarea>
-        </div>
-
-        <div class="carrito-comprar">
+        <div class="area-boton">
+            <div class="textarea">
+                <textarea name="textarea" rows="10" cols="36">...</textarea>
+            </div>
+            <!-- <div class="carrito-comprar"> -->
             <button class="comprar">Comprar</button>
+            <!-- </div> -->
         </div>
 
 
     </main>
 
-    <!--==========================
-           FOOTER
-============================-->
+
+    <!--=====================================
+    F O O T E R
+======================================-->
     <footer>
-        <section>
-            <span class="icon-footer"><i class="fas fa-credit-card"></i></span>
-            <h3>Pagá con tarjeta o en efectivo</h3>
-            <p class="body-pie">Con Sunflower Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!</p>
-        </section>
-        <section>
-            <span class="icon-footer"><i class="fas fa-gift"></i></span>
-            <h3>Envío gratis desde $ 2.500</h3>
-            <p class="body-pie">Solo por estar registrad@ en Sunflower tenés envíos gratis en miles de productos. Es un beneficio de Sunflower Puntos.</p>
-        </section>
-        <section>
-            <span class="icon-footer"><i class="fas fa-user-shield"></i></span>
-            <h3>Seguridad, de principio a fin</h3>
-            <p class="body-pie">¿No te gusta? ¡Devolvelo! En Sunflower, no hay nada que no puedas hacer, porque estás siempre protegid@.</p>
-        </section>
-        <section class="pie-footer">
-            <p class="body-pie">Copyright © 2021-2021 Sunflower</p>
-        </section>
+        <div class="main-content2">
+        <div class="left2 box2">
+            <h2>Sobre Nosotros</h2>
+            <div class="content2">
+            <p>Creamos Sunflower porque, simplemente, amamos las plantas. Al inaugurar nuestra tienda, queríamos crear un espacio cálido y acogedor para todos, desde los admiradores de las plantas hasta los cultivadores expertos. </p>
+            <p>Una de nuestras partes favoritas del funcionamiento de Sunflower es obtener las plantas más hermosas y exóticas que podamos tener en nuestras manos y, por supuesto, compartirlas con todos ustedes.</p>
+            <div class="social2">
+                <a href="https://facebook.com/"><span class="fa fa-facebook-f"></span></a>
+                <a href="http://twitter.com/"><span class="fa fa-twitter"></span></a>
+                <a href="https://instagram.com/"><span class="fa fa-instagram"></span></a>
+                <a href="https://youtube.com/"><span class="fa fa-youtube"></span></a>
+            </div>
+            </div>
+        </div>
+        <div class="center2 box2">
+            <h2>Direccion</h2>
+            <div class="content2">
+                <div class="place2">
+                    <span class="fa fa-map-marker"></span>
+                    <span class="text2">Av. Corrientes 348</span>
+                </div>
+                <div class="phone2">
+                    <span class="fa fa-phone"></span>
+                    <span class="text2">+5411- 4321-0000</span>
+                </div>
+                <div class="email2">
+                    <span class="fa fa-envelope"></span>
+                    <span class="text2">sunflower@gmail.com</span>
+                </div>
+            </div>
+        </div>
+        <div class="right2 box2">
+            <h2>Contacta con nosotros</h2>
+            <div class="content2">
+            <form action="#">
+                <div class="email2">
+                <div class="text2">Email *</div>
+                <input type="email" required>
+                </div>
+                <div class="msg2">
+                <div class="text2">Mensaje *</div>
+                <textarea rows="2" cols="25" required></textarea>
+                </div>
+                <div class="btn2">
+                <button type="submit">Enviar</button>
+                </div>
+            </form>
+            </div>
+        </div>
+        </div>
+        <!-- <div class="container-map2">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.843800421494!2d-58.83752258502619!3d-34.63338736657504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc93fbdd82d7b1%3A0x6a5d8a92f152c39!2sEl%20Arreo%20250%2C%20La%20Reja%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1613067829897!5m2!1ses-419!2sar" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div> -->
+        <div class="bottom2">
+        <center>
+            <span class="credit2">Creado por <a href="#">Sunflower</a> | </span>
+            <span class="fa fa-copyright"></span><span> 2021 Todos los derechos reservados.</span>
+        </center>
+        </div>
     </footer>
 
 </body>

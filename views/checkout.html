@@ -7,10 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
     <link rel="stylesheet" href="/css/styles-checkout.css">
+    <link rel="stylesheet" href="/css/colores.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <!--==================================================
         Iconos Fontawesome
     ===================================================-->
@@ -19,10 +22,56 @@
 </head>
 
 <body>
-    <header>
+    <header class="main-header">
         <div class="main-header-top-bar">
-            <img src="/images/sunflowerLogo.png" alt="logo sunflower">
+            <div class="main-header-div">
+                <div class="div-main-logo">
+                    <a href="/"> <img src="/img/sunflowerLogo.png" alt="logo sunflower"> </a>
+                </div>
+                <!--==========================
+                        MENÚ NAVEGACIÓN
+                  ============================-->
+                <nav class="main-navbar">
+                    <ul>
+                        <li> <a href="/">Inicio</a> </li>
+                        <li> <a href="">Productos</a> </li>
+                        <li> <a href="">Acerca de nosotros</a> </li>
+                    </ul>
+                </nav>
+
+                <div class="div-main-iconos">
+                    <div class="main-div-search">
+                        <div class="div-search">
+                            <form action="/search" method="POST">
+                                <div class="div-main-busqueda">
+                                    <input class="input-busqueda" type="search" name="busqueda"></input>
+                                    <button type="submit" class="ilupa"><i class="fas fa-search"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="div-secundario-iconos">
+                        <div class="login">
+                            <a href="">
+                                <i class="fas fa-user"></i>
+                            </a>
+                        </div>
+                        <div class="carrito">
+                            <a href="">
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+                        </div>
+                        <div class="hamburguer-buttom">
+                            <a href="">
+                                <i class="fas fa-bars"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+
     </header>
 
     <div class="space-between-header-main">
@@ -35,128 +84,194 @@
         <div class="title-checkout">
             <h3>Checkout</h3>
         </div>
-        <div class="info-contact">
-            <p>Información de contacto:</p>
-        </div>
 
-        <div class="individual-box2">
-            <input type="email" name="user box" placeholder="E-mail:">
-        </div>
 
-        <div class="account">
-            <p>¿Ya tienes una cuenta?</p>
-        </div>
-        <div class="login">
-            <a href="#" continuar="continuar">Login</a>
-        </div>
-        <div class="container">
+        <div>
+            <div class="info-contact">
+                <p>Información de contacto:</p>
+            </div>
 
-            <form autocomplete="on">
-                <div>
-                    <div class="method-delivery">
-                        <p>Metodo de envio</p>
-                    </div>
-                    <div class="input-delivery">
-                        <input type="radio" id="Delivery" name="Delivery" value="Delivery" checked>
-                        <label for="delivery"><i class="fas fa-truck"></i> Delivery</label>
-                        <input type="radio" id="Retiro en tienda" name="Retiro en tienda" value="Retiro en tienda">
-                        <label for="retiro-en-tienda"><i class="fas fa-store"></i> Retiro en tienda</label>
-                    </div>
+            <div class="individual-box2">
+                <input type="email" name="user box" placeholder="E-mail:">
+            </div>
 
-                    <div class="address-delivery">
-                        <p>Dirección de envío:</p>
-                    </div>
-                    <div class="individual-box">
-                        <input type="name" name="nombre" placeholder="Nombre:">
-                    </div>
-                    <div class="individual-box">
-                        <input type="last-name" name="apellido" placeholder="Apellido:">
-                    </div>
-                    <div class="individual-box">
-                        <input type="address" name="direccion" placeholder="Dirección:">
-                    </div>
-                    <div class="individual-box">
-                        <input type="city" name="ciudad" placeholder="Ciudad:">
-                    </div>
-                    <div class="individual-box">
-                        <input type="country" name="pais" placeholder="País:">
-                    </div>
-                    <div class="individual-box">
-                        <input type="cp" name="cp" placeholder="Codigo Postal:">
-                    </div>
-                    <div class="individual-box">
-                        <input type="phone" name="telefono" placeholder="Télefono:">
-                    </div>
-                </div>
+            <div class="account">
+                <p>¿Ya tienes una cuenta?</p>
+            </div>
+            <div class="login3">
+                <a href="#" continuar="continuar">Login</a>
+            </div>
+            <div class="container">
 
-            </form>
-        </div>
-
-        <div class="cart-detail">
-            <h3>Detalle de la compra</h3>
-        </div>
-
-        <div class="content">
-            <div class="items">
-                <div class="items-img">
-                    <img src="/img/IMG_4795-2_2048x2048.jpg" alt="" srcset="">
-                </div>
-                <div class="items-desc">
+                <form autocomplete="on">
                     <div>
-                        <p><strong>Plantita</strong></p>
+                        <div class="method-delivery">
+                            <p>Metodo de envio</p>
+                        </div>
+
+                        <div class="deli-box">
+
+                            <div class="input-delivery">
+                                <input type="radio" id="Delivery" name="drone" value="Delivery" checked>
+                                <label for="delivery"><i class="fas fa-truck"></i> Delivery</label>
+                                <input type="radio" id="Retiro en tienda" name="drone" value="Retiro en tienda">
+                                <label for="retiro-en-tienda"><i class="fas fa-store"></i> Retiro en tienda</label>
+                            </div>
+
+                        </div>
+
+                        <div class="address-delivery">
+                            <p>Dirección de envío:</p>
+                        </div>
+                        <div class="individual-box">
+                            <input type="name" name="nombre" placeholder="Nombre:">
+                        </div>
+                        <div class="individual-box">
+                            <input type="last-name" name="apellido" placeholder="Apellido:">
+                        </div>
+                        <div class="individual-box">
+                            <input type="address" name="direccion" placeholder="Dirección:">
+                        </div>
+                        <!-- <div class="individual-box">
+                        <input type="country" name="país" placeholder="País:"> -->
+                        <div class="form-list">
+                            <form>
+                                <label for="country">País: </label>
+                                <select name="paises" id="countrys">
+                              <option value="argentina">Argentina</option>
+                              <option value="venezuela">Venezuela</option>
+                              <option value="colombia">Colombia</option>
+                              <option value="bolivia">Bolivía</option>
+                            </select>
+                            </form>
+                        </div>
+
+                        <div class="individual-box">
+                            <input type="city" name="Ciudad" placeholder="Ciudad:">
+                        </div>
+                        <div class="individual-box">
+                            <input type="cp" name="cp" placeholder="Codigo Postal:">
+                        </div>
+                        <div class="individual-box">
+                            <input type="phone" name="telefono" placeholder="Télefono:">
+                        </div>
                     </div>
-                    <div>
-                        <p><strong>1.733.00$</strong></p>
+
+                </form>
+            </div>
+
+            <div class="cart-detail">
+                <h3>Detalle de la compra</h3>
+            </div>
+
+            <div class="content">
+                <div class="items">
+                    <div class="items-img">
+                        <img src="/img/IMG_4795-2_2048x2048.jpg" alt="" srcset="">
+                    </div>
+                    <div class="items-desc">
+                        <div>
+                            <p><strong>Homalomena 'Selby'
+                        </strong></p>
+                        </div>
+                        <div>
+                            <p><strong>$1.250,25</strong></p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="total">
-            <div class="subtotal">
-                <hr>
-                <h2>Subtotal:</h2>
-                <hr>
-            </div>
-            <div class="cost_delivery">
-                <hr>
-                <h2>Costo de envio:</h2>
-                <hr>
-            </div>
-            <div class="total_final">
-                <hr>
-                <h2>Total:</h2>
-                <hr>
+            <div class="totales">
+                <div class="total">
+                    <div class="subtotal">
+                        <!-- <hr> -->
+                        <h2>Subtotal:</h2>
+                        <!-- <hr> -->
+                    </div>
+                    <div class="cost_delivery">
+                        <!-- <hr> -->
+                        <h2>Costo de envio:</h2>
+                        <!-- <hr> -->
+                    </div>
+                    <div class="total_final">
+                        <!-- <hr> -->
+                        <h2>Total:</h2>
+                        <!-- <hr> -->
+                    </div>
+                </div>
             </div>
             <div>
                 <button class="box-send">Comprar</button>
                 <button class="box-send1">Regresar</button>
             </div>
         </div>
-
     </main>
-    <!--==========================
-           FOOTER
-============================-->
+
+    <!--=====================================
+    F O O T E R
+======================================-->
+    <!--=====================================
+    F O O T E R
+======================================-->
     <footer>
-        <section>
-            <span class="icon-footer"><i class="fas fa-credit-card"></i></span>
-            <h3>Pagá con tarjeta o en efectivo</h3>
-            <p class="body-pie">Con Sunflower Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!</p>
-        </section>
-        <section>
-            <span class="icon-footer"><i class="fas fa-gift"></i></span>
-            <h3>Envío gratis desde $ 2.500</h3>
-            <p class="body-pie">Solo por estar registrad@ en Sunflower tenés envíos gratis en miles de productos. Es un beneficio de Sunflower Puntos.</p>
-        </section>
-        <section>
-            <span class="icon-footer"><i class="fas fa-user-shield"></i></span>
-            <h3>Seguridad, de principio a fin</h3>
-            <p class="body-pie">¿No te gusta? ¡Devolvelo! En Sunflower, no hay nada que no puedas hacer, porque estás siempre protegid@.</p>
-        </section>
-        <section class="pie-footer">
-            <p class="body-pie">Copyright © 2021-2021 Sunflower</p>
-        </section>
+        <div class="main-content2">
+            <div class="left2 box2">
+                <h2>Sobre Nosotros</h2>
+                <div class="content2">
+                    <p>Creamos Sunflower porque, simplemente, amamos las plantas. Al inaugurar nuestra tienda, queríamos crear un espacio cálido y acogedor para todos, desde los admiradores de las plantas hasta los cultivadores expertos. </p>
+                    <p>Una de nuestras partes favoritas del funcionamiento de Sunflower es obtener las plantas más hermosas y exóticas que podamos tener en nuestras manos y, por supuesto, compartirlas con todos ustedes.</p>
+                    <div class="social2">
+                        <a href="https://facebook.com/"><span class="fa fa-facebook-f"></span></a>
+                        <a href="http://twitter.com/"><span class="fa fa-twitter"></span></a>
+                        <a href="https://instagram.com/"><span class="fa fa-instagram"></span></a>
+                        <a href="https://youtube.com/"><span class="fa fa-youtube"></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="center2 box2">
+                <h2>Direccion</h2>
+                <div class="content2">
+                    <div class="place2">
+                        <span class="fa fa-map-marker"></span>
+                        <span class="text2">Av. Corrientes 348</span>
+                    </div>
+                    <div class="phone2">
+                        <span class="fa fa-phone"></span>
+                        <span class="text2">+5411- 4321-0000</span>
+                    </div>
+                    <div class="email2">
+                        <span class="fa fa-envelope"></span>
+                        <span class="text2">sunflower@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="right2 box2">
+                <h2>Contacta con nosotros</h2>
+                <div class="content2">
+                    <form action="#">
+                        <div class="email2">
+                            <div class="text2">Email *</div>
+                            <input type="email" required>
+                        </div>
+                        <div class="msg2">
+                            <div class="text2">Mensaje *</div>
+                            <textarea rows="2" cols="25" required></textarea>
+                        </div>
+                        <div class="btn2">
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="container-map2">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.843800421494!2d-58.83752258502619!3d-34.63338736657504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc93fbdd82d7b1%3A0x6a5d8a92f152c39!2sEl%20Arreo%20250%2C%20La%20Reja%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1613067829897!5m2!1ses-419!2sar" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div> -->
+        <div class="bottom2">
+            <center>
+                <span class="credit2">Creado por <a href="#">Sunflower</a> | </span>
+                <span class="fa fa-copyright"></span><span> 2021 Todos los derechos reservados.</span>
+            </center>
+        </div>
     </footer>
 
 </body>
