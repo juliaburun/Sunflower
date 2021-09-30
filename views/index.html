@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/lightslider.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/colores.css">
     <link rel="stylesheet" href="/css/footer.css"> <!--Hoja de estilos del footer-->
     <script src="/js/jquery.min.js"></script>
     <script src="/js/lightslider.js"></script>
@@ -19,30 +21,58 @@
 </head>
 
 <body> <!--HEADER-->
- <header>
-  <div class="container-header">
-     <div>
-      <img src="img/sunflowerLogo.png" class="logo">
-     </div>
-    <nav class="navbar">
-    <div class="login">
-       <a href><i class="fas fa-user"></i></a>
+  <header class="main-header">
+    <div class="main-header-top-bar">
+        <div class="main-header-div">
+            <div class="div-main-logo">
+               <a href="/"> <img src="/img/sunflowerLogo.png" alt="logo sunflower"> </a>
+            </div>
+             <!--==========================
+                    MENÚ NAVEGACIÓN
+              ============================-->
+            <nav class="main-navbar">
+                <ul> 
+                    <li> <a href="/">Inicio</a> </li>
+                    <li> <a href="">Productos</a> </li>
+                    <li> <a href="">Acerca de nosotros</a> </li>
+                </ul>
+            </nav>
+
+            <div class="div-main-iconos">
+                <div class="main-div-search">
+                        <div class="div-search"> 
+                            <form action="/search" method="POST" >   
+                                <div class="div-main-busqueda">
+                                    <input class="input-busqueda" type="search" name="busqueda" ></input>
+                                    <button type="submit" class="ilupa"><i class="fas fa-search"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                </div>
+                <div class="div-secundario-iconos">
+                    <div class="login">
+                        <a href="" >
+                            <i class="fas fa-user"></i>
+                        </a>
+                    </div>
+                    <div class="carrito">
+                        <a href="">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </div>
+                    <div class="hamburguer-buttom">
+                        <a href="" >
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div>
-      <form action="/" method="POST">   
-        <input class="buscar" type="text" placeholder="Buscar...">
-        <button type="submit"><i class="fas fa-search lupa"></i></button>
-      </form>
-    </div>
-    <div class="carrito">
-       <a href><i class="fas fa-shopping-cart"></i></a>
-    </div>
-    <div>
-       <a href><i class="fas fa-bars" id="menu"></i></a>
-    </div>
-  </div>
-</nav>
- </header>
+   
+    
+</header>
+
  <!--Carrusel-->
  <div class="carrusel">
    <ul id="autoWidth" class="cs-hidden">

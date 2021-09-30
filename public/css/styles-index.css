@@ -154,8 +154,13 @@ main img {
 }
 
 @media (min-width:769px) {
+    .producto-destacado {
+        margin: 10px;
+    }
     .cuatro-articulos {
         display: flex;
+    }    
+    .dos-articulos {
+        display:contents;
     }
-
 }
