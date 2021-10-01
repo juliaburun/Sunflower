@@ -5,10 +5,10 @@ Acerca del proyecto: Es un sitio dedicado a la comercialización de productos de
 Público objetivo: El sitio apunta a hombres y mujeres de más de 20 años.
 
 Integrantes del equipo:
-Julia Burundarena,
-Johanna Niño,
-Ariel Cruz,
-Yolfer Villalobos
+Julia Burundarena: Docente
+Johanna Niño: experiencia en docencia y coordinadora de proyectos tecnológicos.
+Ariel Cruz: Administrador de una empresa de seguridad 
+Yolfer Villalobos: Administrador de servidores.
 
 wireframes: https://www.figma.com/file/sBjmJkEsVOPOP7fw0O2rJm/SUNFLOWER?node-id=0%3A1
 
