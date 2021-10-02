@@ -44,36 +44,45 @@ a {
     margin-top: 10px;
 }
 
-#menu {
-    margin:10px;
-    margin-top: 13px;
-}
+/*=======================================  PRINCIPIO DEL CARRUSEL ===================================*/
 
-body {
-    background-color: white;
+/*CONTENEDOR TODA LA LISTA*/
+.slider{
+    width: 95%;
+    margin: auto;  
+    overflow: hidden;
 }
+.slider ul{
+    padding: 0;
+    display: flex;
+    width: 400%;
+  
+    animation: cambio 20s infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+.slider li{
+    list-style-type: none;
+    width: 100%;
+    
+}
+.slider img{
+    width: 100%;
+}
+@keyframes cambio{
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+    
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+    
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
 
-.menu{
-    text-align: center;
-    margin: 20px;
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
 }
-  
-.menu li{
-    display: inline-block;
-    text-align: center;
-}
-  
-.menu li a{
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    background-color: #edafa4;
-    padding: 10px;
-    width: 20px;
-    height: 20px;
-    font-size: 20px;
-    border-radius: 100%;
-  }
+/*=============================== TERMINA EL CARRUSEL ===============================*/
 
 .copy {
     margin-left: 20px;
@@ -82,6 +91,9 @@ body {
 
 .frase{
     margin-left: 15px;
+    font-weight: 600;/*AGREGADO / ARIEL*/
+    font-size: 16px;/*AGREGADO / ARIEL*/
+
 }
 
 .autora-frase {
