@@ -3,45 +3,12 @@
     font-family: 'Quicksand', sans-serif;;
 }
 
-.container-header {
-    display:flex;
-    flex-direction: row;
-    background-color: #edafa4;
-    padding: 10px;
-}
-
-nav {
-    display: flex;
-    justify-content: flex-end;
-    width: 50%;
-}
-
-.logo {
-    width: 50%;
-}
-
-a {
-    text-decoration: none;
-    color: white
-}
-.login {
-    margin: 10px;
-    margin-top: 10px;
-}
-                        /* ARREGLAR LUPAAAA */
-.buscar{
-    border-radius: 5px;
-    width: 100px;
-    margin-top: 5px;
-    max-width: 70px;
-    padding: 3px;
- /*   background-repeat: no-repeat;  Lupa que queda dentro, pero no es un botón.
-    background-image: url('/images/lupa.svg')*/
-}
-
-.carrito {
-    margin:10px;
-    margin-top: 10px;
+ /*****************************
+ BARRA ENTRE EL HEADER Y EL MAIN
+ ******************************/
+ .space-between-header-main{
+    background-color: var(--grisClaro);
+    height: 5px;
 }
 
 /*=======================================  PRINCIPIO DEL CARRUSEL ===================================*/
@@ -98,6 +65,7 @@ a {
 
 .autora-frase {
     text-align: end;
+    margin-right: 39px;
 }
 
 main {

@@ -21,7 +21,8 @@
 ***********************/
 
 .main-header{
-    background-color: var(--rosa);
+   /* background-color: var(--rosa);*/
+    background-image: url("/img/tierra.jpg");
     padding: 5px;
     /* border: chartreuse solid 3px; */
     /* height: 50%; */
