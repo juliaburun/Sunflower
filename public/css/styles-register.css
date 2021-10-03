@@ -88,7 +88,7 @@ input[type="password"]
 }
 /*MANITO CUANDO PASAS SOBRE EL BOTON ENVIAR*/
 .boton-enviar:hover{
-    background-color: var(--negroFuerte);
+    background-color: var(--marron);
     color: var(--rosa);
     font-weight: 500;
     transition: all 1s;

@@ -23,7 +23,7 @@ body{
 footer {
     bottom: 0px;
     width: 100%;
-    background: #111;
+    background: var(--marron);
     font-family: 'Poppins', sans-serif;
     /* margin-top: 40px; */
 }

@@ -183,7 +183,7 @@ BARRA ENTRE EL HEADER Y EL MAIN
 }
 
 .comprar:hover{
-    background-color: var(--negroFuerte);
+    background-color: var(--marron);
     color: var(--rosa);
     font-weight: 500;
     transition: all 1s;

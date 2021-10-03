@@ -303,6 +303,11 @@
        margin-right: 10px;
    }
 
+   .main-navbar ul li a:hover{
+       color: var(--rosa);
+       transition: all 1s;
+   }
+
    .main-navbar a{
        font-size: 18px;
        color: var(--blanco);
