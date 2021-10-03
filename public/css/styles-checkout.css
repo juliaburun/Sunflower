@@ -7,14 +7,6 @@
     width: 100%;
 } */
 
-header {
-    background-color: #edafa4;
-}
-
-
-/*****************************
-           HEADER
- ******************************/
 
 body {
     font-family: 'Quicksand', sans-serif;
@@ -189,6 +181,13 @@ input[type="phone"] {
     padding: 10px 0px;
     cursor: pointer;
     margin: 10px 20px;
+}
+
+.box-send:hover, .box-send1:hover{
+    background-color: var(--negroFuerte);
+    color: var(--rosa);
+    font-weight: 500;
+    transition: all 1s;
 }
 
 .box-send1 {
@@ -419,177 +418,3 @@ input[type="phone"] {
 }
 
 
-/*================================================
-                   FOOTER
-================================================*/
-
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-footer {
-    bottom: 0px;
-    width: 100%;
-    background: #111;
-    font-family: 'Poppins', sans-serif;
-    /* margin-top: 40px; */
-}
-
-.main-content2 {
-    color: #d9d9d9;
-    display: flex;
-}
-
-.main-content2 .box2 {
-    flex-basis: 50%;
-    padding: 10px 20px;
-}
-
-.main-content2 .box2 h2 {
-    font-size: 1.125rem;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-.main-content2 .box2 .content2 {
-    margin: 20px 0 0 0;
-    position: relative;
-}
-
-.box2 .content2:before {
-    position: absolute;
-    content: '';
-    top: -10px;
-    height: 2px;
-    width: 100%;
-    background: #1a1a1a;
-}
-
-.box2 .content2:after {
-    position: absolute;
-    content: '';
-    height: 2px;
-    width: 15%;
-    background: var(--rosa);
-    top: -10px;
-}
-
-.left2 .content2 p {
-    text-align: justify;
-}
-
-.left2 .content2 .social2 {
-    margin: 20px 0 0 0;
-}
-
-.left2 .content2 .social2 a {
-    padding: 0 2px;
-    text-decoration: none;
-    color: #d9d9d9;
-}
-
-.left2 .content2 .social2 a span {
-    height: 40px;
-    width: 40px;
-    background: #1a1a1a;
-    line-height: 40px;
-    text-align: center;
-    font-size: 18px;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.left2 .content2 .social2 a span:hover {
-    background: var(--rosa);
-}
-
-.center2 .content2 .text2 {
-    font-size: 1.0625rem;
-    font-weight: 500;
-    padding-left: 10px;
-}
-
-.center2 .content2 .fa {
-    font-size: 1.4375rem;
-    background: #1a1a1a;
-    height: 45px;
-    width: 45px;
-    line-height: 45px;
-    text-align: center;
-    border-radius: 50%;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-.center2 .content2 .fa:hover {
-    background: var(--rosa);
-}
-
-.center2 .content2 .phone2 {
-    margin: 10px 0;
-}
-
-.right2 form .text2 {
-    font-size: 1.0625rem;
-    margin-bottom: 2px;
-    color: #656565;
-}
-
-.right2 form .msg2 {
-    margin-top: 10px;
-}
-
-.right2 form input,
-.right2 form textarea {
-    width: 100%;
-    font-size: 1.0625rem;
-    background: #151515;
-    padding-left: 10px;
-    border: 1px solid #222222;
-}
-
-.right2 form input:focus,
-.right2 form textarea:focus {
-    outline-color: #3498db;
-}
-
-.right2 form input {
-    height: 35px;
-}
-
-.right2 form .btn2 {
-    margin-top: 10px;
-}
-
-.right2 form .btn2 button {
-    height: 40px;
-    width: 100%;
-    border: none;
-    outline: none;
-    background: var(--rosa);
-    font-size: 1.0625rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.right2 form .btn2 button:hover {
-    background: var(--negro);
-    color: var(--blanco);
-}
-
-.bottom2 center {
-    padding: 5px;
-    font-size: 0.9375rem;
-    background: var(--negroFuerte);
-}
-
-.bottom2 center span {
-    color: var(--grisOscuro);
-}
-
-.bottom2 center a {
-    color: var(--rosa);
-    text-decoration: none;
-}
-
-.bottom2 center a:hover {
-    text-decoration: underline;
-}

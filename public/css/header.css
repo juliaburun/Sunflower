@@ -21,7 +21,8 @@
 ***********************/
 
 .main-header{
-    background-color: var(--rosa);
+    /* background: linear-gradient(180deg, #111 0%, rgb(46, 45, 45) 100%); */
+    background: url(/img/fondo-header.jpg);
     padding: 5px;
     /* border: chartreuse solid 3px; */
     /* height: 50%; */
@@ -44,9 +45,7 @@
     /* border: solid 3px red; */
 }
 
-.main-header-top-bar .main-header-div{
-    height: 100%;
-}
+
 
 /************************
     Logo Sunflower 
@@ -135,6 +134,7 @@
     display: flex;
     flex-direction: row;
     justify-content: right;
+    
     /* border: solid 2px purple; */
 }
 
@@ -146,10 +146,14 @@
 .div-main-busqueda button{
     width: 30px;
     height: 25px;
+    background-color: #edafa4;
 }
+
+
 
 .ilupa i{
     color: var(--grisOscuro);
+    
 }
 
 /* íconos login, carrito, menú hambrguesa  */
@@ -201,26 +205,33 @@
 }
 
 .login i:hover{
-    color: var(--negroFuerte);
+    color: var(--rosa);
     transition: color 1s;
 }
 
 .carrito i:hover{
-    color: var(--negroFuerte);
+    color: var(--rosa);
     transition: color 1s;
 }
 
 
 @media (min-width:481px){
 
+    .main-header-div{
+        justify-content: space-between;
+    }
+
     .main-header-div .div-main-logo{
-        width: 50%;
+        width: 40%;
+        
        /*  border: cyan solid 3px; */
     }
 
     .main-header-div .div-main-iconos{
-        width: 50%;
+        width: 40%;
         margin-bottom: 10px;
+        justify-content: flex-end;
+        margin-right: 0;
     }
 
     .main-div-search{
@@ -245,18 +256,22 @@
        /*  border: black solid 2px; */
     }
 
+    .login i, .carrito i, .hamburguer-buttom i{
+        font-size: 18px;
+       }
+
     .hamburguer-buttom {
         margin-right: 0;
     }
 
     .div-main-busqueda input{
         width: 80%;
-        height: 40px;
+        height: 30px;
     }
     
     .div-main-busqueda button{
         width: 30px;
-        height: 40px;
+        height: 30px;
         font-size: 20px;
     }
 
@@ -266,7 +281,7 @@
 @media (min-width:769px){
 
     .main-header-div .div-main-logo{
-        width: 30%;
+        width: 15%;
        /*  border: cyan solid 3px; */
     }
 
@@ -289,10 +304,23 @@
    }
 
    .main-navbar a{
-       font-size: 16px;
-       color: var(--grisOscuro);
+       font-size: 18px;
+       color: var(--blanco);
        font-weight: bold;
    }
+
+   .div-main-busqueda input{
+    width: 80%;
+    height: 30px;
+    }
+
+    .div-main-busqueda button{
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+    }
+
+   
 
    .hamburguer-buttom{
        display: none;

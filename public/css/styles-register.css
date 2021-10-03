@@ -88,8 +88,10 @@ input[type="password"]
 }
 /*MANITO CUANDO PASAS SOBRE EL BOTON ENVIAR*/
 .boton-enviar:hover{
-    background: #B0B3AF;
-    color: black;
+    background-color: var(--negroFuerte);
+    color: var(--rosa);
+    font-weight: 500;
+    transition: all 1s;
 }
 
 /*============================== MEDIA QUERIES ===============================*/
