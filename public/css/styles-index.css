@@ -70,9 +70,8 @@ BARRA ENTRE EL HEADER Y EL MAIN
 
 .frase{
     margin-left: 15px;
-    font-weight: 600;/*AGREGADO / ARIEL*/
-    font-size: 16px;/*AGREGADO / ARIEL*/
-
+    font-weight: 600;
+    font-size: 16px;
 }
 
 .autora-frase {
@@ -134,6 +133,19 @@ main img {
     color: black;
 }
 
+.container-ultimo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-ultimo p {
+    font-size: 16px;
+}
+.container-ultimo img {
+    width: 15px;
+}
+
+
 
 @media (min-width:481px) {
     .producto-destacado {
@@ -141,6 +153,22 @@ main img {
     }
     .dos-articulos {
         display: flex;
+    }
+    .autora-frase {
+        text-align: end;
+        margin-right: 200px;
+    }
+    .container-ultimo {
+        margin: 30px;
+    }
+    .container-ultimo p {
+        font-size: 18px;
+    }
+    .container-ultimo img {
+        width: 20px;
+    }
+    .pago-texto {
+        margin-top: 11px;
     }
 
 }
