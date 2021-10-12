@@ -4,6 +4,20 @@ const app = express();
 //requiriendo Path
 const path = require('path');
 
+app.set("view engine", "ejs");
+
+//requiriendo al indexRoutes
+const indexRoutes=require('./routes/indexRoutes');
+
+//requiriendo al productsRoutes
+const productsRoutes=require('./routes/productsRoutes');
+
+//requiriendo al cartRoutes
+const cartRoutes=require('./routes/cartRoutes');
+
+//requiriendo al loginRoutes
+const loginRoutes=require('./routes/loginRoutes');
+
 //corriendo el servidor
 app.listen(3000, () => {
     console.log('Server running on port 3000', 'http://localhost:3000');
@@ -14,10 +28,15 @@ const publicPath = path.resolve(__dirname, './public');
 app.use(express.static(publicPath));
 
 // ***********enlazando las páginas************************
-// Página inicio
-app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/index.html'));
-});
+// index
+app.use('/', indexRoutes);
+// productos
+app.use('/products', productsRoutes);
+// carrito de compras
+app.use('/cart', cartRoutes);
+// login
+app.use('/login', loginRoutes);
+
 
 // Página login
 app.get('/login', (req, res) => {
@@ -29,10 +48,10 @@ app.get('/register', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/register.html'));
 });
 
-// Página detalle producto
+/* // Página detalle producto
 app.get('/productDetail', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/productDetail.html'));
-});
+}); */
 
 // carrito de compras
 app.get('/productCart', (req, res) => {

@@ -25,10 +25,11 @@ BARRA ENTRE EL HEADER Y EL MAIN
 
 /*CONTENEDOR TODA LA LISTA*/
 .slider{
-    width: 90%;
+    width: 100%;
     padding: 0;
     margin: auto;  
     overflow: hidden;
+    margin-top: 95px;
 }
 .slider ul{
     padding: 0;

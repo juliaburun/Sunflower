@@ -26,8 +26,10 @@
     padding: 5px;
     /* border: chartreuse solid 3px; */
     /* height: 50%; */
-    /* position: fixed;
-    margin-top: 0; */
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    top: 0;
 }
 
 .main-header .main-header-top-bar{
@@ -222,7 +224,7 @@
     }
 
     .main-header-div .div-main-logo{
-        width: 40%;
+        width: 30%;
         
        /*  border: cyan solid 3px; */
     }

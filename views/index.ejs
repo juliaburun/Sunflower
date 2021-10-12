@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivero Sunflower</title>
+    <!--links para la tipografía-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <!--nuestras hojas de estilos-->
+    <link rel="stylesheet" href="/css/styles-index.css" />
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/colores.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <!--link a los íconos de fontawesome-->
+    <script src="https://kit.fontawesome.com/606e397101.js" crossorigin="anonymous"></script>
+</head>
+
+<body> <!--HEADER-->
+  <header class="main-header">
+    <div class="main-header-top-bar">
+        <div class="main-header-div">
+            <div class="div-main-logo">
+               <a href="/"> <img src="/img/sunflowerLogo.png" alt="logo sunflower"> </a>
+            </div>
+             <!--==========================
+                    MENÚ NAVEGACIÓN
+              ============================-->
+            <nav class="main-navbar">
+                <ul> 
+                    <li> <a href="/">Inicio</a> </li>
+                    <li> <a href="">Productos</a> </li>
+                    <li> <a href="">Acerca de nosotros</a> </li>
+                </ul>
+            </nav>
+
+            <div class="div-main-iconos">
+                <div class="main-div-search">
+                        <div class="div-search"> 
+                            <form action="/search" method="POST" >   
+                                <div class="div-main-busqueda">
+                                    <input class="input-busqueda" type="search" name="busqueda" placeholder="¿Qué estás buscando?" ></input>
+                                    <button type="submit" class="ilupa"><i class="fas fa-search"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                </div>
+                <div class="div-secundario-iconos">
+                    <div class="login">
+                        <a href="/login" >
+                            <i class="fas fa-user"></i>
+                        </a>
+                    </div>
+                    <div class="carrito">
+                        <a href="/productCart">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </div>
+                    <div class="hamburguer-buttom">
+                        <a href="" >
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    
+</header>
+<!--==========================
+       BORDE ENTRE HEADER Y MAIN
+    ============================-->      
+
+    <div class="space-between-header-main">
+
+    </div>
+
+    <!--CONTENEDOR DE LAS IMAGENES DEL CARRUSEL-->
+  <div class="slider">
+      <ul>
+          <li><img src="/img/balcon-flores.jpeg" alt=""></li>
+          <li><img src="/img/plantauno.jpg" alt=""></li>
+          <li><img src="/img/plantados.jpg" alt=""></li>
+          <!-- <li><img src="/img/plantatres.jpg" alt=""></li> -->
+          <li><img src="/img/plantacuatro.jpg" alt=""></li>
+      </ul>
+  </div>
+  <!--ACA TERMINA EL CONTENEDOR DE LAS IMAGENES DEL CARRUSEL-->
+
+<main>
+  <div>       
+      <h1 class="copy">Conectate con la naturaleza</h1>
+      <p class="frase">"El amor por la jardinería es una semilla que una vez sembrada nunca muere."</p>
+      <p class="autora-frase">Gertrude Jekyll</p>
+  </div>
+
+  <!--Sección plantas de interior-->
+<h2 class="productos-destacados">Plantas de interior</h2>
+  <section class="destacados">
+  <div class="cuatro-articulos">
+    <div class="dos-articulos">
+    <div class="producto-destacado">
+     <article>
+       <img src="/img/geranio.png">
+       <div class="articulo-pie">
+         <p class="nombre-planta">Geranio</p>
+         <p class="nombre-cienti">Pelargonium peltatum</p>
+         <p class="precio">$470</p>
+       </div>
+     </article>
+    </div>
+
+    <div class="producto-destacado">
+      <article>
+        <img src="/img/sanseviera.png">
+        <div class="articulo-pie">
+          <p class="nombre-planta">Sanseviera</p>
+          <p class="nombre-cienti">Dracaena trifasciata</p>
+          <p class="precio">$750</p>
+        </div>
+      </article>
+     </div>
+    </div>
+
+    <div class="dos-articulos">
+     <div class="producto-destacado">
+      <article>
+        <img src="/img/oxalis.png">
+        <div class="articulo-pie">
+          <p class="nombre-planta">Oxalis rubra</p>
+          <p class="nombre-cienti">Oxalis corniculata</p>
+          <p class="precio">$580</p>
+        </div>
+      </article>
+     </div>
+
+     <div class="producto-destacado">
+      <article>
+        <img src="/img/erica.png">
+        <div class="articulo-pie">
+          <p class="nombre-planta">Erica</p>
+          <p class="nombre-cienti">Cuphea hyssopifolia</p>
+          <p class="precio">$160</p>
+        </div>
+      </article>
+     </div>
+     </div>
+    </div>
+  </section>
+    <!--Ofertas-->
+  <h2 class="productos-destacados">Plantas de exterior</h2>
+  <section class="destacados">
+    <div class="cuatro-articulos">
+      <div class="dos-articulos">
+      <div class="producto-destacado">
+       <article>
+         <img src="/img/lavanda.png">
+         <div class="articulo-pie">
+           <p class="nombre-planta">Lavanda</p>
+           <p class="nombre-cienti">Lavanda dentata</p>
+           <p class="precio">$490</p>
+         </div>
+       </article>
+      </div>
+  
+      <div class="producto-destacado">
+        <article>
+          <img src="/img/orquidea.png">
+          <div class="articulo-pie">
+            <p class="nombre-planta">Orquídea</p>
+            <p class="nombre-cienti">Orquídea phalaenopsis</p>
+            <p class="precio">$4800</p>
+          </div>
+        </article>
+       </div>
+      </div>
+  
+      <div class="dos-articulos">
+       <div class="producto-destacado">
+        <article>
+          <img src="/img/begonia.png">
+          <div class="articulo-pie">
+            <p class="nombre-planta">Flor de azúcar</p>
+            <p class="nombre-cienti">Begonia semperflorens</p>
+            <p class="precio">$140</p>
+          </div>
+        </article>
+       </div>
+  
+       <div class="producto-destacado">
+        <article>
+          <img src="/img/bambu.png">
+          <div class="articulo-pie">
+            <p class="nombre-planta">Caña de Bambú</p>
+            <p class="nombre-cienti">Bambussa spp.</p>
+            <p class="precio">$650</p>
+          </div>
+        </article>
+       </div>
+       </div>
+      </div>
+    </section>
+    <!--Última seccion-->
+    <section>
+      <div class="container-ultimo">
+       <div class="camion-envio">
+        <i class="fas fa-truck"></i>
+         <p>Envíos área metropolitana</p>     
+      </div>
+      <div class="pago-en-linea">
+        <img src="/img/pago.png">
+          <p class="pago-texto">Pago en línea</p>
+      </div>
+      <div class="cambios">
+        <i class="fas fa-exchange-alt"></i>
+          <p>Cambios y garantías</p>
+      </div>
+      <div class="compra-segura">
+        <i class="fas fa-shield-alt"></i>
+          <p>Compra segura</p>
+      </div>
+    </div>
+    </section>
+</main>
+<!--Footer-->
+<footer>
+  <div class="main-content2">
+  <div class="left2 box2">
+      <h2>Sobre Nosotros</h2>
+      <div class="content2">
+      <p>Creamos Sunflower porque, simplemente, amamos las plantas. Al inaugurar nuestra tienda, queríamos crear un espacio cálido y acogedor para todos, desde los admiradores de las plantas hasta los cultivadores expertos. </p>
+      <p>Una de nuestras partes favoritas del funcionamiento de Sunflower es obtener las plantas más hermosas y exóticas que podamos tener en nuestras manos y, por supuesto, compartirlas con todos ustedes.</p>
+      <div class="social2">
+          <a href="https://facebook.com/"><span class="fa fa-facebook-f"></span></a>
+          <a href="http://twitter.com/"><span class="fa fa-twitter"></span></a>
+          <a href="https://instagram.com/"><span class="fa fa-instagram"></span></a>
+          <a href="https://youtube.com/"><span class="fa fa-youtube"></span></a>
+      </div>
+      </div>
+  </div>
+  <div class="center2 box2">
+      <h2>Direccion</h2>
+      <div class="content2">
+          <div class="place2">
+              <span class="fa fa-map-marker"></span>
+              <span class="text2">Av. Corrientes 348</span>
+          </div>
+          <div class="phone2">
+              <span class="fa fa-phone"></span>
+              <span class="text2">+5411- 4321-0000</span>
+          </div>
+          <div class="email2">
+              <span class="fa fa-envelope"></span>
+              <span class="text2">sunflower@gmail.com</span>
+          </div>
+      </div>
+  </div>
+  <div class="right2 box2">
+      <h2>Contacta con nosotros</h2>
+      <div class="content2">
+      <form action="#">
+          <div class="email2">
+          <div class="text2">Email *</div>
+          <input type="email" required>
+          </div>
+          <div class="msg2">
+          <div class="text2">Mensaje *</div>
+          <textarea rows="2" cols="25" required></textarea>
+          </div>
+          <div class="btn2">
+          <button type="submit">Enviar</button>
+          </div>
+      </form>
+      </div>
+  </div>
+  </div>
+  <!-- <div class="container-map2">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.843800421494!2d-58.83752258502619!3d-34.63338736657504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc93fbdd82d7b1%3A0x6a5d8a92f152c39!2sEl%20Arreo%20250%2C%20La%20Reja%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1613067829897!5m2!1ses-419!2sar" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+  </div> -->
+  <div class="bottom2">
+  <center>
+      <span class="credit2">Creado por <a href="#">Sunflower</a> | </span>
+      <span class="fa fa-copyright"></span><span> 2021 Todos los derechos reservados.</span>
+  </center>
+  </div>
+</footer>
+</body>
+
+</html>

@@ -7,13 +7,7 @@ img{
     
 }
 
-header{
-    background-color:var(--rosa);
-    
-}
-/*****************************
-          HEADER
-******************************/
+
 body{
     font-family: 'Quicksand', sans-serif;
     font-size: 14px;
@@ -26,12 +20,19 @@ BARRA ENTRE EL HEADER Y EL MAIN
 ******************************/
 .space-between-header-main{
     background-color: var(--grisClaro);
-    height: 5px;
+    height: 4px;
+   
+    
 }
 
 /*****************************
           MAIN
 ******************************/
+.main-principal{
+    margin-top: 110px;
+
+}
+
 .bar-carrusel{
     width: 100%;
     /* border: solid 2px gold ; */
@@ -266,6 +267,12 @@ BARRA ENTRE EL HEADER Y EL MAIN
     body main{
         width: 100%;
     }
+
+    .main-principal{
+        margin-top: 160px;
+    
+    }
+
    .main principal .main-principal-carrusel{
         width: 100%;
         height: 100%;
