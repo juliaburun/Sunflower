@@ -35,6 +35,10 @@ body {
 BARRA ENTRE EL HEADER Y EL MAIN
 ******************************/
 
+main {
+    margin-top: 120px;
+}
+
 .space-between-header-main {
     background-color: var(--grisClaro);
     height: 5px;
