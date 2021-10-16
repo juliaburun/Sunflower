@@ -24,70 +24,160 @@
     <!--==========================
            MAIN
 ============================-->
-    <main>
+<main>
+    <div class="cart-template">
+        <div class="cart-template-products">
+            <div class="cart-title">
+                <h1>Tu Carrito</h1>
+            </div>
+            <!-- <div class="actualizar">
+                <a href="#" continuar="continuar">Actualizar carrito | Continuar comprando</a>
+            </div> -->
+            <!-- ARTICULOS DEL CARRITO DE COMPRAS -->
+            <section class="content">
+                <article class="cartProducts">
+                    <div class="items">
+                        <div class="items-img">
+                            <a href="#"><img src="/img/IMG_4795-2_2048x2048.jpg" alt=""></a>
+                        </div>
+                        <div class="items-content">
+                            <div class="items-desc">
+                                <div class="item-title">
+                                    <a href="#"><span>Homalomena 'Selby'</span></a>
+                                </div>
+                                
+                                <div class="items-description">
+                                    <p>Maceta: 12</p>
+                                </div>    
+                            </div>
+                            <div class="amount-cost">
+                                <h3>$90.000</h3>
+                            </div> 
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="amount">
+                        <div class="amount-button">
+                            <div class="amount-group">
+                                <a href=""><i class="far fa-minus-square"></i></a>
+                                <input type="text" value="1">
+                                <a href=""><i class="far fa-plus-square"></i></a> 
+                            </div>
+                        </div>
+                        <div class="amount-subtotal">
+                            <h3 class="amount-total">Total producto:</h3>
+                            <h3>$90.000</h3>
+                        </div>
+                        <div class="close">
+                            <div>
+                                <i class="fas fa-times"></i>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
-        <div>
-            <h1 style="text-align: center;">Tu Carrito</h1>
+                <article class="cartProducts">
+                    <div class="items">
+                        <div class="items-img">
+                            <a href="#"><img src="/img/suculenta variada.jpg" alt=""></a>
+                        </div>
+                        <div class="items-content">
+                            <div class="items-desc">
+                                <div class="item-title">
+                                    <a href="#"><span>Suculenta variada</span></a>
+                                </div>
+                                
+                                <div class="items-description">
+                                    <p>Maceta: 10</p>
+                                </div>    
+                            </div>
+                            <div class="amount-cost">
+                                <h3>$45.000</h3>
+                            </div> 
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="amount">
+                        <div class="amount-button">
+                            <div class="amount-group">
+                                <a href=""><i class="far fa-minus-square"></i></a>
+                                <input type="text" value="1">
+                                <a href=""><i class="far fa-plus-square"></i></a> 
+                            </div>
+                        </div>
+                        <div class="amount-subtotal">
+                            <h3 class="amount-total">Total producto:</h3>
+                            <h3>$45.000</h3>
+                        </div>
+                        <div class="close">
+                            <div>
+                                <i class="fas fa-times"></i>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
         </div>
-        <div class="actualizar">
-            <a href="#" continuar="continuar">Actualizar carrito | Continuar comprando</a>
-        </div>
-        <div class="content">
-            <div class="items">
-                <div class="items-img">
-                    <img src="/img/IMG_4795-2_2048x2048.jpg" alt="" srcset="">
+
+            <!-- DETALLE DE LA COMPRA -->
+        <div class="cart-template-detail">
+            <div class="cart-title-detail">
+                <h1>Resumen de tu compra</h1>
+            </div>
+            <div class="subtotal">
+                <div class="info">
+                    <h2>Subtotal:</h2>
                 </div>
-                <div class="items-desc">
-                    <div>
-                        <p>Homalomena 'Selby'</p>
-                    </div>
-                    <!-- <div>
-                        <p>6"</p>
-                    </div> -->
-                    <div class="cost">
-                        <p>$1.250,25</p>
-                    </div>
+                <div class="subtotal-cost">
+                    <h2>$135.000</h2>
                 </div>
             </div>
-            <div class="amount">
-                <div class="amount-button">
-                    <div class="amount-group">
-                        <button>-</button>
-                        <input type="text" value="1">
-                        <button>+</button>
-                    </div>
+
+            <div class="discounts">
+                <div class="info">
+                    <h2>Descuentos:</h2>
                 </div>
-                <div class="close">
-                    <div>
-                        <i class="fas fa-times"></i>
-                    </div>
+                <div class="discount-cost">
+                    <h2>$</h2>
                 </div>
             </div>
-        </div>
 
-        <div class="subtotal">
-            <hr>
-            <h2>Subtotal:</h2>
-            <hr>
-        </div>
-
-        <div class="subtotal_final">
-            <h2>$1.250,25</h2>
-        </div>
-
-        <div class="instrucciones">
-            <h2>Escribe alguna instrucción al vendedor:</h2>
-        </div>
-        <div class="area-boton">
-            <div class="textarea">
-                <textarea name="textarea" rows="10" cols="36">...</textarea>
+            <div class="total">
+                <div class="info">
+                    <h2>Total:</h2>
+                </div>
+                <div class="total-cost">
+                    <h2>$135.000</h2>
+                </div>
             </div>
-            <!-- <div class="carrito-comprar"> -->
-            <button class="comprar">Comprar</button>
-            <!-- </div> -->
-        </div>
 
-    </main>
+            <div class="instructions">
+                <div class="instructions-title">
+                    <h2>Escribe alguna instrucción al vendedor:</h2>
+                </div>
+
+                <div class="instructions-description">
+                    <textarea name="textarea" rows="10" cols="36"></textarea>
+                </div>
+
+                <div class="instructions-comprar">
+                    <button type="submit" name="comprar"  class="comprar">Finalizar compra</button>
+                </div>
+
+                <div class="instructions-vaciar">
+                    <button type="reset" name="vaciar"  class="vaciar">Vaciar carrito</button>
+                </div>
+
+                <div class="instructions-seguirComprando">
+                    <button type="submit" name="seguirComprando"  class="seguirComprando">Seguir comprando</button>
+                </div>
+            </div>
+       </div>
+    </div>
+
+</main>
 
       <!-- FOOTER -->
       <%- include('../partials/footer') %>
