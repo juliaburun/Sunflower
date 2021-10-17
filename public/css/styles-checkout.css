@@ -13,14 +13,154 @@
      margin: 0;
  }
 
+ /*********************************
+      INFORMACIÓN DE LA COMPRA
+**********************************/
 
 .container-main {
-    margin-top: 190px;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    /* border: red solid 3px; */
+    
 }
 
+.container1{
+    width: 95%;
+    margin: auto;
+    border: solid 1px var(--grisClaro);
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+    
+    /* border: turquoise solid 3px; */
+}
+
+.info-contact h1{
+    font-size: 1.5em;
+    text-align: left ;
+    font-weight: 900;
+    padding-bottom: 10px;
+    border-bottom: solid 2px var(--grisClaro);
+    margin-bottom: 30px;
+}
+
+.account-login a{
+    text-decoration: none;
+    color: var(--rosa);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.account{
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.account .account-title{
+    width: 60%;
+   
+}
+
+.account-title h2{
+    font-size: 1.1em;
+    margin: 0;
+}
+
+.account .account-login{
+    width: 40%;
+}
+
+/*********************************
+      FORMULARIO DE ENVÍO
+**********************************/
+
+.forms-checkout{
+    width: 100%;
+    /* border: black solid 3px; */
+}
+
+
+.delivery{
+    margin-bottom: 30px;
+}
+
+.method-delivery{
+    font-size: 1.1em;
+    font-weight: 700;
+    margin: 0;
+   
+}
+
+.deliveryMethod{
+    margin-bottom: 8px;
+}
+
+.control-space-top{
+    display: block;
+    color: var(--grisOscuro);
+}
+
+.control1, .control2{
+    margin-bottom: 9px;
+    font-weight: 700;
+}
+
+.control1:hover, .control2:hover{
+    color: var(--rosa);
+}
+
+.deliveryAddres{
+    /* border: tomato solid 3px; */
+    width: 100%;
+}
+
+.address-delivery h2{
+    font-size: 1.5em;
+    text-align: left ;
+    font-weight: 900;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.control-div{
+    margin-bottom: 20px;
+}
+
+.individual-box input{
+    width: 100%;
+    height: 50px;
+    border: 0;
+    border-radius: 5px;
+    border: solid 2px #ebebeb;
+    font-weight: 700;
+}
+
+.individual-box input:hover{
+    border: solid 2px var(--rosa);
+}
+
+.label-titulo, .country option {
+    font-weight: bold;
+}
+
+.country select{
+    width: 100%;
+    font-weight: bold;
+    font-size: 14px;
+
+}
+
+/*********************************
+      RESUMEN DE LA COMPRA
+**********************************/
 .content {
     /*    border: 1px solid black; */
-    width: 100%;
+    width: 90%;
     margin: auto;
     margin-top: 35px;
     /* border: saddlebrown solid 3px; */
@@ -110,12 +250,16 @@
 
 
 .cart-template-detail{
-    width: 90%;
+    width: 95%;
     margin: auto;
+    border: solid 1px var(--grisClaro);
+    margin-top: 20px;
     
 }
 
 .cart-detail{
+    width: 90%;
+    margin: auto;
     background-color: var(--grisClaro) ;
 }
 
@@ -163,6 +307,175 @@
 .subtotal h2, .discounts h2, .total h2{
     font-size: 16px;
 }
+
+/* Botones */
+
+.buttons{
+    width: 90%;
+    margin: auto;
+    /* border: red 2px solid; */
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.button-continuar, .button-regresar {
+    width: 90%;
+    margin: auto;
+    /* border: blue solid 3px; */
+    text-align: center;
+}
+
+.continuar {
+    border: none;
+    background-color: #edafa4;
+    padding: 15px 41px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 17px;
+    color: var(--blanco);
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.regresar{
+    border: none;
+    background-color: var(--rosa);
+    padding: 15px 21px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 17px;
+    color: var(--blanco);
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 3px;
+    /* border: solid 1px var(--blanco); */
+}
+
+.continuar:hover, .regresar:hover{
+    background-color: var(--marron);
+    color: var(--rosa);
+    font-weight: 500;
+    transition: all 1s;
+}
+
+
+/*****************************
+      PUNTOS DE QUIEBRE
+******************************/
+
+/****************************
+      BREAKPOINT TABLET     
+*****************************/
+@media (min-width:481px){
+
+    .container-main{
+        margin-top: 150px;
+    }
+
+    .container1{
+        width: 80%;
+    }
+
+    .container{
+        width: 90%;  
+    }
+
+    .cart-template-detail{
+        width: 80%;
+    }
+
+    .cart-detail{
+        width: 90%;
+    }
+
+    .items-img{
+        width: 15%;
+        /* border: 3px solid blue; */
+    }
+    
+    .items-content{
+        width: 90%;
+        margin-left: 10px;
+    }
+
+    .account .account-title{
+        width: 35%;
+    }
+
+    .account .account-login{
+        width: 65%;
+    }
+
+    .buttons{
+        width: 70%;
+        display: flex;
+    }
+}
+
+/****************************
+      BREAKPOINT pc     
+*****************************/
+
+@media (min-width:769px) {
+
+    .container-main{
+        display: flex;
+        width: 95%;
+        margin: auto;
+        margin-top: 140px;
+        margin-bottom: 40px;
+    }
+
+    .container1{
+        width: 80%;
+        margin-right: 20px;
+    }
+
+    .container{
+        width: 90%;  
+    }
+
+    .account .account-title{
+        width: 25%;
+    }
+
+    .account .account-login{
+        width: 75%;
+    }
+
+    .cart-template-detail{
+        width: 50%;
+        
+        margin-top: 0;
+        /* border: blueviolet solid 3px; */
+    }
+
+    .cart-detail{
+        width: 90%;
+    }
+
+    .items-img{
+        width: 30%;
+        /* border: 3px solid blue; */
+    }
+
+    .buttons{
+        width: 90%;
+    }
+
+    .button-continuar, .button-regresar{
+        margin-bottom: 10px;
+    }
+
+}
+
+
+
 
 
 

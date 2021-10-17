@@ -24,84 +24,112 @@
     <main>
         <div class="container-main">
 
-            <div class="container">
-                <div class="info-contact">
-                    <p>Información de contacto:</p>
-                </div>
-
-                <div class="account">
-                    <p>¿Ya tienes una cuenta?</p>
-                </div>
-                <div class="login3">
-                    <a href="#" continuar="continuar">Login</a>
-                </div>
-
-                <form action="" method="POST" class="forms-checkout">
-                    <div class="container">
-                        <!-- ***************************
-                                MÉTODO DE ENVÍO 
-                        *******************************-->
-                        <div class="deliveryMethod">
-                            <div>
-                                <label class="method-delivery" for="metodo-envio">Método de envío</label>
-                            </div>
-                            <div class="control-space-top">
-                                <label><input type="radio" name="metodo-envio" id="metodo-envio" > <i class="fas fa-truck"></i>Envío a domicilio</label>
-                                <label><input type="radio" name="metodo-envio" id="metodo-envio"> <i class="fas fa-store"></i>Retiro en tienda</label>
-                            </div>
-                        </div>
-
-                        <!-- ***************************
-                                DIRECCIÓN DE ENVÍO 
-                        *******************************-->
-
-                        <div class="deliveryAddres">
-                            <div class="address-delivery">
-                                <h2>Dirección de envío:</h2>
-                            </div>
-                            <!-- Nombre -->
-                            <div class="individual-box">
-                                <input type="text" name="nombre" id="nombre" placeholder="Nombre:" minlength="4" required>     
-                            </div>
-                            <!-- Apellido -->
-                            <div class="individual-box">
-                                <input type="text" name="apellido" id="apellido" placeholder="Apellido:" minlength="4" required> 
-                            </div>
-                            <!-- Dirección -->
-                            <div class="individual-box">
-                                <input type="text" name="direccion" id="direccion" placeholder="Dirección:" minlength="4" required> 
-                            </div>
-
-                            <!-- País -->
-                            <div class="country">
-                                <select name="pais" id="pais">
-                                    <option selected>Seleccione el país</option>
-                                    <option value="argentina" >Argentina</option>
-                                    <option value="bolivia">Bolivía</option>
-                                    <option value="colombia">Colombia</option>
-                                    <option value="venezuela">Venezuela</option>
-                                </select>
-                            </div>
-
-                            <!-- Ciudad -->
-                            <div class="individual-box">
-                                <input type="text" name="ciudad" id="ciudad" placeholder="Ciudad:" minlength="4" required> 
-                            </div>
-
-                            <!-- Código postal -->
-                            <div class="individual-box">
-                                <input type="number" name="codigoPostal" id="codigoPostal" placeholder="Codigo Postal:" minlength="4" required> 
-                            </div>
-
-                            <!-- Teléfono -->
-                            <div class="individual-box">
-                                <input type="number" name="telefono" id="telefono" placeholder="Teléfono:" minlength="4" required> 
-                            </div>
-                        </div>
-
+            <div class="container1">
+                <div class="container">
+                    <div class="info-contact">
+                        <h1>Información de contacto:</h1>
                     </div>
 
-                </form>
+                    <div class="account">
+                        <div class="account-title" >
+                            <h2>¿Ya tienes una cuenta?</h2>
+                        </div>
+                        <div class="account-login">
+                            <a href="/login" >Login</a>
+                        </div>
+                    </div>
+
+                    <form action="" method="POST" class="forms-checkout">
+                        <div class="delivery-container">
+                            <!-- ***************************
+                                    MÉTODO DE ENVÍO 
+                            *******************************-->
+                            <div class="delivery">
+                                <div class="deliveryMethod">
+                                    <label class="method-delivery" for="metodo-envio">Método de envío</label>
+                                </div>
+                                <div class="control-space-top">
+                                    <div class="control1">
+                                        <label><input type="radio" name="metodo-envio" id="metodo-envio" > <i class="fas fa-truck"></i>  Envío a domicilio</label>
+                                    </div>
+                                    <div class="control2">
+                                        <label><input type="radio" name="metodo-envio" id="metodo-envio"> <i class="fas fa-store"></i>  Retiro en tienda</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ***************************
+                                    DIRECCIÓN DE ENVÍO 
+                            *******************************-->
+
+                            <div class="deliveryAddres">
+                                <div class="address-delivery">
+                                    <h2>Dirección de envío:</h2>
+                                </div>
+                                <!-- Nombre -->
+                                <div>
+                                    <label class="label-titulo" for="nombre">Nombres</label>
+                                </div>
+                                <div class="control-div individual-box">
+                                    <input type="text" name="nombre" id="nombre" minlength="4" required>     
+                                </div>
+                                <!-- Apellido -->
+                                <div>
+                                    <label class="label-titulo" for="apellido">Apellidos</label>
+                                </div>
+                                <div class="control-div individual-box">
+                                    <input type="text" name="apellido" id="apellido" minlength="4" required> 
+                                </div>
+                                <!-- Dirección -->
+                                <div>
+                                    <label class="label-titulo" for="direccion">Dirección</label>
+                                </div>
+                                <div class="control-div individual-box">
+                                    <input type="text" name="direccion" id="direccion" minlength="4" required> 
+                                </div>
+
+                                <!-- País -->
+                                <div class="control-div">
+                                    <label class=" label-titulo" for="pais">País</label>
+                                </div>
+                                <div class=" control-div country">
+                                    <select name="pais" id="pais">
+                                        <option value="argentina" selected >Argentina</option>
+                                        <option value="bolivia">Bolivía</option>
+                                        <option value="colombia">Colombia</option>
+                                        <option value="venezuela">Venezuela</option>
+                                    </select>
+                                </div>
+
+                                <!-- Ciudad -->
+                                <div>
+                                    <label class="label-titulo" for="ciudad">Ciudad</label>
+                                </div>
+                                <div class="control-div individual-box">
+                                    <input type="text" name="ciudad" id="ciudad" minlength="4" required> 
+                                </div>
+
+                                <!-- Código postal -->
+                                <div>
+                                    <label class="label-titulo" for="codigoPostal">Código Postal</label>
+                                </div>
+                                <div class="control-div individual-box">
+                                    <input type="number" name="codigoPostal" id="codigoPostal" minlength="4" required> 
+                                </div>
+
+                                <!-- Teléfono -->
+                                <div>
+                                    <label class="label-titulo" for="telefono">Teléfono</label>
+                                </div>
+                                <div class="control-div individual-box">
+                                    <input type="number" name="telefono" id="telefono" minlength="4" required> 
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </form>
+                </div>
             </div>
 
             <!-- ***************************
@@ -211,12 +239,19 @@
                         </div>
                     </article>
                 </section>
+                <div class="buttons">
+                    <div class="button-continuar">
+                        <button type="submit" name="continuar" class="continuar">Continuar</button>
+                    </div>
+    
+                    <div class="button-regresar">
+                        <button type="submit" name="regresar" class="regresar">Volver a carrito</button>
+                    </div>
+                
+                </div>
             </div>
             
-            <div>
-                <button class="box-send">Comprar</button>
-                <button class="box-send1">Regresar</button>
-            </div>
+            
         </div>
     </main>
 
