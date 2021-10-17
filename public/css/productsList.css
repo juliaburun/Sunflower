@@ -2,8 +2,6 @@
 margin-top: 100px;
 }
 
-
-
 .articulo-pie{
     display: flex;
     flex-direction: column;
@@ -31,11 +29,4 @@ margin-top: 100px;
     background: #edafa4;
     padding: 10px 20px;
     cursor: pointer;
-}
-
-
-@media (min-width: 769){
-    .caja-botonenviar{
-        text-align: center;
-    }
 }
