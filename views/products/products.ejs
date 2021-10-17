@@ -2,15 +2,390 @@
 <html lang="en">
 <head>
     <%-include('../partials/head') %>
-    <link rel="stylesheet" href="/css/styles-products.css">
-   <title>Document</title>
+    <link rel="stylesheet" href="/css/styles-index.css">
+    <link rel="stylesheet" href="/css/productsList.css">
+   <title>Listado de productos</title>
 </head>
 <body>
-      <!--HEADER-->
+      <!--
+        HEADER
+      -->
   <%- include('../partials/header') %>
-    <h2>Listado de productos</h2>
 
-      <!-- FOOTER -->
+  <!---- ESPACIO ENTRE HEADER Y MAIN
+  ------->
+
+  <div class="space-between-header-main"></div>
+
+  <!----------------------
+            BANNER
+    ---------------------->
+    <div class="banner">
+      <img src="/img/banner.png" alt="plantas en macetas">
+    </div>
+    
+
+    <h1 class="titulo-listado">Listado de productos</h1>
+
+      <!-----
+        Sección plantas de exterior
+        ----->
+<h2 class="productos-destacados">Plantas de exterior</h2>
+<section class="destacados">
+<div class="cuatro-articulos">
+  <div class="dos-articulos">
+  <div class="producto-destacado">
+   <article>
+     <img src="/img/geranio-2.png">
+     <div class="articulo-pie">
+       <p class="nombre-planta">Geranio</p>
+       <p class="nombre-cienti">Pelargonium peltatum</p>
+       <p class="precio">$470</p>
+       <div class="container-button">
+         <button class="boton-carrito" type="button">Agregar al carrito</button></div>
+       </div>
+   </article>
+  </div>
+
+  <div class="producto-destacado">
+    <article>
+      <img src="/img/ficus-lyrata.png">
+      <div class="articulo-pie">
+        <p class="nombre-planta">Ficus lira</p>
+        <p class="nombre-cienti">Ficus lyrata</p>
+        <p class="precio">$750</p>
+        <div class="container-button">
+          <button class="boton-carrito" type="button">Agregar al carrito</button>
+        </div>
+      </div>
+    </article>
+   </div>
+  </div>
+
+  <div class="dos-articulos">
+   <div class="producto-destacado">
+    <article>
+      <img src="/img/oxalis-rubra.png">
+      <div class="articulo-pie">
+        <p class="nombre-planta">Oxalis rubra</p>
+        <p class="nombre-cienti">Oxalis corniculata</p>
+        <p class="precio">$580</p>
+        <div class="container-button">
+          <button class="boton-carrito" type="button">Agregar al carrito</button>
+        </div>
+      </div>
+    </article>
+   </div>
+
+   <div class="producto-destacado">
+    <article>
+      <img src="/img/erica.png">
+      <div class="articulo-pie">
+        <p class="nombre-planta">Erica</p>
+        <p class="nombre-cienti">Cuphea hyssopifolia</p>
+        <p class="precio">$160</p>
+        <div class="container-button">
+          <button class="boton-carrito" type="button">Agregar al carrito</button>
+        </div>
+      </div>
+    </article>
+   </div>
+   </div>
+  </div>
+</section>
+
+<!-------Division cada 4 articulos------->
+<section class="destacados">
+  <div class="cuatro-articulos">
+    <div class="dos-articulos">
+    <div class="producto-destacado">
+     <article>
+       <img src="/img/helecho.png">
+       <div class="articulo-pie">
+         <p class="nombre-planta">Helecho</p>
+         <p class="nombre-cienti">Asplenium nidus</p>
+         <p class="precio">$740</p>
+         <div class="container-button"><button class="boton-carrito" type="button">Agregar al carrito</button></div>
+       </div>
+     </article>
+    </div>
+  
+    <div class="producto-destacado">
+      <article>
+        <img src="/img/jazmin-del-cabo.png">
+        <div class="articulo-pie">
+          <p class="nombre-planta">Jazmín del Cabo</p>
+          <p class="nombre-cienti">Gardenia jasminoides</p>
+          <p class="precio">$1200</p>
+          <div class="container-button"><button class="boton-carrito" type="button">Agregar al carrito</button></div>
+        </div>
+      </article>
+     </div>
+    </div>
+  
+    <div class="dos-articulos">
+     <div class="producto-destacado">
+      <article>
+        <img src="/img/laurentino.png">
+        <div class="articulo-pie">
+          <p class="nombre-planta">Laurentino</p>
+          <p class="nombre-cienti">Viburnum tinus</p>
+          <p class="precio">$680</p>
+          <div class="container-button"><button class="boton-carrito" type="button">Agregar al carrito</button></div>
+        </div>
+      </article>
+     </div>
+  
+     <div class="producto-destacado">
+      <article>
+        <img src="/img/lavanda.png">
+        <div class="articulo-pie">
+          <p class="nombre-planta">Lavanda</p>
+          <p class="nombre-cienti">Lavandula angustifolia</p>
+          <p class="precio">$180</p>
+          <div class="container-button"><button class="boton-carrito" type="button">Agregar al carrito</button></div>
+        </div>
+      </article>
+     </div>
+     </div>
+    </div>
+  </section>
+  <!-------Division cada 4 articulos------->
+<section class="destacados">
+  <div class="cuatro-articulos">
+    <div class="dos-articulos">
+    <div class="producto-destacado">
+     <article>
+       <img src="/img/lazo-de-amor-2.png">
+       <div class="articulo-pie">
+         <p class="nombre-planta">Lazo de amor</p>
+         <p class="nombre-cienti">Chlorophytum comosum</p>
+         <p class="precio">$470</p>
+         <div class="container-button"><button class="boton-carrito" type="button">Agregar al carrito</button></div>
+       </div>
+     </article>
+    </div>
+  
+    <div class="producto-destacado">
+      <article>
+        <img src="/img/oreja-de-elefante.png">
+        <div class="articulo-pie">
+          <p class="nombre-planta">Oreja de elefante</p>
+          <p class="nombre-cienti">Alocasia Macrorrhiza</p>
+          <p class="precio">$750</p><div class="container-button"><button class="boton-carrito" type="button">Agregar al carrito</button></div>
+        </div>
+      </article>
+     </div>
+    </div>
+  
+    <div class="dos-articulos">
+     <div class="producto-destacado">
+      <article>
+        <img src="/img/philodendron-florida.png">
+        <div class="articulo-pie">
+          <p class="nombre-planta">Philodendron</p>
+          <p class="nombre-cienti">Philodendron florida</p>
+          <p class="precio">$580</p>
+          <div class="container-button"><button class="boton-carrito" type="button">Agregar al carrito</button></div>
+        </div>
+      </article>
+     </div>
+  
+     <div class="producto-destacado">
+      <article>
+        <img src="/img/santa-rita.png">
+        <div class="articulo-pie">
+          <p class="nombre-planta">Santa Rita</p>
+          <p class="nombre-cienti">Bougainvillea glabra</p>
+          <p class="precio">$160</p>
+          <div class="container-button"><button class="boton-carrito" type="button">Agregar al carrito</button></div>
+        </div>
+      </article>
+     </div>
+     </div>
+    </div>
+  </section>
+  <!------
+    Plantas de interior
+    ------->
+<h2 class="productos-destacados">Plantas de interior</h2>
+<section class="destacados">
+  <div class="cuatro-articulos">
+    <div class="dos-articulos">
+    <div class="producto-destacado">
+     <article>
+       <img src="/img/violeta-africana.png">
+       <div class="articulo-pie">
+         <p class="nombre-planta">Violeta africana</p>
+         <p class="nombre-cienti">Saintpaulia</p>
+         <p class="precio">$430</p>
+         <div class="container-button"><button class="boton-carrito" type="button">Agregar al carrito</button></div>
+       </div>
+     </article>
+    </div>
+
+    <div class="producto-destacado">
+      <article>
+        <img src="/img/orquidea.png">
+        <div class="articulo-pie">
+          <p class="nombre-planta">Orquídea</p>
+          <p class="nombre-cienti">Orquídea phalaenopsis</p>
+          <p class="precio">$4800</p>
+          <div class="container-button"><button class="boton-carrito" type="button">Agregar al carrito</button></div>
+        </div>
+      </article>
+     </div>
+    </div>
+
+    <div class="dos-articulos">
+     <div class="producto-destacado">
+      <article>
+        <img src="/img/syngonium.png">
+        <div class="articulo-pie">
+          <p class="nombre-planta">Syngonium</p>
+          <p class="nombre-cienti">Syngonium podophyllum</p>
+          <p class="precio">$540</p>
+          <div class="container-button"><button class="boton-carrito" type="button">Agregar al carrito</button></div>
+        </div>
+      </article>
+     </div>
+
+     <div class="producto-destacado">
+      <article>
+        <img src="/img/spatifilium-2.png">
+        <div class="articulo-pie">
+          <p class="nombre-planta">Espatifilo</p>
+          <p class="nombre-cienti">Spatiphillum</p>
+          <p class="precio">$1050</p>
+          <div class="container-button"><button class="boton-carrito" type="button">Agregar al carrito</button></div>
+        </div>
+      </article>
+     </div>
+     </div>
+    </div>
+  </section>
+
+  <!-------- División entre 4 articulos ------->
+
+  <section class="destacados">
+    <div class="cuatro-articulos">
+      <div class="dos-articulos">
+      <div class="producto-destacado">
+       <article>
+         <img src="/img/pilea.png">
+         <div class="articulo-pie">
+           <p class="nombre-planta">Pilea</p>
+           <p class="nombre-cienti">Pilea peperomioides</p>
+           <p class="precio">$1880</p>
+           <div class="container-button"><button class="boton-carrito" type="button">Agregar al carrito</button></div>
+         </div>
+       </article>
+      </div>
+  
+      <div class="producto-destacado">
+        <article>
+          <img src="/img/paleta-de-pintor-2.png">
+          <div class="articulo-pie">
+            <p class="nombre-planta">Paleta de pintor</p>
+            <p class="nombre-cienti">Hypoestes</p>
+            <p class="precio">$600</p>
+            <div class="container-button"><button class="boton-carrito" type="button">Agregar al carrito</button></div>
+          </div>
+        </article>
+       </div>
+      </div>
+  
+      <div class="dos-articulos">
+       <div class="producto-destacado">
+        <article>
+          <img src="/img/gynura.png">
+          <div class="articulo-pie">
+            <p class="nombre-planta">Gynura</p>
+            <p class="nombre-cienti">Gynura aurantiaca</p>
+            <p class="precio">$240</p>
+            <div class="container-button"><button class="boton-carrito" type="button">Agregar al carrito</button></div>
+          </div>
+        </article>
+       </div>
+  
+       <div class="producto-destacado">
+        <article>
+          <img src="/img/fittonia.png">
+          <div class="articulo-pie">
+            <p class="nombre-planta">Fittonia</p>
+            <p class="nombre-cienti">Fittonia albivenis</p>
+            <p class="precio">$650</p>
+            <div class="container-button"><button class="boton-carrito" type="button">Agregar al carrito</button></div>
+          </div>
+        </article>
+       </div>
+       </div>
+      </div>
+    </section>
+
+<!-----Division 4 articulos-------> 
+
+<section class="destacados">
+  <div class="cuatro-articulos">
+    <div class="dos-articulos">
+    <div class="producto-destacado">
+     <article>
+       <img src="/img/sanseviera.png">
+       <div class="articulo-pie">
+         <p class="nombre-planta">Sanseviera</p>
+         <p class="nombre-cienti">Sansevieria Trifasciata</p>
+         <p class="precio">$890</p>
+         <div class="container-button"><button class="boton-carrito" type="button">Agregar al carrito</button></div>
+       </div>
+     </article>
+    </div>
+
+    <div class="producto-destacado">
+      <article>
+        <img src="/img/croton-petra.png">
+        <div class="articulo-pie">
+          <p class="nombre-planta">Croton petra</p>
+          <p class="nombre-cienti">Codiaeum variegatum</p>
+          <p class="precio">$800</p>
+          <div class="container-button"><button class="boton-carrito" type="button">Agregar al carrito</button></div>
+        </div>
+      </article>
+     </div>
+    </div>
+
+    <div class="dos-articulos">
+     <div class="producto-destacado">
+      <article>
+        <img src="/img/begonia-cross.png">
+        <div class="articulo-pie">
+          <p class="nombre-planta">Begonia</p>
+          <p class="nombre-cienti">Begonia cross</p>
+          <p class="precio">$140</p>
+          <div class="container-button"><button class="boton-carrito" type="button">Agregar al carrito</button></div>
+        </div>
+      </article>
+     </div>
+
+     <div class="producto-destacado">
+      <article>
+        <img src="/img/anthurium.png">
+        <div class="articulo-pie">
+          <p class="nombre-planta">Anturio</p>
+          <p class="nombre-cienti">Anthurium andreanum</p>
+          <p class="precio">$1250</p>
+          <div class="container-button"><button class="boton-carrito" type="button">Agregar al carrito</button></div>
+        </div>
+      </article>
+     </div>
+     </div>
+    </div>
+  </section>
+
+
+
+      <!-- 
+        FOOTER
+       -->
   <%- include('../partials/footer') %>
 </body>
 </html>

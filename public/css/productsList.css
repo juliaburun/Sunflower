@@ -1,0 +1,41 @@
+.banner{
+margin-top: 100px;
+}
+
+
+
+.articulo-pie{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.titulo-listado{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container-button {
+    width: 40%;
+    padding: 10px;
+    margin: auto;
+}
+
+.boton-carrito{
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 12px;
+    background: #edafa4;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+@media (min-width: 769){
+    .caja-botonenviar{
+        text-align: center;
+    }
+}

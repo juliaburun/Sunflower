@@ -18,8 +18,9 @@ BARRA ENTRE EL HEADER Y EL MAIN
 ******************************/
 .space-between-header-main{
     background-color: var(--grisClaro);
-    height: 5px;
+    height: 4px;
 }
+
 
 /*=======================================  PRINCIPIO DEL CARRUSEL ===================================*/
 
@@ -85,6 +86,7 @@ main {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    color: gray;
 }
 
 
