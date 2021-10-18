@@ -49,10 +49,10 @@ hr{
     width: 25%;
     position: relative;
 }
-/*CONTIENE LAS CAJAS USUARIO Y CONTRASEÑA*/
+/*CONTIENE LAS CAJAS NOMBRE HASTA CONFIRMAR CONTRASEÑA*/
 .caja-datos{
     width: 90%;
-    height: 300px;
+    height: 100%;
     padding: 10px;
     margin: auto;
 }
@@ -68,8 +68,9 @@ input[type="password"]
     height: 35px;
     padding: 10px;
     border: solid 1px #B0B3AF;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     background-color: #F8F4F4;
+    border-radius: 3px;
 }
 /*CAJA CONTENEDORA DEL BOTON ENVIAR*/
 .caja-botonenviar{
@@ -82,10 +83,11 @@ input[type="password"]
     border: none;
     width: 100%;
     color: white;
-    font-size: 12px;
+    font-size: 15px;
     background: #edafa4;
     padding: 10px 20px;
     cursor: pointer;
+    border-radius: 3px;
 }
 /*MANITO CUANDO PASAS SOBRE EL BOTON ENVIAR*/
 .boton-enviar:hover{
@@ -104,22 +106,9 @@ input[type="password"]
         width: 10%;
         position: relative;
     }
-    /*CONTIENE LAS CAJAS USUARIO Y CONTRASEÑA*/   
+    /*CONTIENE LAS CAJAS NOMBRE HASTA CONFIRMAR CONTRASEÑA*/   
     .caja-datos{
         width: 60%;
-    }
-    /*FORMULARIOS*/
-    input[type="name"],
-    input[type="surname"],
-    input[type="email"],
-    input[type="phone"],
-    input[type="password"]
-    {
-        font-size: 14px; 
-    }
-    /*BOTON ENVIAR*/
-    .boton-enviar{
-        font-size: 14px;
     }
 }
 
@@ -130,17 +119,14 @@ input[type="password"]
         width: 8%;
         position: relative;
     }
-    /*CONTIENE LAS CAJAS USUARIO Y CONTRASEÑA*/
+    /*CONTIENE LAS CAJAS NOMBRE HASTA CONFIRMAR CONTRASEÑA*/
     .caja-datos{
         width: 40%;
     }
+ 
     /*CAJA CONTENEDORA DEL BOTON ENVIAR*/
     .caja-botonenviar{
         width: 30%;
-    }
-    /*BOTON ENVIAR*/
-    .boton-enviar{
-        font-size: 14px;
     }
 }
 
