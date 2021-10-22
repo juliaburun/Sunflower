@@ -1,0 +1,70 @@
+
+/*CONTIENE TODOS LOS ELEMENTOS DEL CUERPO*/
+.contPrincipal{
+    width: 100%;
+    padding: 15px;
+    margin: 0 auto;
+    height: 400px;
+    margin-top: 120px;
+}
+/*TEXTO DEL LOGIN*/
+h2{
+    text-align: center;
+    position: relative;
+}
+/*LINEA INFERIOR DEL LOGIN*/
+hr{
+    width: 50%;
+    position: relative;
+}
+.contPrincipal{
+    width: 100%;
+    height: auto;
+    margin-top: 110px;
+    margin-bottom: 30px;
+}
+.contImagenUno{
+    width: 60%;
+    margin: auto;  
+}
+.contImagenDos{
+    width: 60%;
+    margin: auto;  
+}
+.imagenUno,
+.imagenDos{
+    width: 100%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+.textosCentrales,
+.ultimoTexto{
+    width: 70%;
+    margin-left: 15px;
+    font-weight: 600;
+    font-size: 16px;
+    margin: auto;
+    text-align: center;
+    line-height: 2em;
+}
+.contImagenTres{
+    width: 70%;
+    margin: auto;
+}
+
+
+.imagenTres{
+    width: 100%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+
+/*============================== MEDIA QUERIES ===============================*/
+
+@media (min-width:481px){
+
+}
+@media (min-width:769px){
+
+}

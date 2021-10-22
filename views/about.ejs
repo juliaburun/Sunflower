@@ -1,17 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-'<%-include('./partials/head') %>
-    <title>Document</title>
-</head>
-<body>
-      <!--HEADER-->
-  <%- include('./partials/header') %>
-    <h2>Acerca de nosotros</h2>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus corporis minus ad dolor voluptatibus quam neque molestiae vitae officia ratione alias tenetur, fugiat error, suscipit dolores ullam dolorem? Voluptatum, autem.</p>
+  <!--==========================
+            HEAD
+============================-->
+  <head>
+    <%-include('./partials/head') %>
 
-    <!--FOOTER-->
-  <%- include('./partials/footer') %>
+    <title>Products</title>
+    <!--Enlazando con el css styles_products-->
+    <link rel="stylesheet" href="/css/styles-about.css" />
+  </head>
 
-</body>
+  <!--==========================
+            BODY
+============================-->
+  <body>
+    <!-----HEADER------>
+    <%- include('./partials/header') %>
+
+    <!--==========================
+       BORDE ENTRE HEADER Y MAIN
+    ============================-->
+
+    <div class="space-between-header-main"></div>
+
+    <!--############################# LINEA DIVISORA ENTRE EL ENCABEZADO Y EL CUERPO ##############################-->
+
+    <main>
+      <!--CONTIENE TODOS LOS ELEMENTOS DEL CUERPO-->
+      <section class="contPrincipal">
+        <h2>Acerca de nosotros</h2>
+        <!--LINEA INFERIOR DEL LOGIN-->
+        <hr color="#edafa4" />
+        <div class="contImagenUno">
+          <img class="imagenUno" src="/img/about-us1.jpg" />
+        </div>
+        <div class="textosCentrales">
+          <p>
+            Hola. Johanna, Julia y Ariel los saludamons. Bienvenido a Sunflower.
+            Un poco acerca de nosotros...
+          </p>
+
+          <p>
+            Creamos Sunflower en 2018 porque, simplemente, amamos las plantas.
+            Al inaugurar nuestra tienda, queríamos crear un espacio cálido y
+            acogedor para todos, desde los admiradores de las plantas hasta los
+            cultivadores expertos. Una de nuestras partes favoritas del
+            funcionamiento de Sunflower es obtener las plantas más hermosas y
+            exóticas que podamos tener en nuestras manos y, por supuesto,
+            compartirlas con todos ustedes .
+          </p>
+
+          <p>
+            Sunflower comenzó en Florida, Provincia de Buenos Aires y
+            originalmente operaba en la calle Calathea 2001 en galponsito de 50
+            metos cuadrados, en nuestro patio trasero que renovamos nosotros
+            mismos. En febrero de 2021, nos expandimos a nuestra tienda física
+            ubicada en Av.Corrientes 348 de la Ciudad de Buenos Aires. En
+            nuestra tienda encontrará una variedad cuidadosamente seleccionada
+            de plantas de interior y de exterior, macetas, cerámicas caseras,
+            herramientas de jardín, cestas hechas a mano y artículos para el
+            hogar.
+          </p>
+        </div>
+        <div class="contImagenDos">
+          <img class="imagenDos" src="/img/about-us2.jpg" />
+        </div>
+        <div class="ultimoTexto">
+          <p>
+            También puede comprar una selección de nuestros productos en línea y
+            recibirlos directamente en su puerta. Utilizamos el envío rápido y
+            empaquetamos sus plantas en capas protectoras para garantizar su
+            llegada segura. Las plantas transforman tu espacio, elevan tu estado
+            de ánimo, potencian tu creatividad e incluso mejoran tu salud. Ya
+            sea que esté obsesionado con las plantas o sea un padre de plantas
+            por primera vez, tenemos todo lo que necesita para mantener a sus
+            amigos verdes felices, saludables y prósperos.
+          </p>
+        </div>
+        <div class="contImagenTres">
+          <img class="imagenTres" src="/img/about-us3.jpg" />
+        </div>
+      </section>
+      <!--FOOTER-->
+    </main>
+
+    <%- include('./partials/footer') %>
+  </body>
 </html>
