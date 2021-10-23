@@ -10,13 +10,13 @@ const router=express.Router();
 router.get('/', productsControllers.indexProducts);
 
 /* Ruta detalle del Producto */
-router.get('/productDetail', productsControllers.productDetail);
+router.get('/detail', productsControllers.productDetail);
 
 /* Ruta crear el producto */
-router.get('/productCreate', productsControllers.productCreate);
+router.get('/Create', productsControllers.productCreate);
 
 /* Ruta modificar el producto */
-router.get('/productEdit', productsControllers.productEdit);
+router.get('/edit', productsControllers.productEdit);
 
 
 module.exports=router;

@@ -1,3 +1,19 @@
+*{
+    box-sizing: border-box; 
+ }
+ 
+ img{
+     width: 100%;
+     
+ }
+ 
+ 
+ body{
+     font-family: 'Quicksand', sans-serif;
+     font-size: 14px;
+     margin: 0;
+ }
+
 
 /*CONTIENE TODOS LOS ELEMENTOS DEL CUERPO*/
 .contPrincipal{
@@ -39,13 +55,15 @@ hr{
 }
 .textosCentrales,
 .ultimoTexto{
-    width: 70%;
+    width: 90%;
     margin-left: 15px;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     margin: auto;
     text-align: center;
     line-height: 2em;
+    font-style: italic;
+    text-align: justify;
 }
 .contImagenTres{
     width: 70%;
@@ -63,8 +81,14 @@ hr{
 /*============================== MEDIA QUERIES ===============================*/
 
 @media (min-width:481px){
-
+    .textosCentrales,
+    .ultimoTexto{
+        width: 70%;
+        
+    }
 }
-@media (min-width:769px){
 
+
+@media (min-width:769px){
+    
 }
