@@ -1,0 +1,165 @@
+*{
+    box-sizing: border-box; 
+ }
+ body{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    margin: 0;
+}
+
+
+/*****************************
+BARRA ENTRE EL HEADER Y EL MAIN
+******************************/
+.space-between-header-main{
+    background-color: var(--grisClaro);
+    height: 5px;
+}
+
+/*############################### LINEA DIVISORA ENTRE EL ENCABEZADO Y EL CUERPO  #########################*/
+main{
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+h2{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 1.17em;
+
+}
+hr{
+    width: 40%;
+    position: relative;
+    margin-bottom: 50px;
+}
+.cajaPrincipal{
+    background-color: #dbdbdb;
+    width: 90%;
+    margin: auto;
+    font-weight: 600;
+    border-radius: 5px;
+}
+form{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1000px;
+    padding: 0 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.cajaName{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.cajaCategory{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+
+}
+.cajaCapacity{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+.cajaCode{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+.cajaDescription{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+.cajaDescription textarea{
+    height: 70px;
+    margin-bottom: 20px;
+}
+.cajaPrice{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+.cajaPrincipal input{
+    font-size: 14px;
+    width: 90%;
+    height: 45px;
+    padding: 10px;
+    border: solid 1px #B0B3AF;
+    margin-bottom: 20px;
+    background-color: #F8F4F4;
+    border-radius: 3px;
+
+}
+form label{
+    padding-bottom: 5px;
+}
+
+
+
+
+
+
+/*BOTON ENVIAR*/
+p#texto{
+    text-align: center;
+    color: white;
+}
+div#cajaFile{
+    position: relative;
+    padding: 1px;
+    width: 150px;
+    background-color: #edafa4;
+    border-radius: 3px;
+    margin-top: 15px;
+    margin-bottom: 15px;    
+}
+input#botonFile{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+/*============================== MEDIA QUERIES ===============================*/
+
+@media (min-width:481px){
+
+    main{
+        padding-top: 140px;
+    }
+    hr{
+        width: 17%;
+    }
+    div#cajaFile{
+        margin-top: 20px;
+        margin-bottom: 20px;    
+    }
+
+}
+@media (min-width:769px){
+
+    main{
+        padding-top: 140px;
+    }
+    hr{
+        width: 13%;
+    }
+    div#cajaFile{
+        margin-top: 20px;
+        margin-bottom: 30px;    
+    }
+}

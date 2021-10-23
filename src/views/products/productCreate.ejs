@@ -1,13 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!--==========================
+            HEAD
+============================-->
 <head>
     <%-include('../partials/head') %>
-    <title>Document</title>
+    <!--Enlazando con el css styles_products-->
+    <link rel="stylesheet" href="/css/styles-productCreate.css">
+    <title>Products</title>
 </head>
+
+<!--==========================
+            BODY
+============================-->
 <body>
-      <!--HEADER-->
+  <!--HEADER-->
   <%- include('../partials/header') %>
-    <h2>Formulario de Creación de Productos</h2>
+    <!--==========================
+        BORDE ENTRE HEADER Y MAIN
+    ============================-->      
+    <div class="space-between-header-main">
+    </div>
+   
+<!--==========================
+           MAIN
+============================--> 
+
+
+<main>
+  <section>
+
+<div class="cajaPrincipal">
+  <h2>CREAR PRODUCTO</h2>
+  <hr color="#edafa4">
+  <form action="" method="">
+    <div class="cajaName">
+      <label for="name" class="nombreProd">Nombre del producto:</label>
+      <input type="text" id="name" name="name" placeholder="Ej: orquidea" class="form-cajaName">
+    </div>
+
+    <div class="cajaDescription">
+      <label for="description" class="descripcionProd">Descripción del producto:</label>
+      <textarea name="description" id="description" class="area-cajaDescription"></textarea>
+    </div>
+
+    <div class="cajaCategory">
+      <label for="Category" class="categoriaProd">Categoría:</label>
+      <input type="text" id="Category" name="Category" placeholder="Ej: planta/accesorio" class="form-cajaCategory">
+    </div>
+
+    <div class="cajaCapacity">
+      <label for="capacity" class="capasidadProd">Capacidad:</label>
+      <input type="text" id="capacity" name="capacity" placeholder="Ej: Maceta 5 lts." class="form-cajaCapacity">
+    </div>
+
+    <div class="cajaCode">
+      <label for="code" class="codigoProd">Código de producto:</label>
+      <input type="text" id="code" name="code" placeholder="Ej: pln-orq-5lts" class="form-cajaCode">
+    </div>
+
+    <div class="cajaPrice">
+      <label for="price" class="precioProd">Precio del producto $:</label>
+      <input type="text" id="price" name="price" placeholder="Ej: 2220 " class="form-cajaPrice">
+    </div>
+
+    <div id="cajaFile">
+      <p id="texto">Agregar imagen</p>
+      <input type="file" id="botonFile">
+    </div>
+
+  </form>
+</div>
+
+</section>
+</main>
 
       <!-- FOOTER -->
 <%- include('../partials/footer') %>
