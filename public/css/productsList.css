@@ -2,6 +2,10 @@
 margin-top: 100px;
 }
 
+.producto-destacado img {
+  max-width: 330px;
+}
+
 .articulo-pie{
     display: flex;
     flex-direction: column;
@@ -122,3 +126,15 @@ margin-top: 100px;
     content: '';
     background: --rosa;
   }
+
+@media (min-width:481px) {
+  .producto-destacado img {
+    max-width: 250px;
+  }
+}
+
+@media (min-width:769px) {
+  .producto-destacado {
+    margin: 30px;
+  }
+}
