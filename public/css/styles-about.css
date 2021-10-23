@@ -3,17 +3,14 @@
  }
  
  img{
-     width: 100%;
-     
+     width: 100%;   
  }
- 
  
  body{
      font-family: 'Quicksand', sans-serif;
      font-size: 14px;
      margin: 0;
  }
-
 
 /*CONTIENE TODOS LOS ELEMENTOS DEL CUERPO*/
 .contPrincipal{
@@ -23,36 +20,41 @@
     height: 400px;
     margin-top: 120px;
 }
-/*TEXTO DEL LOGIN*/
+/*PRIMER TEXTO*/
 h2{
     text-align: center;
     position: relative;
 }
-/*LINEA INFERIOR DEL LOGIN*/
+/*LINEA INFERIOR DEL TEXTO*/
 hr{
     width: 50%;
     position: relative;
 }
+/*CONTIENE TODOS LOS ELEMENTOS SECTION*/
 .contPrincipal{
     width: 100%;
     height: auto;
     margin-top: 110px;
     margin-bottom: 30px;
 }
+/*CONTENEDOR DE LAS TRES PRIMERAS IMAGENES*/
 .contImagenUno{
     width: 60%;
     margin: auto;  
 }
+/*CONTENEDOR DE LAS CUATRO IMAGENES UBICADAS EN EL CENTRO*/
 .contImagenDos{
     width: 60%;
     margin: auto;  
 }
+/*ETIQUETA IMG DE LAS IMAGENES*/
 .imagenUno,
 .imagenDos{
     width: 100%;
     margin: auto;
     margin-bottom: 30px;
 }
+/*CONTENEDOR DE LOS TEXTOS MEDIO Y FINAL*/
 .textosCentrales,
 .ultimoTexto{
     width: 90%;
@@ -65,30 +67,25 @@ hr{
     font-style: italic;
     text-align: justify;
 }
+/*CONTENEDOR DE LA ULTIMA IMAGEN*/
 .contImagenTres{
     width: 70%;
     margin: auto;
 }
 
-
+/*ETIQUETA IMG DE LA ULTIMA IMAGEN*/
 .imagenTres{
     width: 100%;
     margin: auto;
     margin-bottom: 30px;
 }
 
-
 /*============================== MEDIA QUERIES ===============================*/
-
+/*CONTENEDOR DE LOS TEXTOS MEDIO Y FINAL*/
 @media (min-width:481px){
     .textosCentrales,
     .ultimoTexto{
         width: 70%;
         
     }
-}
-
-
-@media (min-width:769px){
-    
 }
