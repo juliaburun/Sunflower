@@ -17,22 +17,24 @@ BARRA ENTRE EL HEADER Y EL MAIN
 }
 
 /*############################### LINEA DIVISORA ENTRE EL ENCABEZADO Y EL CUERPO  #########################*/
+
 main{
     padding-top: 100px;
     padding-bottom: 30px;
 }
-
+/*ETIQUETA H2 TEXTO CREAR PRODUCTO*/
 h2{
     padding-top: 20px;
     text-align: center;
     font-size: 1.17em;
-
 }
+/*LINEA BAJO EL TEXTO*/
 hr{
     width: 40%;
     position: relative;
     margin-bottom: 50px;
 }
+/*CONTENEDOR DE TODO EL FORMULARIO*/
 .cajaPrincipal{
     background-color: #dbdbdb;
     width: 90%;
@@ -40,6 +42,7 @@ hr{
     font-weight: 600;
     border-radius: 5px;
 }
+/*ETIQUETA FORM CONTENEDOR DE TODO EL FORMULARIO*/
 form{
     width: 100%;
     margin: auto;
@@ -50,66 +53,14 @@ form{
     padding: 0 30px;
     margin-left: auto;
     margin-right: auto;
-
 }
+/*CONTENEDOR NOMBRE DEL PRODUCTO*/
 .cajaName{
     display: flex;
     flex-direction: column;
     width: 500px;
 }
-
-.cajaCategory{
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-
-}
-.cajaCapacity{
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-}
-.cajaCode{
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-}
-.cajaDescription{
-    display: flex;
-    flex-direction: column;
-    width: 500px;
-}
-.cajaDescription textarea{
-    height: 70px;
-    margin-bottom: 20px;
-}
-.cajaPrice{
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-}
-
-.cajaPrincipal input{
-    font-size: 14px;
-    width: 90%;
-    height: 45px;
-    padding: 10px;
-    border: solid 1px #B0B3AF;
-    margin-bottom: 20px;
-    background-color: #F8F4F4;
-    border-radius: 3px;
-
-}
-form label{
-    padding-bottom: 5px;
-}
-
-
-
-
-
-
-/*BOTON ENVIAR*/
+/*BOTON AGREGAR IMAGEN*/
 p#texto{
     text-align: center;
     color: white;
@@ -124,6 +75,76 @@ div#cajaFile{
     margin-bottom: 15px;    
 }
 input#botonFile{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+/*CONTENEDOR DESCRIPCION DEL PRODUCTO*/
+.cajaDescription{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+/*ETIQUETA TEXTAREA DESCRIPCION DEL PRODUCTO*/
+.cajaDescription textarea{
+    height: 70px;
+    margin-bottom: 20px;
+}
+/*CONTENEDOR CATEGORIA*/
+.cajaCategory{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+/*CONTENEDOR CAPACIDAD*/
+.cajaCapacity{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+/*CONTENEDOR CODIGO*/
+.cajaCode{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+/*CONTENEDOR PRECIO*/
+.cajaPrice{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+/*ETIQUETA INPUT PRECIO*/
+.cajaPrincipal input{
+    font-size: 14px;
+    width: 90%;
+    height: 45px;
+    padding: 10px;
+    border: solid 1px #B0B3AF;
+    margin-bottom: 20px;
+    background-color: #F8F4F4;
+    border-radius: 3px;
+}
+/*separacion entre el label y el formulario*/
+form label{
+    padding-bottom: 5px;
+}
+
+/*BOTON AGREGAR*/
+.cajaAgregar{
+    position: relative;
+    width: 100px;
+    background-color: rgb(49, 38, 36);;
+    border-radius: 3px;
+    margin-top: 15px;
+    margin-bottom: 15px;  
+}
+.botonAgregar{
     position: absolute;
     top: 0px;
     left: 0px;

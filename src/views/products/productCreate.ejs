@@ -30,44 +30,51 @@
 
 <main>
   <section>
-
+<!--CONTENEDOR DE TODO EL FORMULARIO-->
 <div class="cajaPrincipal">
   <h2>CREAR PRODUCTO</h2>
+  <!--LINEA BAJO EL TEXTO-->
   <hr color="#edafa4">
   <form action="" method="">
+    <!--CONTENEDOR NOMBRE DEL PRODUCTO-->
     <div class="cajaName">
       <label for="name" class="nombreProd">Nombre del producto:</label>
       <input type="text" id="name" name="name" placeholder="Ej: orquidea" class="form-cajaName">
     </div>
-
+    <!--BOTON AGREGAR IMAGEN-->
+    <div id="cajaFile">
+      <p id="texto">Agregar imagen</p>
+      <input type="file" id="botonFile">
+    </div>
+    <!--CONTENEDOR DESCRIPCION DEL PRODUCTO-->
     <div class="cajaDescription">
       <label for="description" class="descripcionProd">Descripción del producto:</label>
       <textarea name="description" id="description" class="area-cajaDescription"></textarea>
     </div>
-
+    <!--CONTENEDOR CATEGORIA-->
     <div class="cajaCategory">
       <label for="Category" class="categoriaProd">Categoría:</label>
       <input type="text" id="Category" name="Category" placeholder="Ej: planta/accesorio" class="form-cajaCategory">
     </div>
-
+    <!--CONTENEDOR CAPACIDAD-->
     <div class="cajaCapacity">
       <label for="capacity" class="capasidadProd">Capacidad:</label>
       <input type="text" id="capacity" name="capacity" placeholder="Ej: Maceta 5 lts." class="form-cajaCapacity">
     </div>
-
+    <!--CONTENEDOR CODIGO-->
     <div class="cajaCode">
       <label for="code" class="codigoProd">Código de producto:</label>
       <input type="text" id="code" name="code" placeholder="Ej: pln-orq-5lts" class="form-cajaCode">
     </div>
-
+    <!--CONTENEDOR PRECIO-->
     <div class="cajaPrice">
       <label for="price" class="precioProd">Precio del producto $:</label>
       <input type="text" id="price" name="price" placeholder="Ej: 2220 " class="form-cajaPrice">
     </div>
-
-    <div id="cajaFile">
-      <p id="texto">Agregar imagen</p>
-      <input type="file" id="botonFile">
+    <!--BOTON AGREGAR-->
+    <div class="cajaAgregar">
+      <p id="texto">Guardar producto</p>
+      <button type="submit" class="botonAgregar"></button>
     </div>
 
   </form>
