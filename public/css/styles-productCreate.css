@@ -17,7 +17,6 @@ BARRA ENTRE EL HEADER Y EL MAIN
 }
 
 /*############################### LINEA DIVISORA ENTRE EL ENCABEZADO Y EL CUERPO  #########################*/
-
 main{
     padding-top: 100px;
     padding-bottom: 30px;
@@ -46,6 +45,15 @@ hr{
 form{
     width: 100%;
     margin: auto;
+    max-width: 1000px;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.forlularios{
+    width: 100%;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -60,46 +68,28 @@ form{
     flex-direction: column;
     width: 500px;
 }
-/*BOTON AGREGAR IMAGEN*/
-p#texto{
-    text-align: center;
-    color: white;
-}
-div#cajaFile{
-    position: relative;
-    padding: 1px;
-    width: 150px;
-    background-color: #edafa4;
-    border-radius: 3px;
-    margin-top: 15px;
-    margin-bottom: 15px;    
-}
-input#botonFile{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-}
-/*CONTENEDOR DESCRIPCION DEL PRODUCTO*/
-.cajaDescription{
-    display: flex;
-    flex-direction: column;
-    width: 500px;
-}
-/*ETIQUETA TEXTAREA DESCRIPCION DEL PRODUCTO*/
-.cajaDescription textarea{
-    height: 70px;
-    margin-bottom: 20px;
-}
 /*CONTENEDOR CATEGORIA*/
 .cajaCategory{
     display: flex;
     flex-direction: column;
     width: 200px;
+}
+/*CONTENEDOR SUBCATEGORIA*/
+.cajaSubcategory{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+/*ETIQUETA SELECT CATEGORIA Y SUBCATEGORIA*/
+.cajaPrincipal select{
+    font-size: 14px;
+    width: 90%;
+    height: 45px;
+    padding: 10px;
+    border: solid 1px #B0B3AF;
+    margin-bottom: 20px;
+    background-color: #F8F4F4;
+    border-radius: 3px;
 }
 /*CONTENEDOR CAPACIDAD*/
 .cajaCapacity{
@@ -130,19 +120,80 @@ input#botonFile{
     background-color: #F8F4F4;
     border-radius: 3px;
 }
-/*separacion entre el label y el formulario*/
+/*CONTENEDOR DESCRIPCION DEL PRODUCTO*/
+.cajaDescription{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+/*ETIQUETA TEXTAREA DESCRIPCION DEL PRODUCTO*/
+.cajaDescription textarea{
+    height: 70px;
+    margin-bottom: 20px;
+    border: solid 1px #B0B3AF;
+    background-color: #F8F4F4;
+}
+/*SEPARACION ENTRE EL LABEL Y EL FORMULARIO*/
 form label{
     padding-bottom: 5px;
 }
+/*AGREGAR IMAGEN*/
+.formulImg {
+    margin-left:5px;
+  }
+  .formulImg h2 {
+    text-align:center;
+    color:black;
+    font-size:20px;
+    font-weight:600;
+  }
+  .formulImg .grid {
+    margin-top:10px;
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    gap:20px;
+  }
+  .formulImg .grid .form-element {
+    width:200px;
+    height:200px;
+    box-shadow:0px 0px 20px 5px rgba(100,100,100,0.1);
+  }
+  .formulImg .grid .form-element input {
+    display:none;
+  }
+  .formulImg .grid .form-element img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+  .formulImg .grid .form-element div {
+    position:relative;
+    height:40px;
+    margin-top:-40px;
+    background:rgba(0,0,0,0.5);
+    text-align:center;
+    line-height:40px;
+    font-size:13px;
+    color:#f5f5f5;
+    font-weight:600;
+  }
+  .formulImg .grid .form-element div span {
+    font-size:40px;
+  }
 
-/*BOTON AGREGAR*/
+/*BOTON GUARDAR PRODUCTO*/
 .cajaAgregar{
+    width: 50px;
+    height: 35px;
     position: relative;
     width: 100px;
-    background-color: rgb(49, 38, 36);;
+    background-color: #EDAFA4;
     border-radius: 3px;
-    margin-top: 15px;
-    margin-bottom: 15px;  
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 10px;  
 }
 .botonAgregar{
     position: absolute;
@@ -154,7 +205,10 @@ form label{
     height: 100%;
     opacity: 0;
 }
-
+p#texto{
+    text-align: center;
+    color: white;
+}
 /*============================== MEDIA QUERIES ===============================*/
 
 @media (min-width:481px){
@@ -165,11 +219,6 @@ form label{
     hr{
         width: 17%;
     }
-    div#cajaFile{
-        margin-top: 20px;
-        margin-bottom: 20px;    
-    }
-
 }
 @media (min-width:769px){
 
@@ -178,9 +227,5 @@ form label{
     }
     hr{
         width: 13%;
-    }
-    div#cajaFile{
-        margin-top: 20px;
-        margin-bottom: 30px;    
     }
 }

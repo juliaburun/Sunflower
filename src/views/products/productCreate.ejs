@@ -29,32 +29,40 @@
 
 
 <main>
-  <section>
+<section>
 <!--CONTENEDOR DE TODO EL FORMULARIO-->
 <div class="cajaPrincipal">
   <h2>CREAR PRODUCTO</h2>
   <!--LINEA BAJO EL TEXTO-->
   <hr color="#edafa4">
   <form action="" method="">
+    <div class="forlularios">
     <!--CONTENEDOR NOMBRE DEL PRODUCTO-->
     <div class="cajaName">
       <label for="name" class="nombreProd">Nombre del producto:</label>
       <input type="text" id="name" name="name" placeholder="Ej: orquidea" class="form-cajaName">
     </div>
-    <!--BOTON AGREGAR IMAGEN-->
-    <div id="cajaFile">
-      <p id="texto">Agregar imagen</p>
-      <input type="file" id="botonFile">
-    </div>
-    <!--CONTENEDOR DESCRIPCION DEL PRODUCTO-->
-    <div class="cajaDescription">
-      <label for="description" class="descripcionProd">Descripción del producto:</label>
-      <textarea name="description" id="description" class="area-cajaDescription"></textarea>
-    </div>
+    
+
     <!--CONTENEDOR CATEGORIA-->
     <div class="cajaCategory">
       <label for="Category" class="categoriaProd">Categoría:</label>
-      <input type="text" id="Category" name="Category" placeholder="Ej: planta/accesorio" class="form-cajaCategory">
+      <select name="Category" id="Category" class="form-cajaCategory">
+        <option value="planta">Plantas</option>
+        <option value="accesorios">Accesorios</option>
+      </select>
+    </div>
+    <!--CONTENEDOR SUBCATEGORIA-->
+    <div class="cajaSubcategory">
+      <label for="Subcategory" class="subcategoriaProd">Subcategoría:</label>
+      <select name="Subcategory" id="Subcategory" class="form-cajaSubcategory">
+        <option value="planta interior">Plantas interior</option>
+        <option value="planta interior">Plantas exterior</option>
+
+        <option value="macetas">Macetas</option>
+        <option value="sustratos">Sustratos</option>
+        <option value="fertilizantes">Fertilizantes</option>
+      </select>
     </div>
     <!--CONTENEDOR CAPACIDAD-->
     <div class="cajaCapacity">
@@ -71,17 +79,64 @@
       <label for="price" class="precioProd">Precio del producto $:</label>
       <input type="text" id="price" name="price" placeholder="Ej: 2220 " class="form-cajaPrice">
     </div>
-    <!--BOTON AGREGAR-->
+<!--CONTENEDOR DESCRIPCION DEL PRODUCTO-->
+<div class="cajaDescription">
+  <label for="description" class="descripcionProd">Descripción del producto:</label>
+  <textarea name="description" id="description" class="area-cajaDescription"></textarea>
+</div>
+
+  </div>
+    <!--BOTON AGREGAR IMAGEN-->
+    <div class="formulImg">
+      <h2>Vista previa</h2>
+      <div class="grid">
+        <div class="form-element">
+          <input type="file" id="file-1" accept="image/*">
+          <label for="file-1" id="file-1-preview">
+            <img src="/img/upload-image.png" alt="">
+            <div>
+              <span>+</span>
+            </div>
+          </label>
+        </div>
+        <div class="form-element">
+          <input type="file" id="file-2" accept="image/*">
+          <label for="file-2" id="file-2-preview">
+            <img src="/img/upload-image.png" alt="">
+            <div>
+              <span>+</span>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+    <!--BOTON AGREGAR PRODUCTO-->
     <div class="cajaAgregar">
       <p id="texto">Guardar producto</p>
       <button type="submit" class="botonAgregar"></button>
     </div>
-
   </form>
 </div>
 
 </section>
 </main>
+<!--SECCION JS-->
+<script>
+  function previewBeforeUpload(id){
+  document.querySelector("#"+id).addEventListener("change",function(e){
+    if(e.target.files.length == 0){
+      return;
+    }
+    let file = e.target.files[0];
+    let url = URL.createObjectURL(file);
+    document.querySelector("#"+id+"-preview div").innerText = file.name;
+    document.querySelector("#"+id+"-preview img").src = url;
+  });
+}
+
+previewBeforeUpload("file-1");
+previewBeforeUpload("file-2");
+</script>
 
       <!-- FOOTER -->
 <%- include('../partials/footer') %>
