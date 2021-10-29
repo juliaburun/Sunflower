@@ -35,7 +35,7 @@
   <h2>EDITAR PRODUCTO</h2>
   <!--LINEA BAJO EL TEXTO-->
   <hr color="#edafa4">
-  <form action="" method="">
+  <form action="" method="GET">
       <div class="p-editproduct">
       <p>EDITANDO EL PRODUCTO:</p>
       </div>
@@ -50,11 +50,12 @@
             <div class="cajaCategory">
                 <label for="Category" class="categoriaProd">Categoría:</label>
                 <select name="Category" id="Category" class="form-cajaCategory" value="">
-                    <option value="planta">Plantas</option>
-                    <option value="accesorios">Accesorios</option>
+                    <option value="plantas interior">Plantas interior</option>
+                    <option value="plantas exterior">Plantas exterior</option>
                 </select>
             </div>
             <!--CONTENEDOR SUBCATEGORIA-->
+            <!--
             <div class="cajaSubcategory">
                 <label for="Subcategory" class="subcategoriaProd">Subcategoría:</label>
                 <select name="Subcategory" id="Subcategory" class="form-cajaSubcategory" value="">
@@ -66,15 +67,11 @@
                     <option value="fertilizantes">Fertilizantes</option>
                 </select>
             </div>
+            -->
             <!--CONTENEDOR CAPACIDAD-->
             <div class="cajaCapacity">
-                <label for="capacity" class="capasidadProd">Capacidad:</label>
-                <input type="text" id="capacity" name="capacity" placeholder="Ej: Maceta 5 lts." class="form-cajaCapacity" value="">
-            </div>
-            <!--CONTENEDOR CODIGO-->
-            <div class="cajaCode">
-                <label for="code" class="codigoProd">Código de producto:</label>
-                <input type="text" id="code" name="code" placeholder="Ej: pln-orq-5lts" class="form-cajaCode" value="">
+                <label for="capacity" class="capasidadProd">Tamaño:</label>
+                <input type="text" id="capacity" name="capacity" placeholder="Ej: Maceta 10" class="form-cajaCapacity" value="">
             </div>
             <!--CONTENEDOR PRECIO-->
             <div class="cajaPrice">
@@ -113,7 +110,7 @@
     </div>
     <!--BOTON AGREGAR PRODUCTO-->
     <div class="cajaAgregar">
-      <p id="texto">Guardar modificaciones</p>
+      <p id="texto">Guardar</p>
       <button type="submit" class="botonAgregar"></button>
     </div>
   </form>
