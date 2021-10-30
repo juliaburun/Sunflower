@@ -1,0 +1,103 @@
+[
+ {
+  "cod_product": 1,
+  "name": "Geranio",
+  "price": "200",
+  "discount": "50",
+  "category": "planta interior",
+  "estado": "in-sale",
+  "description": "Plants Geranio....",
+  "image": "geranio-2.png"
+ },
+ {
+  "cod_product": 2,
+  "name": "Helecho",
+  "price": "72999",
+  "discount": "25",
+  "category": "planta interior",
+  "estado": "in-sale",
+  "description": "Son hermosos y elegantes.",
+  "image": "helecho.png"
+ },
+ {
+  "cod_product": 3,
+  "name": "Orquidea",
+  "price": "47900",
+  "discount": "20",
+  "category": "planta interior",
+  "estado": "visited",
+  "description": "Hermosa",
+  "image": "orquidea.png"
+ },
+ {
+  "cod_product": 4,
+  "name": "lavanda",
+  "price": "47900",
+  "discount": "20",
+  "category": "planta exterior",
+  "estado": "visited",
+  "description": "Elegante y de gran aroma",
+  "image": "lavanda.png"
+ },
+ {
+  "cod_product": 5,
+  "name": "Erica",
+  "price": "47900",
+  "discount": "20",
+  "category": "planta interior",
+  "estado": "in-sale",
+  "description": "Hermosa",
+  "image": "erica.png"
+ },
+ {
+  "cod_product": 6,
+  "name": "homalomena",
+  "price": "47900",
+  "discount": "20",
+  "category": "planta interior",
+  "estado": "visited",
+  "description": "Hermosa",
+  "image": "homalomena.jpg"
+ },
+ {
+ "cod_product": 7,
+  "name": "Ficus-lyrata",
+  "price": "47900",
+  "discount": "20",
+  "category": "planta interior",
+  "estado": "in-sale",
+  "description": "Hermosa",
+  "image": "ficus-lyrata.png"
+ },
+ {
+  "cod_product": 8,
+  "name": "Fittonia",
+  "price": "47900",
+  "discount": "20",
+  "category": "planta exterior",
+  "estado": "in-sale",
+  "description": "Hermosa",
+  "image": "fittonia.png"
+ },
+ {
+  "cod_product": 9,
+  "name": "Sanseviera",
+  "price": "47900",
+  "discount": "20",
+  "category": "planta exterior",
+  "estado": "visited",
+  "description": "Hermosa",
+  "image": "sanseviera.png"
+ },
+ {
+ "cod_product": 10,
+  "name": "Suculenta variada",
+  "price": "47900",
+  "discount": "20",
+  "category": "planta interior",
+  "estado": "visited",
+  "description": "Hermosa",
+  "image": "suculenta-variada.jpg"
+ }
+ 
+]

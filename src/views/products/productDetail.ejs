@@ -27,32 +27,32 @@
            MAIN
 ============================--> 
     <main>
-     
+       
         <div class="main-principal">
             
             <div class="main-principal-carrusel">
                 <div class="bar-carrusel">
                     <div class="carrusel-principal">
-                        <img src="/img/products/selby1.jpg" alt="Homalomena 'Selby'1">
+                        <img src="/img/products/<%= productDetail.image%>" alt="Homalomena 'Selby'1">
                     </div>
                     <div class="carrusel-secundario">
                         <div>
-                            <img src="/img/products/homalomena.jpg" alt="Homalomena 'Selby'2">
+                            <img src="/img/products/<%= productDetail.image%>" alt="Homalomena 'Selby'2">
                         </div>
                         <div>
-                            <img src="/img/products/selby2.jpg" alt="Homalomena 'Selby'3">
+                            <img src="/img/products/<%= productDetail.image%>" alt="Homalomena 'Selby'3">
                         </div>
                         <div>
-                            <img src="/img/products/selby3.jpg" alt="Homalomena 'Selby'4">
+                            <img src="/img/products/<%= productDetail.image%>" alt="Homalomena 'Selby'4">
                         </div>
 
                     </div>
                 </div>
                 <div class="main-secundario-products">
                     <div class="name-product">
-                        <h1>Homalomena 'Selby'</h1>
+                        <h1><%= productDetail.name%></h1>
                         <div class="size-product">
-                            <span>Maceta: 10</span>
+                            <span>Maceta: <%= productDetail.capacity%></span>
                         </div>
                         <div class="cost-product">
                             <span>$25.00</span>
@@ -83,34 +83,8 @@
             <section class="description-bar">
                 <article class="article-description">
                     <ul>
-                        <li><b> Iluminación:</b> Poca luz - Luz brillante e indirecta</li>
-                        <li><b>Agua:</b>  Una vez que las dos pulgadas superiores se hayan secado. Aproximadamente cada 5-6 días.</li>
-                        <li> <b>Humedad:</b>  Tolerante a la humedad doméstica estándar.</li>
-                        <li><b>Familia:</b>  Aracaea</li>
-                        <li><b>Origen nativo:</b>  Sudeste de Asia</li>
+                        <%= productDetail.description %>
                     </ul>
-                </article>
-                <article class="article-description">
-                    <h3>Creciendo en Interiores</h3>
-                    <div>
-                        Homalomena es una planta muy tranquila con un follaje llamativo. Son fanáticos de la luz 
-                        indirecta e incluso pueden tolerar niveles de luz más bajos. Mantenga su planta alejada del 
-                        sol directo. Encontrará a estos géneros creciendo felizmente en el subsuelo de las selvas 
-                        tropicales del sudeste asiático, lo que significa que disfrutan de una nebulización diaria o 
-                        un humidificador funcionando cerca. Asegúrese de retener un nivel uniforme de humedad en su 
-                        mezcla para macetas para mantener la planta feliz y el follaje exuberante.
-                    </div>
-                </article>
-                <article class="article-description">
-                    <h3>Creciendo al aire libre</h3>
-                    <div>
-                        Homalomena cultivada al aire libre en el norte de Texas debe mantenerse a la sombra. 
-                        No recomendamos mantener su planta al aire libre durante períodos de calor o frío extremos. 
-                        Se recomienda regar con regularidad, especialmente si su región es relativamente 
-                        seca (en comparación con los neotrópicos). Nunca deje que su Homalomena se exponga a
-                        temperaturas bajo cero. Cuando las temperaturas alcancen los 55 grados o menos, asegúrese de 
-                        trasladar sus plantas al interior a un ambiente cálido y brillante.
-                    </div>
                 </article>
             </section>
         </div>
@@ -120,56 +94,26 @@
         </div>
 
         <section class="main-section-otherProducts">
+            <% productOther.forEach(producto =>  { %>
             <div class="div-otherProducts">
                 <div class="main-otherProducts">
                     <article class="article-otherProducts">
                         <div class="div-img-otherProducts">
-                            <img src="/img/products/geranio-2.png" alt="">
+                            <img src="/img/products/<%= producto.image %>" alt="">
                         </div>
                         <div class="name-otherProducts">
-                            <h1>Geranio</h1>
-                            <h3>$54.00</h3>
+                            <h1><%= producto.name %></h1>
+                            <h3>$<%= producto.price %></h3>
                         </div>
                     </article>
-
-                    <article class="article-otherProducts">
-                        <div class="div-img-otherProducts">
-                            <img src="/img/products/jazmin-del-cabo.png" alt="">
-                        </div>
-                        <div class="name-otherProducts">
-                            <h1>Jazmin</h1>
-                            <h3>$90.00</h3>
-                            
-                        </div>
-                    </article>
-                </div>
-                
-
-                <div class="main-otherProducts">
-                    <article class="article-otherProducts">
-                        <div class="div-img-otherProducts">
-                            <img src="/img/products/orquidea.png" alt="">
-                        </div>
-                        <div class="name-otherProducts">
-                            <h1>Orquidea</h1>
-                            <h3>$78.00</h3>
-                            
-                        </div>
-                    </article>
-
-                    <article class="article-otherProducts">
-                        <div class="div-img-otherProducts">
-                            <img src="/img/products/lazo-de-amor-2.png" alt="">
-                        </div>
-                        <div class="name-otherProducts">
-                            <h1>Lazo de amor</h1>
-                            <h3>$44.00</h3>
-                        </div>
-                    </article>
-                </div>
+               </div>
             </div>
+            <% }) %>
+        </section>    
 
-        </section>
+        
+
+                   
 
     </main>
 
