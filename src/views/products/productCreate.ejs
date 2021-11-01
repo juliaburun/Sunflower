@@ -35,20 +35,20 @@
   <h2>CREAR PRODUCTO</h2>
   <!--LINEA BAJO EL TEXTO-->
   <hr color="#edafa4">
-  <form action="" method="GET">
+  <form action="./create" method="POST" enctype="multipart/form-data">
     <div class="forlularios">
     <!--CONTENEDOR NOMBRE DEL PRODUCTO-->
     <div class="cajaName">
       <label for="name" class="nombreProd">Nombre del producto:</label>
       <input type="text" id="name" name="name" placeholder="Ej: orquidea" class="form-cajaName">
     </div>
-    
     <!--CONTENEDOR CATEGORIA-->
     <div class="cajaCategory">
-      <label for="Category" class="categoriaProd">Categoría:</label>
-      <select name="Category" id="Category" class="form-cajaCategory">
-        <option value="plantas interior">Plantas interior</option>
-        <option value="plantas exterior">Plantas exterior</option>
+      <label for="category" class="categoriaProd">Categoría:</label>
+      <select name="category" id="category" class="form-cajaCategory">
+        <option value="" selected>Elegí</option>
+        <option value="plantas-interior">Plantas interior</option>
+        <option value="plantas-exterior">Plantas exterior</option>
       </select>
     </div>
     <!--CONTENEDOR SUBCATEGORIA-->
@@ -67,15 +67,31 @@
 -->
     <!--CONTENEDOR CAPACIDAD-->
     <div class="cajaCapacity">
-      <label for="capacity" class="capasidadProd">Tamaño:</label>
-      <input type="text" id="capacity" name="capacity" placeholder="Ej: Maceta 10" class="form-cajaCapacity">
+      <label for="capacity" class="capasidadProd">Maceta:</label>
+      <select name="capacity" id="capacity" class="form-cajaSection">
+        <option value="" selected>Elegí</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+      </select>
     </div>
+
 
     <!--CONTENEDOR PRECIO-->
     <div class="cajaPrice">
       <label for="price" class="precioProd">Precio del producto $:</label>
       <input type="text" id="price" name="price" placeholder="Ej: 2220 " class="form-cajaPrice">
     </div>
+        <!--CONTENEDOR SECCION-->
+        <div class="cajaSection">
+          <label for="section" class="seccionProd">Sección:</label>
+          <select name="section" id="section" class="form-cajaSection">
+            <option value="" selected>Elegí</option>
+            <option value="visitado">Producto destacado</option>
+            <option value="en-oferta">Producto en oferta</option>
+          </select>
+        </div>
+
 <!--CONTENEDOR DESCRIPCION DEL PRODUCTO-->
 <div class="cajaDescription">
   <label for="description" class="descripcionProd">Descripción del producto:</label>
@@ -88,9 +104,9 @@
       <h2>Vista previa</h2>
       <div class="grid">
         <div class="form-element">
-          <input type="file" id="file-1" accept="image/*">
+          <input type="file" id="file-1" accept="image/*" name="image1">
           <label for="file-1" id="file-1-preview">
-            <img src="/img/upload-image.png" alt="">
+            <img name="image" src="/img/upload-image.png" alt="">
             <div>
               <span>+</span>
             </div>
@@ -99,7 +115,7 @@
         <div class="form-element">
           <input type="file" id="file-2" accept="image/*">
           <label for="file-2" id="file-2-preview">
-            <img src="/img/upload-image.png" alt="">
+            <img name="image" src="/img/upload-image.png" alt="">
             <div>
               <span>+</span>
             </div>

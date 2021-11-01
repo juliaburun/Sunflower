@@ -1,12 +1,17 @@
 // ************ Require's ************
 const express = require('express');
 const path = require('path');
+const methodOverride = require('method-override'); // Para poder usar los métodos PUT y DELETE
+
 
 // ************ express() ************
 const app = express();
 
 
 // ************ Middlewares -************
+app.use(express.urlencoded({ extended: false })); // Necesario para recibir los datos que vienen desde el formulario
+app.use(express.json()); // Necesario para utilizar datos JSON
+app.use(methodOverride('_method')); // Para poder usar los métodos PUT y DELETE
 
 
 // ************ Template Engine ************

@@ -106,6 +106,12 @@ form{
     flex-direction: column;
     width: 200px;
 }
+/*CONTENEDOR SECCION*/
+.cajaSection{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
 /*ETIQUETA INPUT PRECIO*/
 .cajaPrincipal input{
     font-size: 14px;
@@ -206,6 +212,7 @@ form label{
 p#texto{
     text-align: center;
     color: white;
+    font-size: 14px;
 }
 .cajaAgregar:hover{
     background-color: var(--marron);
