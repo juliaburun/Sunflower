@@ -53,7 +53,7 @@
     <div class="producto-destacado">
       <article>
         <div class="div-img">
-          <a href="#"><img src="/img/products/<%= producto.image %>"></a>
+          <a href="/products/detail/<%= producto.cod_product%>"><img src="/img/products/<%= producto.image %>"></a>
         </div>
            <div class="articulo-pie">
               <p class="nombre-planta"><%= producto.name %></p>
@@ -61,8 +61,12 @@
               <p class="precio"> $<%= producto.price %></p>
               <div class="container-button">
               <button class="boton-carrito" type="button">Agregar al carrito</button></div>
+              <form action="/products/delete/<%= producto.cod_product %>?_method=DELETE" method="POST" class="forms-button">
+                 <a href="/products/edit/<%= producto.cod_product%>"><i class="fas fa-edit"></i></a>
+                 <button type="submit"><i class="fas fa-trash"></i></button>
+              </form>
             </div>
-      </article>
+      </article>  
     </div>
     <% }) %>
   </div>

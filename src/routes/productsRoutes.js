@@ -28,17 +28,20 @@ const upload = multer ({storage});
 // ************ Rutas ************
 
 /* Ruta listado de Productos */
-router.get('/', productsControllers.indexProducts);
+router.get('/', productsControllers.index);
 
 /* Ruta detalle del Producto */
-router.get('/detail/:cod_product', productsControllers.productDetail);
+router.get('/detail/:cod_product', productsControllers.detail);
 
 /* Ruta crear el producto */
-router.get('/create', productsControllers.productCreate);
-router.post('/create', upload.single('image1'),productsControllers.productStore)
+router.get('/create', productsControllers.create);
+router.post('/create', upload.single('image1'),productsControllers.store)
 
 /* Ruta modificar el producto */
-router.get('/edit', productsControllers.productEdit);
+router.get('/edit/:cod_product', productsControllers.edit);
+router.put('/edit/:cod_product', upload.single('imageEdited1'), productsControllers.update); 
 
+/* Ruta eliminar el producto */
+router.delete('/delete/:cod_product', productsControllers.destroy); 
 
 module.exports=router;

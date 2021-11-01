@@ -1,7 +1,7 @@
 [
  {
   "cod_product": 1,
-  "name": "Geranio",
+  "name": "GERANIO",
   "category": "plantas-interior",
   "capacity": "10",
   "price": "200",
@@ -10,28 +10,8 @@
   "image": "geranio-2.png"
  },
  {
-  "cod_product": 2,
-  "name": "Helecho",
-  "category": "plantas-interior",
-  "capacity": "20",
-  "price": "300",
-  "section": "en-oferta",
-  "description": "Los helechos pertenecen a los pteridófitos, que es un grupo de plantas vasculares caracterizado porque su dispersión se produce por esporas (criptógamas). Comprendes unos 150 géneros con entre 6.000 y 15.000 especies. Se caracteriza por tener frondas de 60 a 80 cm de longitud, oblongas, de pecíolo cubierto con escamas rojizas y divididas en segmentos largos de borde aserrado, y cuyo rizoma, de sabor algo amargo y olor desagradable, se emplea en medicina como vermífugo.",
-  "image": "helecho.png"
- },
- {
-  "cod_product": 3,
-  "name": "Orquidea",
-  "category": "plantas-interior",
-  "capacity": "30",
-  "price": "47900",
-  "section": "visitado",
-  "description": "Las orquídeas u orquidáceas (nombre científico Orchidaceae) son una familia de plantas monocotiledóneas que se distinguen por la complejidad de sus flores y por sus interacciones ecológicas con los agentes polinizadores y con los hongos con los que forman micorrizas. La familia comprende aproximadamente 25.000 (algunas fuentes informan de 30.000) especies, y quizá otros 60.000 híbridos y variedades producidas por los horticultores, por lo que resulta ser una de las familias con mayor riqueza de especies entre las angiospermas. Pueden ser reconocidas por sus flores de simetría fuertemente bilateral, en las que la pieza media del verticilo interno de tépalos —llamada labelo— está profundamente modificada, y el o los estambres están fusionados al estilo, al menos en la base.",
-  "image": "orquidea.png"
- },
- {
   "cod_product": 4,
-  "name": "lavanda",
+  "name": "LAVANDA",
   "category": "plantas-exterior",
   "capacity": "10",
   "price": "59000",
@@ -41,7 +21,7 @@
  },
  {
   "cod_product": 5,
-  "name": "Erica",
+  "name": "ERICA",
   "category": "plantas-interior",
   "capacity": "20",
   "price": "34000",
@@ -51,7 +31,7 @@
  },
  {
   "cod_product": 6,
-  "name": "homalomena",
+  "name": "HOMALOMENA",
   "category": "plantas-exterior",
   "capacity": "10",
   "price": "8900",
@@ -61,7 +41,7 @@
  },
  {
   "cod_product": 7,
-  "name": "Ficus-lyrata",
+  "name": "FICUS LYRATA",
   "category": "plantas-exterior",
   "capacity": "20",
   "price": "5400",
@@ -71,7 +51,7 @@
  },
  {
   "cod_product": 8,
-  "name": "Fittonia",
+  "name": "FITTONIA",
   "category": "plantas-interior",
   "capacity": "30",
   "price": "2356",
@@ -81,7 +61,7 @@
  },
  {
   "cod_product": 9,
-  "name": "Sanseviera",
+  "name": "SANSEVIERA",
   "category": "plantas-interior",
   "capacity": "20",
   "price": "1400",
@@ -91,7 +71,7 @@
  },
  {
   "cod_product": 10,
-  "name": "Suculenta variada",
+  "name": "SUCULENTA VARIADA",
   "category": "plantas-interior",
   "capacity": "10",
   "price": "1700",
@@ -101,22 +81,11 @@
  },
  {
   "cod_product": 11,
-  "name": "Aphelandra",
+  "name": "APHELANDRA",
   "category": "plantas-interior",
   "capacity": "20",
   "price": "45000",
-  "section": "en-oferta",
   "description": "El género Aphelandra pertenece a la familia de las Acanthaceae y está integrado por más de 200 especies, casi todas originarias de Brasil. Las principales especies son: Aphelandra squarrosa, Aphelandra tetragona, Aphelandra acutifolia, Aphelandra rigida, Aphelandra sinclairiana, Aphelandra tridentata.\r\n\r\nRecibe los nombres vulgares de Afelandra o Añilillo.\r\n\r\nSon plantas tropicales muy atractivas por sus hojas de color verde oscuro brillante que contrastan con el blanco crema de los nervios. Las flores surgen de espigas terminales y suelen ser amarillas, rojas o naranjas. Florecen en primavera y en verano.\r\n\r\nSe utilizan como plantas de interior en habitaciones bien iluminadas y cálidas. La maceta debe ser bastante grande. Si vemos que pierde hojas suele ser porque está mal ubicada: o demasiado sol o demasiado frío.\r\n\r\nLa Aphelandra squarrosa necesita una exposición iluminada pero sin sol directo. Su temperatura ideal está entre los 15-25 ºC y la humedad ambiental debe ser más bien alta.\r\n\r\nUn suelo ideal para esta planta de interior sería uno formado por una parte de arena gruesa, otra de mantillo de hojas y dos partes de turba. Si se realizan trasplantes es mejor que sea en primavera.\r\n\r\nRegar frecuentemente con agua sin cal para evitar que la tierra se seque; debe tener una cierta humedad siempre.\r\n\r\nNo necesitan propiamente poda, sólo cortar la espiga floral cuando se marchite para que surjan nuevos brotes.",
   "image": "productImg1635576194751.jpg"
- },
- {
-  "cod_product": 12,
-  "name": "planta prueba",
-  "category": "plantas-interior",
-  "capacity": "20",
-  "price": "23000",
-  "section": "visitado",
-  "description": "esta es una prueba......",
-  "image": "productImg1635603342003.jpg"
  }
 ]

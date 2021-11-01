@@ -189,7 +189,7 @@ form label{
     height: 35px;
     position: relative;
     width: 100px;
-    background-color: #EDAFA4;
+    background-color: var(--rosa);
     border-radius: 3px;
     margin-left: auto;
     margin-right: auto;
@@ -206,6 +206,7 @@ form label{
     height: 100%;
     opacity: 0;
     cursor: pointer;
+    color: var(--b);
 }
 p#texto{
     text-align: center;
