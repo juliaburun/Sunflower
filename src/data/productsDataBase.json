@@ -5,7 +5,7 @@
   "category": "plantas-interior",
   "capacity": "10",
   "price": "200",
-  "section": "en-oferta",
+  "section": "",
   "description": "Los geranios son plantas de exterior con flores de colores vivos. Florecen durante el verano y son bastante resistentes.Se suelen cultivar en el jardín, en la terraza o el balcón pero también se pueden mantener en interior, siempre y cuando se coloque en un lugar muy luminoso alejados de la calefacción. Hay muchas variedades distintas de geranios y cada año aparecen nuevas especies.Las más populares son: el geranio común, la gitanilla o geranio de hojas de hiedra (porte colgante), el pelargonio de pensamiento (el mejor para cultivar en interior) y los geranios con hojas aromáticas.",
   "image": "geranio-2.png"
  },
@@ -15,7 +15,7 @@
   "category": "plantas-exterior",
   "capacity": "10",
   "price": "59000",
-  "section": "en-oferta",
+  "section": "",
   "description": "Elegante y de gran aroma",
   "image": "lavanda.png"
  },
@@ -25,7 +25,7 @@
   "category": "plantas-interior",
   "capacity": "20",
   "price": "34000",
-  "section": "visitado",
+  "section": "",
   "description": "Hermosa",
   "image": "erica.png"
  },
@@ -55,7 +55,7 @@
   "category": "plantas-interior",
   "capacity": "30",
   "price": "2356",
-  "section": "en-oferta",
+  "section": "",
   "description": "Hermosa",
   "image": "fittonia.png"
  },
@@ -78,14 +78,5 @@
   "section": "visitado",
   "description": "Hermosa",
   "image": "suculenta-variada.jpg"
- },
- {
-  "cod_product": 11,
-  "name": "APHELANDRA",
-  "category": "plantas-interior",
-  "capacity": "20",
-  "price": "45000",
-  "description": "El género Aphelandra pertenece a la familia de las Acanthaceae y está integrado por más de 200 especies, casi todas originarias de Brasil. Las principales especies son: Aphelandra squarrosa, Aphelandra tetragona, Aphelandra acutifolia, Aphelandra rigida, Aphelandra sinclairiana, Aphelandra tridentata.\r\n\r\nRecibe los nombres vulgares de Afelandra o Añilillo.\r\n\r\nSon plantas tropicales muy atractivas por sus hojas de color verde oscuro brillante que contrastan con el blanco crema de los nervios. Las flores surgen de espigas terminales y suelen ser amarillas, rojas o naranjas. Florecen en primavera y en verano.\r\n\r\nSe utilizan como plantas de interior en habitaciones bien iluminadas y cálidas. La maceta debe ser bastante grande. Si vemos que pierde hojas suele ser porque está mal ubicada: o demasiado sol o demasiado frío.\r\n\r\nLa Aphelandra squarrosa necesita una exposición iluminada pero sin sol directo. Su temperatura ideal está entre los 15-25 ºC y la humedad ambiental debe ser más bien alta.\r\n\r\nUn suelo ideal para esta planta de interior sería uno formado por una parte de arena gruesa, otra de mantillo de hojas y dos partes de turba. Si se realizan trasplantes es mejor que sea en primavera.\r\n\r\nRegar frecuentemente con agua sin cal para evitar que la tierra se seque; debe tener una cierta humedad siempre.\r\n\r\nNo necesitan propiamente poda, sólo cortar la espiga floral cuando se marchite para que surjan nuevos brotes.",
-  "image": "productImg1635576194751.jpg"
  }
 ]

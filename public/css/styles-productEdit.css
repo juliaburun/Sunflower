@@ -90,6 +90,7 @@ form{
 /*ETIQUETA SELECT CATEGORIA Y SUBCATEGORIA*/
 .cajaPrincipal select{
     font-size: 14px;
+    font-weight: 600;
     width: 90%;
     height: 45px;
     padding: 10px;
@@ -110,9 +111,22 @@ form{
     flex-direction: column;
     width: 200px;
 }
-/*ETIQUETA INPUT PRECIO*/
+/*CONTENEDOR DESCUENTO*/
+.cajaDiscount{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+/*CONTENEDOR SECCION*/
+.cajaSection{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+/*ETIQUETA INPUT*/
 .cajaPrincipal input{
     font-size: 14px;
+    font-weight: 600;
     width: 90%;
     height: 45px;
     padding: 10px;
@@ -129,6 +143,7 @@ form{
 }
 /*ETIQUETA TEXTAREA DESCRIPCION DEL PRODUCTO*/
 .cajaDescription textarea{
+    font-weight: 600;
     height: 70px;
     margin-bottom: 20px;
     border: solid 1px #B0B3AF;
@@ -196,7 +211,8 @@ form label{
     margin-top: 40px;
     margin-bottom: 10px;  
 }
-.botonAgregar{
+.botonAgregar,
+.botonCancelar{
     position: absolute;
     top: 0px;
     left: 0px;
@@ -211,7 +227,7 @@ form label{
 p#texto{
     text-align: center;
     color: white;
-    padding-top: 6px;
+    padding-top: 8px;
 }
 .cajaAgregar:hover{
     background-color: var(--marron);
@@ -219,6 +235,31 @@ p#texto{
     font-weight: 500;
     transition: all 1s
 }
+
+/*BOTON CANCELAR*/
+.cajaCancelar{
+    width: 50px;
+    height: 35px;
+    position: relative;
+    width: 100px;
+    background-color: var(--blanco);
+    border-radius: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 10px;  
+}
+p#texto2{
+    text-align: center;
+    color:var(--marron); 
+    padding-top: 8px;
+}
+.cajaCancelar:hover{
+    background-color: var(--rosa);
+    color:var(--blanco);
+    transition: all 1s
+}
+
 
 /*============================== MEDIA QUERIES ===============================*/
 
