@@ -2,11 +2,11 @@ const fs = require('fs');
 const path = require ('path');
 
 // convertir los datos del JSON a objeto literal
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
+const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productsControllers={
-    index: (req, res) => {
+    index: (req, res) => {       
         res.render('./products/products', {products} );
     },
 
