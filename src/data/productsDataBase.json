@@ -5,6 +5,7 @@
   "category": "plantas-interior",
   "capacity": "10",
   "price": "200",
+  "discount": 15,
   "section": "en-oferta",
   "description": "Los geranios son plantas de exterior con flores de colores vivos. Florecen durante el verano y son bastante resistentes.Se suelen cultivar en el jardín, en la terraza o el balcón pero también se pueden mantener en interior, siempre y cuando se coloque en un lugar muy luminoso alejados de la calefacción. Hay muchas variedades distintas de geranios y cada año aparecen nuevas especies.Las más populares son: el geranio común, la gitanilla o geranio de hojas de hiedra (porte colgante), el pelargonio de pensamiento (el mejor para cultivar en interior) y los geranios con hojas aromáticas.",
   "image": "geranio-2.png"
