@@ -4,6 +4,7 @@
 
 img{
     width: 100%;
+    height: 100%;
     
 }
 
@@ -227,10 +228,16 @@ BARRA ENTRE EL HEADER Y EL MAIN
 
 .article-description ul {
     padding: 0;;
+    font-size: 16px;
+    text-align: justify;
+    line-height: 24px;
+    color: black;
+    font-weight: bold;
 }
 .article-description ul li{
     list-style: none;
     padding: 3px;
+
     
 }
 
@@ -243,11 +250,24 @@ BARRA ENTRE EL HEADER Y EL MAIN
 ******************************/
 .main-section-otherProducts{
     width: 100%;
+   
 }
+
+.main-section-otherProducts a{
+    text-decoration: none;
+    
+}
+
+
+/* .div-otherProducts{
+    width: 70%;
+    height: 60%;
+} */
+
 .article-otherProducts{
     box-shadow : 0px 0px 10px #edafa4;
     /* border: #edafa4 solid 1px; */
-    width: 80%;
+    width: 50%;
     margin: auto;
     margin-bottom: 50px;
 }
@@ -275,7 +295,7 @@ BARRA ENTRE EL HEADER Y EL MAIN
 
 /* Imágenes */
 .div-img-otherProducts{
-    width: 90%;
+    width: 100%;
     height: 200px;
     margin: auto;
     /* border: blue solid 4px; */
@@ -418,25 +438,39 @@ BARRA ENTRE EL HEADER Y EL MAIN
 
     .main-section-otherProducts {
         display: flex;
-        width: 100%;
-    }
-
-    .main-section-otherProducts .div-otherProducts{
-        width: 100%;
-    }
-
-   
-    .main-otherProducts{
-        display: flex;
-        width: 90%;
-        /* border: BLACK solid 6px; */
-        margin: auto;
+        flex-wrap: wrap;
+        justify-content: space-around
+        
+        
     }
 
     .article-otherProducts{
+        width: 100%;
+
+    }
+
+    .div-img-otherProducts{
+        width: 100%;
+        height: 150px;
+    }
+
+    /* .main-section-otherProducts .div-otherProducts{
+        width: 100%;
+    } */
+
+   
+   /*  .main-otherProducts{
+        display: flex;
+       
+        
+        border: BLACK solid 6px;
+        margin: auto;
+    } */
+
+   /*  .article-otherProducts{
         width: 60%;
         height: 100%;
-       /*  border: olive solid 4px; */
+        border: olive solid 4px;
         margin: 6px;
         margin-bottom: 50px;
     }
@@ -448,7 +482,7 @@ BARRA ENTRE EL HEADER Y EL MAIN
 
     .name-otherProducts{
         width: 100%;
-    }
+    } */
    
 }  
 
@@ -507,20 +541,17 @@ BARRA ENTRE EL HEADER Y EL MAIN
         font-size: 20px;
     }
 
-   
-    .div-otherProducts{
-        display: flex;
-    }
-
-    .main-section-otherProducts .div-otherProducts{
-        width: 90%;
-        margin: auto;
-    }
-
     .div-img-otherProducts{
         width: 100%;
-        height: 100%;
+        height: 200px;
     }
+
+   
+   
+
+    
+
+    
 }
 
 

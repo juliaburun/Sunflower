@@ -85,6 +85,7 @@ form{
 /*ETIQUETA SELECT CATEGORIA Y SUBCATEGORIA*/
 .cajaPrincipal select{
     font-size: 14px;
+    font-weight: 600;
     width: 90%;
     height: 45px;
     padding: 10px;
@@ -106,15 +107,23 @@ form{
     flex-direction: column;
     width: 200px;
 }
+/*CONTENEDOR DESCUENTO*/
+.cajaDiscount{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
 /*CONTENEDOR SECCION*/
 .cajaSection{
     display: flex;
     flex-direction: column;
     width: 200px;
+    font-weight: 600;
 }
 /*ETIQUETA INPUT PRECIO*/
 .cajaPrincipal input{
     font-size: 14px;
+    font-weight: 600;
     width: 90%;
     height: 45px;
     padding: 10px;
@@ -131,6 +140,7 @@ form{
 }
 /*ETIQUETA TEXTAREA DESCRIPCION DEL PRODUCTO*/
 .cajaDescription textarea{
+    font-weight: 600;
     height: 70px;
     margin-bottom: 20px;
     border: solid 1px #B0B3AF;

@@ -49,7 +49,9 @@
 <section class="destacados">
 <div class="cuatro-articulos">
   <div class="dos-articulos">
-    <% products.forEach (producto => {%>
+    <% products.forEach (producto => { %>
+      <% const productCapacity = capacity.find(capacity => capacity.cod_capacity == producto.capacity);
+      const capacityName = productCapacity.name %>
     <div class="producto-destacado">
       <article>
         <div class="div-img">
@@ -57,7 +59,7 @@
         </div>
            <div class="articulo-pie">
               <p class="nombre-planta"><%= producto.name %></p>
-              <p class="nombre-cienti">Maceta <%= producto.capacity %></p>
+              <p class="nombre-cienti">Maceta <%=capacityName %> </p>
               <p class="precio"> $<%= producto.price %></p>
               <div class="container-button">
               <button class="boton-carrito" type="button">Agregar al carrito</button></div>

@@ -52,10 +52,10 @@
                     <div class="name-product">
                         <h1><%= productDetail.name%></h1>
                         <div class="size-product">
-                            <span>Maceta: <%= productDetail.capacity%></span>
+                            <span>Maceta: <%= productCapacity.name%></span>
                         </div>
                         <div class="cost-product">
-                            <span>$25.00</span>
+                            <span>$<%= productDetail.price%></span>
                         </div>
                         
                     </div>
@@ -94,21 +94,23 @@
         </div>
 
         <section class="main-section-otherProducts">
-            <% let productosOtros= productOther.slice(0,6)   %>
+            <% let productosOtros= productOther.slice(0,4)   %>
             <% productosOtros.forEach(producto =>  { %>
-            <div class="div-otherProducts">
-                <div class="main-otherProducts">
-                    <article class="article-otherProducts">
-                        <div class="div-img-otherProducts">
-                            <img src="/img/products/<%= producto.image %>" alt="">
-                        </div>
-                        <div class="name-otherProducts">
-                            <h1><%= producto.name %></h1>
-                            <h3>$<%= producto.price %></h3>
-                        </div>
-                    </article>
-               </div>
-            </div>
+            <a href="/products/detail/<%= producto.cod_product%>">
+                <div class="div-otherProducts">
+                    <div class="main-otherProducts">
+                        <article class="article-otherProducts">
+                            <div class="div-img-otherProducts">
+                                <img src="/img/products/<%= producto.image %>" alt="">
+                            </div>
+                            <div class="name-otherProducts">
+                                <h1><%= producto.name %></h1>
+                                <h3>$<%= producto.price %></h3>
+                            </div>
+                        </article>
+                </div>
+                </div>
+            </a>
             <% }) %>
         </section>    
 

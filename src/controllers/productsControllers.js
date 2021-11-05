@@ -2,19 +2,44 @@ const fs = require('fs');
 const path = require ('path');
 
 // convertir los datos del JSON a objeto literal
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
+const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+// convertir category.JSON a objeto literal
+const categoryFilePath = path.join(__dirname, '../data/category.json');
+const category = JSON.parse(fs.readFileSync(categoryFilePath, 'utf-8'));
+
+// convertir capacity.JSON a objeto literal
+const capacityFilePath = path.join(__dirname, '../data/capacity.json');
+const capacity = JSON.parse(fs.readFileSync(capacityFilePath, 'utf-8'));
+
+// convertir discount.JSON a objeto literal
+const discountFilePath = path.join(__dirname, '../data/discount.json');
+const discount = JSON.parse(fs.readFileSync(discountFilePath, 'utf-8'));
+
+// convertir section.JSON a objeto literal
+const sectionFilePath = path.join(__dirname, '../data/section.json');
+const section = JSON.parse(fs.readFileSync(sectionFilePath, 'utf-8'));
+
 const productsControllers={
-    index: (req, res) => {
-        res.render('./products/products', {products} );
+    index: (req, res) => {      
+
+        res.render('./products/products', {products, capacity} );
     },
 
     detail: (req, res) => {
         const cod_product = req.params.cod_product;
         const productDetail = products.find(producto => producto.cod_product == cod_product);
+        const productCategory = category.find(producto => producto.cod_category == productDetail.category);
+        const productCapacity = capacity.find(producto => producto.cod_capacity== productDetail.capacity);
+        const productDiscount = discount.find(producto => producto.cod_discount== productDetail.discount);
+        const productSection = section.find(producto => producto.cod_section== productDetail.section);
+
+        //console.log (productSection);
+        //Filtro de los otros productos ofertados diferentes al que se muestra en el detalle
         const productOther = products.filter(producto => producto.cod_product != cod_product);
-        res.render('./products/productDetail', {productDetail, productOther});
+
+        res.render('./products/productDetail', {productDetail, productCapacity,  productOther});
         //res.send(productOther)
         
     },
@@ -32,6 +57,7 @@ const productsControllers={
             category: req.body.category,
             capacity: req.body.capacity,
             price: req.body.price,
+            discount: req.body.discount,
             section: req.body.section,
             description: req.body.description,
             image: req.file.filename
