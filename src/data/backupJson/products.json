@@ -16,6 +16,7 @@
   "category": "1",
   "capacity": "2",
   "price": "72999",
+  "discount": "2",
   "section": "",
   "description": "Los helechos, son plantas vasculares sin semilla (pteridofitas), cuyas características morfológicas más sobresalientes son sus hojas grandes, usualmente pinadas y con prefoliación circinada. La cantidad de especies y formas de los helechos les convierte en unas de las plantas más atractivas y espectaculares para decorar terrazas y jardines, pero también como planta de interior. En este artículo te vamos a contar cómo cuidarlas para que te duren mucho y se vean siempre bonitas y con vida.",
   "image": "img-products-helecho.png"
@@ -118,15 +119,5 @@
   "section": "1",
   "description": "Hermosa planta tropical",
   "image": "productImg1636146969187.webp"
- },
- {
-  "cod_product": 12,
-  "name": "lo que quieras",
-  "category": "1",
-  "capacity": "2",
-  "price": "200",
-  "section": "2",
-  "description": "dfrss",
-  "image": "planta.jpg"
  }
 ]
