@@ -3,7 +3,7 @@ const path = require ('path');
 
 // convertir los datos del JSON a objeto literal
 const productsFilePath = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 // convertir category.JSON a objeto literal
 const categoryFilePath = path.join(__dirname, '../data/category.json');
@@ -54,24 +54,27 @@ const productsControllers={
         let newProduct = {
             cod_product: products[products.length - 1].cod_product + 1,
             name: req.body.name,
-            category: req.body.category,
-            capacity: req.body.capacity,
+            category: parseInt(req.body.category),
+            capacity: parseInt(req.body.capacity),
             price: req.body.price,
-            discount: req.body.discount,
-            section: req.body.section,
+            discount: parseInt(req.body.discount),
+            section: parseInt(req.body.section),
             description: req.body.description,
-            image: req.file.filename
+            image: req.file ? req.file.filename : "planta.jpg" 
         }
         products.push(newProduct);
         let productJson =JSON.stringify(products, null, " ");
         fs.writeFileSync(productsFilePath, productJson);
+
+        products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
         res.redirect('/products/');
     },
 
     edit: (req, res) => {
         const cod_product = req.params.cod_product;
         const productEdit = products.find(producto => producto.cod_product == cod_product);
-        res.render('./products/productEdit', {productEdit});
+        res.render('./products/productEdit', {productEdit, category, discount, section, capacity});
     },
 
     update: (req, res) => {
@@ -103,6 +106,8 @@ const productsControllers={
         products[indexProduct] = editedProduct;
         let productJson =JSON.stringify(products, null, " ");
         fs.writeFileSync(productsFilePath, productJson);
+
+        products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         res.redirect('/products');
     },
 
@@ -112,6 +117,9 @@ const productsControllers={
 
 		let productJson =JSON.stringify(finalProducts, null, " ");
 		fs.writeFileSync(productsFilePath, productJson);
+
+        products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
 		res.redirect('/products');
 
     }

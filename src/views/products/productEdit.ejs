@@ -50,19 +50,30 @@
               <div class="cajaCategory">
                   <label for="category" class="categoriaProd">Categoría:</label>
                   <select name="category" id="category" class="form-cajaCategory" value="">
-                      <option value="<%= productEdit.category%>">Elegí</option>
-                      <option value=1>Plantas interior</option>
-                      <option value=2>Plantas exterior</option>
+                      <option value="">Elegí</option>
+                      <% category.forEach(categorys => { %>
+                          <% if (categorys.cod_category == productEdit.category){ %>
+                                <option value= <%= categorys.cod_category %> selected > <%= categorys.name%> </option>
+                          <% }else{ %>
+                              <option value= <%= categorys.cod_category %>> <%= categorys.name%>  </option>
+                         <% } %>
+                      <% }); %>
                   </select>
               </div> 
               <!--CONTENEDOR CAPACIDAD-->
               <div class="cajaCapacity">
                 <label for="capacity" class="capasidadProd">Maceta:</label>
                 <select name="capacity" id="capacity" class="form-cajaSection">
-                  <option value="<%= productEdit.capacity%>">Elegí</option>
-                  <option value=1>10</option>
-                  <option value=2>20</option>
-                  <option value=3>30</option>
+                  <option value="">Elegí</option>
+                  <% capacity.forEach(capacitys => { %>
+                    <% if (capacitys.cod_capacity == productEdit.capacity){ %>
+                          <option value= <%= capacitys.cod_capacity %> selected > <%= capacitys.name%> </option>
+                    <% }else{ %>
+                        <option value= <%= capacitys.cod_capacity %>> <%= capacitys.name%>  </option>
+                   <% } %>
+                <% }); %>
+
+                  
                 </select>
               </div>
               <!--CONTENEDOR PRECIO-->
@@ -74,19 +85,30 @@
               <div class="cajaDiscount">
                 <label for="discount" class="descuProd">Descuento %:</label>
                 <select name="discount" id="discount" class="form-cajaDiscount">
-                  <option value="<%= productEdit.discount%>">Elegí</option>
-                  <option value=1>10</option>
-                  <option value=2>15</option>
-                  <option value=3>20</option>
+                  <option value="">Elegí</option>
+                  <% discount.forEach(discounts => { %>
+                    <% if (discounts.cod_discount == productEdit.discount){ %>
+                          <option value= <%= discounts.cod_discount %> selected > <%= discounts.name%> </option>
+                    <% }else{ %>
+                        <option value= <%= discounts.cod_discount %>> <%= discounts.name%>  </option>
+                   <% } %>
+                <% }); %>
+                  
                 </select>
               </div>
               <!--CONTENEDOR SECCION-->
               <div class="cajaSection">
                 <label for="section" class="seccionProd">Sección:</label>
                 <select name="section" id="section" class="form-cajaSection">
-                  <option value="" selected>Elegí</option>
-                  <option value=1>Producto en oferta</option>
-                  <option value=2>Producto destacado</option>
+                  <option value="" >Elegí</option>
+                  <% section.forEach(sections => { %>
+                    <% if (sections.cod_section == productEdit.section){ %>
+                          <option value= <%= sections.cod_section %> selected > <%= sections.name%> </option>
+                    <% }else{ %>
+                        <option value= <%= sections.cod_section %>> <%= sections.name%>  </option>
+                   <% } %>
+                <% }); %>
+                  
                 </select>
               </div>
               <!--CONTENEDOR DESCRIPCION DEL PRODUCTO-->

@@ -72,7 +72,7 @@
   "capacity": "3",
   "price": "47900",
   "discount": "1",
-  "section": "3",
+  "section": "1",
   "description": "LA PLANTA DE TENDENCIA. El ficus lyrata destaca por sus hojas verdes y su presencia. Es una planta perfecta para decorar cualquier rincón y amenaza con conquistar esta temporada el reinado del helecho. El ficus lyrata es una planta tropical procedente de África perfecta para interiores. Su nombre es un homenaje a la lira ya que sus hojas tienen la forma de ese instrumento de cuerda. Aunque también se la conoce como higuera de hojas de violín, árbol lira o ficus lirado.",
   "image": "img-products-ficus-lyrata.png"
  },
@@ -119,5 +119,16 @@
   "section": "1",
   "description": "Hermosa planta tropical",
   "image": "productImg1636146969187.webp"
+ },
+ {
+  "cod_product": 12,
+  "name": "Gatito",
+  "category": 1,
+  "capacity": 2,
+  "price": "34000",
+  "discount": 1,
+  "section": 1,
+  "description": "wewrweqreteqrew",
+  "image": "productImg1636152508854.webp"
  }
 ]
