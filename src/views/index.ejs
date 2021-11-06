@@ -37,135 +37,91 @@
       <p class="autora-frase">Gertrude Jekyll</p>
   </div>
 
-  <!--Sección Destacados-->
-<h2 class="productos-destacados">Productos destacados</h2>
+  <!--OFERTAS-->
+<h2 class="productos-destacados">Ofertas</h2>
   <section class="destacados">
   <div class="cuatro-articulos">
     <div class="dos-articulos">
+
+      <% products.forEach (producto => { %>
+         <% if (producto.section == 1) { %>
+        <% const productCapacity = capacity.find(capacity => capacity.cod_capacity == producto.capacity);
+        const capacityName = productCapacity.name %>
+
     <div class="producto-destacado">
      <article>
-       <img src="/img/products/img-products-geranio-2.png">
-       <div class="articulo-pie">
-         <p class="nombre-planta">Geeeranio</p>
-         <p class="nombre-cienti">Pelargonium peltatum</p>
-         <p class="precio">$470</p>
-       </div>
+      <div class="div-img">
+      <a href="/products/detail/<%= producto.cod_product%>"><img src="/img/products/<%= producto.image %>"></a>
+    </div>
+    <div class="articulo-pie">
+      <p class="nombre-planta"><%= producto.name %></p>
+      <p class="nombre-cienti">Maceta <%= capacityName.name %></p>
+      <p class="precio"> $<%= producto.price %></p>
+    </div>
      </article>
     </div>
-
-    <div class="producto-destacado">
-      <article>
-        <img src="/img/products/img-products-sanseviera.png">
-        <div class="articulo-pie">
-          <p class="nombre-planta">Sanseviera</p>
-          <p class="nombre-cienti">Dracaena trifasciata</p>
-          <p class="precio">$750</p>
-        </div>
-      </article>
-     </div>
+    <% } %>
+    <% }) %>   
     </div>
-
-    <div class="dos-articulos">
-     <div class="producto-destacado">
-      <article>
-        <img src="/img/products/img-products-oxalis-rubra.png">
-        <div class="articulo-pie">
-          <p class="nombre-planta">Oxalis rubra</p>
-          <p class="nombre-cienti">Oxalis corniculata</p>
-          <p class="precio">$580</p>
-        </div>
-      </article>
-     </div>
-
-     <div class="producto-destacado">
-      <article>
-        <img src="/img/products/img-products-erica.png">
-        <div class="articulo-pie">
-          <p class="nombre-planta">Erica</p>
-          <p class="nombre-cienti">Cuphea hyssopifolia</p>
-          <p class="precio">$160</p>
-        </div>
-      </article>
-     </div>
-     </div>
     </div>
   </section>
-    <!--Ofertas-->
-  <h2 class="productos-destacados">Ofertas</h2>
+
+    
+
+  <h2 class="productos-destacados">Productos destacados</h2>
   <section class="destacados">
-    <div class="cuatro-articulos">
-      <div class="dos-articulos">
-      <div class="producto-destacado">
-       <article>
-         <img src="/img/products/img-products-lavanda.png">
-         <div class="articulo-pie">
-           <p class="nombre-planta">Lavanda</p>
-           <p class="nombre-cienti">Lavanda dentata</p>
-           <p class="precio">$490</p>
-         </div>
-       </article>
-      </div>
-  
-      <div class="producto-destacado">
-        <article>
-          <img src="/img/products/img-products-orquidea.png">
-          <div class="articulo-pie">
-            <p class="nombre-planta">Orquídea</p>
-            <p class="nombre-cienti">Orquídea phalaenopsis</p>
-            <p class="precio">$4800</p>
-          </div>
-        </article>
-       </div>
-      </div>
-  
-      <div class="dos-articulos">
-       <div class="producto-destacado">
-        <article>
-          <img src="/img/products/img-products-begonia-cross.png">
-          <div class="articulo-pie">
-            <p class="nombre-planta">Begonia</p>
-            <p class="nombre-cienti">Begonia cross</p>
-            <p class="precio">$140</p>
-          </div>
-        </article>
-       </div>
-  
-       <div class="producto-destacado">
-        <article>
-          <img src="/img/products/img-products-santa-rita.png">
-          <div class="articulo-pie">
-            <p class="nombre-planta">Santa Rita</p>
-            <p class="nombre-cienti">Bougainvillea glabra</p>
-            <p class="precio">$650</p>
-          </div>
-        </article>
-       </div>
-       </div>
-      </div>
-    </section>
-    <!--Última seccion-->
-    <section>
-      <div class="container-ultimo">
-       <div class="camion-envio">
-        <i class="fas fa-truck"></i>
-         <p>Envíos área metropolitana</p>     
-      </div>
-      <div class="pago-en-linea">
-        <img src="/img/pago.png">
-          <p class="pago-texto">Pago en línea</p>
-      </div>
-      <div class="cambios">
-        <i class="fas fa-exchange-alt"></i>
-          <p>Cambios y garantías</p>
-      </div>
-      <div class="compra-segura">
-        <i class="fas fa-shield-alt"></i>
-          <p>Compra segura</p>
-      </div>
+  <div class="cuatro-articulos">
+    <div class="dos-articulos">
+
+      <% products.forEach (producto => { %>
+         <% if (producto.section == 2) { %>
+        <% const productCapacity = capacity.find(capacity => capacity.cod_capacity == producto.capacity);
+        const capacityName = productCapacity.name %>
+
+    <div class="producto-destacado">
+     <article>
+      <div class="div-img">
+      <a href="/products/detail/<%= producto.cod_product%>"><img src="/img/products/<%= producto.image %>"></a>
     </div>
-    </section>
+    <div class="articulo-pie">
+      <p class="nombre-planta"><%= producto.name %></p>
+      <p class="nombre-cienti">Maceta <%= capacityName.name %></p>
+      <p class="precio"> $<%= producto.price %></p>
+    </div>
+     </article>
+    </div>
+    <% } %>
+    <% }) %>   
+    </div>
+    </div>
+  </section>
+
+
+<section>
+  <div class="container-ultimo">
+   <div class="camion-envio">
+    <i class="fas fa-truck"></i>
+     <p>Envíos área metropolitana</p>     
+  </div>
+  <div class="pago-en-linea">
+  <div class="icon">
+    <img src="/img/pago.png">
+  </div>
+      <p class="pago-texto">Pago en línea</p>
+  </div>
+  <div class="cambios">
+    <i class="fas fa-exchange-alt"></i>
+      <p>Cambios y garantías</p>
+  </div>
+  <div class="compra-segura">
+    <i class="fas fa-shield-alt"></i>
+      <p>Compra segura</p>
+  </div>
+</div>
+</section>
 </main>
-          <!-- FOOTER -->
+          
+
 <%- include('./partials/footer') %>
 
 </body>
