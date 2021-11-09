@@ -5,7 +5,7 @@
 body{
     font-family: 'Quicksand', sans-serif;
     scroll-behavior: smooth;
-    width: 100%;
+    /*width: 100%;*/
 }
 
 a {
@@ -74,19 +74,29 @@ p{
 }
 
 .copy {
+margin-top: 50px;    
     margin-left: 20px;
     color: #edafa4;
+font-weight: 600;
 }
 
-.frase{
+.frase{  
     margin-left: 15px;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .autora-frase {
+margin-bottom: 70px;      
     text-align: end;
     margin-right: 39px;
+}
+
+/*LINEA INFERIOR DEL TEXTO*/
+hr{
+    width: 90%;
+    position: relative;
+    margin-bottom: 70px;
 }
 
 main {
