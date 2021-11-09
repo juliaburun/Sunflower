@@ -106,16 +106,6 @@ main {
 }
 
 
-
-/*ETIQUETA SECTION CLASE DESTACADOS*/
-/*.destacados {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-*/
-
 .productos-destacados{
     text-align: center;
     font-size: 27px;
@@ -129,10 +119,6 @@ main {
     margin-bottom: 30px;
     box-shadow: 0.5px 0.5px 4px 1px var(--rosa);
 }
-
-
-
-
 
 .articulo-pie p {
     font-size: 16.5px;
@@ -161,18 +147,15 @@ main {
 }
 
 
-
 .div-img{
     width: 100%;
     height: 200px;
 }
 
 
-
-
 /*ANTES DEL FOOTER*/
 .container-ultimo {
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
 }
@@ -194,6 +177,11 @@ main {
     font-size: 16px;
 }
 
+@media (max-width:416px){
+    .slider {
+        margin-top: 60px;
+    }
+}
 
 
 @media (min-width:481px) {
@@ -238,6 +226,10 @@ main {
 
 @media (min-width:769px) {
 
+    .slider{
+        margin-top: -80 !important;
+    }
+
     .producto-destacado {
         width: 22%;
         height: 420px;
@@ -247,10 +239,4 @@ main {
         height: 300px;
     }
 
-    /* .cuatro-articulos {
-        display: flex;
-    }    
-    .dos-articulos {
-        display:contents;
-    } */
 }
