@@ -1,0 +1,332 @@
+*{
+    box-sizing: border-box; 
+  }
+  
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+body{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+.main{
+    width: 100%;
+    margin-top: 88px;
+}
+
+/*****************************
+BARRA ENTRE EL HEADER Y EL MAIN
+******************************/
+.space-between-header-main{
+    background: linear-gradient(rgba(49, 38, 36, 0.801) 0%, rgba(49, 38, 36, 0.185) 100%);
+    height: 4px;
+}
+
+.main .bannerLogo{
+    font-size: 9px;
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    background-color: var(--rosa);
+    width: 100%;
+    height: 70px;
+    margin: auto;
+    padding: 5px;
+    text-align: center;
+}
+
+.main-banner-plinterior{
+    font-size: 14px;
+    width: 100%;
+	min-height: 15.62em;
+	background: linear-gradient(rgba(202, 195, 193, 0.24) 0%, rgba(49, 38, 36, 0.034) 100%), url(../img/banner-plinterior.jpg);
+	background-position: center center;
+	background-size: cover;
+	/* margin-bottom: 2.12em; */
+	display: flex;
+	align-items: end;
+}
+
+.main-banner-plexterior{
+    font-size: 14px;
+    width: 100%;
+	min-height: 15.62em;
+	background: linear-gradient(rgba(202, 195, 193, 0.24) 0%, rgba(49, 38, 36, 0.034) 100%), url(../img/banner-plexterior.jpg);
+	background-position: center center;
+	background-size: cover;
+	/* margin-bottom: 2.12em; */
+	display: flex;
+	align-items: end;
+}
+
+.main-banner-plinterior h1{
+    background-color: rgba(255, 255, 255, 0.596);
+    color: var(--marron);
+}
+
+.main-banner-plexterior h1{
+    background-color: rgba(255, 255, 255, 0.596);
+    color: var(--marron);
+}
+
+.main-banner .contenedor {
+    margin: 1.7em  10em 6.25em .7em;
+}
+
+.main-banner .descripcion {
+	font-weight: 600;
+	font-size: 1em;
+    font-style: italic;
+    line-height: 1.5em;
+	max-width: 50%;
+	margin-bottom: 1.25em;
+    color: var(--grisOscuro);
+
+}
+
+.category{
+    display: flex;
+    width: 100%;
+}
+
+.planta1{
+    width: 100%;
+    border: black solid 2px;
+}
+.plant1{
+    width: 50%;
+    height: 100px;
+    margin-right: 0;
+    border: tomato solid 1px;
+}
+
+.pl1{
+    width: 95%;
+    margin-top: 35px;
+    border: blue solid 3px;
+}
+
+.plant2{
+    width: 50%;
+    margin-left: 0;
+    border: tomato solid 1px;
+}
+
+.pl2{
+    width: 95%;
+    margin-top: 60px;
+    border: blue solid 3px;
+}
+
+.productsList{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.producto-destacado{
+    width: 40%; 
+    margin: auto;
+    margin-bottom: 30px;
+    box-shadow: 0.5px 0.5px 4px 1px #edafa4;
+}
+
+.div-img{
+    width: 100%;
+    height: 120px;
+    margin: auto;
+}
+
+.productsDescription p{
+    font-size: 16.5px;
+    font-weight: 600;
+    color: gray;
+    margin: 10px 0 0 10px;
+    text-align: center;
+    
+} 
+
+.precio p{
+    font-size: 22px;
+    color: var(--marron);
+    font-weight: bold;
+    font: sans-serif;
+    text-align: center;
+}
+
+.container-button {
+    width: 110px;
+    padding: 10px;
+    margin: auto;
+}
+
+.boton-carrito{
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 12px;
+    background: #edafa4;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+
+.forms-button{
+    text-align: center;
+}
+  
+.forms-button button{
+    background: none;
+      color: inherit;
+      border: none;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
+      outline: inherit;
+}
+  
+  .forms-button i {
+    color: var(--rosa);
+  }
+  
+  .forms-button i:hover {
+    color: var(--marron);
+  }
+
+/****************************
+      BREAKPOINT TABLET     
+*****************************/
+@media (min-width:481px) {
+
+    .main{
+        margin-top: 130px;
+    }
+
+    .main-banner-plinterior{
+        min-height: 41.90em;
+
+    }
+
+    .main-banner-plinterior h1{
+        width: 350px;
+        height: 60px;
+        font-size: 40px;
+    }
+    
+    .main-banner-plexterior h1{
+        width: 350px;
+        height: 60px;
+        font-size: 40px;
+    }
+    .main-banner-plexterior{
+        min-height: 41.90em;
+    }
+
+
+    .plant1{
+        height: 200px;
+     
+    }
+    
+    .pl1{
+        margin-top: 40px;
+    }
+    
+    .pl2{
+        margin-top: 99px;
+    }
+
+    .main .bannerLogo{
+        font-size: 11px;
+        font-weight: normal;
+        width: 100%;
+        height: 80px;
+        padding: 9px;
+        text-align: center;
+    }
+
+    .producto-destacado{
+        width: 23%; 
+    }
+    
+    .div-img{
+        height: 250px;
+    }
+    
+
+
+}
+
+@media (min-width:769px) {
+    
+    .main{
+        margin-top: 115px;
+    }
+
+    .main{
+        margin-top: 119px;
+    }
+
+    .main-banner-plinterior{
+        font-size: 12px;
+        min-height: 41.90em;
+
+    }
+
+    .main-banner-plinterior h1{
+        width: 450px;
+        height: 60px;
+        font-size: 50px;
+    }
+    
+    .main-banner-plexterior h1{
+        width: 450px;
+        height: 60px;
+        font-size: 50px;
+    }
+    .main-banner-plexterior{
+        font-size: 12px;
+        min-height: 41.90em;
+    }
+
+    .plant1{
+        height: 400px;
+     
+    }
+    
+    .pl1{
+        width: 70%;
+        margin-top: 150px;
+    }
+    
+    .pl2{
+        width: 70%;
+        margin-top: 250px;
+    }
+
+    
+
+    
+
+    .main .bannerLogo{
+        font-size: 13px;
+        font-weight: normal;
+        width: 100%;
+        height: 80px;
+        padding: 12px;
+        text-align: center;
+    }
+
+    .producto-destacado{
+        width: 17%; 
+    }
+    
+    .div-img{
+        height: 280px;
+    }
+
+}

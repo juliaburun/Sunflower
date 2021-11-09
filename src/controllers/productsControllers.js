@@ -23,8 +23,14 @@ const section = JSON.parse(fs.readFileSync(sectionFilePath, 'utf-8'));
 
 const productsControllers={
     index: (req, res) => {      
+        let idCategory=req.params.cod_category;
+        res.render('./products/products', {products, idCategory, capacity, category} );
+    },
 
-        res.render('./products/products', {products, capacity} );
+    category: (req, res) => {
+        let idCategory=req.params.cod_category;
+        let productsCategory = products.filter(producto => producto.category == idCategory);
+        res.render ('./products/productsCategory', {productsCategory, idCategory, capacity, category});
     },
 
     detail: (req, res) => {

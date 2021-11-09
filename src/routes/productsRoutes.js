@@ -30,6 +30,8 @@ const upload = multer ({storage});
 /* Ruta listado de Productos */
 router.get('/', productsControllers.index);
 
+
+
 /* Ruta detalle del Producto */
 router.get('/detail/:cod_product', productsControllers.detail);
 
@@ -43,5 +45,8 @@ router.put('/edit/:cod_product', upload.single('imageEdited1'), productsControll
 
 /* Ruta eliminar el producto */
 router.delete('/delete/:cod_product', productsControllers.destroy); 
+
+/* Ruta por categoria productos */
+router.get ('/:cod_category', productsControllers.category);
 
 module.exports=router;

@@ -21,17 +21,6 @@
   "image": "img-products-helecho.png"
  },
  {
-  "cod_product": 3,
-  "name": "ORQUIDEA",
-  "category": "1",
-  "capacity": "2",
-  "price": "47900",
-  "discount": "2",
-  "section": "2",
-  "description": "¡Nuestras Orquídeas son perfectas para compartir todos tus sentimientos!. Las orquídeas son plantas purificadoras, ideales para armonizar cualquier espacio.",
-  "image": "img-products-orquidea.png"
- },
- {
   "cod_product": 4,
   "name": "LAVANDA",
   "category": "2",
@@ -62,7 +51,7 @@
   "discount": "3",
   "section": "2",
   "description": "Es una interesante planta adecuada para entornos de interior gracias a su ornamental follaje. Goza de unas bellísimas hojas de naturaleza permanente. El género de las Homalomena procede de diversas partes tropicales de Asia y América del Sur y lo determinan plantas de condición perenne. No es raro que produzca flores, aún en los espacios cerrados de una vivienda si se dan las condiciones oportunas.",
-  "image": "img-products-homalomena.jpg"
+  "image": "img-products-selby1.jpg"
  },
  {
   "cod_product": 7,
@@ -100,7 +89,7 @@
  {
   "cod_product": "10",
   "name": "SUCULENTA",
-  "category": "1",
+  "category": "2",
   "capacity": "1",
   "price": "47900",
   "discount": "2",
@@ -114,19 +103,8 @@
   "category": "2",
   "capacity": "2",
   "price": "45000",
-  "discount": "2",
-  "section": "1",
+  "section": "2",
   "description": "Hermosa planta tropical",
   "image": "productImg1636146969187.webp"
- },
- {
-  "cod_product": 12,
-  "name": "lo que quieras",
-  "category": "1",
-  "capacity": "2",
-  "price": "200",
-  "section": "2",
-  "description": "dfrss",
-  "image": "planta.jpg"
  }
 ]

@@ -1,88 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <%-include('../partials/head') %>
-    <link rel="stylesheet" href="/css/productsList.css">
-   <title>Listado de productos</title>
-</head>
+  <%-include('../partials/head', {title:"productos", style:"products"}) %>
 <body>
       <!--
         HEADER
       -->
   <%- include('../partials/header') %>
 
-  <!---- ESPACIO ENTRE HEADER Y MAIN
-  ------->
-
-  <div class="space-between-header-main"></div>
+ <main>
 
   <!----------------------
             BANNER
     ---------------------->
-
-    <div class="banner">
-      <img src="/img/banner.png" alt="plantas en macetas">
-    </div>
-
-    <!----------------------
-            FILTRADO
-    ---------------------->
-
-    <p class="filtrar">Filtrar por categoría</p>
-
+  <div class="main">
+    <!--==========================
+        BORDE ENTRE HEADER Y MAIN
+    ============================-->      
+    <div class="space-between-header-main"></div>
     
-	
-  <div class="" style="width: 400px; height: 100px;" >
-    <div class="" >
-      <a href="/products"> 
-          <label for="opt1" class="">Plantas de interior</label>
-      </a>
-
-      <a href=""> 
-        <label for="opt2" class="">Plantas de exterior</label>
-      </a>
-     </div>
-  </div>
-
-        <!----------------------
+<!----------------------
+                FILTRADO
+        ---------------------->
+    <div class="main-banner">
+          <div class="category">
+            <% category.forEach(categorys => { %>
+              <% if(categorys.cod_category == 1) {%>
+                <div class="plant1" >
+                    <a href="/products/<%= categorys.cod_category %>"> 
+                        <div class="pl1"> <img src="./img/plantasInterior.png" alt=""> </div>
+                    </a>
+                </div>
+            <% } else{ %>
+                <div class="plant2"  >
+                    <a href="/products/2"> 
+                      <div class="pl2"><img src="./img/plantasExterior.png" alt=""></div>
+                    </a>
+                </div>
+              <% } %>
+            <% }) %>
+          </div>
+      </div>
+       <!----------------------
             TERMINA FILTRADO
-    ---------------------->
+       ---------------------->
 
-    <h1 class="titulo-listado">Listado de productos</h1>
-
-
-<section class="destacados">
-<div class="cuatro-articulos">
-  <div class="dos-articulos">
-    <% products.forEach (producto => { %>
-      <% const productCapacity = capacity.find(capacity => capacity.cod_capacity == producto.capacity);
-      const capacityName = productCapacity.name %>
-    <div class="producto-destacado">
-      <article>
-        <div class="div-img">
-          <a href="/products/detail/<%= producto.cod_product%>"><img src="/img/products/<%= producto.image %>"></a>
+       <div class="bannerLogo">
+         <h2>Hacemos de tu hogar un ambiente agradable, con la tranquilidad y armonía de nuestras plantas.</h2>
         </div>
-           <div class="articulo-pie">
-              <p class="nombre-planta"><%= producto.name %></p>
-              <p class="nombre-cienti">Maceta <%=capacityName %> </p>
-              <p class="precio"> $<%= producto.price %></p>
-              <div class="container-button">
-              <button class="boton-carrito" type="button">Agregar al carrito</button></div>
-              <form action="/products/delete/<%= producto.cod_product %>?_method=DELETE" method="POST" class="forms-button">
-                 <a href="/products/edit/<%= producto.cod_product%>"><i class="fas fa-edit"></i></a>
-                 <button type="submit"><i class="fas fa-trash"></i></button>
-              </form>
-            </div>
-      </article>  
-    </div>
-    <% }) %>
+
+
+        <div class="productsList">
+          <% products.forEach (producto => { %>
+            <% const productCapacity = capacity.find(capacity => capacity.cod_capacity == producto.capacity);
+            const capacityName = productCapacity.name %>
+          <div class="producto-destacado">
+            <article class="articleProduct">
+                <div class="div-img">
+                  <a href="/products/detail/<%= producto.cod_product%>"><img src="/img/products/<%= producto.image %>"></a>
+                </div>
+
+                <div class="productsDescription">
+                  <div>
+                    <p class="nombre-planta"><%= producto.name %></p>
+                    <p class="nombre-cienti">Maceta <%=capacityName %> </p>
+                  </div>
+                  <div class="precio">
+                    <p> $<%= producto.price %></p>
+                  </div>
+                  <div class="container-button">
+                      <button class="boton-carrito" type="button">Agregar al carrito</button>
+                    </div>
+                    <form action="/products/delete/<%= producto.cod_product %>?_method=DELETE" method="POST" class="forms-button">
+                        <a href="/products/edit/<%= producto.cod_product%>"><i class="fas fa-edit"></i></a>
+                        <button type="submit"><i class="fas fa-trash"></i></button>
+                    </form>
+                </div>
+            </article>  
+          </div>
+          <% }) %>
+        </div>
   </div>
-</div>
-</section>
+</main>
+
   
-      <!-- 
-        FOOTER
-       -->
-  <%- include('../partials/footer') %>
+<!------------ 
+    FOOTER
+ ------------->
+<%- include('../partials/footer') %>
 </body>
 </html>

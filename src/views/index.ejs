@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <%-include('./partials/head') %>
-  <link rel="stylesheet" href="/css/styles-index.css" />
-    <title>Vivero Sunflower</title>
-</head>
+  <%-include('./partials/head', {title:"Vivero Sunflower", style:"styles-index"}) %>
 
 <body> 
   <!--HEADER-->
@@ -15,7 +11,6 @@
     ============================-->      
 
     <div class="space-between-header-main">
-
     </div>
 
     <!--CONTENEDOR DE LAS IMAGENES DEL CARRUSEL-->
@@ -49,14 +44,16 @@
         const capacityName = productCapacity.name %>
 
     <div class="producto-destacado">
-     <article>
+     <article class="article-div">
       <div class="div-img">
       <a href="/products/detail/<%= producto.cod_product%>"><img src="/img/products/<%= producto.image %>"></a>
     </div>
     <div class="articulo-pie">
-      <p class="nombre-planta"><%= producto.name %></p>
-      <p class="nombre-cienti">Maceta <%= capacityName.name %></p>
-      <p class="precio"> $<%= producto.price %></p>
+      <p ><%= producto.name %></p>
+      <p >Maceta <%= capacityName.name %></p>
+    </div>
+    <div class="precio">
+      <p> $<%= producto.price %></p>
     </div>
      </article>
     </div>
@@ -86,7 +83,10 @@
     <div class="articulo-pie">
       <p class="nombre-planta"><%= producto.name %></p>
       <p class="nombre-cienti">Maceta <%= capacityName.name %></p>
-      <p class="precio"> $<%= producto.price %></p>
+    </div>
+
+    <div class="precio">
+      <p> $<%= producto.price %></p>
     </div>
      </article>
     </div>

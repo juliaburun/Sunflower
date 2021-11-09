@@ -1,10 +1,12 @@
 [
 {
     "cod_category": 1,
-    "name": "Planta interior"
+    "name": "Plantas de interior",
+    "clase": "main-banner-plinterior"
 },
 {
     "cod_category": 2,
-    "name": "Planta exterior"
+    "name": "Plantas de exterior",
+    "clase": "main-banner-plexterior"
 }
 ]
