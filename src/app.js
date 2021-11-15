@@ -30,7 +30,7 @@ const productsRoutes=require('./routes/productsRoutes');
 const cartRoutes=require('./routes/cartRoutes');
 
 //requiriendo al loginRoutes
-const loginRoutes=require('./routes/loginRoutes');
+const usersRoutes=require('./routes/usersRoutes');
 
 
 //Colocamos la carpeta pblic como estática
@@ -45,7 +45,7 @@ app.use('/products', productsRoutes);
 // carrito de compras
 app.use('/cart', cartRoutes);
 // login
-app.use('/login', loginRoutes);
+app.use('/users', usersRoutes);
 
 
 // ************ Set the server to listen ************

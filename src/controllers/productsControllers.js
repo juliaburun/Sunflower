@@ -109,6 +109,13 @@ const productsControllers={
             image: req.file ? req.file.filename : productUpdate.image
         }
 
+        if(req.file) {
+            console.log('viene foto nueva');
+            if(productUpdate.image != 'planta.jpg') {
+                fs.unlinkSync(path.join(__dirname, '../../public/img/products/'+productUpdate.image))
+            }
+        }
+
         products[indexProduct] = editedProduct;
         let productJson =JSON.stringify(products, null, " ");
         fs.writeFileSync(productsFilePath, productJson);
@@ -121,8 +128,15 @@ const productsControllers={
         let cod_product = req.params.cod_product;
 		let finalProducts = products.filter(products => products.cod_product != cod_product);
 
+        let imageOld = products.filter(product => product.cod_product == cod_product)
+
+        if(imageOld[0].image != 'planta.jpg') {
+            fs.unlinkSync(path.join(__dirname, '../../public/img/products/'+imageOld[0].image))
+        }
+
 		let productJson =JSON.stringify(finalProducts, null, " ");
 		fs.writeFileSync(productsFilePath, productJson);
+
 
         products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 

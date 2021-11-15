@@ -1,16 +1,16 @@
 const express=require('express');
 const path=require('path');
-const loginControllers=require('../controllers/loginControllers');
+const usersControllers=require('../controllers/usersControllers');
 
 
 const app= express();
 const router=express.Router();
 
 /* Ruta login */
-router.get('/', loginControllers.login);
+router.get('/login', usersControllers.login);
 
 /* Ruta register */
-router.get('/register', loginControllers.register);
+router.get('/register', usersControllers.register);
 
 
 
