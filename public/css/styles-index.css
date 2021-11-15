@@ -5,7 +5,7 @@
 body{
     font-family: 'Quicksand', sans-serif;
     scroll-behavior: smooth;
-    width: 100%;
+    /*width: 100%;*/
 }
 
 a {
@@ -74,19 +74,29 @@ p{
 }
 
 .copy {
+margin-top: 50px;    
     margin-left: 20px;
     color: #edafa4;
+font-weight: 600;
 }
 
-.frase{
+.frase{  
     margin-left: 15px;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .autora-frase {
+margin-bottom: 70px;      
     text-align: end;
     margin-right: 39px;
+}
+
+/*LINEA INFERIOR DEL TEXTO*/
+hr{
+    width: 90%;
+    position: relative;
+    margin-bottom: 70px;
 }
 
 main {
@@ -95,16 +105,6 @@ main {
    color: gray;
 }
 
-
-
-/*ETIQUETA SECTION CLASE DESTACADOS*/
-/*.destacados {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-*/
 
 .productos-destacados{
     text-align: center;
@@ -119,10 +119,6 @@ main {
     margin-bottom: 30px;
     box-shadow: 0.5px 0.5px 4px 1px var(--rosa);
 }
-
-
-
-
 
 .articulo-pie p {
     font-size: 16.5px;
@@ -151,18 +147,15 @@ main {
 }
 
 
-
 .div-img{
     width: 100%;
     height: 200px;
 }
 
 
-
-
 /*ANTES DEL FOOTER*/
 .container-ultimo {
-    width: 100%;
+    width: 98%;
     display: flex;
     justify-content: space-between;
 }
@@ -181,9 +174,14 @@ main {
 
 
 .container-ultimo p {
-    font-size: 16px;
+    font-size: 10px;
 }
 
+@media (max-width:416px){
+    .slider {
+        margin-top: 60px;
+    }
+}
 
 
 @media (min-width:481px) {
@@ -228,6 +226,10 @@ main {
 
 @media (min-width:769px) {
 
+    .slider{
+        margin-top: -80 !important;
+    }
+
     .producto-destacado {
         width: 22%;
         height: 420px;
@@ -237,10 +239,4 @@ main {
         height: 300px;
     }
 
-    /* .cuatro-articulos {
-        display: flex;
-    }    
-    .dos-articulos {
-        display:contents;
-    } */
 }
