@@ -5,7 +5,7 @@
   "category": "1",
   "capacity": "2",
   "price": "20000",
-  "discount": "2",
+  "discount": "20",
   "section": "1",
   "description": "Los geranios son plantas de exterior con flores de atractivos y colores vivos que florecen durante el verano y son bastante resistentes. Los geranios son plantas de exterior con flores de colores vivos. Florecen durante el verano y son bastante resistentes. Se suelen cultivar en el jardín, en la terraza o el balcón pero también se pueden mantener en interior, siempre y cuando se coloque en un lugar muy luminoso alejados de la calefacción.",
   "image": "img-products-geranio-2.png"
@@ -16,7 +16,8 @@
   "category": "1",
   "capacity": "2",
   "price": "72999",
-  "section": "",
+  "discount": "10",
+  "section": "0",
   "description": "Los helechos, son plantas vasculares sin semilla (pteridofitas), cuyas características morfológicas más sobresalientes son sus hojas grandes, usualmente pinadas y con prefoliación circinada. La cantidad de especies y formas de los helechos les convierte en unas de las plantas más atractivas y espectaculares para decorar terrazas y jardines, pero también como planta de interior. En este artículo te vamos a contar cómo cuidarlas para que te duren mucho y se vean siempre bonitas y con vida.",
   "image": "img-products-helecho.png"
  },
@@ -26,8 +27,8 @@
   "category": "2",
   "capacity": "2",
   "price": "47900",
-  "discount": "1",
-  "section": "2",
+  "discount": "15",
+  "section": "1",
   "description": "Planta medicinal para tratar heridas y quemaduras. La lavanda toma su nombre del latín lavare (lavar), y se ha utilizado durante siglos para aromatizar aceite de baño y jabones. Es originaria del Mediterráneo y sigue estrechamente relacionada con la industria del perfume del sur de Francia. Sus flores son apreciadas por sus virtudes calmantes y sedantes, y el aceite esencial se utiliza para los dolores musculares y los problemas respiratorios.",
   "image": "img-products-lavanda.png"
  },
@@ -37,7 +38,7 @@
   "category": "2",
   "capacity": "3",
   "price": "47900",
-  "discount": "3",
+  "discount": "10",
   "section": "1",
   "description": "Una planta bonita y fácil de cuidar. Es perfecta para tener en el jardín, ya sea plantada a ambos lados de una entrada, o delimitando caminos. Capaz de vivir muchos años incluso si se cultiva en maceta. La Erica, llamada a veces brezo, es una planta que se ve hermosa durante gran parte del año, siendo el otoño el momento en el que se llena de flores. Así, vale la pena tenerla en cuenta para darle color al patio o al rincón verde del hogar.",
   "image": "img-products-erica.png"
@@ -48,8 +49,8 @@
   "category": "1",
   "capacity": "3",
   "price": "47900",
-  "discount": "3",
-  "section": "2",
+  "discount": "30",
+  "section": "0",
   "description": "Es una interesante planta adecuada para entornos de interior gracias a su ornamental follaje. Goza de unas bellísimas hojas de naturaleza permanente. El género de las Homalomena procede de diversas partes tropicales de Asia y América del Sur y lo determinan plantas de condición perenne. No es raro que produzca flores, aún en los espacios cerrados de una vivienda si se dan las condiciones oportunas.",
   "image": "img-products-selby1.jpg"
  },
@@ -59,8 +60,8 @@
   "category": "1",
   "capacity": "3",
   "price": "47900",
-  "discount": "1",
-  "section": "1",
+  "discount": "15",
+  "section": "0",
   "description": "LA PLANTA DE TENDENCIA. El ficus lyrata destaca por sus hojas verdes y su presencia. Es una planta perfecta para decorar cualquier rincón y amenaza con conquistar esta temporada el reinado del helecho. El ficus lyrata es una planta tropical procedente de África perfecta para interiores. Su nombre es un homenaje a la lira ya que sus hojas tienen la forma de ese instrumento de cuerda. Aunque también se la conoce como higuera de hojas de violín, árbol lira o ficus lirado.",
   "image": "img-products-ficus-lyrata.png"
  },
@@ -68,9 +69,9 @@
   "cod_product": 8,
   "name": "FITTONIA",
   "category": "1",
-  "capacity": "3",
-  "price": "47900",
-  "discount": "2",
+  "capacity": "2",
+  "price": "1200",
+  "discount": "30",
   "section": "1",
   "description": "La Fitonia (Fittonia verschaffeltii) es una planta de interior de tipo rastrero. Se caracteriza por su pequeño tamaño, perfecto como tapiz para realizar composiciones con plantas de mayor tamaño. Se caracteriza por sus hojas, de color verde y con venas o nervaduras de color que contrastan con el resto de la hoja. Es una planta que alcanza muy poca altura, unos 15 centímetros. Este porte rastrero la hace perfecta como complemento en composiciones de plantas. Las distintas variedades permiten encontrar multitud de patrones de colores en sus hojas que van desde el blanco o plateado, al amarillo, rojo intenso o morado.",
   "image": "img-products-fittonia.png"
@@ -81,8 +82,8 @@
   "category": "1",
   "capacity": "2",
   "price": "47900",
-  "discount": "2",
-  "section": "",
+  "discount": "20",
+  "section": "0",
   "description": "UNA PLANTA DE INTERIOR FÁCIL DE CUIDAR Y QUE LIMPIA EL AIRE. La sansevieria necesita muy poca agua y su llamativo color verde suma vitalidad a cualquier rincón. Además, ¡mejora el aire en tu casa!. La sansevieria es una planta fácil de cultivar y una superviviente nata en cualquier espacio: aguanta temperaturas elevadas y también bajas (hasta -5ºC). Resulta muy decorativa con sus hojas robustas y verticales, su verde «atigrado» y el borde de las hojas entre verde lima y amarillo. Además, ¡es una gran limpiadora del aire interior de la casa!. La sansevieria,también conocida como lengua de suegra, es una de las plantas recomendadas por la NASA (Administración Nacional de la Aeronáutica y del Espacio de Estados Unidos) para eliminar del aire que respiramos tóxicos como el benceno, el tolueno, el xileno, el tricloroetileno y el formaldehído. Y añade a esto que es muy resistente a las plagas; incluso los ácaros lo tienen difícil con ella. Por todo ello, está el top ten de las que no pueden faltar en tu casa si eres principiante.",
   "image": "img-products-sanseviera.png"
  },
@@ -92,8 +93,8 @@
   "category": "2",
   "capacity": "1",
   "price": "47900",
-  "discount": "2",
-  "section": "2",
+  "discount": "20",
+  "section": "1",
   "description": "Las plantas suculentas se han convertido en unas habituales tanto para los amantes de la jardinería como para quienes tienen poca mano con ella. El hecho de que ocupen poco espacio y que, además, pueden crecer en casi en cualquier sitio (ya sea en interior o en exterior) convierten a las suculentas en una apuesta genial para tener un pedacito de Naturaleza en casi cualquier espacio. Una manera genial de evitarles plagas, deformaciones o, incluso, la muerte (algo realmente complicado por el tipo de planta que son: Poca Agua, Mucha luz, drenaje y un suelo sencillo.",
   "image": "img-products-suculenta-variada.jpg"
  },
@@ -103,7 +104,8 @@
   "category": "2",
   "capacity": "2",
   "price": "45000",
-  "section": "2",
+  "discount": "15",
+  "section": "1",
   "description": "Hermosa planta tropical",
   "image": "productImg1636146969187.webp"
  }

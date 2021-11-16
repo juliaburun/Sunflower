@@ -4,8 +4,6 @@ const path=require('path');
 const productsControllers=require('../controllers/productsControllers');
 const multer = require('multer');
 
-// ************ express() ************
-const app= express();
 
 // ************ router() ************
 const router=express.Router();

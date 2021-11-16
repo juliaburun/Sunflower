@@ -74,22 +74,12 @@
               <!--CONTENEDOR PRECIO-->
               <div class="cajaPrice">
                   <label for="price" class="precioProd">Precio del producto $:</label>
-                  <input type="text" id="price" name="price" class="form-cajaPrice" value="<%= productEdit.price%>">
+                  <input type="number" id="price" name="price" class="form-cajaPrice" value="<%= productEdit.price%>">
               </div>
               <!--CONTENEDOR DESCUENTO-->
               <div class="cajaDiscount">
                 <label for="discount" class="descuProd">Descuento %:</label>
-                <select name="discount" id="discount" class="form-cajaDiscount">
-                  <option value="">Elegí</option>
-                  <% discount.forEach(discounts => { %>
-                    <% if (discounts.cod_discount == productEdit.discount){ %>
-                          <option value= <%= discounts.cod_discount %> selected > <%= discounts.name%> </option>
-                    <% }else{ %>
-                        <option value= <%= discounts.cod_discount %>> <%= discounts.name%>  </option>
-                   <% } %>
-                <% }); %>
-                  
-                </select>
+                <input type="number" name="discount" class="form-cajaName" value="<%= productEdit.discount%>">
               </div>
               <!--CONTENEDOR SECCION-->
               <div class="cajaSection">

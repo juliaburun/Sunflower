@@ -59,25 +59,20 @@
             <!--CONTENEDOR PRECIO-->
             <div class="cajaPrice">
               <label for="price" class="precioProd">Precio del producto $:</label>
-              <input type="text" id="price" name="price" placeholder="Ej: 2220 " class="form-cajaPrice">
+              <input type="number" id="price" name="price" placeholder="Ej: 2220 " class="form-cajaPrice">
             </div>
             <!--CONTENEDOR DESCUENTO-->
             <div class="cajaDiscount">
               <label for="discount" class="descuProd">Descuento %:</label>
-              <select name="discount" id="discount" class="form-cajaDiscount">
-                <option value="" selected>Elegir un descuento</option>
-                <option value=1>10</option>
-                <option value=2>15</option>
-                <option value=3>20</option>
-              </select>
+              <input type="number" name="discount" class="form-cajaName">
             </div>
             <!--CONTENEDOR SECCION-->
             <div class="cajaSection">
               <label for="section" class="seccionProd">Sección:</label>
               <select name="section" id="section" class="form-cajaSection">
                 <option value="" selected>Elegí</option>
-                <option value=1>Producto en oferta</option>
-                <option value=2>Producto destacado</option>
+                <option value=1>Con oferta</option>
+                <option value=0>Sin oferta</option>
               </select>
             </div>
             <!--CONTENEDOR DESCRIPCION DEL PRODUCTO-->
