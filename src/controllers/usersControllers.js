@@ -9,9 +9,10 @@ const loginControllers={
     register: (req, res) => {
         res.render('./users/register');
         
+    },
+    usuarios: (req, res) => {
+        res.render('./users/user');    
     }
-
-    
 
 }
 

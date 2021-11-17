@@ -12,6 +12,9 @@ router.get('/login', usersControllers.login);
 /* Ruta register */
 router.get('/register', usersControllers.register);
 
+/* Ruta usuarios */
+router.get('/user', usersControllers.usuarios);
+
 
 
 module.exports=router;
