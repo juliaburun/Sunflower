@@ -2,6 +2,7 @@
 const express = require('express');
 const path = require('path');
 const methodOverride = require('method-override'); // Para poder usar los métodos PUT y DELETE
+    const {body, validationResult} = require("express-validator"); // Para validaciones
 
 
 // ************ express() ************
@@ -31,6 +32,8 @@ const cartRoutes=require('./routes/cartRoutes');
 
 //requiriendo al loginRoutes
 const usersRoutes=require('./routes/usersRoutes');
+const { exists } = require('fs');
+
 
 
 //Colocamos la carpeta pblic como estática
@@ -46,6 +49,28 @@ app.use('/products', productsRoutes);
 app.use('/cart', cartRoutes);
 // login
 app.use('/users', usersRoutes);
+
+app.post('/loguear',[
+
+    body('userbox', 'Ingrese el nombre de usuario')
+        .exists()
+        .isLength({min:5}),
+    body('password_box', 'Ingrese su contraseña')
+        .exists()
+        .isLength({min:5})
+], (req, res) =>{
+    const errors = validationResult(req);
+    if (!errors.isEmpty()){
+        console.log(req.body)
+        const valores = req.body
+        const validaciones = errors.array()
+        res.render('users/login', {validaciones: validaciones, valores: valores})
+    }else{
+        res.render('users/user')
+    }
+    
+
+})
 
 
 // ************ Set the server to listen ************

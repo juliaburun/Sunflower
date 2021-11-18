@@ -58,8 +58,8 @@ hr{
     margin: auto;
 }
 /*FORMULARIOS USUARIO CONTRASEÑA*/
-input[type="name"],
-input[type="password"]
+input[id="userbox"],
+input[id="password_box"]
 {
     font-size: 14px;
     width: 100%;
@@ -130,6 +130,13 @@ input[type="password"]
     font-size: 12px;
     text-align: center;
 }
+/*TEXTOS VALIDACIONES*/
+.mensajes{
+    text-align: center;
+    font-size: 18px;
+    color: red;
+    font-weight: 600;
+}
 
 
 /*============================== MEDIA QUERIES ===============================*/
@@ -145,8 +152,8 @@ input[type="password"]
         width: 40%;
     }
     /*FORMULARIOS*/
-    input[type="name"],
-    input[type="password"]
+    input[id="userbox"],
+    input[id="password_box"]
     {
         font-size: 14px;
         height: 40px; 
@@ -175,8 +182,8 @@ input[type="password"]
     }
 
     /*FORMULARIOS*/
-    input[type="name"],
-    input[type="password"]
+    input[id="userbox"],
+    input[id="password_box"]
     {
         font-size: 16px;
         height: 45px;
