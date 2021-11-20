@@ -32,14 +32,37 @@
             <h3>LOGIN</h3>
             <!--LINEA INFERIOR DEL LOGIN-->
                 <hr color="#edafa4">
-            <form action="/loguear" method="post" autocomplete="on">
+            <form action="/users/login" method="post" autocomplete="on">
                 <!--CONTIENE LAS CAJAS USUARIO Y CONTRASEÑA-->
                 <div class="caja-datos">
+                    <!--CAMPO USUARIO-->
                     <div class="individual-box">
-                        <input type="text" id="userbox" name="userbox" placeholder="Nombre de Usuario" value="<% if(typeof valores != 'undefined') { %><%= valores.userbox %><% } %>">
+                        <input
+                         type="text"
+                         id="userbox"
+                         name="userbox"
+                         placeholder="Nombre de Usuario"
+                         value="<%= locals.oldData ? oldData.userbox : null %>"
+                         class="input-user">
+                         <% if (locals.errors && errors.userbox) { %>
+                           <div class="text-danger">
+                             <%= errors.userbox.msg %> 
+                         </div>   
+                        <% } %> 
                     </div>
+                    <!--CAMPO CONTRASEÑA-->
                     <div class="individual-box">   
-                        <input type="password" id="password_box" name="password_box" placeholder="Contraseña" value="<% if(typeof valores != 'undefined') { %><%= valores.password_box %><% } %>">
+                        <input type="password"
+                        id="password_box" 
+                        name="password_box" 
+                        placeholder="Contraseña" 
+                        value="<%= locals.oldData ? oldData.password_box : null %>"
+                        class="input-user">
+                         <% if (locals.errors && errors.password_box) { %>
+                           <div class="text-danger">
+                             <%= errors.password_box.msg %> 
+                         </div>   
+                        <% } %> 
                     </div>
                     <!--CAJA CONTENEDORA RECUERDAME-->
                     <div class="minicaja">
@@ -57,13 +80,7 @@
                     <p class="olvidaste"><a class="link" href="#">¿Olvidaste tu contraseña?</a></p>
                     <p class="registrate">¿No tienes una cuenta?, <a class="link" href="/users/register">Regístrate</a></p>
                 </div>
-        </div>
-        <!--SECCION VALIDACIONES-->
-        <% if(typeof validaciones != 'undefined') { %>
-            <% validaciones.forEach((validacion) => { %>
-                <p class="mensajes"> <%= validacion.msg  %> </p>
-                <% }) %>  
-            <% } %> 
+            </div>
 
     </main>
 

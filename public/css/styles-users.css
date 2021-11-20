@@ -1,14 +1,35 @@
 *{
     box-sizing: border-box; 
  }
+ 
+ img{
+     width: 100%;
+     
+ }
+ 
+ header{
+     background-color:var(--rosa);
+     
+ }
+ /*****************************
+           HEADER
+ ******************************/
  body{
-    font-family: 'Quicksand', sans-serif;
-    font-size: 14px;
-    margin: 0;
-}
+     font-family: 'Quicksand', sans-serif;
+     font-size: 14px;
+     margin: 0;
+ }
+ 
+ 
+ /*****************************
+ BARRA ENTRE EL HEADER Y EL MAIN
+ ******************************/
+ .space-between-header-main{
+     background-color: var(--grisClaro);
+     height: 5px;
+ }
 
-
-/*############################### LINEA DIVISORA ENTRE EL ENCABEZADO Y EL CUERPO  #########################*/
+ /*############################### LINEA DIVISORA ENTRE EL ENCABEZADO Y EL CUERPO  #########################*/
 main{
     margin-top: 120px;
     margin-bottom: 50px;
