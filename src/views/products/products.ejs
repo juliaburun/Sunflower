@@ -23,10 +23,10 @@
         ---------------------->
     <div class="main-banner">
           <div class="category">
-            <% category.forEach(categorys => { %>
-              <% if(categorys.cod_category == 1) {%>
+            <% categorys.forEach(category => { %>
+              <% if(category.cod_category == 1) {%>
                 <div class="plant1" >
-                    <a href="/products/<%= categorys.cod_category %>"> 
+                    <a href="/products/<%= category.cod_category %>"> 
                         <div class="pl1"> <img src="./img/plantasInterior.png" alt=""> </div>
                     </a>
                 </div>
@@ -55,7 +55,7 @@
 
         <div class="productsList">
           <% products.forEach (producto => { %>
-            <% const productCapacity = capacity.find(capacity => capacity.cod_capacity == producto.capacity);
+            <% const productCapacity = capacitys.find(capacity => capacity.cod_capacity == producto.capacity);
             const capacityName = productCapacity.name %>
           <div class="producto-destacado">
             <article class="articleProduct">

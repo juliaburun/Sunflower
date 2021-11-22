@@ -46,11 +46,11 @@
                   <label for="category" class="categoriaProd">Categoría:</label>
                   <select name="category" id="category" class="form-cajaCategory" value="">
                       <option value="">Elegí</option>
-                      <% category.forEach(categorys => { %>
-                          <% if (categorys.cod_category == productEdit.category){ %>
-                                <option value= <%= categorys.cod_category %> selected > <%= categorys.name%> </option>
+                      <% categorys.forEach(category => { %>
+                          <% if (category.cod_category == productEdit.category){ %>
+                                <option value= <%= category.cod_category %> selected > <%= category.name%> </option>
                           <% }else{ %>
-                              <option value= <%= categorys.cod_category %>> <%= categorys.name%>  </option>
+                              <option value= <%= category.cod_category %>> <%= category.name%>  </option>
                          <% } %>
                       <% }); %>
                   </select>
@@ -60,11 +60,11 @@
                 <label for="capacity" class="capasidadProd">Maceta:</label>
                 <select name="capacity" id="capacity" class="form-cajaSection">
                   <option value="">Elegí</option>
-                  <% capacity.forEach(capacitys => { %>
-                    <% if (capacitys.cod_capacity == productEdit.capacity){ %>
-                          <option value= <%= capacitys.cod_capacity %> selected > <%= capacitys.name%> </option>
+                  <% capacitys.forEach(capacity => { %>
+                    <% if (capacity.cod_capacity == productEdit.capacity){ %>
+                          <option value= <%= capacity.cod_capacity %> selected > <%= capacity.name%> </option>
                     <% }else{ %>
-                        <option value= <%= capacitys.cod_capacity %>> <%= capacitys.name%>  </option>
+                        <option value= <%= capacity.cod_capacity %>> <%= capacity.name%>  </option>
                    <% } %>
                 <% }); %>
 

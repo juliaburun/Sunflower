@@ -43,7 +43,7 @@
 
       <%products.forEach (producto=>{%>
         <%if(producto.discount>0){%>
-          <% let productCapacity = capacity.find(capacity => capacity.cod_capacity == producto.capacity);%>
+          <% let productCapacity = capacitys.find(capacity => capacity.cod_capacity == producto.capacity);%>
           <% let capacityName = productCapacity.name%>
           <div class="producto-destacado">
           <article class="article-div">
@@ -74,7 +74,7 @@
 
       <%products.forEach (producto=>{%>
          <%if(producto.discount==0) { %>
-          <% const productCapacity = capacity.find(capacity => capacity.cod_capacity == producto.capacity);
+          <% const productCapacity = capacitys.find(capacity => capacity.cod_capacity == producto.capacity);
             const capacityName = productCapacity.name %>
     <div class="producto-destacado">
      <article>

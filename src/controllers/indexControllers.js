@@ -7,12 +7,12 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 // convertir capacity.JSON a objeto literal
 const capacityFilePath = path.join(__dirname, '../data/capacity.json');
-const capacity = JSON.parse(fs.readFileSync(capacityFilePath, 'utf-8'));
+const capacitys = JSON.parse(fs.readFileSync(capacityFilePath, 'utf-8'));
 
 
 const indexControllers={
     index: (req, res) => {
-        res.render('index', {products, capacity} );
+        res.render('index', {products, capacitys} );
     },
 
     about: (req, res) => {

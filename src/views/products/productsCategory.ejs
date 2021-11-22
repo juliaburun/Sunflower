@@ -12,14 +12,14 @@
             BANNER
     ---------------------->
   <div class="main">
-    <%  let categoryFind = category.find(category => category.cod_category == idCategory)%>
+    <%  let categoryFind = categorys.find(category => category.cod_category == idCategory)%>
     <div class="<%= categoryFind.clase%>">
         <h1 class="titulo-listado"><%= categoryFind.name %></h1>
     </div>
 
       <div class="productsList">
         <% productsCategory.forEach (producto => { %>
-          <% const productCapacity = capacity.find(capacity => capacity.cod_capacity == producto.capacity);
+          <% const productCapacity = capacitys.find(capacity => capacity.cod_capacity == producto.capacity);
           const capacityName = productCapacity.name %>
         <div class="producto-destacado">
           <article>

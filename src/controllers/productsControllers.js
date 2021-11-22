@@ -7,28 +7,28 @@ let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 // convertir category.JSON a objeto literal
 const categoryFilePath = path.join(__dirname, '../data/category.json');
-const category = JSON.parse(fs.readFileSync(categoryFilePath, 'utf-8'));
+const categorys = JSON.parse(fs.readFileSync(categoryFilePath, 'utf-8'));
 
 // convertir capacity.JSON a objeto literal
 const capacityFilePath = path.join(__dirname, '../data/capacity.json');
-const capacity = JSON.parse(fs.readFileSync(capacityFilePath, 'utf-8'));
+const capacitys = JSON.parse(fs.readFileSync(capacityFilePath, 'utf-8'));
 
 const productsControllers={
     index: (req, res) => {      
         let idCategory=req.params.cod_category;
-        res.render('./products/products', {products, idCategory, capacity, category} );
+        res.render('./products/products', {products, idCategory, capacitys, categorys} );
     },
 
     category: (req, res) => {
         let idCategory=req.params.cod_category;
         let productsCategory = products.filter(producto => producto.category == idCategory);
-        res.render ('./products/productsCategory', {productsCategory, idCategory, capacity, category});
+        res.render ('./products/productsCategory', {productsCategory, idCategory, capacitys, categorys});
     },
 
     detail: (req, res) => {
         const cod_product = req.params.cod_product;
         const productDetail = products.find(producto => producto.cod_product == cod_product);
-        const productCapacity = capacity.find(capacity => capacity.cod_capacity== productDetail.capacity);
+        const productCapacity = capacitys.find(capacity => capacity.cod_capacity== productDetail.capacity);
         //Filtro de los otros productos ofertados diferentes al que se muestra en el detalle
         const productOther = products.filter(producto => producto.cod_product != cod_product);
         res.render('./products/productDetail', {productDetail, productCapacity,  productOther});
@@ -46,7 +46,7 @@ const productsControllers={
             cod_product: products[products.length - 1].cod_product + 1,
             name: req.body.name,
             category: req.body.category,
-            capacity: req.body.capacity,
+            capacity: req.body.capacity ? req.body.capacity : 1 ,
             price: req.body.price,
             discount: req.body.discount ? req.body.discount : 0,
             description: req.body.description,
@@ -64,7 +64,7 @@ const productsControllers={
     edit: (req, res) => {
         const cod_product = req.params.cod_product;
         const productEdit = products.find(producto => producto.cod_product == cod_product);
-        res.render('./products/productEdit', {productEdit, category, capacity});
+        res.render('./products/productEdit', {productEdit, categorys, capacitys});
     },
 
     update: (req, res) => {
