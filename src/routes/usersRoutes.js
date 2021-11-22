@@ -1,6 +1,9 @@
 const express=require('express');
 const path=require('path');
 
+const multer = require('multer');
+
+const { body } = require('express-validator');
 
 
 // ************ Controller Require ************
@@ -17,9 +20,16 @@ const router=express.Router();
 /* Ruta login */
 router.get('/login', usersControllers.login);
 
+/* ruta proceso validacion*/
+router.post('/login', validations, usersControllers.processRegister);
+
+
 /* Ruta register */
 router.get('/register', usersControllers.register);
 router.post('/register', upload.single('image_profile'), users, usersControllers.ProcessRegister);
+
+/* Ruta usuarios */
+router.get('/user', usersControllers.usuarios);
 
 
 

@@ -1,0 +1,212 @@
+*{
+    box-sizing: border-box; 
+ }
+ 
+ img{
+     width: 100%;
+     
+ }
+ 
+ header{
+     background-color:var(--rosa);
+     
+ }
+ /*****************************
+           HEADER
+ ******************************/
+ body{
+     font-family: 'Quicksand', sans-serif;
+     font-size: 14px;
+     margin: 0;
+ }
+ 
+ 
+ /*****************************
+ BARRA ENTRE EL HEADER Y EL MAIN
+ ******************************/
+ .space-between-header-main{
+     background-color: var(--grisClaro);
+     height: 5px;
+ }
+
+ /*############################### LINEA DIVISORA ENTRE EL ENCABEZADO Y EL CUERPO  #########################*/
+main{
+    margin-top: 120px;
+    margin-bottom: 50px;
+}
+/*ETIQUETA H2 TEXTO CREAR PRODUCTO*/
+h2{
+    text-align: center;
+}
+hr{
+    width: 60px;
+}
+.datosCta{
+    font-size: 16px;
+    padding-top: 40px;
+    padding-left: 30px;
+}
+.avatar{
+    margin-top: 40px;
+    text-align: center;
+}
+/*CONTENEDOR DE TODO EL FORMULARIO*/
+.cajaPrincipal{
+    background-color: #dbdbdb;
+    width: 90%;
+    margin: auto;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+/*ETIQUETA FORM CONTENEDOR DE TODO EL FORMULARIO*/
+form{
+    width: 100%;
+    margin: auto;
+    max-width: 1000px;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*AGREGAR IMAGEN*/
+.formulImg {
+
+    margin-left:0px;
+  }
+  .formulImg .grid {
+    margin-top:10px;
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    gap:20px;
+  }
+  .formulImg .grid .form-element {
+    margin:auto;
+    width:100px;
+    height:100px;
+    box-shadow:0px 0px 20px 5px rgba(100,100,100,0.1);
+  }
+  .formulImg .grid .form-element input {
+    display:none;
+  }
+  .formulImg .grid .form-element img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius: 2px;
+  }
+  .formulImg .grid .form-element div {
+    position:relative;
+    height:20px;
+    margin-top:-20px;
+    background:rgba(0,0,0,0.5);
+    text-align:center;
+    line-height:10px;
+    font-size:8px;
+    color:#f5f5f5;
+    font-weight:600;
+    border-radius: 2px;
+  }
+  
+
+.cajaMail,
+.cajaNombre,
+.cajaApellido,
+.cajaTelefono,
+.cajaContras,
+.cajaDirec {
+    display: flex;
+    margin: auto;
+    width: 80%;
+    height: 40px;
+    margin-top: 30px;
+    background-color: var(--blanco);
+    border-radius: 3px;   
+}
+.form-cajaMail,
+.form-cajaNombre,
+.form-cajaApellido,
+.form-cajaTelefono,
+.form-cajaContras,
+.form-cajaDirec {
+    border: none;
+    width: 90%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.labelMail,
+.labelNombre,
+.labelApellido,
+.labelTelefono,
+.labelContras,
+.labelDirec {
+    margin-left: 5px;
+    padding: 10px;
+} 
+.datosPerso{
+    font-size: 16px;
+    margin-top: 40px;
+    padding-left: 30px;
+}
+/*BOTON GUARDAR PRODUCTO*/
+.cajaGuardar{
+    width: 50px;
+    height: 35px;
+    position: relative;
+    width: 100px;
+    background-color: var(--rosa);
+    border-radius: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 10px;  
+}
+.botonGuardar{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    color: var(--b);
+}
+p#texto{
+    text-align: center;
+    color: white; 
+}
+.cajaGuardar:hover{
+    background-color: var(--marron);
+    color: var(--rosa);
+    font-weight: 500;
+    transition: all 1s
+}
+
+
+/*MEDIA*/
+@media (min-width:481px){
+
+    h2{
+        margin-top: 150px;
+    }
+    .datosCta,
+    .datosPerso{
+        margin-left: 45px;
+    }
+}
+
+
+@media (min-width:769px){
+
+    h2{
+        margin-top: 150px;
+    }
+    .datosCta,
+    .datosPerso{
+        margin-left: 70px;
+    }
+}
