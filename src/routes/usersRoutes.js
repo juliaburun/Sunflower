@@ -1,36 +1,33 @@
+// ************ Require's ************
 const express=require('express');
-const path=require('path');
-
-const multer = require('multer');
-
-const { body } = require('express-validator');
-
 
 // ************ Controller Require ************
 const usersControllers=require('../controllers/usersControllers');
-var users = require ('../middlewares/userRegisterValidattor');
-var upload = require ('../middlewares/multerUsers');
+
+// ************ Middlewares ************
+var uploadFile = require ('../middlewares/multerUsers');
+var usersValidations = require ('../middlewares/userRegisterValidattor');
+
+
 // ************ router() ************
 const router=express.Router();
 
 
-
 // ************ Rutas ************
+//Formulario de registro
+router.get('/register', usersControllers.register);
 
-/* Ruta login */
+//Procesar el registro
+router.post('/register', uploadFile.single('image_profile'), usersValidations, usersControllers.ProcessRegister);
+
+//Formulario de login
 router.get('/login', usersControllers.login);
 
 /* ruta proceso validacion*/
-router.post('/login', validations, usersControllers.processRegister);
+/* router.post('/login', validations, usersControllers.processRegister);
+ */
 
-
-/* Ruta register */
-router.get('/register', usersControllers.register);
-router.post('/register', upload.single('image_profile'), users, usersControllers.ProcessRegister);
-
-/* Ruta usuarios */
-router.get('/user', usersControllers.usuarios);
-
-
+//perfil de Usuario
+router.get('/profile/:userId', usersControllers.profile);
 
 module.exports=router;

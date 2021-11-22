@@ -25,53 +25,73 @@
         <div class="container">
             <h3>REGÍSTRATE</h3>
                 <hr color="#edafa4">
-            <form action="./register" method="post">
+            <form action="/users/register" method="POST" enctype="multipart/form-data">
                 <!--CONTENEDOR FORMULARIO-->
                 <div class="caja-datos">
                     <div class="individual-box">
+                        <input type="name" 
+                        name="first_name" 
+                        placeholder="Nombre"
+                        value="<%= locals.oldData ? oldData.first_name : null %>">
                         <% if (locals.errors && errors.first_name) { %>
                             <div class="msgError">
                                 <%= errors.first_name.msg %> 
                             </div>
                         <% } %>
-                        <input type="name" name="first_name" placeholder="Nombre" >
                     </div>
                     
                     <div class="individual-box">   
+                        <input type="surname"
+                        name="last_name" 
+                        placeholder="Apellido"
+                        value="<%= locals.oldData ? oldData.last_name : null %> ">
                         <% if (locals.errors && errors.last_name) { %>
                             <div class="msgError">
                                 <%= errors.last_name.msg %> 
                             </div>
                         <% } %>
-                        <input type="surname" name="last_name" placeholder="Apellido" >
-
                     </div>
+
                     <div class="individual-box">   
+                        <input type="email" 
+                        name="email" 
+                        placeholder="E-mail"
+                        value="<%= locals.oldData ? oldData.email : null %> ">
                         <% if (locals.errors && errors.email) { %>
                             <div class="msgError">
                                 <%= errors.email.msg %> 
                             </div>
                         <% } %>
-                        <input type="email" name="email" placeholder="E-mail" >
                     </div>
+
                     <div class="individual-box">
+                        <input 
+                        type="phone" 
+                        name="phone" 
+                        placeholder="Teléfono"
+                        value="<%= locals.oldData ? oldData.phone : null %> ">
                         <% if (locals.errors && errors.phone) { %>
                             <div class="msgError">
                                 <%= errors.phone.msg %> 
                             </div>
                         <% } %>
-                        <input type="phone" name="phone" placeholder="Teléfono">
                     </div>
+
                     <div class="individual-box">   
+                        <input 
+                        type="password"  
+                        name="password1" 
+                        placeholder="Contraseña"
+                        value="<%= locals.oldData ? oldData.password1 : null %> ">
                         <% if (locals.errors && errors.password1) { %>
                             <div class="msgError">
                                 <%= errors.password1.msg %> 
                             </div>
                         <% } %>
-                        <input type="password" minlength="4" maxlength="8" name="password1" placeholder="Contraseña" >
                     </div>
+
                     <div class="individual-box">
-                        <input type="password" minlength="4" maxlength="8" name="password2" placeholder="Confirmar contraseña" >
+                        <input type="password"  name="password2" placeholder="Confirmar contraseña" >
                     </div>
                     <!-- <div class="individual-box">
                         <label for="user_type" class="etiqueta-tUsuario">Tipo de usuario:</label>
@@ -104,7 +124,7 @@
                 </div>
             </form>
         </div>
-    </main>
+</main>
 
 <!--SECCION JS-->
 <script>
@@ -129,5 +149,4 @@
     <%- include('../partials/footer') %>
 </body>
 </html>
-    </body>   
-    </html>
+ 

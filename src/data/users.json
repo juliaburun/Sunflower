@@ -98,23 +98,5 @@
   "password": "",
   "user_type": "usuario",
   "image_profile": "user.jpg"
- },
- {
-  "cod_user": 11,
-  "first_name": "",
-  "last_name": "",
-  "email": "",
-  "phone": "",
-  "password": "",
-  "image_profile": "user.jpg"
- },
- {
-  "cod_user": 12,
-  "first_name": "",
-  "last_name": "",
-  "email": "",
-  "phone": "",
-  "password": "",
-  "image_profile": "user.jpg"
  }
 ]
