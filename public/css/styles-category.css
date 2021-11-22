@@ -149,7 +149,10 @@ BARRA ENTRE EL HEADER Y EL MAIN
     margin: 10px 0 0 10px;
     text-align: center;
     
-} 
+}
+.nombre-planta{
+    text-transform: capitalize;
+}
 
 .precio p{
     font-size: 22px;

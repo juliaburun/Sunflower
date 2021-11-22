@@ -137,6 +137,9 @@ BARRA ENTRE EL HEADER Y EL MAIN
     font: sans-serif;
     text-align: center;
 }
+.nombre-planta{
+    text-transform: capitalize;
+}
 
 .container-button {
     width: 110px;

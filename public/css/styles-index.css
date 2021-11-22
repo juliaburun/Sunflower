@@ -125,6 +125,7 @@ main {
     font-weight: 600;
     color: var(--gris);
     margin: 10px 0 0 10px;
+    text-transform: capitalize;
 }
 
 .precio {

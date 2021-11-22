@@ -81,6 +81,7 @@ BARRA ENTRE EL HEADER Y EL MAIN
 .name-product h1{
     margin-left: 18px;
     margin-bottom: 0;
+    text-transform: capitalize;
 }
 
 
@@ -321,7 +322,8 @@ BARRA ENTRE EL HEADER Y EL MAIN
     font-size: 20px;
     font-weight: bold;
     margin: auto;
-    margin: 10px 0
+    margin: 10px 0;
+    text-transform: capitalize;
 }
 
 .name-otherProducts h3{
