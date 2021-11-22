@@ -25,35 +25,62 @@
         <div class="container">
             <h3>REGÍSTRATE</h3>
                 <hr color="#edafa4">
-            <form action="" method="" autocomplete="on">
+            <form action="./register" method="post">
                 <!--CONTENEDOR FORMULARIO-->
                 <div class="caja-datos">
                     <div class="individual-box">
-                        <input type="name" name="user box" placeholder="Nombre" required>
+                        <% if (locals.errors && errors.first_name) { %>
+                            <div class="msgError">
+                                <%= errors.first_name.msg %> 
+                            </div>
+                        <% } %>
+                        <input type="name" name="first_name" placeholder="Nombre" >
+                    </div>
+                    
+                    <div class="individual-box">   
+                        <% if (locals.errors && errors.last_name) { %>
+                            <div class="msgError">
+                                <%= errors.last_name.msg %> 
+                            </div>
+                        <% } %>
+                        <input type="surname" name="last_name" placeholder="Apellido" >
+
                     </div>
                     <div class="individual-box">   
-                        <input type="surname" name="surname box" placeholder="Apellido" required>
+                        <% if (locals.errors && errors.email) { %>
+                            <div class="msgError">
+                                <%= errors.email.msg %> 
+                            </div>
+                        <% } %>
+                        <input type="email" name="email" placeholder="E-mail" >
+                    </div>
+                    <div class="individual-box">
+                        <% if (locals.errors && errors.phone) { %>
+                            <div class="msgError">
+                                <%= errors.phone.msg %> 
+                            </div>
+                        <% } %>
+                        <input type="phone" name="phone" placeholder="Teléfono">
                     </div>
                     <div class="individual-box">   
-                        <input type="email" name="email box" placeholder="E-mail" required>
+                        <% if (locals.errors && errors.password1) { %>
+                            <div class="msgError">
+                                <%= errors.password1.msg %> 
+                            </div>
+                        <% } %>
+                        <input type="password" minlength="4" maxlength="8" name="password1" placeholder="Contraseña" >
                     </div>
                     <div class="individual-box">
-                        <input type="phone" name="phone box" placeholder="Teléfono">
+                        <input type="password" minlength="4" maxlength="8" name="password2" placeholder="Confirmar contraseña" >
                     </div>
-                    <div class="individual-box">   
-                        <input type="password" minlength="4" maxlength="8" name="password box" placeholder="Contraseña" required>
-                    </div>
-                    <div class="individual-box">
-                        <input type="password" minlength="4" maxlength="8" name="confirm password box" placeholder="Confirmar contraseña" required>
-                    </div>
-                    <div class="individual-box">
-                        <label for="Category" class="etiqueta-tUsuario">Tipo de usuario:</label>
-                        <select name="Category" id="Category" class="form-categoria">
-                            <option value="tipo-usuario">Usuario</option>
-                            <option value="tipo-superusuario">Superusuario</option>
-                            <option value="tipo-administrador">Administrador</option>
+                    <!-- <div class="individual-box">
+                        <label for="user_type" class="etiqueta-tUsuario">Tipo de usuario:</label>
+                        <select name="user_type" id="user_type" class="form-categoria">
+                            <option value="usuario">Usuario</option>
+                            <option value="superusuario">Superusuario</option>
+                            <option value="admin">Administrador</option>
                         </select>
-                    </div>
+                    </div> -->
                 </div>
 
     <!--BOTON AGREGAR AVATAR-->
@@ -61,7 +88,7 @@
         <h2>Imagen de perfil</h2>
         <div class="grid">
           <div class="form-element">
-            <input type="file" id="file-1" accept="image/*">
+            <input type="file" id="file-1" name="image_profile" accept="image/*">
             <label for="file-1" id="file-1-preview">
               <img src="/img/upload-image.png" alt="">
               <div>

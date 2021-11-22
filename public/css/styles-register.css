@@ -56,6 +56,12 @@ hr{
     padding: 10px;
     margin: auto;
 }
+
+.msgError{
+    color: red;
+    font-weight: 600;
+}
+
 /*FORMULARIOS*/
 input[type="name"],
 input[type="surname"],
@@ -157,6 +163,8 @@ form label{
     font-weight: 500;
     transition: all 1s;
 }
+
+
 
 /*============================== MEDIA QUERIES ===============================*/
 

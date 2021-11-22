@@ -1,47 +1,120 @@
-[{
-    "id": 1,
-    "first_name": "Valentine",
-    "last_name": "Deakin",
-    "email": "vdeakin0@homestead.com",
-    "phone": "(818) 2737727",
-    "password": "Idt0OriW",
-    "user_type": "Usuario",
-    "image_profile": "https://robohash.org/assumendainciduntcorrupti.png?size=50x50&set=set1"
-  }, {
-    "id": 2,
-    "first_name": "Olvan",
-    "last_name": "Hritzko",
-    "email": "ohritzko1@amazonaws.com",
-    "phone": "(426) 4398099",
-    "password": "cuyutyOAi",
-    "user_type": "Usuario",
-    "image_profile": "https://robohash.org/voluptatumteneturquas.png?size=50x50&set=set1"
-  }, {
-    "id": 3,
-    "first_name": "Jereme",
-    "last_name": "Schimon",
-    "email": "jschimon2@senate.gov",
-    "phone": "(708) 5122350",
-    "password": "VGqMK4Qa1vh",
-    "user_type": "Usuario",
-    "image_profile": "https://robohash.org/isteasperioresculpa.png?size=50x50&set=set1"
-  }, {
-    "id": 4,
-    "first_name": "Katti",
-    "last_name": "Eagling",
-    "email": "keagling3@nyu.edu",
-    "phone": "(277) 8201593",
-    "password": "IT9qtC1accN",
-    "user_type": "Superusuario",
-    "image_profile": "https://robohash.org/idfugitmolestias.png?size=50x50&set=set1"
-  }, {
-    "id": 5,
-    "first_name": "Eliot",
-    "last_name": "Neilus",
-    "email": "eneilus4@tumblr.com",
-    "phone": "(513) 4434897",
-    "password": "lifBQKUX",
-    "user_type": "Administrador",
-    "image_profile": "https://robohash.org/earumharumet.png?size=50x50&set=set1"
-  }]
-  
+[
+ {
+  "cod_user": 1,
+  "first_name": "Valentine",
+  "last_name": "Deakin",
+  "email": "vdeakin0@homestead.com",
+  "phone": "(818) 2737727",
+  "password": "Idt0OriW",
+  "user_type": "Usuario",
+  "image_profile": "https://robohash.org/assumendainciduntcorrupti.png?size=50x50&set=set1"
+ },
+ {
+  "cod_user": 2,
+  "first_name": "Olvan",
+  "last_name": "Hritzko",
+  "email": "ohritzko1@amazonaws.com",
+  "phone": "(426) 4398099",
+  "password": "cuyutyOAi",
+  "user_type": "Usuario",
+  "image_profile": "https://robohash.org/voluptatumteneturquas.png?size=50x50&set=set1"
+ },
+ {
+  "cod_user": 3,
+  "first_name": "Jereme",
+  "last_name": "Schimon",
+  "email": "jschimon2@senate.gov",
+  "phone": "(708) 5122350",
+  "password": "VGqMK4Qa1vh",
+  "user_type": "Usuario",
+  "image_profile": "https://robohash.org/isteasperioresculpa.png?size=50x50&set=set1"
+ },
+ {
+  "cod_user": 4,
+  "first_name": "Katti",
+  "last_name": "Eagling",
+  "email": "keagling3@nyu.edu",
+  "phone": "(277) 8201593",
+  "password": "IT9qtC1accN",
+  "user_type": "Superusuario",
+  "image_profile": "https://robohash.org/idfugitmolestias.png?size=50x50&set=set1"
+ },
+ {
+  "cod_user": 5,
+  "first_name": "Eliot",
+  "last_name": "Neilus",
+  "email": "eneilus4@tumblr.com",
+  "phone": "(513) 4434897",
+  "password": "lifBQKUX",
+  "user_type": "Administrador",
+  "image_profile": "https://robohash.org/earumharumet.png?size=50x50&set=set1"
+ },
+ {
+  "cod_user": 6,
+  "first_name": "Johanna",
+  "last_name": "Niño",
+  "email": "hanni.file@gmail.com",
+  "phone": "3017082187",
+  "password": "123456",
+  "user_type": "admin",
+  "image_profile": "user.jpg"
+ },
+ {
+  "cod_user": 7,
+  "first_name": "",
+  "last_name": "",
+  "email": "",
+  "phone": "",
+  "password": "",
+  "user_type": "usuario",
+  "image_profile": "user.jpg"
+ },
+ {
+  "cod_user": 8,
+  "first_name": "",
+  "last_name": "",
+  "email": "",
+  "phone": "",
+  "password": "",
+  "user_type": "usuario",
+  "image_profile": "user.jpg"
+ },
+ {
+  "cod_user": 9,
+  "first_name": "",
+  "last_name": "",
+  "email": "",
+  "phone": "",
+  "password": "",
+  "user_type": "usuario",
+  "image_profile": "user.jpg"
+ },
+ {
+  "cod_user": 10,
+  "first_name": "Johanna",
+  "last_name": "Niño",
+  "email": "",
+  "phone": "",
+  "password": "",
+  "user_type": "usuario",
+  "image_profile": "user.jpg"
+ },
+ {
+  "cod_user": 11,
+  "first_name": "",
+  "last_name": "",
+  "email": "",
+  "phone": "",
+  "password": "",
+  "image_profile": "user.jpg"
+ },
+ {
+  "cod_user": 12,
+  "first_name": "",
+  "last_name": "",
+  "email": "",
+  "phone": "",
+  "password": "",
+  "image_profile": "user.jpg"
+ }
+]
