@@ -13,10 +13,6 @@ const category = JSON.parse(fs.readFileSync(categoryFilePath, 'utf-8'));
 const capacityFilePath = path.join(__dirname, '../data/capacity.json');
 const capacity = JSON.parse(fs.readFileSync(capacityFilePath, 'utf-8'));
 
-// convertir section.JSON a objeto literal
-const sectionFilePath = path.join(__dirname, '../data/section.json');
-const section = JSON.parse(fs.readFileSync(sectionFilePath, 'utf-8'));
-
 const productsControllers={
     index: (req, res) => {      
         let idCategory=req.params.cod_category;
@@ -32,7 +28,7 @@ const productsControllers={
     detail: (req, res) => {
         const cod_product = req.params.cod_product;
         const productDetail = products.find(producto => producto.cod_product == cod_product);
-        const productCapacity = capacity.find(producto => producto.cod_capacity== productDetail.capacity);
+        const productCapacity = capacity.find(capacity => capacity.cod_capacity== productDetail.capacity);
         //Filtro de los otros productos ofertados diferentes al que se muestra en el detalle
         const productOther = products.filter(producto => producto.cod_product != cod_product);
         res.render('./products/productDetail', {productDetail, productCapacity,  productOther});
@@ -52,8 +48,7 @@ const productsControllers={
             category: req.body.category,
             capacity: req.body.capacity,
             price: req.body.price,
-            discount: req.body.discount,
-            section: req.body.section,
+            discount: req.body.discount ? req.body.discount : 0,
             description: req.body.description,
             image: req.file ? req.file.filename : "planta.jpg" 
         }
@@ -69,7 +64,7 @@ const productsControllers={
     edit: (req, res) => {
         const cod_product = req.params.cod_product;
         const productEdit = products.find(producto => producto.cod_product == cod_product);
-        res.render('./products/productEdit', {productEdit, category, section, capacity});
+        res.render('./products/productEdit', {productEdit, category, capacity});
     },
 
     update: (req, res) => {
@@ -93,8 +88,7 @@ const productsControllers={
             category: req.body.category,
             capacity: req.body.capacity,
             price: req.body.price,
-            discount: req.body.discount,
-            section: req.body.section,
+            discount: req.body.discount ? req.body.discount : 0,
             description: req.body.description,
             image: req.file ? req.file.filename : productUpdate.image
         }

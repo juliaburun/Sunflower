@@ -30,7 +30,7 @@
     <h2>CREAR PRODUCTO</h2>
     <!--LINEA BAJO EL TEXTO-->
     <hr color="#edafa4">
-    <form action="./create" method="POST" enctype="multipart/form-data">
+    <form action="/products/create" method="POST" enctype="multipart/form-data">
         <div class="forlularios">
             <!--CONTENEDOR NOMBRE DEL PRODUCTO-->
             <div class="cajaName">
@@ -67,14 +67,14 @@
               <input type="number" name="discount" class="form-cajaName">
             </div>
             <!--CONTENEDOR SECCION-->
-            <div class="cajaSection">
+           <!--  <div class="cajaSection">
               <label for="section" class="seccionProd">Sección:</label>
               <select name="section" id="section" class="form-cajaSection">
                 <option value="" selected>Elegí</option>
                 <option value=1>Con oferta</option>
                 <option value=0>Sin oferta</option>
               </select>
-            </div>
+            </div> -->
             <!--CONTENEDOR DESCRIPCION DEL PRODUCTO-->
             <div class="cajaDescription">
               <label for="description" class="descripcionProd">Descripción del producto:</label>

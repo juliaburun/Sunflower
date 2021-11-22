@@ -32,7 +32,8 @@
                         <input type="name" 
                         name="first_name" 
                         placeholder="Nombre"
-                        value="<%= locals.oldData ? oldData.first_name : null %>">
+                        value="<%= locals.oldData ? oldData.first_name : null %>"
+                        >
                         <% if (locals.errors && errors.first_name) { %>
                             <div class="msgError">
                                 <%= errors.first_name.msg %> 
@@ -44,7 +45,8 @@
                         <input type="surname"
                         name="last_name" 
                         placeholder="Apellido"
-                        value="<%= locals.oldData ? oldData.last_name : null %> ">
+                        value="<%= locals.oldData ? oldData.last_name : null %>"
+                        >
                         <% if (locals.errors && errors.last_name) { %>
                             <div class="msgError">
                                 <%= errors.last_name.msg %> 
@@ -56,7 +58,8 @@
                         <input type="email" 
                         name="email" 
                         placeholder="E-mail"
-                        value="<%= locals.oldData ? oldData.email : null %> ">
+                        value="<%= locals.oldData ? oldData.email : null %>"
+                        >
                         <% if (locals.errors && errors.email) { %>
                             <div class="msgError">
                                 <%= errors.email.msg %> 
@@ -69,7 +72,8 @@
                         type="phone" 
                         name="phone" 
                         placeholder="Teléfono"
-                        value="<%= locals.oldData ? oldData.phone : null %> ">
+                        value="<%= locals.oldData ? oldData.phone : null %>"
+                        >
                         <% if (locals.errors && errors.phone) { %>
                             <div class="msgError">
                                 <%= errors.phone.msg %> 
@@ -80,18 +84,24 @@
                     <div class="individual-box">   
                         <input 
                         type="password"  
-                        name="password1" 
+                        name="password" 
                         placeholder="Contraseña"
-                        value="<%= locals.oldData ? oldData.password1 : null %> ">
-                        <% if (locals.errors && errors.password1) { %>
+                        value="<%= locals.oldData ? oldData.password : null %>"
+                        >
+                        <% if (locals.errors && errors.password) { %>
                             <div class="msgError">
-                                <%= errors.password1.msg %> 
+                                <%= errors.password.msg %> 
                             </div>
                         <% } %>
                     </div>
 
                     <div class="individual-box">
-                        <input type="password"  name="password2" placeholder="Confirmar contraseña" >
+                        <input type="password"  name="repassword" placeholder="Confirmar contraseña">
+                        <% if (locals.errors && errors.repassword) { %>
+                            <div class="msgError">
+                                <%= errors.repassword.msg %> 
+                            </div>
+                        <% } %>
                     </div>
                     <!-- <div class="individual-box">
                         <label for="user_type" class="etiqueta-tUsuario">Tipo de usuario:</label>

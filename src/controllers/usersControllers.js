@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require ('path');
 const { validationResult } = require('express-validator');
+const bcryptjs = require('bcryptjs');
 
 // convertir los datos del JSON a objeto literal
 const usersFilePath = path.join(__dirname, '../data/users.json');
@@ -15,6 +16,8 @@ const controller={
     ProcessRegister: (req, res) =>{
         const resultValidation = validationResult(req);
 
+        console.log(resultValidation.errors.length);
+
         if (resultValidation.errors.length > 0){
             return res.render('./users/register', {
                 errors: resultValidation.mapped(),
@@ -23,14 +26,14 @@ const controller={
         }
 
         
-       /*  let newUser ={
+       let newUser ={
                 cod_user: users[users.length - 1].cod_user + 1,
                 first_name: req.body.first_name,
                 last_name: req.body.last_name,
                 email: req.body.email,
                 phone: req.body.phone,
-                password: req.body.password1,
-                user_type: req.body.user_type,
+                password: bcryptjs.hashSync(req.body.password, 10),
+                user_type: 'usuario',
                 image_profile: req.file ? req.file.filename : "user.jpg" 
         } 
 
@@ -40,7 +43,7 @@ const controller={
     
         users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); 
         res.redirect('/') 
-         */
+         
     },
 
     login: (req, res) => {

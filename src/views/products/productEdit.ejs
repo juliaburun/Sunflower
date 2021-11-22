@@ -81,21 +81,7 @@
                 <label for="discount" class="descuProd">Descuento %:</label>
                 <input type="number" name="discount" class="form-cajaName" value="<%= productEdit.discount%>">
               </div>
-              <!--CONTENEDOR SECCION-->
-              <div class="cajaSection">
-                <label for="section" class="seccionProd">Sección:</label>
-                <select name="section" id="section" class="form-cajaSection">
-                  <option value="" >Elegí</option>
-                  <% section.forEach(sections => { %>
-                    <% if (sections.cod_section == productEdit.section){ %>
-                          <option value= <%= sections.cod_section %> selected > <%= sections.name%> </option>
-                    <% }else{ %>
-                        <option value= <%= sections.cod_section %>> <%= sections.name%>  </option>
-                   <% } %>
-                <% }); %>
-                  
-                </select>
-              </div>
+              
               <!--CONTENEDOR DESCRIPCION DEL PRODUCTO-->
               <div class="cajaDescription">
                   <label for="description" class="descripcionProd">Descripción del producto:</label>

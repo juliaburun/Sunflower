@@ -1,0 +1,10 @@
+[
+{
+    "cod_tipoUser": 1,
+    "name": "administrador"
+},
+{
+    "cod_category": 2,
+    "name": "usuario"
+}
+]

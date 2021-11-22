@@ -8,10 +8,9 @@ const validationRegister = [
                  .isEmail().withMessage('Debes ingresar un email válido'),
     body('phone').notEmpty().withMessage('Debes ingresar un número de celular').bail()
                 .isInt().withMessage('Debes ingresar números enteros'),
-    body('password1').notEmpty().withMessage('Debes ingresar una contraseña').bail()
-                     .isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres'),
-    body('password2').custom((value, {req}) => {
-        if(value != req.body.password1){
+    body('password').notEmpty().withMessage('Debes ingresar una contraseña'),
+    body('repassword').custom((value, { req }) => {
+        if(value !== req.body.password){
             throw new Error ('las constraseñas no coinciden');
         }
         return true;
