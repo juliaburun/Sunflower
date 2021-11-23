@@ -7,6 +7,7 @@ const usersControllers=require('../controllers/usersControllers');
 // ************ Middlewares ************
 var uploadFile = require ('../middlewares/multerUsers');
 var usersValidations = require ('../middlewares/userRegisterValidattor');
+var loginValidations = require ('../middlewares/loginValidattor');
 
 
 // ************ router() ************
@@ -23,9 +24,8 @@ router.post('/register', uploadFile.single('image_profile'), usersValidations, u
 //Formulario de login
 router.get('/login', usersControllers.login);
 
-/* ruta proceso validacion*/
-/* router.post('/login', validations, usersControllers.processRegister);
- */
+//Procesa la validacion delogin
+router.post('/login', loginValidations, usersControllers.loginProcess);
 
 //perfil de Usuario
 router.get('/profile/:userId', usersControllers.profile);

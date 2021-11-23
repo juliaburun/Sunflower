@@ -47,7 +47,21 @@ const controller={
     },
 
     login: (req, res) => {
-        res.render('./users/login');
+        res.render('./users/login', { data: null });
+    },
+
+    loginProcess: (req, res) => {
+		const resultValidation = validationResult(req);
+		
+		if (resultValidation.errors.length > 0) {
+			return res.render('./users/login', {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		}
+
+		return res.render('./users/user', { data:req.body });
+        
     },
 
     profile: (req, res) => {
