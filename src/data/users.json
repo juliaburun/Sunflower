@@ -58,5 +58,35 @@
   "password": "123456",
   "user_type": "1",
   "image_profile": "user.jpg"
+ },
+ {
+  "cod_user": 7,
+  "first_name": "Ariel",
+  "last_name": "cruz",
+  "email": "ariel@gmail.com",
+  "phone": "12344",
+  "password": "$2a$10$N7mMvg5zil1/zxevMrWobOWl8oor5NXzJcVL.pR8Sij79kzUXXzhS",
+  "user_type": "2",
+  "image_profile": "user.jpg"
+ },
+ {
+  "cod_user": 9,
+  "first_name": "Johanna",
+  "last_name": "sdfsdf",
+  "email": "jn@gmail.com",
+  "phone": "12123213",
+  "password": "$2a$10$Bc7zu8vHYgw/d.VABF5fBu82h5OcblhVocMSU7p7sH5/EyjwjToCG",
+  "user_type": "2",
+  "image_profile": "user.jpg"
+ },
+ {
+  "cod_user": 10,
+  "first_name": "Linda",
+  "last_name": "Niño",
+  "email": "linda@gmail.com",
+  "phone": "12344",
+  "password": "$2a$10$KE3bBb4m5vd4OUb6cHIwAuGkDvYUM.uz1SEdvJAvixV/QeGxxYZmy",
+  "user_type": 2,
+  "image_profile": "userImg1637651645731.jpg"
  }
 ]
