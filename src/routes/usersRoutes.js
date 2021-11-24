@@ -28,6 +28,6 @@ router.get('/login', usersControllers.login);
 router.post('/login', loginValidations, usersControllers.loginProcess);
 
 //perfil de Usuario
-router.get('/profile/:userId', usersControllers.profile);
-
+router.get('/user', usersControllers.profile);
+///:userId
 module.exports=router;

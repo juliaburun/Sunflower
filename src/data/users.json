@@ -88,5 +88,55 @@
   "password": "$2a$10$KE3bBb4m5vd4OUb6cHIwAuGkDvYUM.uz1SEdvJAvixV/QeGxxYZmy",
   "user_type": 2,
   "image_profile": "userImg1637651645731.jpg"
+ },
+ {
+  "cod_user": 11,
+  "first_name": "ju",
+  "last_name": "bu",
+  "email": "hj@mail.com",
+  "phone": "3",
+  "password": "$2a$10$dH7cHyg6UHX9XSW3gvU6R.F6ZkNbSwMvCmUAURYy4sPZ.xcykpKty",
+  "user_type": 2,
+  "image_profile": "userImg1637754399875.png"
+ },
+ {
+  "cod_user": 12,
+  "first_name": "julia",
+  "last_name": "bu",
+  "email": "g@mail.com",
+  "phone": "2",
+  "password": "$2a$10$PxLsYUiFW7HD/Tvie2daguSKDhGFK4Mg9IIJVC4C3CbfJm7J3TJkK",
+  "user_type": 2,
+  "image_profile": "userImg1637756165414.png"
+ },
+ {
+  "cod_user": 13,
+  "first_name": "julias",
+  "last_name": "bu",
+  "email": "j@mail.com",
+  "phone": "2",
+  "password": "$2a$10$yiBDRR8nUelVJat.1IcWp.eQR8tY6v9R798ej0T5.pylkLqmlPXLG",
+  "user_type": 2,
+  "image_profile": "user.jpg"
+ },
+ {
+  "cod_user": 14,
+  "first_name": "jules",
+  "last_name": "bu",
+  "email": "gh@mail.com",
+  "phone": "2",
+  "password": "$2a$10$VVszDkySZLpB8b327j/jtO1I9IvD6aOE4cfZLho2Y4q2O.1CAk2J2",
+  "user_type": 2,
+  "image_profile": "user.jpg"
+ },
+ {
+  "cod_user": 15,
+  "first_name": "juli",
+  "last_name": "bur",
+  "email": "ju@mail.com",
+  "phone": "2",
+  "password": "$2a$10$MbsQV7RMrr0Q0/bglJqcxOygnTZszLYIfPHtGydXAcGBoKlGtmBCm",
+  "user_type": 2,
+  "image_profile": "user.jpg"
  }
 ]

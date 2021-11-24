@@ -58,16 +58,39 @@ const controller={
     },
 
     loginProcess: (req, res) => {
-		const resultValidation = validationResult(req);
-		
-		if (resultValidation.errors.length > 0) {
+
+        const resultValidation = validationResult(req);
+
+        if (resultValidation.errors.length > 0) {
 			return res.render('./users/login', {
 				errors: resultValidation.mapped(),
 				oldData: req.body
 			});
 		}
 
-		return res.render('./users/user', { data:req.body });
+		let userToLogin = User.findByField('email', req.body.email)
+
+        if(userToLogin){
+            let isOkPassword = bcryptjs.compareSync( req.body.password, userToLogin.password)
+            if (isOkPassword){
+                return res.redirect('./user'/*.id*/)
+            }
+            return res.render('./users/login', {
+                errors: {
+                    email: {
+                        msg: 'Las credenciales son inválidas' // esto no está apareciendo
+                    }
+                }
+            })
+        }
+
+        return res.render('./users/login', {
+            errors: {
+                email: {
+                    msg: 'No se encuentra este email en nuestra base de datos' // esto no aparece
+                }
+            }
+        })
         
     },
 

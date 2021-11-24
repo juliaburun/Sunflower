@@ -13,6 +13,25 @@ app.use(express.urlencoded({ extended: false })); // Necesario para recibir los 
 app.use(express.json()); // Necesario para utilizar datos JSON
 app.use(methodOverride('_method')); // Para poder usar los métodos PUT y DELETE
 
+// ------------- Middleware prueba --------//
+
+app.use((req, res, next) => {
+    const render = res.render;
+    const send = res.send;
+    res.render = function renderWrapper(...args) {
+        Error.captureStackTrace(this);
+        return render.apply(this, args);
+    };
+    res.send = function sendWrapper(...args) {
+        try {
+            send.apply(this, args);
+        } catch (err) {
+            console.error(`Error in res.send | ${err.code} | ${err.message} | ${res.stack}`);
+        }
+    };
+    next();
+});
+
 
 // ************ Template Engine ************
 app.set("view engine", "ejs"); // Define que el motor que utilizamos es EJS
