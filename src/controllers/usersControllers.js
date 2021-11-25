@@ -68,32 +68,40 @@ const controller={
 			});
 		}
 
-		let userToLogin = User.findByField('email', req.body.email)
+
+        //SE COMENTO LO DE JULIA PARA QUE FUNCIONE EL REDIRECIONAR Y MOSTRAR USUARIO
+        
+/* 		 let userToLogin = User.findByField('email', req.body.email)
 
         if(userToLogin){
             let isOkPassword = bcryptjs.compareSync( req.body.password, userToLogin.password)
             if (isOkPassword){
-                return res.redirect('./user'/*.id*/)
-            }
+                return res.redirect('./user')/*.id ESTE.ID VA DENTRO DEL PARENTESIS DESPUES DE USER*/
+ /*             }
             return res.render('./users/login', {
                 errors: {
                     email: {
-                        msg: 'Las credenciales son inválidas' // esto no está apareciendo
+                        msg: 'Las credenciales son inválidas'
                     }
                 }
             })
         }
-
-        return res.render('./users/login', {
+  */
+ /*         return res.render('./users/login', {
             errors: {
                 email: {
-                    msg: 'No se encuentra este email en nuestra base de datos' // esto no aparece
+                    msg: 'No se encuentra este email en nuestra base de datos'
                 }
             }
         })
         
+    }, 
+ */ 
+//SE AGREGO SOLO ESTE CODIGO QUE ESTABA ANTES DE JULIA
+	return res.render('./users/user', { data:req.body });     
     },
 
+// ESTO ESTABA CON EL CODIGO DE JULIA
     profile: (req, res) => {
         return res.render('./users/user');    
     },

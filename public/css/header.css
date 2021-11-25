@@ -216,6 +216,34 @@
     transition: color 1s;
 }
 
+/*SECCION USUARIO LOGUEADO*/
+.contenedor-perfil{
+    position: absolute;
+    color: white; 
+    right: 0;
+   
+  }
+  /*CONTENEDOR IMG Y P*/
+  .perfil-detalle{
+      display: flex;
+      align-items: center;
+      position: relative;
+      height: 40px;
+  }
+  
+  /*IMAGEN PERFIL USUARIO*/
+  .perfil-detalle img{
+      height: 20px;
+      width: 20px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-right: 5px;
+  }
+  /*USUARIO LOGUEADO*/
+  .seccion-usuario p{
+      margin-right: 20px;
+  }
+
 
 @media (min-width:481px){
 

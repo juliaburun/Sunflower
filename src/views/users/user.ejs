@@ -30,6 +30,15 @@
   <h2>Mis datos</h2>
  <!--LINEA INFERIOR MIS DATOS-->
   <hr color="#edafa4">
+
+<!--MUESTRA EL MAIL DEL USUARIO LOGUEADO-->
+<% if (data) { %>
+  <p>
+  Bienvenido <strong><%= data.email %></strong>
+  </p>
+<% } %>
+
+
     <section>
       <div class="cajaPrincipal">
           <form action="" method="get">
