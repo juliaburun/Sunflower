@@ -58,8 +58,8 @@ hr{
     margin: auto;
 }
 /*FORMULARIOS USUARIO CONTRASEÑA*/
-input[id="userbox"],
-input[id="password_box"]
+input[id="email"],
+input[id="password"]
 {
     font-size: 14px;
     width: 100%;
@@ -159,8 +159,8 @@ input[id="password_box"]
         width: 40%;
     }
     /*FORMULARIOS*/
-    input[id="userbox"],
-    input[id="password_box"]
+    input[id="email"],
+    input[id="password"]
     {
         font-size: 14px;
         height: 40px; 
@@ -200,8 +200,8 @@ input[id="password_box"]
         padding: 0px;
     }
     /*FORMULARIOS*/
-    input[id="userbox"],
-    input[id="password_box"]
+    input[id="email"],
+    input[id="password"]
     {
         font-size: 16px;
         height: 45px;
