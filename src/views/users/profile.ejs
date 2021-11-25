@@ -32,7 +32,7 @@
   <hr color="#edafa4">
 
 <!--MUESTRA EL MAIL DEL USUARIO LOGUEADO-->
-<% if (data) { %>
+<% if (locals.data && data) { %>
   <p>
   Bienvenido <strong><%= data.email %></strong>
   </p>

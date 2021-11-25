@@ -1,12 +1,8 @@
 const fs = require('fs');
-const path = require ('path');
 const { validationResult } = require('express-validator');
 const bcryptjs = require('bcryptjs');
 const User = require('../models/User');
 
-// convertir los datos del JSON a objeto literal
-const usersFilePath = path.join(__dirname, '../data/users.json');
-let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const controller={
 
@@ -68,26 +64,26 @@ const controller={
 			});
 		}
 
-
-        //SE COMENTO LO DE JULIA PARA QUE FUNCIONE EL REDIRECIONAR Y MOSTRAR USUARIO
         
-/* 		 let userToLogin = User.findByField('email', req.body.email)
+ 		 let userToLogin = User.findByField('email', req.body.email)
+          console.log (userToLogin)
 
         if(userToLogin){
             let isOkPassword = bcryptjs.compareSync( req.body.password, userToLogin.password)
             if (isOkPassword){
-                return res.redirect('./user')/*.id ESTE.ID VA DENTRO DEL PARENTESIS DESPUES DE USER*/
- /*             }
+                return res.render('./users/profile', {data: userToLogin}) 
+              }
+
             return res.render('./users/login', {
                 errors: {
                     email: {
                         msg: 'Las credenciales son inválidas'
                     }
-                }
+                    }
             })
         }
-  */
- /*         return res.render('./users/login', {
+  
+        return res.render('./users/login', {
             errors: {
                 email: {
                     msg: 'No se encuentra este email en nuestra base de datos'
@@ -96,15 +92,14 @@ const controller={
         })
         
     }, 
- */ 
-//SE AGREGO SOLO ESTE CODIGO QUE ESTABA ANTES DE JULIA
-	return res.render('./users/user', { data:req.body });     
-    },
+ 
 
-// ESTO ESTABA CON EL CODIGO DE JULIA
     profile: (req, res) => {
-        return res.render('./users/user');    
-    },
+        let id= req.params.id
+        let userInDb = User.findByField('cod_user', id);
+        res.send (id)
+/*         return res.render('./users/profile', userInDb);    
+ */    },
 }
 
 module.exports = controller;

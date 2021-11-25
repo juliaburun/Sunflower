@@ -138,5 +138,25 @@
   "password": "$2a$10$MbsQV7RMrr0Q0/bglJqcxOygnTZszLYIfPHtGydXAcGBoKlGtmBCm",
   "user_type": 2,
   "image_profile": "user.jpg"
+ },
+ {
+  "cod_user": 16,
+  "first_name": "Prueba25",
+  "last_name": "nov",
+  "email": "prueba25@mail.com",
+  "phone": "3017082187",
+  "password": "$2a$10$BEeDMFjhOFpQiE63uc5f9eh6nZFsA5pX/BfkSzSXXbEiuumbJiigC",
+  "user_type": 2,
+  "image_profile": "user.jpg"
+ },
+ {
+  "cod_user": 17,
+  "first_name": "Johanna",
+  "last_name": "Niño",
+  "email": "johy@gmail.com",
+  "phone": "3017082187",
+  "password": "$2a$10$NXhtKT6S9125ntKhEq24H.FTMe/A7y0KFLED.5BT34Q1e2lNzZyFm",
+  "user_type": 2,
+  "image_profile": "user.jpg"
  }
 ]
