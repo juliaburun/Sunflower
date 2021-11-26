@@ -221,14 +221,23 @@
     position: absolute;
     color: white; 
     right: 0;
-   
+   display: flex;
+   margin-top: 40px;
   }
+
+  .contenedor-perfil i {
+    color: white;
+    margin-right: 20px;
+    margin-top: 11px;
+  }
+
   /*CONTENEDOR IMG Y P*/
   .perfil-detalle{
       display: flex;
       align-items: center;
       position: relative;
       height: 40px;
+      margin-right: 20px;
   }
   
   /*IMAGEN PERFIL USUARIO*/
@@ -237,13 +246,19 @@
       width: 20px;
       object-fit: cover;
       border-radius: 5px;
-      margin-right: 5px;
+      margin-right: 20px;
   }
   /*USUARIO LOGUEADO*/
   .seccion-usuario p{
-      margin-right: 20px;
+      margin-right: 10px;
   }
 
+@media (min-width:420px) and (max-width: 480px){
+    .contenedor-perfil{
+        margin-top: 60px;
+      }
+
+}
 
 @media (min-width:481px){
 
@@ -253,8 +268,6 @@
 
     .main-header-div .div-main-logo{
         width: 30%;
-        
-       /*  border: cyan solid 3px; */
     }
 
     .main-header-div .div-main-iconos{
@@ -268,22 +281,16 @@
         margin-bottom: 50px;
     }
 
-    
-
     .div-secundario-iconos{
         margin-top: 30px;
-     /*    border: indianred solid 2px; */
     }
 
     .login{
-        justify-content: right;
-        /* border: indigo solid 2px; */
-        
+        justify-content: right;        
     }
 
     .carrito{
         justify-content: right;
-       /*  border: black solid 2px; */
     }
 
     .login i, .carrito i, .hamburguer-buttom i{
@@ -305,8 +312,23 @@
         font-size: 20px;
     }
 
+    .contenedor-perfil{
+        position: absolute;
+        color: white; 
+        right: 0;
+        display: flex;
+        margin-right: 70px;
+        margin-top: 48px;
+      }
+    
+      .contenedor-perfil i {
+        color: white;
+        margin-right: 20px;
+      }
+
 
 }
+
 
 @media (min-width:769px){
 
@@ -376,23 +398,34 @@
         width: 25%;
         align-self: end;
     }
+    .contenedor-perfil{
+        margin-top:40px;
+    }
 
-    /* .div-main-iconos .carrito{
-        width: 5%;
-    } */
-
-
-
-
-    
 
 }
 
 
+@media (min-width:940px){
+    .contenedor-perfil{
+        margin-top:50px;
+    }
 
+}
 
+@media (min-width:1065px){
+    .contenedor-perfil{
+        margin-top:65px;
+    }
 
+}
 
+@media (min-width:1270px){
+    .contenedor-perfil{
+        margin-top:80px;
+    }
+
+}
 
 
 
