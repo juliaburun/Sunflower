@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 const methodOverride = require('method-override'); // Para poder usar los métodos PUT y DELETE
 const session = require('express-session')
+const cookies = require('cookie-parser')
 
 
 // ************ express() ************
@@ -20,6 +21,7 @@ app.use(session({
     resave: false, 
     saveUninitialized: false
 }));
+app.use(cookies())
 app.use(userLoggedMiddleware);
 
 // ------------- Middleware prueba --------//
