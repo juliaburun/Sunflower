@@ -8,16 +8,15 @@
                     MENÚ NAVEGACIÓN
               ============================-->
  <!--SECCION USUARIO LOGUEADO -->
- <div class="contenedor-perfil">          
-    <div class="perfil-detalle">
-        <img src="/img/users/user.jpg" alt="imagen perfil">
-        <div class="seccion-usuario">
-            <p>User mail</p>
-        </div> 
-</div>
-<i class="fas fa-sign-out-alt"></i>
-</div>
-
+ <% if (locals.isLogged) { %>
+    <div class="contenedor-perfil"> 
+            <div class="perfil-detalle">
+                <a href="/users/profile"><img src="/img/users/<%= locals.userLogged.image_profile%>" alt="imagen perfil"></a>
+                <p>Hola! <%= locals.userLogged.first_name %></p>
+            </div>
+            <a href="/users/logout"><i class="fas fa-sign-out-alt"></i></a>
+    </div>
+<% } %>
 
             <nav class="main-navbar">
                 <ul> 
@@ -39,11 +38,14 @@
                         </div>
                 </div>
                 <div class="div-secundario-iconos">
-                    <div class="login">
-                        <a href="/users/login" >
-                            <i class="fas fa-user"></i>
-                        </a>
-                    </div>
+                    <% if (!locals.isLogged) { %>
+                        <div class="login">
+                            <a href="/users/login" >
+                                <i class="fas fa-user"></i>
+                            </a>
+                        </div>
+                    <% } %>
+                    
                     <div class="carrito">
                         <a href="/cart">
                             <i class="fas fa-shopping-cart"></i>

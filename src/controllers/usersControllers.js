@@ -66,12 +66,13 @@ const controller={
 
         
  		 let userToLogin = User.findByField('email', req.body.email)
-          console.log (userToLogin)
 
         if(userToLogin){
             let isOkPassword = bcryptjs.compareSync( req.body.password, userToLogin.password)
             if (isOkPassword){
-                return res.render('./users/profile', {data: userToLogin}) 
+                delete userToLogin.password;
+                req.session.userLogged = userToLogin;
+                return res.redirect('/users/profile') 
               }
 
             return res.render('./users/login', {
@@ -95,11 +96,15 @@ const controller={
  
 
     profile: (req, res) => {
-        let id= req.params.id
-        let userInDb = User.findByField('cod_user', id);
-        res.send (id)
-/*         return res.render('./users/profile', userInDb);    
- */    },
+        return res.render('./users/profile', {
+            user: req.session.userLogged
+        });    
+    },
+
+    logout: (req, res) =>{
+        req.session.destroy();
+        return res.redirect('/');
+    }
 }
 
 module.exports = controller;

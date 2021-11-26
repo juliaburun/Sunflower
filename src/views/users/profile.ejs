@@ -32,11 +32,9 @@
   <hr color="#edafa4">
 
 <!--MUESTRA EL MAIL DEL USUARIO LOGUEADO-->
-<% if (locals.data && data) { %>
   <p>
-  Bienvenido <strong><%= data.email %></strong>
+  Bienvenido <strong><%= user.first_name%></strong>
   </p>
-<% } %>
 
 
     <section>
@@ -50,7 +48,7 @@
                   <div class="form-element">
                     <input type="file" id="file-1" accept="image/*" value="" name="imageEdited1">
                       <label for="file-1" id="file-1-preview">
-                        <img src="/img/upload-image.png" alt="">
+                        <img src="/img/users/<%= user.image_profile%>" alt="">
                           <div>
                           </div>
                       </label>
@@ -59,30 +57,22 @@
               </div>
               <div class="cajaMail">
                 <label for="email" class="labelMail">Email</label>
-                  <input type="text" id="email" name="email" class="form-cajaMail" value="">
+                  <input type="text" id="email" name="email" class="form-cajaMail" value="<%= user.email%>">
               </div>
               <p class="datosPerso">Datos personales</p>
                 <div class="cajaNombre">
                   <label for="name" class="labelNombre">Nombre</label>
-                    <input type="text" id="name" name="name" class="form-cajaNombre" value="">
+                    <input type="text" id="name" name="name" class="form-cajaNombre" value="<%= user.first_name%>">
                 </div>
                 <div class="cajaApellido">
                   <label for="last-name" class="labelApellido">Apellido</label>
-                    <input type="text" id="last-name" name="last name" class="form-cajaApellido" value="">
+                    <input type="text" id="last-name" name="last name" class="form-cajaApellido" value="<%= user.last_name%>">
                 </div>
                 <div class="cajaTelefono">
                   <label for="phone" class="labelTelefono">Teléfono</label>
-                    <input type="text" id="phone" name="phone" class="form-cajaTelefono" value="">
+                    <input type="text" id="phone" name="phone" class="form-cajaTelefono" value="<%= user.phone%>">
                 </div>
-                <div class="cajaContras">
-                  <label for="password" class="labelContras">Contraseña</label>
-                    <input type="text" id="password" name="password" class="form-cajaContras" value="">
-                </div>
-                <div class="cajaDirec">
-                  <label for="address" class="labelDirec">Domicilio</label>
-                    <input type="text" id="address" name="address" class="form-cajaDirec" value="">
-                </div>
-                 <!--BOTON-->
+                  <!--BOTON-->
           <div class="cajaGuardar">
             <p id="texto">Guardar cambios</p>
             <button type="submit" class="botonGuardar" onclick="return confirmar()"></button>

@@ -2,20 +2,29 @@
 const express = require('express');
 const path = require('path');
 const methodOverride = require('method-override'); // Para poder usar los métodos PUT y DELETE
+const session = require('express-session')
 
 
 // ************ express() ************
 const app = express();
+
+const userLoggedMiddleware = require ('./middlewares/userLoggedMiddleware');
 
 
 // ************ Middlewares -************
 app.use(express.urlencoded({ extended: false })); // Necesario para recibir los datos que vienen desde el formulario
 app.use(express.json()); // Necesario para utilizar datos JSON
 app.use(methodOverride('_method')); // Para poder usar los métodos PUT y DELETE
+app.use(session({
+    secret:'esto es un secreto', 
+    resave: false, 
+    saveUninitialized: false
+}));
+app.use(userLoggedMiddleware);
 
 // ------------- Middleware prueba --------//
 
-app.use((req, res, next) => {
+app.use((req, res, next) => { 
     const render = res.render;
     const send = res.send;
     res.render = function renderWrapper(...args) {
