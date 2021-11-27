@@ -156,7 +156,17 @@
   "email": "johy@gmail.com",
   "phone": "3017082187",
   "password": "$2a$10$NXhtKT6S9125ntKhEq24H.FTMe/A7y0KFLED.5BT34Q1e2lNzZyFm",
-  "user_type": 2,
+  "user_type": 1,
   "image_profile": "johanna.jfif"
+ },
+ {
+  "cod_user": 18,
+  "first_name": "pruebaCliente",
+  "last_name": "Cliente",
+  "email": "cliente@gmail.com",
+  "phone": "3017082187",
+  "password": "$2a$10$sLaruLeJCTpdV1IQtzMs.e4IY.DqK5/FWg.avFxNHyFc.LB6Ep71e",
+  "user_type": 2,
+  "image_profile": "userImg1637975090982.webp"
  }
 ]
