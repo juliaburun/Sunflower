@@ -209,4 +209,7 @@ p#texto{
     .datosPerso{
         margin-left: 70px;
     }
+    .form-cajaMail{
+        width: 100%;
+    }
 }

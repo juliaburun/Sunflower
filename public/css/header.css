@@ -109,7 +109,7 @@
     /* margin-left: 30px; */
     /* border: black solid 5px; */
     margin: auto;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
 }
 
 
@@ -136,7 +136,7 @@
     display: flex;
     flex-direction: row;
     justify-content: right;
-    margin-bottom: 13px;
+    margin-bottom: 3px;
 
     /* border: solid 2px purple; */
 }
@@ -223,7 +223,7 @@
     color: white; 
     right: 0;
    display: flex;
-   margin-top: 25px;
+   margin-top: 30px;
   }
 
   .contenedor-perfil i {
@@ -239,7 +239,7 @@
       align-items: center;
       position: relative;
       height: 40px;
-      margin-right: 20px;
+      margin-right: 10px;
   }
   
   /*IMAGEN PERFIL USUARIO*/
@@ -251,18 +251,9 @@
       margin-right: 0px;
   }
   /*USUARIO LOGUEADO*/
-  .seccion-usuario p{
-      margin-right: 10px;
+  .nombre-usuario{
+      font-size: 10px;
   }
-
-
-/*BREAKPOINT MOBILE*/
-@media (min-width:420px) and (max-width: 480px){
-    .contenedor-perfil{
-        margin-top: 60px;
-      }
-
-}
 
 
 /*BREAKPOINT TABLET*/
@@ -281,10 +272,6 @@
         margin-bottom: 10px;
         justify-content: flex-end;
         margin-right: 0;
-    }
-
-    .main-div-search{
-        margin-bottom: 50px;
     }
 
     .div-secundario-iconos{
@@ -306,6 +293,9 @@
     .hamburguer-buttom {
         margin-right: 0;
     }
+    .div-main-busqueda{
+        margin-bottom: 20px;
+    }
 
     .div-main-busqueda input{
         width: 80%;
@@ -323,15 +313,17 @@
         color: white; 
         right: 0;
         display: flex;
-        margin-right: 10px;
-        margin-top: 40px;
+        margin-right: 20px;
+        margin-top: 48px;
       }
     
       .contenedor-perfil i {
         color: white;
         margin-right: 0px;
       }
-
+      .nombre-usuario{
+        font-size: 12px;
+    }
 
 }
 
@@ -383,7 +375,7 @@
         font-size: 20px;
     }
     .div-main-busqueda{
-        margin-bottom: 40px;
+        margin-bottom: 50px;
         margin-right: 0px;
     }  
 
@@ -407,9 +399,33 @@
         align-self: end;
     }
     .contenedor-perfil{
-        margin-top:70px;
+        margin-top: 60px;
         margin-right: 115px;
     }
-
+    .nombre-usuario{
+        font-size: 12px;
+    }
 
 }
+
+
+/* @media (min-width:940px){
+    .contenedor-perfil{
+        margin-top:50px;
+    }
+
+}
+
+@media (min-width:1065px){
+    .contenedor-perfil{
+        margin-top:65px;
+    }
+
+}
+
+@media (min-width:1270px){
+    .contenedor-perfil{
+        margin-top:80px;
+    }
+
+}  */
