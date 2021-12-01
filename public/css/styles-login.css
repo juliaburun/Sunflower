@@ -30,7 +30,9 @@
  }
 
  /*############################### LINEA DIVISORA ENTRE EL ENCABEZADO Y EL CUERPO  #########################*/
-
+main{
+    margin-top: 150px;
+}
 
 /*CONTIENE TODOS LOS ELEMENTOS DEL CUERPO*/
 .container{
@@ -186,6 +188,10 @@ input[id="password"]
 }
 
 @media (min-width:769px){
+
+    main{
+        margin-top: 220px;
+    }
 
     hr{
         width: 4%;

@@ -7,17 +7,7 @@
              <!--==========================
                     MENÚ NAVEGACIÓN
               ============================-->
- <!--SECCION USUARIO LOGUEADO -->
- <% if (locals.isLogged) { %>
-    <div class="contenedor-perfil"> 
-            <div class="perfil-detalle">
-                <a href="/users/profile"><img src="/img/users/<%= locals.userLogged.image_profile%>" alt="imagen perfil"></a>
-            </div>
-            <div class="nombre-usuario"><p>Hola! <%= locals.userLogged.first_name %></p></div>
-            <div><a href="/users/logout"><i class="fas fa-sign-out-alt"></i></a></div>
-    </div>
-<% } %>
-
+ 
             <nav class="main-navbar">
                 <ul> 
                     <li> <a href="/">Inicio</a> </li>
@@ -27,17 +17,21 @@
             </nav>
 
             <div class="div-main-iconos">
-                <div class="main-div-search">
-                        <div class="div-search"> 
-                            <form action="/search" method="POST" >   
-                                <div class="div-main-busqueda">
-                                    <input class="input-busqueda" type="search" name="busqueda" placeholder="¿Qué estás buscando?" ></input>
-                                    <button type="submit" class="ilupa"><i class="fas fa-search"></i></button>
-                                </div>
-                            </form>
-                        </div>
-                </div>
+
+
                 <div class="div-secundario-iconos">
+
+                    <!--SECCION USUARIO LOGUEADO -->
+                <% if (locals.isLogged) { %>
+                    <div class="contenedor-perfil"> 
+                            <div class="perfil-detalle">
+                                <a href="/users/profile"><img src="/img/users/<%= locals.userLogged.image_profile%>" alt="imagen perfil"></a>
+                            </div>
+                            <div class="nombre-usuario"><p>Hola! <%= locals.userLogged.first_name %></p></div>
+                            <div><a href="/users/logout"><i class="fas fa-sign-out-alt"></i></a></div>
+                    </div>
+                <% } %>
+
                     <% if (!locals.isLogged) { %>
                         <div class="login">
                             <a href="/users/login" >
@@ -60,6 +54,16 @@
             </div>
         </div>
     </div>
-   
+
+    <div class="main-div-search">
+        <div class="div-search"> 
+            <form action="/search" method="POST" >   
+                <div class="div-main-busqueda">
+                    <input class="input-busqueda" type="search" name="busqueda" placeholder="¿Qué estás buscando?" ></input>
+                    <button type="submit" class="ilupa"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
     
 </header>

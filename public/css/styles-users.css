@@ -31,7 +31,7 @@
 
  /*############################### LINEA DIVISORA ENTRE EL ENCABEZADO Y EL CUERPO  #########################*/
 main{
-    margin-top: 120px;
+    margin-top: 180px;
     margin-bottom: 50px;
 }
 /*ETIQUETA H2 TEXTO CREAR PRODUCTO*/
@@ -190,6 +190,9 @@ p#texto{
 /*MEDIA*/
 @media (min-width:481px){
 
+    main{
+        margin-top: 230px;
+    }
     h2{
         margin-top: 150px;
     }
@@ -201,6 +204,10 @@ p#texto{
 
 
 @media (min-width:769px){
+
+    main{
+        margin-top: 250px;
+    }
 
     h2{
         margin-top: 150px;

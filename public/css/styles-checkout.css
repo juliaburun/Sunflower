@@ -16,7 +16,9 @@
  /*********************************
       INFORMACIÓN DE LA COMPRA
 **********************************/
-
+main{
+    margin-top: 200px;
+}
 .container-main {
     width: 100%;
     margin-top: 100px;
@@ -423,6 +425,9 @@
 
 @media (min-width:769px) {
 
+    main{
+        margin-top: 250px;
+    }
     .container-main{
         display: flex;
         width: 95%;

@@ -25,7 +25,9 @@
  }
 
  /*############################### LINEA DIVISORA ENTRE EL ENCABEZADO Y EL CUERPO  #########################*/
-
+ main{
+    margin-top: 140px;
+}
 /*CONTIENE TODOS LOS ELEMENTOS DEL CUERPO*/
 .container{
     width: 100%;
@@ -172,6 +174,10 @@ form label{
 /*============================== MEDIA QUERIES ===============================*/
 
 @media (min-width:481px){
+
+    main{
+        margin-top: 200px;
+    }
 
     /*LINEA BAJO EL H3 REGISTRATE*/
     hr{

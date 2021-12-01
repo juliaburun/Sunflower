@@ -178,12 +178,6 @@ main {
     font-size: 10px;
 }
 
-@media (max-width:416px){
-    .slider {
-        margin-top: 60px;
-    }
-}
-
 
 @media (min-width:481px) {
     

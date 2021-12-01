@@ -13,6 +13,10 @@
  }
 
 /*CONTIENE TODOS LOS ELEMENTOS DEL CUERPO*/
+
+main{
+    margin-top: 150px;
+}
 .contPrincipal{
     width: 100%;
     padding: 15px;
@@ -83,6 +87,10 @@ hr{
 /*============================== MEDIA QUERIES ===============================*/
 /*CONTENEDOR DE LOS TEXTOS MEDIO Y FINAL*/
 @media (min-width:481px){
+    main{
+        margin-top: 200px;
+    }
+
     .textosCentrales,
     .ultimoTexto{
         width: 70%;

@@ -16,7 +16,7 @@ body{
 
 .main{
     width: 100%;
-    margin-top: 88px;
+    margin-top: 130px;
 }
 
 /*****************************
@@ -206,7 +206,7 @@ BARRA ENTRE EL HEADER Y EL MAIN
 @media (min-width:481px) {
 
     .main{
-        margin-top: 130px;
+        margin-top: 180px;
     }
 
     .main-banner-plinterior{
@@ -267,12 +267,9 @@ BARRA ENTRE EL HEADER Y EL MAIN
 @media (min-width:769px) {
     
     .main{
-        margin-top: 115px;
+        margin-top: 220px;
     }
 
-    .main{
-        margin-top: 119px;
-    }
 
     .main-banner-plinterior{
         font-size: 12px;

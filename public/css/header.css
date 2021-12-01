@@ -104,12 +104,13 @@
 
 .main-div-search{
     width: 100%;
-    display: flex;
-    flex-direction: column;
+   /*  display: flex;
+    flex-direction: column; */
     /* margin-left: 30px; */
     /* border: black solid 5px; */
     margin: auto;
-    margin-bottom: 35px;
+    margin-bottom: 0;
+    margin-top: 20px;
 }
 
 
@@ -169,7 +170,7 @@
 }
 
 .login{
-    width: 33%;
+    width: 25%;
     /* border: green solid 1px; */
     margin: auto;
     text-align: right;
@@ -183,7 +184,7 @@
 }
 
 .carrito{
-    width: 33%;
+    width: 25%;
     /* border: blue solid 1px; */
     margin: auto;
     text-align: right;
@@ -195,7 +196,8 @@
 }
 
 .hamburguer-buttom {
-    width: 34%;
+    width: 25%;
+    margin: auto;
     text-align: right;
 }
 
@@ -219,11 +221,11 @@
 
 /*SECCION USUARIO LOGUEADO*/
 .contenedor-perfil{
-    position: absolute;
+    width: 25%;
     color: white; 
     right: 0;
    display: flex;
-   margin-top: 30px;
+   margin: 0;
   }
 
   .contenedor-perfil i {
@@ -253,6 +255,7 @@
   /*USUARIO LOGUEADO*/
   .nombre-usuario{
       font-size: 10px;
+      display: none;
   }
 
 
@@ -275,7 +278,7 @@
     }
 
     .div-secundario-iconos{
-        margin-top: 30px;
+        margin-top: 10px;
     }
 
     .login{
@@ -297,6 +300,9 @@
         margin-bottom: 20px;
     }
 
+    .main-div-search{
+        margin: auto;
+    }
     .div-main-busqueda input{
         width: 80%;
         height: 30px;
@@ -309,26 +315,27 @@
     }
 
     .contenedor-perfil{
-        position: absolute;
-        color: white; 
-        right: 0;
-        display: flex;
-        margin-right: 20px;
-        margin-top: 48px;
+        margin: 0;
       }
     
       .contenedor-perfil i {
         color: white;
         margin-right: 0px;
       }
-      .nombre-usuario{
-        font-size: 12px;
-    }
+      /*USUARIO LOGUEADO*/
+  .nombre-usuario{
+    font-size: 12px;
+    display: list-item;
+}
 
 }
 
 /*BREAKPOINT LAPTOP*/
 @media (min-width:769px){
+
+    .main-navbar{
+        display: hide;
+    }
 
     .main-header-div .div-main-logo{
         width: 15%;
@@ -394,6 +401,11 @@
         margin-bottom: 0;
     }
     
+    .div-secundario-iconos{
+        margin-right: 80px;
+    }
+
+    
     .div-main-iconos .div-secundario-iconos{
         width: 25%;
         align-self: end;
@@ -404,7 +416,9 @@
     }
     .nombre-usuario{
         font-size: 12px;
+        display: list-item;
     }
+  
 
 }
 

@@ -25,6 +25,9 @@ BARRA ENTRE EL HEADER Y EL MAIN
             MAIN
 ******************************/
 
+main{
+    margin-top: 180px;
+}
 .cart-template{
     width: 100%;
     margin-top: 110px;
@@ -338,6 +341,9 @@ BARRA ENTRE EL HEADER Y EL MAIN
       BREAKPOINT TABLET     
 *****************************/
 @media (min-width:481px) {
+    main{
+        margin-top: 220px;
+    }
 
     .cart-template{
         margin-top: 150px;
@@ -428,6 +434,10 @@ BARRA ENTRE EL HEADER Y EL MAIN
       BREAKPOINT pc     
 *****************************/
 @media (min-width:769px) {
+
+    main{
+        margin-top: 260px;
+    }
 
     .cart-template{
         display: flex;
