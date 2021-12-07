@@ -25,7 +25,7 @@ https://www.figma.com/file/sBjmJkEsVOPOP7fw0O2rJm/SUNFLOWER?node-id=0%3A1
 ### **Paleta de colores:**
 ![paleta de colores](design/paleta_de_colores.png)
 
-### **Logo:** [_Ver logo_](desing/sunflowerLogo.png)
+### **Logo:** [_Ver logo_](https://github.com/juliaburun/grupo_2_sunflower/blob/main/design/sunflowerLogo.png)
  
 
 ### **Tablero de trabajo:** 
