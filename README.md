@@ -33,7 +33,7 @@ https://trello.com/b/eqHONEIy/digitalhousetareas
 
 
 ### **Modelo relacional-Database:** [_Ver modelo en pdf_](db/DB_Sunflower.com.pdf)
-![Base de Datos](db/db_sunflower.com.jpeg)
+![Base de Datos](https://github.com/juliaburun/grupo_2_sunflower/tree/main/db/DB_Sunflower.com.jpeg)
 
 
 
