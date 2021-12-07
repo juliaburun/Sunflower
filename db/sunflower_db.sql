@@ -18,7 +18,7 @@ create table `products`(
 `deleted` tinyint unsigned not null default 0,
 `date_sale` date,
 primary key(`id`),
-constraint `fk_products_category_id` foreign key (`category_id`) references `categories`(`id`) on delete cascade);
+constraint `fk_products_category_id` foreign key (`category_id`) references `categories`(`id`) on delete cascade on update cascade);
 
 
 create TABLE `sizes`(
@@ -31,8 +31,8 @@ create TABLE `sizesProducts`(
 `product_id` int(20) unsigned,
 `size_id` int(20)  unsigned,
 primary key (`id`),
-constraint `fk_sizesProducts_product_id` foreign key (`product_id`) references `products`(`id`) on delete cascade,
-constraint `fk_sizesProducts_size_id` foreign key (`size_id`) references `sizes`(`id`) on delete cascade);
+constraint `fk_sizesProducts_product_id` foreign key (`product_id`) references `products`(`id`) on delete cascade on update cascade,
+constraint `fk_sizesProducts_size_id` foreign key (`size_id`) references `sizes`(`id`) on delete cascade on update cascade);
 
 create TABLE `roles`(
 `id` int(20) unsigned auto_increment,
@@ -44,14 +44,14 @@ create table `users`(
 `first_name` varchar(100) not null,
 `last_name` varchar(100) not null,
 `email` varchar(255) not null,
-`phone` int(20) unsigned not null,
+`phone` varchar(60) not null,
 `birthday` date not null,
 `password` varchar(255) not null,
 `image_profile` varchar(255),
 `rol_id` int(20) unsigned,
 `deleted` tinyint unsigned not null default 0,
 primary key(`id`),
-constraint `fk_users_rol_id` foreign key (`rol_id`) references `roles`(`id`) on delete cascade);
+constraint `fk_users_rol_id` foreign key (`rol_id`) references `roles`(`id`) on delete cascade on update cascade);
 
 create TABLE `carts`(
 `id` int(20) unsigned auto_increment,
@@ -60,7 +60,7 @@ create TABLE `carts`(
 `total` int(100) unsigned not null,
 `finished` tinyint unsigned not null default 0, 
 primary key (`id`),
-constraint `fk_carts_user_id` foreign key (`user_id`) references `users`(`id`) on delete cascade);
+constraint `fk_carts_user_id` foreign key (`user_id`) references `users`(`id`) on delete cascade on update cascade);
 
 create TABLE `productsCarts`(
 `id` int(20) unsigned auto_increment,
@@ -69,6 +69,6 @@ create TABLE `productsCarts`(
 `amount` int(50) unsigned not null,
 `subtotal` int(100) unsigned not null,
 primary key (`id`),
-constraint `fk_productsCarts_product_id` foreign key (`product_id`) references `products`(`id`) on delete cascade,
-constraint `fk_productsCarts_cart_id` foreign key (`cart_id`) references `carts`(`id`) on delete cascade);
+constraint `fk_productsCarts_product_id` foreign key (`product_id`) references `products`(`id`) on delete cascade on update cascade,
+constraint `fk_productsCarts_cart_id` foreign key (`cart_id`) references `carts`(`id`) on delete cascade on update cascade);
 
