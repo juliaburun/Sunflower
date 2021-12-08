@@ -44,6 +44,7 @@ module.exports = (sequelize, dataTypes) => {
       timestamps: false
   }
   const Usuario = sequelize.define(alias, cols, config);
+  
 
   User.associate = function(models) {
     User.belongsTo(models.Rol, {
