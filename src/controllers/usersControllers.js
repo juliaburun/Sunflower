@@ -2,6 +2,7 @@ const fs = require('fs');
 const { validationResult } = require('express-validator');
 const bcryptjs = require('bcryptjs');
 const User = require('../models/User');
+const db = require('../database/models')
 
 
 const controller={
@@ -20,9 +21,16 @@ const controller={
             });
         }
 
-        let userInDb = User.findByField('email', req.body.email);
+        //let userInDb = User.findByField('email', req.body.email);
 
-        if (userInDb){
+        db.User.findAll(
+            {
+                where : { email : req.body.email }
+            }
+        )
+        .then((userInDb)=>{
+            console.log(userInDb)
+           if (userInDb.length > 0){
             return res.render('./users/register',{
                 errors: {
                     email: {
@@ -38,15 +46,21 @@ const controller={
             last_name: req.body.last_name,
             email: req.body.email,
             phone: req.body.phone,
+            birthday: '1984-10-12',
             password: bcryptjs.hashSync(req.body.password, 10),
-            user_type: 2,
-            image_profile: req.file ? req.file.filename : "user.jpg"
+            rol_id: 2,
+            image_profile: req.file ? req.file.filename : "user.jpg",
+            deleted: 0
         }
 
-        let userCreated = User.create(userToCreate);
-
+        //let userCreated = User.create(userToCreate);
+        db.User.create(
+            userToCreate
+        )
         res.redirect('/users/login') 
-         
+
+        })
+        .catch((error)=> res.send(error))
     },
 
     login: (req, res) => {
@@ -111,7 +125,8 @@ const controller={
         res.clearCookie('userEmail')
         req.session.destroy();
         return res.redirect('/');
-    }
+    },
+    
 }
 
 module.exports = controller;
