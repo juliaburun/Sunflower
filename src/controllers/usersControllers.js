@@ -1,7 +1,6 @@
 const fs = require('fs');
 const { validationResult } = require('express-validator');
 const bcryptjs = require('bcryptjs');
-const User = require('../models/User');
 const db = require('../database/models')
 
 
@@ -20,8 +19,6 @@ const controller={
                 oldData: req.body
             });
         }
-
-        //let userInDb = User.findByField('email', req.body.email);
 
         db.User.findAll(
             {
@@ -52,7 +49,6 @@ const controller={
             deleted: 0
         }
 
-        //let userCreated = User.create(userToCreate);
         db.User.create(
             userToCreate
         )
@@ -77,10 +73,14 @@ const controller={
 			});
 		}
 
-        
- 		 let userToLogin = User.findByField('email', req.body.email)
-
-        if(userToLogin){
+          db.User.findAll(
+            {
+                where : { email : req.body.email }
+            }
+        )
+        .then((userToLogin)=>{
+            console.log(userToLogin)
+            if(userToLogin){
             let isOkPassword = bcryptjs.compareSync( req.body.password, userToLogin.password)
             if (isOkPassword){
                 delete userToLogin.password;
@@ -89,7 +89,6 @@ const controller={
                 if(req.body.remember_user){
                     res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2 })
                 }
-
 
                 return res.redirect('/users/profile') 
               }
@@ -110,9 +109,10 @@ const controller={
                 }
             }
         })
+        })
+        .catch((error)=> res.send(error))
         
     }, 
- 
 
     profile: (req, res) => {
         return res.render('./users/profile', {
@@ -125,6 +125,8 @@ const controller={
         req.session.destroy();
         return res.redirect('/');
     },
+
+    
     
 }
 

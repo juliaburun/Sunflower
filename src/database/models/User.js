@@ -29,6 +29,9 @@ module.exports = (sequelize, dataTypes) => {
       image_profile: {
         type: dataTypes.STRING
       },
+      rol_id: {
+        type: dataTypes.INTEGER
+      },
       deleted: {
         allowNull: false,
         type: dataTypes.INTEGER
