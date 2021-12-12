@@ -46,7 +46,6 @@ const controller={
             last_name: req.body.last_name,
             email: req.body.email,
             phone: req.body.phone,
-            birthday: '1984-10-12',
             password: bcryptjs.hashSync(req.body.password, 10),
             rol_id: 2,
             image_profile: req.file ? req.file.filename : "user.jpg",

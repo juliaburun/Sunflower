@@ -7,10 +7,6 @@
      
  }
  
- header{
-     background-color:var(--rosa);
-     
- }
  /*****************************
            HEADER
  ******************************/
@@ -24,14 +20,14 @@
  /*****************************
  BARRA ENTRE EL HEADER Y EL MAIN
  ******************************/
- .space-between-header-main{
+ /* .space-between-header-main{
      background-color: var(--grisClaro);
      height: 5px;
- }
+ } */
 
  /*############################### LINEA DIVISORA ENTRE EL ENCABEZADO Y EL CUERPO  #########################*/
 main{
-    margin-top: 180px;
+    margin-top: 130px;
     margin-bottom: 50px;
 }
 /*ETIQUETA H2 TEXTO CREAR PRODUCTO*/
