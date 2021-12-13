@@ -1,9 +1,9 @@
 const fs = require('fs');
 const path = require ('path');
-/* const db = require('../database/models'); */
+const db = require('../database/models');
 
 //convertir los datos del JSON a objeto literal
-const productsFilePath = path.join(__dirname, '../data/products.json');
+/* const productsFilePath = path.join(__dirname, '../data/products.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 // convertir category.JSON a objeto literal
@@ -12,21 +12,21 @@ const categorys = JSON.parse(fs.readFileSync(categoryFilePath, 'utf-8'));
 
 // convertir capacity.JSON a objeto literal
 const capacityFilePath = path.join(__dirname, '../data/capacity.json');
-const capacitys = JSON.parse(fs.readFileSync(capacityFilePath, 'utf-8')); 
+const capacitys = JSON.parse(fs.readFileSync(capacityFilePath, 'utf-8'));  */
 
 const productsControllers={
 
     index: (req, res) => {  
-       /*  db.Product.findAll({
-            include: ['category']
+       db.Product.findAll({
+            include: ['categoria', 'tamaños'],
         })
         .then(products => {
-            console.log(products);
+            /* res.send(products); */
             res.render('./products/products', {products})
-        }) */
+        })
         
-        let idCategory=req.params.cod_category;
-        res.render('./products/products', {products, idCategory, capacitys, categorys} );
+        /* let idCategory=req.params.cod_category;
+        res.render('./products/products', {products, idCategory, capacitys, categorys} ); */
     },
 
     category: (req, res) => {

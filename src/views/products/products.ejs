@@ -23,21 +23,18 @@
         ---------------------->
     <div class="main-banner">
           <div class="category">
-            <% categorys.forEach(category => { %>
-              <% if(category.cod_category == 1) {%>
+            
                 <div class="plant1" >
-                    <a href="/products/<%= category.cod_category %>"> 
+                    <a href="/products/1"> 
                         <div class="pl1"> <img src="./img/plantasInterior.png" alt=""> </div>
                     </a>
                 </div>
-            <% } else{ %>
+            
                 <div class="plant2"  >
                     <a href="/products/2"> 
                       <div class="pl2"><img src="./img/plantasExterior.png" alt=""></div>
                     </a>
                 </div>
-              <% } %>
-            <% }) %>
           </div>
       </div>
        <!----------------------
@@ -54,35 +51,44 @@
 </div>
 
         <div class="productsList">
-          <% products.forEach (producto => { %>
-            <% const productCapacity = capacitys.find(capacity => capacity.cod_capacity == producto.capacity);
-            const capacityName = productCapacity.name %>
+          <% for( let i = 0; i< products.length; i++ ) { %>
+            <% if ((products[i].categoria) && (products[i].tamaños)) { %> 
           <div class="producto-destacado">
             <article class="articleProduct">
                 <div class="div-img">
-                  <a href="/products/detail/<%= producto.cod_product%>"><img src="/img/products/<%= producto.image %>"></a>
+                  <a href="/products/detail/<%= products[i].id%>"><img src="/img/products/<%= products[i].image %>"></a>
                 </div>
                 <div class="productsDescription">
                   <div>
-                    <p class="nombre-planta"><%= producto.name %></p>
-                    <p class="nombre-cienti">Maceta <%= capacityName %> </p>
+                    <p class="nombre-planta"><%= products[i].name %></p>
+                    
+                    <p class="nombre-cienti">Maceta <% for(j=0; j<products[i].tamaños.length; j++) {%>
+                      <% if (products[i].tamaños[j]>1) { %>
+                        <span><%= products[i].tamaños[j].name %>,</span>
+                      <% }else{%>
+                        <span><%= products[i].tamaños[j].name %></span>
+                      <% } %>
+                      <% } %>
+                    </p>
+                      
                   </div>
                   <div class="precio">
-                    <p> $<%= producto.price %></p>
+                    <p> $<%= products[i].price %></p>
                   </div>
                   <div class="container-button">
                       <button class="boton-carrito" type="button">Agregar al carrito</button>
                     </div>
                     <% if(locals.userLogged && locals.userLogged.user_type == 1) {%>
-                      <form action="/products/delete/<%= producto.cod_product %>?_method=DELETE" method="POST" class="forms-button">
-                          <a href="/products/edit/<%= producto.cod_product%>"><i class="fas fa-edit"></i></a>
+                      <form action="/products/delete/<%= products[i].id%>?_method=DELETE" method="POST" class="forms-button">
+                          <a href="/products/edit/<%= products[i].id%>"><i class="fas fa-edit"></i></a>
                           <button type="submit"><i class="fas fa-trash"></i></button>
                       </form>
                     <% } %>
                 </div>
             </article>  
           </div>
-          <% }) %>
+          <% } %>
+        <% } %>
         </div>
   </div>
 </main>

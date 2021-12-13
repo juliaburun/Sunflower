@@ -2,6 +2,8 @@
 const express=require('express');
 const path=require('path');
 const productsControllers=require('../controllers/productsControllers');
+const categoryControllers=require('../controllers/categoryControllers');
+
 const multer = require('multer');
 
 
