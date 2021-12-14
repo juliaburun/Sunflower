@@ -32,7 +32,7 @@
   <hr color="#edafa4">
     <section>
       <div class="cajaPrincipal">
-          <form action="" method="get">
+          <form action="/users/edit/<%= user.id %>?_method=PUT" method="Post" enctype="multipart/form-data">
             <p class="datosCta">Datos de la cuenta</p>
             <p class="avatar">Avatar</p>
               <!--BOTON IMAGEN-->
@@ -50,7 +50,7 @@
               </div>
               <div class="cajaMail">
                 <label for="email" class="labelMail">Email</label>
-                  <input type="text" id="email" name="email" class="form-cajaMail" value="<%= user.email%>">
+           <!--Cambiar a etiqueta p, que no sea input-->       <input type="text" id="email" name="email" class="form-cajaMail" value="<%= user.email%>">
               </div>
               <p class="datosPerso">Datos personales</p>
                 <div class="cajaNombre">
