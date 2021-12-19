@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require ('path');
 const db = require('../database/models');
+const sequelize = db.sequelize;
 
 //convertir los datos del JSON a objeto literal
 /* const productsFilePath = path.join(__dirname, '../data/products.json');
@@ -45,7 +46,77 @@ const productsControllers={
         
     },
 
-    create: (req, res) => {
+    /*---------INICIO CRUD DB 17-12-2021-----------*/
+
+    create: function (req, res) {
+        res.render('productCreate.ejs', { products });
+    },
+
+    store: function (req, res) {
+        db.Product.store(
+        {
+            name: req.body.name,
+            category: req.body.category,
+            capacity: req.body.capacity,
+            price: req.body.price,
+            discount: req.body.discount,
+            description: req.body.description,
+            image: req.body.image
+        })
+
+        .then (() => {res.redirect('/products')})
+        
+    },
+
+    edit: (req, res) =>{
+        db.Product.findByPk(req.params.id)
+        .then(Product => {
+            res.render('productEdit.ejs', { Product: Product})
+        })
+    },
+
+    update: (req, res) => {
+        db.Product.update(
+        {
+            name: req.body.name,
+            category: req.body.category,
+            capacity: req.body.capacity,
+            price: req.body.price,
+            discount: req.body.discount,
+            description: req.body.description,
+            image: req.body.image 
+        },{
+            where: {
+                id : req.params.id
+            }
+        })
+            .then (Product => {
+                res.redirect('/products', {Product: Product})
+            })
+        },
+
+        delete: (req, res) => {
+            db.Product.findByPk(req.params.id)
+            .then(Product => {
+                res.render('productEdit.ejs', { Product: Product})
+            })
+        },
+
+        destroy: (req, res) => {
+            db.Movie.destroy({
+                where: {
+                    id: req.params.id
+                }
+            })
+            .then ( () => {
+                res.redirect('/products')
+            })
+        }
+ 
+        /*---------FIN CRUD DB 17-12-2021-----------*/
+        
+
+/*     create: (req, res) => {
         res.render('./products/productCreate');
         
     },
@@ -137,7 +208,7 @@ const productsControllers={
 		res.redirect('/products');
 
     }
-
+ */
 
 
 }
