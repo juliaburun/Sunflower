@@ -18,9 +18,11 @@ const capacitys = JSON.parse(fs.readFileSync(capacityFilePath, 'utf-8'));  */
 const productsControllers={
 
     index: (req, res) => {  
-       db.Product.findAll({
-            include: ['categoria', 'tamaños'],
+       db.Product.findAll({where: 
+            {deleted:0},
+            include:['categoria', 'tamaños'],            
         })
+
         .then(products => {
             /* res.send(products); */
             res.render('./products/products', {products})
@@ -37,31 +39,51 @@ const productsControllers={
     },
 
     detail: (req, res) => {
-        const cod_product = req.params.cod_product;
+        let id = req.params.id;
+        db.Product.findByPk(id, 
+            {
+                include:['categoria', 'tamaños']
+        })
+        .then (product => {
+            /* res.send (product) */
+           res.render ('./products/productDetail', {product})
+        })
+        .catch(error => {
+            console.log(error)
+        } )
+
+
+        /* const cod_product = req.params.cod_product;
         const productDetail = products.find(producto => producto.cod_product == cod_product);
         const productCapacity = capacitys.find(capacity => capacity.cod_capacity== productDetail.capacity);
         //Filtro de los otros productos ofertados diferentes al que se muestra en el detalle
         const productOther = products.filter(producto => producto.cod_product != cod_product);
         res.render('./products/productDetail', {productDetail, productCapacity,  productOther});
-        
+         */
     },
 
-    /*---------INICIO CRUD DB 17-12-2021-----------*/
+    /*---------INICIO CRUD DB ----------*/
 
     create: function (req, res) {
-        res.render('productCreate.ejs', { products });
+        let promCategory = db.Category.findAll();
+        let promSize =db.Size.findAll();
+        Promise.all([promCategory, promSize])
+        .then (([category, size]) => {
+            return res.render('./products/productCreate', {category, size});
+        })
+        .catch((error) => res.send(error));
     },
 
     store: function (req, res) {
-        db.Product.store(
-        {
+        db.Product.create({
             name: req.body.name,
-            category: req.body.category,
-            capacity: req.body.capacity,
+            description: req.body.description,
             price: req.body.price,
             discount: req.body.discount,
-            description: req.body.description,
-            image: req.body.image
+            image: req.file ? req.file.filename : "planta.jpg",
+            category_id: req.body.category,
+            deleted: 0,
+            date_sale: '2022-02-14'
         })
 
         .then (() => {res.redirect('/products')})
@@ -69,50 +91,63 @@ const productsControllers={
     },
 
     edit: (req, res) =>{
-        db.Product.findByPk(req.params.id)
-        .then(Product => {
-            res.render('productEdit.ejs', { Product: Product})
+        let promCategory = db.Category.findAll();
+        let promSize =db.Size.findAll();
+        let promProduct = db.Product.findByPk(req.params.id, 
+            {
+                include:['categoria', 'tamaños']
+            });
+        Promise.all([promCategory, promSize, promProduct])
+        .then(([categorys, size, product]) => {
+            res.render('./products/productEdit.ejs', {categorys, size, product})
+            /* res.send({categorys, size, product}) */
         })
     },
 
     update: (req, res) => {
-        db.Product.update(
-        {
+      db.Product.update({
             name: req.body.name,
-            category: req.body.category,
-            capacity: req.body.capacity,
+            description: req.body.description,
             price: req.body.price,
             discount: req.body.discount,
-            description: req.body.description,
-            image: req.body.image 
+            image: req.file ? req.file.filename : db.Product.image,
+            category_id: req.body.category,
+            size_id: req.body.size
         },{
             where: {
                 id : req.params.id
             }
         })
-            .then (Product => {
-                res.redirect('/products', {Product: Product})
-            })
-        },
 
-        delete: (req, res) => {
-            db.Product.findByPk(req.params.id)
-            .then(Product => {
-                res.render('productEdit.ejs', { Product: Product})
-            })
-        },
+        .then(() => {
+            /* res.send({product}) */
+            res.redirect('/products')
+        })
+        .catch(function(error){
+            console.log(error);
+        })
+    },
 
-        destroy: (req, res) => {
-            db.Movie.destroy({
-                where: {
-                    id: req.params.id
+    delete: (req, res) => {
+        let id = req.params.id
+        db.Product.findByPk(id)
+        .then (() =>{
+            db.Product.update(
+                {
+                    deleted:1,
+                },
+                {
+                    where:{
+                        id: id,
+                    },
                 }
-            })
-            .then ( () => {
-                res.redirect('/products')
-            })
-        }
- 
+            )
+        })
+        .then(() => {
+            res.redirect('/products');
+        })
+        },
+
         /*---------FIN CRUD DB 17-12-2021-----------*/
         
 

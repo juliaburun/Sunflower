@@ -78,7 +78,7 @@
                   <div class="container-button">
                       <button class="boton-carrito" type="button">Agregar al carrito</button>
                     </div>
-                    <% if(locals.userLogged && locals.userLogged.user_type == 1) {%>
+                    <% if(locals.userLogged && locals.userLogged.rol_id == 1) {%>
                       <form action="/products/delete/<%= products[i].id%>?_method=DELETE" method="POST" class="forms-button">
                           <a href="/products/edit/<%= products[i].id%>"><i class="fas fa-edit"></i></a>
                           <button type="submit"><i class="fas fa-trash"></i></button>

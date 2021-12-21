@@ -41,19 +41,22 @@
             <div class="cajaCategory">
               <label for="category" class="categoriaProd">Categoría:</label>
               <select name="category" id="category" class="form-cajaCategory">
-                <option value="" selected>Elegir tipo planta </option>
-                <option value=1>Planta de interior</option>
-                <option value=2>Planta de exterior</option>
+                  <% for( let i = 0; i < category.length; i++ ) { %>
+                    <option value=" <%= category[i].id%>"> 
+                      <%= category[i].name%> 
+                    </option>
+                  <% } %>
               </select>
             </div>   
             <!--CONTENEDOR CAPACIDAD-->
             <div class="cajaCapacity">
-              <label for="capacity" class="capasidadProd">Maceta:</label>
-              <select name="capacity" id="capacity" class="form-cajaSection">
-                <option value="" selected>Elegir la maceta</option>
-                <option value=1>10</option>
-                <option value=2>20</option>
-                <option value=3>30</option>
+              <label for="size" class="capasidadProd">Maceta:</label>
+              <select name="size" id="size" class="form-cajaSection">
+                <% for( let i = 0; i < size.length; i++ ) { %>
+                <option value="<%= size[i].id%>">
+                  <%= size[i].name%> 
+                </option>
+                <% } %>
               </select>
             </div>
             <!--CONTENEDOR PRECIO-->

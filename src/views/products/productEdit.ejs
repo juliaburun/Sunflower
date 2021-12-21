@@ -30,16 +30,16 @@
     <h2>EDITAR PRODUCTO</h2>
     <!--LINEA BAJO EL TEXTO-->
     <hr color="#edafa4">
-    <form action="/products/edit/<%= productEdit.cod_product %>?_method=PUT" method="Post" enctype="multipart/form-data">
+    <form action="/products/edit/<%= product.id %>?_method=PUT" method="Post" enctype="multipart/form-data">
         <div class="p-editproduct">
-        <p>EDITANDO EL PRODUCTO: <%= productEdit.name%></p>
+        <p>EDITANDO EL PRODUCTO: <%= product.name%></p>
         </div>
           <!--CONTENEDOR DE FORMULARIOS SIN CARGAR IMAGENES NI BOTON-->
           <div class="forlularios">
               <!--CONTENEDOR NOMBRE DEL PRODUCTO-->
               <div class="cajaName">
                   <label for="name" class="nombreProd">Nombre del producto:</label>
-                  <input type="text" id="name" name="name" class="form-cajaName" value="<%= productEdit.name%>">
+                  <input type="text" id="name" name="name" class="form-cajaName" value="<%= product.name%>">
               </div>
               <!--CONTENEDOR CATEGORIA-->
               <div class="cajaCategory">
@@ -47,45 +47,45 @@
                   <select name="category" id="category" class="form-cajaCategory" value="">
                       <option value="">Elegí</option>
                       <% categorys.forEach(category => { %>
-                          <% if (category.cod_category == productEdit.category){ %>
-                                <option value= <%= category.cod_category %> selected > <%= category.name%> </option>
+                          <% if (category.id == product.category_id){ %>
+                                <option value= <%= category.id %> selected > <%= category.name%> </option>
                           <% }else{ %>
-                              <option value= <%= category.cod_category %>> <%= category.name%>  </option>
+                              <option value= <%= category.id %>> <%= category.name%>  </option>
                          <% } %>
                       <% }); %>
                   </select>
               </div> 
               <!--CONTENEDOR CAPACIDAD-->
               <div class="cajaCapacity">
-                <label for="capacity" class="capasidadProd">Maceta:</label>
-                <select name="capacity" id="capacity" class="form-cajaSection">
+                <label for="size" class="capasidadProd">Maceta:</label>
+                <select name="size" id="size" class="form-cajaSection">
                   <option value="">Elegí</option>
-                  <% capacitys.forEach(capacity => { %>
-                    <% if (capacity.cod_capacity == productEdit.capacity){ %>
-                          <option value= <%= capacity.cod_capacity %> selected > <%= capacity.name%> </option>
-                    <% }else{ %>
-                        <option value= <%= capacity.cod_capacity %>> <%= capacity.name%>  </option>
-                   <% } %>
-                <% }); %>
-
-                  
+                  <% for (let j=0; j< product.tamaños.length; j++) { %>
+                    <% for (let i = 0; i < size.length; i++) { %>
+                        <% if (size[i].id == product.tamaños[j].id){ %>
+                          <option value= <%= product.tamaños[j].id %> selected > <%= product.tamaños[j].name%> </option>
+                        <% }else{ %>
+                          <option value= <%= size[i].id %>> <%= size[i].name%>  </option>
+                        <% } %>
+                      <% } %>
+                  <% }%>
                 </select>
               </div>
               <!--CONTENEDOR PRECIO-->
               <div class="cajaPrice">
                   <label for="price" class="precioProd">Precio del producto $:</label>
-                  <input type="number" id="price" name="price" class="form-cajaPrice" value="<%= productEdit.price%>">
+                  <input type="number" id="price" name="price" class="form-cajaPrice" value="<%= product.price%>">
               </div>
               <!--CONTENEDOR DESCUENTO-->
               <div class="cajaDiscount">
                 <label for="discount" class="descuProd">Descuento %:</label>
-                <input type="number" name="discount" class="form-cajaName" value="<%= productEdit.discount%>">
+                <input type="number" name="discount" class="form-cajaName" value="<%= product.discount%>">
               </div>
               
               <!--CONTENEDOR DESCRIPCION DEL PRODUCTO-->
               <div class="cajaDescription">
                   <label for="description" class="descripcionProd">Descripción del producto:</label>
-                  <textarea name="description" id="description" class="area-cajaDescription" value=""><%= productEdit.description%></textarea>
+                  <textarea name="description" id="description" class="area-cajaDescription" value=""><%= product.description%></textarea>
               </div>
           </div>
           <!--BOTON AGREGAR IMAGEN-->
@@ -93,9 +93,9 @@
             <h2>Vista previa</h2>
             <div class="grid">
               <div class="form-element">
-                <input type="file" id="file-1" accept="image/*" value="<%= productEdit.image %>" name="imageEdited1">
+                <input type="file" id="file-1" accept="image/*" value="<%= product.image %>" name="imageEdited1">
                 <label for="file-1" id="file-1-preview">
-                  <img src="/img/products/<%= productEdit.image %>" alt="">
+                  <img src="/img/products/<%= product.image %>" alt="">
                   <div>
                     <span>+</span>
                   </div>
