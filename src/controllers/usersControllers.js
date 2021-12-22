@@ -130,7 +130,44 @@ const controller = {
     },
 
     edit: (req,res) => {
-        res.send('estoy en edit!'+req.params.id)
+       let user = db.User.findOne(
+            {
+                where: { id: req.params.id }
+            }
+        )
+        .then((user) => res.render('./users/userEdit', { user } ))
+
+    },
+
+    update: async (req,res) => {
+        
+        let userToEdit = await db.User.findOne(
+            {
+                where: { id: req.params.id }
+            }
+        )
+        .then((user) => {
+            data = JSON.parse(JSON.stringify(user))
+            return data
+        })
+
+       let userId = req.params.id;
+        db.User.update(
+            {
+                first_name: req.body.first_name,
+                last_name: req.body.last_name,
+                email: req.body.email,
+                phone: req.body.phone,
+                password: req.body.password,
+                image_profile: req.file ? req.file.filename : userToEdit.image_profile,
+                rol_id: req.body.rol_id
+            },
+            {
+                where: {id: req.params.id}
+            })
+        .then(()=> {
+            return res.redirect('/users/profile')})            
+        .catch(error => res.send(error))
     }
 
 
