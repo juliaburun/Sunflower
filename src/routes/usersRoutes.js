@@ -35,7 +35,7 @@ router.get('/profile', authMiddleware,  usersControllers.profile);
 router.get('/logout', usersControllers.logout);
 
 //Edición de usuario
-router.get('/edit/:id', usersControllers.edit)
+router.get('/edit/:id', authMiddleware, usersControllers.edit)
 router.put('/edit/:id', usersControllers.update)
 
 module.exports=router;

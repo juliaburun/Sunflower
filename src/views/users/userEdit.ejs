@@ -68,8 +68,12 @@
                   <!--BOTON-->
           <div class="cajaGuardar">
             <p id="texto">Guardar cambios</p>
-            <button type="submit" class="botonGuardar" onclick="return confirmar()"></button>
+            <button type="submit" class="botonGuardar" ></button>
           </div>
+          </form>
+          <form action="/users/edit/<%= user.id %>?_method=PUT" method="Post" enctype="multipart/form-data">
+            <input type="text" name='nombre'>
+            <input type="submit">
           </form>
       </div>
     </section>
