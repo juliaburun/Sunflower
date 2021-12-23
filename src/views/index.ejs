@@ -41,26 +41,37 @@
   <div class="cuatro-articulos">
     <div class="dos-articulos">
 
-      <%products.forEach (producto=>{%>
-        <%if(producto.discount>0){%>
-          <% let productCapacity = capacitys.find(capacity => capacity.cod_capacity == producto.capacity);%>
-          <% let capacityName = productCapacity.name%>
+    <% for( let i = 0; i< products.length; i++ ) { %>
+      <% if ((products[i].categoria) && (products[i].tamaños)) { %> 
+        <%if(products[i].discount>0){%>
           <div class="producto-destacado">
           <article class="article-div">
             <div class="div-img">
-            <a href="/products/detail/<%= producto.cod_product%>"><img src="/img/products/<%= producto.image %>"></a>
+            <a href="/products/detail/<%= products[i].id%>"><img src="/img/products/<%= products[i].image %>"></a>
           </div>
           <div class="articulo-pie">
-            <p ><%= producto.name %></p>
-            <p >Maceta <%= capacityName%></p>
+            <p ><%= products[i].name %></p>
+            <p >Maceta 
+              <% for(j=0; j<products[i].tamaños.length; j++) {%>
+                <% if (products[i].tamaños[j].length <= 1) { %>
+                  <span><%= products[i].tamaños[j].name %></span>
+                <% }else{%>
+                  <span><%= products[i].tamaños[j].name %>,</span>
+                <% } %>
+              <% } %>
+            </p>
           </div>
           <div class="precio">
-            <p> $<%= producto.price %></p>
+            <p> $<%= products[i].price %></p>
+          </div>
+          <div class="container-button">
+            <button class="boton-carrito" type="button">Agregar al carrito</button>
           </div>
           </article>
           </div>
         <% } %>
-        <% }) %>   
+      <% } %>
+    <% } %>
       </div>
     </div>
   </section>
@@ -72,27 +83,38 @@
   <div class="cuatro-articulos">
     <div class="dos-articulos">
 
-      <%products.forEach (producto=>{%>
-         <%if(producto.discount==0) { %>
-          <% const productCapacity = capacitys.find(capacity => capacity.cod_capacity == producto.capacity);
-            const capacityName = productCapacity.name %>
-    <div class="producto-destacado">
-     <article>
-      <div class="div-img">
-      <a href="/products/detail/<%= producto.cod_product%>"><img src="/img/products/<%= producto.image %>"></a>
-    </div>
-    <div class="articulo-pie">
-      <p class="nombre-planta"><%= producto.name %></p>
-      <p class="nombre-cienti">Maceta <%= capacityName %> </p>
-    </div>
+    <% for( let i = 0; i< products.length; i++ ) { %>
+       <% if ((products[i].categoria) && (products[i].tamaños)) { %> 
+         <%if(products[i].discount==0){%>
+            <div class="producto-destacado">
+            <article>
+              <div class="div-img">
+              <a href="/products/detail/<%= products[i].id%>"><img src="/img/products/<%= products[i].image %>"></a>
+            </div>
+            <div class="articulo-pie">
+              <p class="nombre-planta"><%= products[i].name %></p>
+              <p class="nombre-cienti">Maceta 
+                <% for(j=0; j<products[i].tamaños.length; j++) {%>
+                  <% if (products[i].tamaños[j].length<1) { %>
+                    <span><%= products[i].tamaños[j].name %></span>
+                  <% }else{%>
+                    <span><%= products[i].tamaños[j].name %>-</span>
+                  <% } %>
+                <% } %>
+                </p>
+            </div>
 
-    <div class="precio">
-      <p> $<%= producto.price %></p>
-    </div>
-     </article>
-    </div>
-    <% } %>
-    <% }) %>   
+            <div class="precio">
+              <p> $<%= products[i].price %></p>
+            </div>
+            <div class="container-button">
+              <button class="boton-carrito" type="button">Agregar al carrito</button>
+            </div>
+            </article>
+            </div>
+        <% } %>
+    <% } %>   
+  <% } %>   
     </div>
     </div>
   </section>

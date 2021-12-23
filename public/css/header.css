@@ -256,7 +256,7 @@
     }
 
     .main-header-div .div-main-logo{
-        width: 45%;
+        width: 30%;
     }
 
     .perfil-detalle{
@@ -330,7 +330,7 @@
     }
 
     .main-header-div .div-main-logo{
-        width: 25%;
+        width: 10%;
        /*  border: cyan solid 3px; */
     }
 
@@ -358,9 +358,13 @@
    }
 
    .main-navbar a{
-       font-size: 18px;
+       font-size: 15px;
        color: var(--blanco);
        font-weight: bold;
+   }
+
+   .carrito{
+       font-size: 18px;
    }
 
    .div-search{
@@ -374,7 +378,7 @@
     .main-header-div .div-main-iconos{
         width: 25%;
         display: flex;
-        font-size: 25px;
+        font-size: 18px;
         /* margin: 5px 0; */
     }
 
@@ -401,7 +405,7 @@
     }
 
     .nombre-usuario{
-        font-size: 16px;
+        font-size: 18px;
     }
   
     

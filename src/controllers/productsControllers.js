@@ -33,9 +33,9 @@ const productsControllers={
     },
 
     category: (req, res) => {
-        let idCategory=req.params.cod_category;
+        /* let idCategory=req.params.cod_category;
         let productsCategory = products.filter(producto => producto.category == idCategory);
-        res.render ('./products/productsCategory', {productsCategory, idCategory, capacitys, categorys});
+        res.render ('./products/productsCategory', {productsCategory, idCategory, capacitys, categorys}); */
     },
 
     detail: (req, res) => {
@@ -62,7 +62,6 @@ const productsControllers={
          */
     },
 
-    /*---------INICIO CRUD DB ----------*/
 
     create: function (req, res) {
         let promCategory = db.Category.findAll();
@@ -74,8 +73,8 @@ const productsControllers={
         .catch((error) => res.send(error));
     },
 
-    store: function (req, res) {
-        db.Product.create({
+    store: function async (req, res) {
+       db.Product.create({
             name: req.body.name,
             description: req.body.description,
             price: req.body.price,
@@ -85,9 +84,10 @@ const productsControllers={
             deleted: 0,
             date_sale: '2022-02-14'
         })
-
         .then (() => {res.redirect('/products')})
         
+        let product = db.Product.findAll()
+        pr
     },
 
     edit: (req, res) =>{
@@ -146,105 +146,32 @@ const productsControllers={
         .then(() => {
             res.redirect('/products');
         })
-        },
+    },
 
-        /*---------FIN CRUD DB 17-12-2021-----------*/
+    search: async (req, res) =>{
+        let search = req.body.busqueda;
+       await db.Product.findAll({
+            where: {
+                deleted:0,
+                name:{[db.Sequelize.Op.like]: `%${search}%` },
+            },
+            include:['categoria', 'tamaños'],            
+        })
+
+        .then(products => {
+            return res.render('./products/searchProduct', {products})
+            /* res.render('./products/products', {products}) */
+        })
+        .catch(error => {
+            console.log(error)
+        } )
+
+
+
+
         
-
-/*     create: (req, res) => {
-        res.render('./products/productCreate');
-        
-    },
-
-    store: (req, res) =>{
-
-        let newProduct = {
-            cod_product: products[products.length - 1].cod_product + 1,
-            name: req.body.name,
-            category: req.body.category,
-            capacity: req.body.capacity ? req.body.capacity : 1 ,
-            price: req.body.price,
-            discount: req.body.discount ? req.body.discount : 0,
-            description: req.body.description,
-            image: req.file ? req.file.filename : "planta.jpg" 
-        }
-        products.push(newProduct);
-        let productJson =JSON.stringify(products, null, " ");
-        fs.writeFileSync(productsFilePath, productJson);
-
-        products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-        res.redirect('/products/');
-    },
-
-    edit: (req, res) => {
-        const cod_product = req.params.cod_product;
-        const productEdit = products.find(producto => producto.cod_product == cod_product);
-        res.render('./products/productEdit', {productEdit, categorys, capacitys});
-    },
-
-    update: (req, res) => {
-        //se lee el código del producto que llega por url
-        let id=req.params.cod_product;
-
-        let indexProduct;
-
-        //buscamos el cod_Product, en el json para traernos los datos del producto
-        let productUpdate = products.find((producto, index) =>{
-            if (producto.cod_product == id){
-                indexProduct = index;
-                return true;
-            }
-            return false;
-        });
-
-        let editedProduct = {
-            cod_product: productUpdate.cod_product,
-            name: req.body.name,
-            category: req.body.category,
-            capacity: req.body.capacity,
-            price: req.body.price,
-            discount: req.body.discount ? req.body.discount : 0,
-            description: req.body.description,
-            image: req.file ? req.file.filename : productUpdate.image
-        }
-
-        if(req.file) {
-            console.log('viene foto nueva');
-            if(productUpdate.image != 'planta.jpg') {
-                fs.unlinkSync(path.join(__dirname, '../../public/img/products/'+productUpdate.image))
-            }
-        }
-
-        products[indexProduct] = editedProduct;
-        let productJson =JSON.stringify(products, null, " ");
-        fs.writeFileSync(productsFilePath, productJson);
-
-        products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        res.redirect('/products');
-    },
-
-    destroy: (req, res) => {
-        let cod_product = req.params.cod_product;
-		let finalProducts = products.filter(products => products.cod_product != cod_product);
-
-        let imageOld = products.filter(product => product.cod_product == cod_product)
-
-        if(imageOld[0].image != 'planta.jpg') {
-            fs.unlinkSync(path.join(__dirname, '../../public/img/products/'+imageOld[0].image))
-        }
-
-		let productJson =JSON.stringify(finalProducts, null, " ");
-		fs.writeFileSync(productsFilePath, productJson);
-
-
-        products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-		res.redirect('/products');
-
+        /* console.log(search); */
     }
- */
-
 
 }
 

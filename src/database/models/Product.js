@@ -40,7 +40,9 @@ module.exports = (sequelize, dataTypes) => {
 
     let config = {
         tableName: 'products',
-        timestamps: false
+        timestamps: false,
+        charset: 'utf8',
+        collate: 'utf8_general_ci'
     };
     const Product = sequelize.define(alias, cols, config);
 

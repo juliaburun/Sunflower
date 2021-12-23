@@ -50,4 +50,7 @@ router.delete('/delete/:id', productsControllers.delete);
 /* Ruta por categoria productos */
 router.get ('/:cod_category', productsControllers.category);
 
+/* Search */
+router.post ('/search', productsControllers.search);
+
 module.exports=router;
