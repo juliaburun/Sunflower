@@ -48,7 +48,7 @@ router.put('/edit/:id', upload.single('imageEdited1'), productsControllers.updat
 router.delete('/delete/:id', productsControllers.delete); 
 
 /* Ruta por categoria productos */
-router.get ('/:cod_category', productsControllers.category);
+router.get ('/:id', productsControllers.category);
 
 /* Search */
 router.post ('/search', productsControllers.search);

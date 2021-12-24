@@ -47,37 +47,30 @@
                     </option>
                   <% } %>
               </select>
-            </div>   
-            <!--CONTENEDOR CAPACIDAD-->
-            <div class="cajaCapacity">
-              <label for="size" class="capasidadProd">Maceta:</label>
-              <select name="size" id="size" class="form-cajaSection">
-                <% for( let i = 0; i < size.length; i++ ) { %>
-                <option value="<%= size[i].id%>">
-                  <%= size[i].name%> 
-                </option>
-                <% } %>
-              </select>
             </div>
             <!--CONTENEDOR PRECIO-->
             <div class="cajaPrice">
               <label for="price" class="precioProd">Precio del producto $:</label>
               <input type="number" id="price" name="price" placeholder="Ej: 2220 " class="form-cajaPrice">
             </div>
+
+                      
             <!--CONTENEDOR DESCUENTO-->
             <div class="cajaDiscount">
               <label for="discount" class="descuProd">Descuento %:</label>
               <input type="number" name="discount" class="form-cajaName">
             </div>
-            <!--CONTENEDOR SECCION-->
-           <!--  <div class="cajaSection">
-              <label for="section" class="seccionProd">Sección:</label>
-              <select name="section" id="section" class="form-cajaSection">
-                <option value="" selected>Elegí</option>
-                <option value=1>Con oferta</option>
-                <option value=0>Sin oferta</option>
-              </select>
-            </div> -->
+
+             <!--CONTENEDOR CAPACIDAD-->
+             <div class="cajaCapacity">
+              <label for="size" class="capasidadProd">Maceta:</label>
+              <% for (let i=0; i < size.length; i++) { %> 
+                <div class="sizeProduct">
+                    <input type="checkbox" name="sizeProduct" id="<%= size[i].name %>" value="<%= size[i].id %>">   
+                    <label for="<%= size[i].name %>"><%= size[i].name %></label>
+                </div>   
+                <% } %> 
+            </div>
             <!--CONTENEDOR DESCRIPCION DEL PRODUCTO-->
             <div class="cajaDescription">
               <label for="description" class="descripcionProd">Descripción del producto:</label>

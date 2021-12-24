@@ -139,9 +139,9 @@ const controller = {
 
     },
 
-    update: async (req,res) => {
-        
-        let userToEdit = await db.User.findOne(
+    update: async(req,res) => {
+        console.log(req.body);
+     let userToEdit = await db.User.findOne(
             {
                 where: { id: req.params.id }
             }
@@ -150,7 +150,7 @@ const controller = {
             data = JSON.parse(JSON.stringify(user))
             return data
         })
-
+ 
        let userId = req.params.id;
         db.User.update(
             {
@@ -158,15 +158,15 @@ const controller = {
                 last_name: req.body.last_name,
                 email: req.body.email,
                 phone: req.body.phone,
-                password: req.body.password,
                 image_profile: req.file ? req.file.filename : userToEdit.image_profile,
-                rol_id: req.body.rol_id
             },
             {
                 where: {id: req.params.id}
             })
-        .then(()=> {
-            return res.redirect('/users/profile')})            
+        .then((resultado)=> {
+            /* return res.redirect('/users/profile') */
+            res.send(resultado)
+        })            
         .catch(error => res.send(error))
     }
 

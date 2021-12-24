@@ -44,13 +44,13 @@ module.exports = (sequelize, dataTypes) => {
   }
   const User = sequelize.define(alias, cols, config);
   
-/*  A DESCOMENTAR CUANDO ESTÉ MODELO ROLES
+  /* A DESCOMENTAR CUANDO ESTÉ MODELO ROLES */
   User.associate = function(models) {
     User.belongsTo(models.Rol, {
         as: "roles",
         foreignKey: "rol_id"
     }) 
-}*/
+}
   return User;
   
 }

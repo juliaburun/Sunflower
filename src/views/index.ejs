@@ -53,10 +53,10 @@
             <p ><%= products[i].name %></p>
             <p >Maceta 
               <% for(j=0; j<products[i].tamaños.length; j++) {%>
-                <% if (products[i].tamaños[j].length <= 1) { %>
-                  <span><%= products[i].tamaños[j].name %></span>
+                <% if (j == products[i].tamaños.length - 1) { %>
+                  <span><%= products[i].tamaños[j].name %> </span>
                 <% }else{%>
-                  <span><%= products[i].tamaños[j].name %>,</span>
+                  <span><%= products[i].tamaños[j].name %>-</span>
                 <% } %>
               <% } %>
             </p>
@@ -95,8 +95,8 @@
               <p class="nombre-planta"><%= products[i].name %></p>
               <p class="nombre-cienti">Maceta 
                 <% for(j=0; j<products[i].tamaños.length; j++) {%>
-                  <% if (products[i].tamaños[j].length<1) { %>
-                    <span><%= products[i].tamaños[j].name %></span>
+                  <% if (j == products[i].tamaños.length - 1) { %>
+                    <span><%= products[i].tamaños[j].name %> </span>
                   <% }else{%>
                     <span><%= products[i].tamaños[j].name %>-</span>
                   <% } %>

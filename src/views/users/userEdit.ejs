@@ -32,7 +32,7 @@
   <hr color="#edafa4">
     <section>
       <div class="cajaPrincipal">
-          <form action="/users/edit/<%= user.id %>?_method=PUT" method="Post" enctype="multipart/form-data">
+          <form action="/users/edit/<%= user.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
             <p class="datosCta">Datos de la cuenta</p>
             <p class="avatar">Avatar</p>
               <!--BOTON IMAGEN-->
@@ -50,16 +50,17 @@
               </div>
               <div class="cajaMail">
                 <label for="email" class="labelMail">Email</label>
-           <!--Cambiar a etiqueta p, que no sea input-->       <input type="text" id="email" name="email" class="form-cajaMail" value="<%= user.email%>">
+           <!--Cambiar a etiqueta p, que no sea input-->       
+           <input type="text" id="email" name="email" class="form-cajaMail" value="<%= user.email%>">
               </div>
               <p class="datosPerso">Datos personales</p>
                 <div class="cajaNombre">
                   <label for="name" class="labelNombre">Nombre</label>
-                    <input type="text" id="name" name="name" class="form-cajaNombre" value="<%= user.first_name%>">
+                    <input type="text" id="name" name="first_name" class="form-cajaNombre" value="<%= user.first_name%>">
                 </div>
                 <div class="cajaApellido">
                   <label for="last-name" class="labelApellido">Apellido</label>
-                    <input type="text" id="last-name" name="last name" class="form-cajaApellido" value="<%= user.last_name%>">
+                    <input type="text" id="last-name" name="last_name" class="form-cajaApellido" value="<%= user.last_name%>">
                 </div>
                 <div class="cajaTelefono">
                   <label for="phone" class="labelTelefono">Teléfono</label>
@@ -68,7 +69,7 @@
                   <!--BOTON-->
           <div class="cajaGuardar">
             <p id="texto">Guardar cambios</p>
-            <button type="submit" class="botonGuardar" onclick="return confirmar()"></button>
+            <button type="submit" class="botonGuardar"></button>
           </div>
           </form>
       </div>

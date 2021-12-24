@@ -33,6 +33,24 @@ const productsControllers={
     },
 
     category: (req, res) => {
+        let id_category = req.params.id;
+        let promProduct = db.Product.findAll({
+            where: {
+                deleted:0,
+                category_id: id_category,
+            },
+            include:['categoria', 'tamaños'],            
+        });
+
+        let promCategory= db.Category.findByPk(req.params.id);
+
+        Promise.all([promProduct, promCategory])
+        .then(([products,category]) => {
+
+        res.render ('./products/productsCategory', {products,category})
+           /* res.send(category); */
+        })
+
         /* let idCategory=req.params.cod_category;
         let productsCategory = products.filter(producto => producto.category == idCategory);
         res.render ('./products/productsCategory', {productsCategory, idCategory, capacitys, categorys}); */
@@ -84,10 +102,25 @@ const productsControllers={
             deleted: 0,
             date_sale: '2022-02-14'
         })
-        .then (() => {res.redirect('/products')})
-        
-        let product = db.Product.findAll()
-        pr
+
+        .then (function(newProduct){
+           let size_product= req.body.sizeProduct.map(function (idSize){
+                return {
+					product_id: newProduct.id,	
+					size_id: parseInt(idSize),
+                }
+            });
+                
+			db.SizeProduct.bulkCreate(size_product)
+            .then(() => {
+                return  res.redirect('/products') 
+            })
+            .catch(error => console.log(error));
+        /* res.redirect('/products') */
+       
+        })
+
+        .catch(error => console.log(error));
     },
 
     edit: (req, res) =>{
