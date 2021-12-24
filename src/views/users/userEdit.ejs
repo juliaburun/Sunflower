@@ -69,8 +69,16 @@
                   <!--BOTON-->
           <div class="cajaGuardar">
             <p id="texto">Guardar cambios</p>
+<<<<<<< HEAD
             <button type="submit" class="botonGuardar"></button>
+=======
+            <button type="submit" class="botonGuardar" ></button>
+>>>>>>> a7c05fa49e6ed0f35974c5d6edf98cb79232f2fe
           </div>
+          </form>
+          <form action="/users/edit/<%= user.id %>?_method=PUT" method="Post" enctype="multipart/form-data">
+            <input type="text" name='nombre'>
+            <input type="submit">
           </form>
       </div>
     </section>

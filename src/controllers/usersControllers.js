@@ -139,17 +139,40 @@ const controller = {
 
     },
 
+<<<<<<< HEAD
     update: async(req,res) => {
         console.log(req.body);
      let userToEdit = await db.User.findOne(
+=======
+    update: (req,res) => {
+        console.log(req.body)
+         db.User.findOne(
+>>>>>>> a7c05fa49e6ed0f35974c5d6edf98cb79232f2fe
             {
                 where: { id: req.params.id }
             }
         )
-        .then((user) => {
-            data = JSON.parse(JSON.stringify(user))
-            return data
+        .then((userToEdit) => {
+            
+            db.User.update(
+                {
+                    first_name: req.body.first_name,
+                    last_name: req.body.last_name,
+                    email: req.body.email,
+                    phone: req.body.phone,
+                    password: req.body.password,
+                    image_profile: req.file ? req.file.filename : userToEdit.image_profile,
+                    rol_id: req.body.rol_id
+                },
+                {
+                    where: {id: req.params.id}
+                })
+            .then(()=> {
+                return res.redirect('/users/profile')})            
+            .catch(error => res.send(error))
+
         })
+<<<<<<< HEAD
  
        let userId = req.params.id;
         db.User.update(
@@ -168,6 +191,12 @@ const controller = {
             res.send(resultado)
         })            
         .catch(error => res.send(error))
+=======
+        .catch(error => res.send(error))
+
+       let userId = req.params.id;
+        
+>>>>>>> a7c05fa49e6ed0f35974c5d6edf98cb79232f2fe
     }
 
 
