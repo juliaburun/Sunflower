@@ -118,7 +118,7 @@ const controller = {
     },
 
     profile: (req, res) => {
-        return res.render('./users/profile', {
+        return res.render('./users/userEdit', {
             user: req.session.userLogged
         });
     },
@@ -139,15 +139,10 @@ const controller = {
 
     },
 
-<<<<<<< HEAD
-    update: async(req,res) => {
-        console.log(req.body);
-     let userToEdit = await db.User.findOne(
-=======
     update: (req,res) => {
+        console.log('update')
         console.log(req.body)
          db.User.findOne(
->>>>>>> a7c05fa49e6ed0f35974c5d6edf98cb79232f2fe
             {
                 where: { id: req.params.id }
             }
@@ -160,9 +155,7 @@ const controller = {
                     last_name: req.body.last_name,
                     email: req.body.email,
                     phone: req.body.phone,
-                    password: req.body.password,
-                    image_profile: req.file ? req.file.filename : userToEdit.image_profile,
-                    rol_id: req.body.rol_id
+                    image_profile: req.file ? req.file.filename : 'imagen'/* userToEdit.image_profile */,
                 },
                 {
                     where: {id: req.params.id}
@@ -172,31 +165,7 @@ const controller = {
             .catch(error => res.send(error))
 
         })
-<<<<<<< HEAD
- 
-       let userId = req.params.id;
-        db.User.update(
-            {
-                first_name: req.body.first_name,
-                last_name: req.body.last_name,
-                email: req.body.email,
-                phone: req.body.phone,
-                image_profile: req.file ? req.file.filename : userToEdit.image_profile,
-            },
-            {
-                where: {id: req.params.id}
-            })
-        .then((resultado)=> {
-            /* return res.redirect('/users/profile') */
-            res.send(resultado)
-        })            
-        .catch(error => res.send(error))
-=======
-        .catch(error => res.send(error))
 
-       let userId = req.params.id;
-        
->>>>>>> a7c05fa49e6ed0f35974c5d6edf98cb79232f2fe
     }
 
 
