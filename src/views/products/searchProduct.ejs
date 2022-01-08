@@ -63,8 +63,8 @@
                     <p class="nombre-planta"><%= products[i].name %></p>
                     
                     <p class="nombre-cienti">Maceta <% for(j=0; j<products[i].tamaños.length; j++) {%>
-                      <% if (j == products[i].tamaños.length - 1) { %>
-                        <span><%= products[i].tamaños[j].name %> </span>
+                      <% if (products[i].tamaños[j].length<1) { %>
+                        <span><%= products[i].tamaños[j].name %></span>
                       <% }else{%>
                         <span><%= products[i].tamaños[j].name %>-</span>
                       <% } %>
@@ -72,10 +72,10 @@
                     </p>
                       
                   </div>
-                    <div class="precio">
-                      <p> $<%= products[i].price %></p>
-                    </div>
-                    <div class="container-button">
+                  <div class="precio">
+                    <p> $<%= products[i].price %></p>
+                  </div>
+                  <div class="container-button">
                       <button class="boton-carrito" type="button">Agregar al carrito</button>
                     </div>
                     <% if(locals.userLogged && locals.userLogged.rol_id == 1) {%>

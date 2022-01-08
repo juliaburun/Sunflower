@@ -1,106 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!--==========================
+    <!--==========================
             HEAD
-============================-->
-    <%-include('../partials/head', {title:"Users", style:"styles-users"}) %>
+    ============================-->
+  <%-include('../partials/head', {title:"Users", style:"styles-profile"}) %>
 
-
-<!--==========================
-            BODY
-============================-->
 <body>
-    <!-----HEADER------>
     <%- include('../partials/header') %>
 
-   <!--==========================
-       BORDE ENTRE HEADER Y MAIN
-    ============================-->      
-
-    <div class="space-between-header-main">
-
-    </div>
-
-
-<!--############################# LINEA DIVISORA ENTRE EL ENCABEZADO Y EL CUERPO ##############################-->
-
-    <main>
-
-  <h2>Mis datos</h2>
- <!--LINEA INFERIOR MIS DATOS-->
-  <hr color="#edafa4">
-    <section>
-      <div class="cajaPrincipal">
-          <form action="" method="get">
-            <p class="datosCta">Datos de la cuenta</p>
-            <p class="avatar">Avatar</p>
-              <!--BOTON IMAGEN-->
-              <div class="formulImg">
-                <div class="grid">
-                  <div class="form-element">
-                    <input type="file" id="file-1" accept="image/*" value="" name="imageEdited1">
-                      <label for="file-1" id="file-1-preview">
-                        <img src="/img/users/<%= user.image_profile%>" alt="">
-                          <div>
-                          </div>
-                      </label>
+    <main class="main">
+        <div class="Name-user">
+            <div class="name">
+                <h3><%= user.first_name + ' ' +user.last_name %> </h3>
+            </div>
+    
+            <div class="password">
+                <form action="/users/delete/<%= user.id%>?_method=DELETE" method="POST" class="forms-button">
+                    <button type="submit"><i class="fas fa-trash"></i></button>
+                </form>
+            </div>
+        </div>
+    
+        <section class="data-content">
+            <article class="user-data">
+                <div class="img-profile">
+                    <img src="/img/users/<%= user.image_profile%>" alt="">
+                </div>
+                <div class="rol-profile"> 
+                    <% for (let i=0; i<rols.length; i++) {%>
+                       <% if (user.rol_id == rols[i].id){ %>
+                        <h4> <%= rols[i].name%> </h4> 
+                        <% } %> 
+                    <% } %>
+                </div>
+                <div class="user-title">
+                    <div>
+                        <h3>Información de contacto</h3>
+                    </div>
+                    <div class="edit">
+                        <a href="/users/editUser/<%= user.id%>"><i class="fas fa-edit"></i></a>
                     </div>
                 </div>
-              </div>
-              <div class="cajaMail">
-                <label for="email" class="labelMail">Email</label>
-                  <input type="text" id="email" name="email" class="form-cajaMail" value="<%= user.email%>">
-              </div>
-              <p class="datosPerso">Datos personales</p>
-                <div class="cajaNombre">
-                  <label for="name" class="labelNombre">Nombre</label>
-                    <input type="text" id="name" name="name" class="form-cajaNombre" value="<%= user.first_name%>">
+                <div class="user-info">
+                    <div class="space">
+                        <h3>Nombre</h3>
+                        <p><%= user.first_name%></p>
+                    </div>
+                    <div class="space">
+                        <h3>Apellido</h3>
+                        <p><%= user.last_name%></p>
+                    </div>
+                    <div class="space">
+                        <h3>Email</h3>
+                        <p><%= user.email%></p>
+                    </div>
+                    <div class="space">
+                        <h3>Teléfono</h3>
+                        <p><%= user.phone%></p>
+                    </div>
                 </div>
-                <div class="cajaApellido">
-                  <label for="last-name" class="labelApellido">Apellido</label>
-                    <input type="text" id="last-name" name="last name" class="form-cajaApellido" value="<%= user.last_name%>">
+            </article>
+            <article class="orders">
+                <div class="main-orders">
+                    <h2>Historial</h2>
                 </div>
-                <div class="cajaTelefono">
-                  <label for="phone" class="labelTelefono">Teléfono</label>
-                    <input type="text" id="phone" name="phone" class="form-cajaTelefono" value="<%= user.phone%>">
+                <div class="orders-realize">
+
                 </div>
-                  <!--BOTON-->
-          <div class="cajaGuardar">
-            <p id="texto">Guardar cambios</p>
-            <button type="submit" class="botonGuardar" onclick="return confirmar()"></button>
-          </div>
-          </form>
-      </div>
-    </section>
-</main>
+    
+            </article>
+        </section>
+    </main>
 
-<script>
-    function previewBeforeUpload(id){
-    document.querySelector("#"+id).addEventListener("change",function(e){
-      if(e.target.files.length == 0){
-        return;
-      }
-      let file = e.target.files[0];
-      let url = URL.createObjectURL(file);
-      document.querySelector("#"+id+"-preview div").innerText = file.name;
-      document.querySelector("#"+id+"-preview img").src = url;
-    });
-  }
- 
-  previewBeforeUpload("file-1");
 
-  function confirmar(){
-    let respuesta = confirm("Esta seguro que desea guardar los cambios?");
-    if (respuesta == true){
-        return true;
-    }else{
-        return false;
-    }
-}
-  </script>
-
-      <!-- FOOTER -->
+    <!-- FOOTER -->
     <%- include('../partials/footer') %>
+   
 </body>
 </html>

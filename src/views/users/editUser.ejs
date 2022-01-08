@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--==========================
+            HEAD
+    ============================-->
+    <%-include('../partials/head', {title:"Actualización de usuario", style:"styles-editUser"}) %>
+    <body>
+        <%- include('../partials/header') %>
+        <main class="main">
+            <div class="main-top">
+                <div class="main-title">
+                    <h3>Actualización de mis datos</h3>
+                </div>
+                <form action="/users/editUser/<%= user.id %>?_method=PUT" method="Post" enctype="multipart/form-data">
+                    <div class="data">
+                        <div class="formulImg">
+                            <div class="grid">
+                              <div class="form-element">
+                                <input
+                                  type="file"
+                                  id="file-1"
+                                  accept="image/*"
+                                  value="<%= user.image_profile%>"
+                                  name="imageEdited1"
+                                />
+                                <label for="file-1" id="file-1-preview">
+                                  <img src="/img/users/<%= user.image_profile%>" alt="" />
+                                  <div></div>
+                                </label>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="section-data">
+                            <div class="title-data"><label for="">Nombre </label></div>
+                            <div class="input-data">
+                              <input type="text"                                
+                                name="first_name" 
+                                id="first_name"
+                                value="<%= locals.oldData ? oldData.first_name : user.first_name %>"
+                              >
+                              <% if (locals.errors && errors.first_name) { %>
+                                <div class="text-danger">
+                                    <%= errors.first_name.msg %> 
+                                </div>
+                              <% } %>
+                            </div> 
+                        </div>
+                        <div class="section-data">
+                            <div class="title-data"><label for="">Apellido</label></div>
+                            <div class="input-data">
+                              <input type="text" 
+                                name="last_name" 
+                                id="last_name"
+                                value="<%= locals.oldData ? oldData.last_name : user.last_name %>"
+                              >
+                              <% if (locals.errors && errors.last_name) { %>
+                                <div class="text-danger">
+                                    <%= errors.last_name.msg %> 
+                                </div>
+                              <% } %>
+                            </div> 
+                        </div>
+                        <div class="section-data">
+                            <div class="title-data"><label for="">Email</label></div>
+                            <div class="input-data">
+                              <input type="email" 
+                                name="email" 
+                                id="email"
+                                value="<%= locals.oldData ? oldData.email : user.email %>"
+                              > 
+                              <% if (locals.errors && errors.email) { %>
+                                <div class="text-danger">
+                                    <%= errors.email.msg %> 
+                                </div>
+                              <% } %>
+                            </div>
+                        </div>
+                        <div class="section-data">
+                            <div class="title-data"><label for="">Teléfono</label></div>
+                            <div class="input-data">
+                              <input type="number" 
+                                name="phone" 
+                                id="phone"
+                                value="<%= locals.oldData ? oldData.phone : user.phone %>"
+                              >
+                              <% if (locals.errors && errors.phone) { %>
+                                <div class="text-danger">
+                                    <%= errors.phone.msg %> 
+                                </div>
+                              <% } %>
+                            </div>
+                        </div>
+                        <div class="section-data">
+                            <div class="title-data"><label for="">Password</label></div>
+                            <div class="input-data"><input type="password" name="password" id="password"></div>
+                            <% if (locals.errors && errors.password) { %>
+                              <div class="text-danger">
+                                  <%= errors.password.msg %> 
+                              </div>
+                            <% } %>
+                        </div>
+                        <div class="section-data">
+                            <div class="title-data"><label for="">Repetir Password</label></div>
+                            <div class="input-data"><input type="password" name="repassword" id="repassword"> </div>
+                            <% if (locals.errors && errors.repassword) { %>
+                              <div class="text-danger">
+                                  <%= errors.repassword.msg %> 
+                              </div>
+                            <% } %>
+                        </div>
+                        
+                        <div class="instructions-button">
+                            <button type="submit" class="button">Actualizar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+        </main>
+
+        <script>
+            function previewBeforeUpload(id) {
+              document
+                .querySelector("#" + id)
+                .addEventListener("change", function (e) {
+                  if (e.target.files.length == 0) {
+                    return;
+                  }
+                  let file = e.target.files[0];
+                  let url = URL.createObjectURL(file);
+                  document.querySelector("#" + id + "-preview div").innerText =
+                    file.name;
+                  document.querySelector("#" + id + "-preview img").src = url;
+                });
+            }
+      
+            previewBeforeUpload("file-1");
+        </script>
+
+        <!-- FOOTER -->
+        <%- include('../partials/footer') %>
+
+</body>
+</html>

@@ -7,6 +7,7 @@
  
  img{
      width: 100%;
+     height: 100%;
      
  }
 
@@ -22,8 +23,6 @@
 
 .main-header{
    /* background-color: var(--rosa);*/
-    background-image: url("/img/tierra.jpg");
-    padding: 5px;
     /* border: chartreuse solid 3px; */
     /* height: 50%; */
     width: 100%;
@@ -33,35 +32,25 @@
 }
 
 .main-header .main-header-top-bar{
-    height: 100%;
+    background-image: url("/img/tierra.jpg");
+    height: 70%;
     /* border: black solid 3px; */
 }
 
-
 .main-header-div{
     width: 100%;
-    height: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    /* flex-direction: row; */
+    justify-content: space-between;
     /* border: solid 3px red; */
 }
-
-
-
 /************************
     Logo Sunflower 
  ***********************/
-
-.main-header-div .div-main-logo{
+.div-main-logo{
     width: 50%;
+    margin: auto;
    /*  border: cyan solid 3px; */
-}
-
-.div-main-logo img{
-    width: 100%;
-    height: 100%;
-    /* border: cornsilk solid 3px; */
 }
 
 /************************
@@ -69,6 +58,7 @@
  ***********************/
 .main-navbar{
     display: none;
+    margin: auto;
 }
 
 .main-navbar ul{
@@ -93,84 +83,55 @@
 .main-header-div .div-main-iconos{
     width: 50%;
     margin: auto;
-    display: inline-block;
-    /* display: flex; */
+    display: flex; 
+    justify-content: space-around;
     margin-left: 20px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
+    align-items: center;
+    margin-right: 10px;
     /* border: darkmagenta 3px solid; */
 }
 
-/* Barra de búsqueda con el ícono de lupa */
-
-.main-div-search{
-    width: 100%;
-   /*  display: flex;
-    flex-direction: column; */
-    /* margin-left: 30px; */
-    /* border: black solid 5px; */
-    margin: auto;
-    margin-bottom: 0;
-    margin-top: 20px;
-}
-
-
-.div-search{
+/*SECCION USUARIO LOGUEADO*/
+.contenedor-perfil{
+    width: 50%;
+    color: white; 
+    right: 0;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* border: solid white 2px; */
-}
+    justify-content: space-around;
+    align-items: center;
+  }
 
-.div-search input{
-    border-radius: 2px 0px 0px 2px;
-    border: none;
-}
+  .contenedor-perfil i {
+    color: white;
+     margin-right: 5px;
+    margin-left: 10px;
+  }
 
-.div-search button{
-    border-radius: 0px 2px 2px 0px;
-    border: none;
-    background: var(--blanco);
-    cursor: pointer;
-}
+  /*CONTENEDOR IMG Y P*/
+  .perfil-detalle{
+      display: flex;
+      align-items: center;
+      height: 35px;
+      width: 35%;
+  }
+  
+  /*IMAGEN PERFIL USUARIO*/
+  .perfil-detalle img{
+      object-fit: cover;
+      border-radius: 3px;
+      margin-right: 0px;
+  }
+  /*USUARIO LOGUEADO*/
+  .nombre-usuario{
+      font-size: 10px;
+      display: none;
+      margin: auto;
+  }
 
-.div-main-busqueda{
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    margin-bottom: 3px;
-
-    /* border: solid 2px purple; */
-}
-
-.div-main-busqueda input{
-    width: 100%;
-    height: 25px;
-}
-
-.div-main-busqueda button{
-    width: 30px;
-    height: 25px;
-    background-color: #edafa4;
-}
-
-
-
-.ilupa i{
-    color: var(--grisOscuro);
-    
-}
-
-/* íconos login, carrito, menú hambrguesa  */
-
-.div-secundario-iconos{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 7px;
-}
-
-.login{
-    width: 25%;
+ 
+  .login{
+    width: 30%;
     /* border: green solid 1px; */
     margin: auto;
     text-align: right;
@@ -184,9 +145,8 @@
 }
 
 .carrito{
-    width: 25%;
+    width: 30%;
     /* border: blue solid 1px; */
-    margin: auto;
     text-align: right;
 }
 
@@ -196,8 +156,7 @@
 }
 
 .hamburguer-buttom {
-    width: 25%;
-    margin: auto;
+    width: 30%;
     text-align: right;
 }
 
@@ -219,44 +178,74 @@
     transition: color 1s;
 }
 
-/*SECCION USUARIO LOGUEADO*/
-.contenedor-perfil{
-    width: 25%;
-    color: white; 
-    right: 0;
-   display: flex;
-   margin: 0;
-  }
 
-  .contenedor-perfil i {
-    color: white;
-     margin-right: 5px;
-    margin-top: 15px;
-    margin-left: 10px;
-  }
 
-  /*CONTENEDOR IMG Y P*/
-  .perfil-detalle{
-      display: flex;
-      align-items: center;
-      position: relative;
-      height: 40px;
-      margin-right: 10px;
-  }
-  
-  /*IMAGEN PERFIL USUARIO*/
-  .perfil-detalle img{
-      height: 20px;
-      width: 20px;
-      object-fit: cover;
-      border-radius: 5px;
-      margin-right: 0px;
-  }
-  /*USUARIO LOGUEADO*/
-  .nombre-usuario{
-      font-size: 10px;
-      display: none;
-  }
+/* Barra de búsqueda con el ícono de lupa */
+
+.main-div-search{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   /*  border: var(--negro) solid 1px; */
+}
+
+
+/* .div-search{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    order: solid white 2px;
+} */
+
+.div-search input{
+    border-radius: 2px 0px 0px 2px;
+    border: none;
+}
+
+.div-search button{
+    border-radius: 0px 2px 2px 0px;
+    border: none;
+    background: var(--blanco);
+    cursor: pointer;
+}
+
+.div-main-busqueda{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    border: solid 2px var(--grisClaro);
+}
+
+.div-main-busqueda input{
+    width: 100%;
+    height: 30px;
+}
+
+.div-main-busqueda button{
+    width: 30px;
+    height: 30px;
+    background-color: #edafa4;
+}
+
+
+
+.ilupa i{
+    color: var(--grisOscuro);
+    
+}
+
+/* íconos login, carrito, menú hambrguesa  */
+
+/* .div-secundario-iconos{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 7px;
+} */
+
 
 
 /*BREAKPOINT TABLET*/
@@ -270,41 +259,43 @@
         width: 30%;
     }
 
+    .perfil-detalle{
+        display: flex;
+        align-items: center;
+        height: 20px;
+        width: 20%;
+    }
+
     .main-header-div .div-main-iconos{
-        width: 40%;
+        width: 55%;
         margin-bottom: 10px;
-        justify-content: flex-end;
-        margin-right: 0;
+        justify-content: center;
     }
 
-    .div-secundario-iconos{
-        margin-top: 10px;
+    .contenedor-perfil{
+        width: 60%;
     }
 
-    .login{
-        justify-content: right;        
-    }
+    .login, .carrito, .hamburguer-buttom{
+        width: 13%;
+    } 
 
-    .carrito{
-        justify-content: right;
-    }
-
-    .login i, .carrito i, .hamburguer-buttom i{
-        font-size: 18px;
+       .login i, .carrito i, .hamburguer-buttom i{
+        font-size: 20px;
        }
 
-    .hamburguer-buttom {
+    /* .hamburguer-buttom {
         margin-right: 0;
-    }
+    } */
     .div-main-busqueda{
         margin-bottom: 20px;
     }
 
     .main-div-search{
-        margin: auto;
+        width: 100%;
     }
     .div-main-busqueda input{
-        width: 80%;
+        width: 100%;
         height: 30px;
     }
     
@@ -316,17 +307,18 @@
 
     .contenedor-perfil{
         margin: 0;
-      }
+    }
     
-      .contenedor-perfil i {
+    .contenedor-perfil i {
         color: white;
         margin-right: 0px;
-      }
+    }
+
       /*USUARIO LOGUEADO*/
-  .nombre-usuario{
-    font-size: 12px;
-    display: list-item;
-}
+    .nombre-usuario{
+        font-size: 12px;
+        display: contents;
+    }
 
 }
 
@@ -334,29 +326,29 @@
 @media (min-width:769px){
 
     .main-navbar{
-        display: hide;
+        margin-bottom: 10px;
     }
 
     .main-header-div .div-main-logo{
-        width: 15%;
+        width: 10%;
        /*  border: cyan solid 3px; */
     }
 
     .main-header-div .main-navbar{
         display: flex;
-        width: 40%;
+        width: 50%;
        justify-content: center;
    }
 
    .main-navbar ul{
        width: 70%;
-       align-items: flex-end;
+       text-align: end;
        display: flex;
        justify-content: space-between;
+       
    }
 
    .main-navbar ul li{
-       text-align: center;
        margin-right: 10px;
    }
 
@@ -366,80 +358,55 @@
    }
 
    .main-navbar a{
-       font-size: 18px;
+       font-size: 15px;
        color: var(--blanco);
        font-weight: bold;
    }
 
-   .div-main-busqueda input{
-    width: 80%;
-    height: 30px;
-    }
+   .carrito{
+       font-size: 18px;
+   }
 
-    .div-main-busqueda button{
-        width: 30px;
-        height: 30px;
-        font-size: 20px;
+   .div-search{
+    width: 100%;
     }
-    .div-main-busqueda{
-        margin-bottom: 50px;
-        margin-right: 0px;
-    }  
 
    .hamburguer-buttom{
        display: none;
    }
 
     .main-header-div .div-main-iconos{
-        width: 30%;
+        width: 25%;
         display: flex;
-        margin: 5px 0;
+        font-size: 18px;
+        /* margin: 5px 0; */
     }
 
-    .div-main-iconos .main-div-search{
+    /* .div-main-iconos .main-div-search{
         width: 75%;
         margin-bottom: 0;
-    }
+    } */
     
-    .div-secundario-iconos{
+    /* .div-secundario-iconos{
         margin-right: 80px;
     }
-
+ */
     
-    .div-main-iconos .div-secundario-iconos{
+    /* .div-main-iconos .div-secundario-iconos{
         width: 25%;
         align-self: end;
+    } */
+
+    .perfil-detalle{
+        display: flex;
+        align-items: center;
+        height: 25px;
+        width: 25%;
     }
-    .contenedor-perfil{
-        margin-top: 60px;
-        margin-right: 115px;
-    }
+
     .nombre-usuario{
-        font-size: 12px;
-        display: list-item;
+        font-size: 18px;
     }
   
-
+    
 }
-
-
-/* @media (min-width:940px){
-    .contenedor-perfil{
-        margin-top:50px;
-    }
-
-}
-
-@media (min-width:1065px){
-    .contenedor-perfil{
-        margin-top:65px;
-    }
-
-}
-
-@media (min-width:1270px){
-    .contenedor-perfil{
-        margin-top:80px;
-    }
-
-}  */

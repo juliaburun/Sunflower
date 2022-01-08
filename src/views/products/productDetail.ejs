@@ -28,29 +28,31 @@
             <div class="main-principal-carrusel">
                 <div class="bar-carrusel">
                     <div class="carrusel-principal">
-                        <img src="/img/products/<%= productDetail.image%>" alt="Homalomena 'Selby'1">
+                        <img src="/img/products/<%= product.image %>" alt="Homalomena 'Selby'1">
                     </div>
                     <div class="carrusel-secundario">
                         <div>
-                            <img src="/img/products/<%= productDetail.image%>" alt="Homalomena 'Selby'2">
+                            <img src="/img/products/<%= product.image %>" alt="Homalomena 'Selby'2">
                         </div>
                         <div>
-                            <img src="/img/products/<%= productDetail.image%>" alt="Homalomena 'Selby'3">
+                            <img src="/img/products/<%= product.image %>" alt="Homalomena 'Selby'3">
                         </div>
                         <div>
-                            <img src="/img/products/<%= productDetail.image%>" alt="Homalomena 'Selby'4">
+                            <img src="/img/products/<%= product.image %>" alt="Homalomena 'Selby'4">
                         </div>
 
                     </div>
                 </div>
                 <div class="main-secundario-products">
                     <div class="name-product">
-                        <h1><%= productDetail.name%></h1>
-                        <div class="size-product">
-                            <span>Maceta: <%= productCapacity.name%></span>
+                        <h1><%= product.name%></h1>
+                        <div class="size-product"> Maceta
+                            <% for(j=0; j<product.tamaños.length; j++) {%>
+                                  <span><%= product.tamaños[j].name %></span>
+                                <% } %>
                         </div>
                         <div class="cost-product">
-                            <span>$<%= productDetail.price%></span>
+                            <span>$<%= product.price%></span>
                         </div>
                         
                     </div>
@@ -78,7 +80,7 @@
             <section class="description-bar">
                 <article class="article-description">
                     <ul>
-                        <%= productDetail.description %>
+                        <%= product.description %>
                     </ul>
                 </article>
             </section>
@@ -88,26 +90,7 @@
             <h3>Las personas que vieron este producto también vieron</h3>
         </div>
 
-        <section class="main-section-otherProducts">
-            <% let productosOtros= productOther.slice(0,4)   %>
-            <% productosOtros.forEach(producto =>  { %>
-            <a href="/products/detail/<%= producto.cod_product%>">
-                <div class="div-otherProducts">
-                    <div class="main-otherProducts">
-                        <article class="article-otherProducts">
-                            <div class="div-img-otherProducts">
-                                <img src="/img/products/<%= producto.image %>" alt="">
-                            </div>
-                            <div class="name-otherProducts">
-                                <h1><%= producto.name %></h1>
-                                <h3>$<%= producto.price %></h3>
-                            </div>
-                        </article>
-                </div>
-                </div>
-            </a>
-            <% }) %>
-        </section>    
+       
 
         
 

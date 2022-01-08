@@ -16,11 +16,7 @@
                 </ul>
             </nav>
 
-            <div class="div-main-iconos">
-
-
-                <div class="div-secundario-iconos">
-
+           <div class="div-main-iconos">
                     <!--SECCION USUARIO LOGUEADO -->
                 <% if (locals.isLogged) { %>
                     <div class="contenedor-perfil"> 
@@ -28,7 +24,7 @@
                                 <a href="/users/profile"><img src="/img/users/<%= locals.userLogged.image_profile%>" alt="imagen perfil"></a>
                             </div>
                             <div class="nombre-usuario"><p>Hola! <%= locals.userLogged.first_name %></p></div>
-                            <div><a href="/users/logout"><i class="fas fa-sign-out-alt"></i></a></div>
+                            <div class="logout"><a href="/users/logout"><i class="fas fa-sign-out-alt"></i></a></div>
                     </div>
                 <% } %>
 
@@ -50,20 +46,18 @@
                             <i class="fas fa-bars"></i>
                         </a>
                     </div>
-                </div>
-            </div>
+           </div>    
         </div>
     </div>
-
+    <!-- Barra de búsqueda -->
     <div class="main-div-search">
         <div class="div-search"> 
-            <form action="/search" method="POST" >   
+            <form action="/products/search" method="POST" >   
                 <div class="div-main-busqueda">
-                    <input class="input-busqueda" type="search" name="busqueda" placeholder="¿Qué estás buscando?" ></input>
+                    <input class="input-busquedasearch type="search" name="busqueda" placeholder="¿Qué estás buscando?" ></input>
                     <button type="submit" class="ilupa"><i class="fas fa-search"></i></button>
                 </div>
             </form>
         </div>
     </div>
-    
 </header>

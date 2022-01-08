@@ -25,6 +25,11 @@ router.post('/register', uploadFile.single('image_profile'), usersValidations, u
 //Formulario de login
 router.get('/login', guestMiddleware, usersControllers.login);
 
+// Editar usuarios
+router.get('/editUser/:id/', authMiddleware, usersControllers.editUser);
+router.put('/editUser/:id/', uploadFile.single('imageEdited1'), usersValidations, usersControllers.updateUser); 
+
+
 //Procesa la validacion delogin
 router.post('/login', loginValidations, usersControllers.loginProcess);
 
@@ -33,5 +38,8 @@ router.get('/profile', authMiddleware,  usersControllers.profile);
 
 //logout
 router.get('/logout', usersControllers.logout);
+
+/* Ruta eliminar usuario en forma lógica */
+router.delete('/delete/:id', usersControllers.delete); 
 
 module.exports=router;
