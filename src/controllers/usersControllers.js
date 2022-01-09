@@ -1,13 +1,9 @@
 const fs = require('fs');
 const { validationResult } = require('express-validator');
 const bcryptjs = require('bcryptjs');
-<<<<<<< HEAD
 const User = require('../models/User');
 const db = require('../database/models');
 
-=======
-const db = require('../database/models')
->>>>>>> c6750b9c4324395e439564ea35ea91276429628d
 
 
 const controller = {
@@ -16,11 +12,7 @@ const controller = {
         res.render('./users/register');
     },
 
-<<<<<<< HEAD
     ProcessRegister: async (req, res) =>{
-=======
-    ProcessRegister: (req, res) => {
->>>>>>> c6750b9c4324395e439564ea35ea91276429628d
         const resultValidation = validationResult(req);
 
         if (resultValidation.errors.length > 0) {
@@ -77,7 +69,6 @@ const controller = {
         const resultValidation = validationResult(req);
 
         if (resultValidation.errors.length > 0) {
-<<<<<<< HEAD
 			return res.render('./users/login', {
 				errors: resultValidation.mapped(),
 				oldData: req.body
@@ -154,18 +145,25 @@ const controller = {
     },
 
     profile: (req, res) => {
-        let user = db.User.findAll({
+        let users = db.User.findAll({
             where:{
                 deleted: 0
             }
         });
 
+        let user = db.User.findOne({
+            where:{
+                id: req.session.userLogged.id
+            }
+        });
+
         let rols = db.Rol.findAll();
 
-        Promise.all([user, rols])
-        .then(([user, rols]) => {
+        Promise.all([users, user, rols])
+        .then(([users, user, rols]) => {
             res.render('./users/profile', {
-                user: req.session.userLogged, 
+                users,
+                user,
                 rols, 
             })
         })
@@ -243,14 +241,44 @@ const controller = {
                 });
             }
         }
+    
+    let emptyPassword = false;
+        /* console.log(resultValidation.mapped()); */
 
-        let userPassword;
-
-        if(req.body.password != ""){
-            userPassword = bcryptjs.hashSync(req.body.password, 10);
-        }else{
-            userPassword = db.User.password;
+    if(resultValidation.mapped().password !== undefined){  
+        emptyPassword = true;
+        
+    }else{
+        console.log("hollaaaa")
+        console.log(resultValidation.errors.length)
+        if(resultValidation.errors.length > 0){
+           
+            let user = db.User.findOne({
+                where:{
+                    id: req.params.id
+                }
+            })
+            .then (user => {
+                return res.render('./users/editUser', {
+                    errors: resultValidation.mapped(),
+                    oldData: req.body,
+                    user
+                });
+            })
+            .catch(function(error){
+                console.log(error);
+            })
+            
         }
+    }
+
+    let userPassword;
+
+    if(emptyPassword == true){
+        userPassword = db.User.password;
+    }else{
+        userPassword = bcryptjs.hashSync(req.body.password, 10);
+    }
         
         db.User.update({
             first_name: req.body.first_name,
@@ -272,62 +300,6 @@ const controller = {
             console.log(error);
         }) 
 
-=======
-            return res.render('./users/login', {
-                errors: resultValidation.mapped(),
-                oldData: req.body
-            });
-        }
-
-        db.User.findOne(
-            {
-                where: { email: req.body.email }
-            }
-        )
-            .then((userToLogin) => {
-
-                if (userToLogin) {
-                    let isOkPassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
-                    if (isOkPassword) {
-                        delete userToLogin.password;
-                        req.session.userLogged = userToLogin;
-
-
-                        if (req.body.remember_user) {
-                            res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2 })
-                        }
-
-                        return res.redirect('/users/profile')
-                    }
-
-                    return res.render('./users/login', {
-                        errors: {
-                            email: {
-                                msg: 'Las credenciales son inválidas'
-                            }
-                        }
-                    })
-                }
-
-                return res.render('/users/login', {
-                    errors: {
-                        email: {
-                            msg: 'No se encuentra este email en nuestra base de datos'
-                        }
-                    }
-                })
-            }
-        )
-
-            .catch((error) => console.log(error))
-
-    },
-
-    profile: (req, res) => {
-        return res.render('./users/userEdit', {
-            user: req.session.userLogged
-        });
->>>>>>> c6750b9c4324395e439564ea35ea91276429628d
     },
 
     logout: (req, res) => {
@@ -336,7 +308,6 @@ const controller = {
         return res.redirect('/');
     },
 
-<<<<<<< HEAD
     delete: (req, res) => {
         let id = req.params.id
         db.User.findByPk(id)
@@ -356,49 +327,6 @@ const controller = {
            res.redirect("/");
         })
     },
-=======
-    edit: (req,res) => {
-       let user = db.User.findOne(
-            {
-                where: { id: req.params.id }
-            }
-        )
-        .then((user) => res.render('./users/userEdit', { user } ))
-
-    },
-
-    update: (req,res) => {
-        console.log('update')
-        console.log(req.body)
-         db.User.findOne(
-            {
-                where: { id: req.params.id }
-            }
-        )
-        .then((userToEdit) => {
-            
-            db.User.update(
-                {
-                    first_name: req.body.first_name,
-                    last_name: req.body.last_name,
-                    email: req.body.email,
-                    phone: req.body.phone,
-                    image_profile: req.file ? req.file.filename : 'imagen'/* userToEdit.image_profile */,
-                },
-                {
-                    where: {id: req.params.id}
-                })
-            .then(()=> {
-                return res.redirect('/users/profile')})            
-            .catch(error => res.send(error))
-
-        })
-
-    }
-
-
-
->>>>>>> c6750b9c4324395e439564ea35ea91276429628d
 }
 
 module.exports = controller;
