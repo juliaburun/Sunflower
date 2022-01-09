@@ -168,5 +168,95 @@
   "password": "$2a$10$sLaruLeJCTpdV1IQtzMs.e4IY.DqK5/FWg.avFxNHyFc.LB6Ep71e",
   "user_type": 2,
   "image_profile": "userImg1637975090982.webp"
+ },
+ {
+  "cod_user": 19,
+  "first_name": "juliass",
+  "last_name": "burs",
+  "email": "y@mail.com",
+  "phone": "2",
+  "password": "$2a$10$cDPmNTBT.SMJA/ED3hn.Me8MDpNVffKaAz59lEJ.Gp2MCuBs5v36O",
+  "user_type": 2,
+  "image_profile": "userImg1639143841561.png"
+ },
+ {
+  "cod_user": 20,
+  "first_name": "d",
+  "last_name": "d",
+  "email": "d@mail.com",
+  "phone": "2",
+  "password": "$2a$10$dDFGQfERDquLXqrkQ03YmetjDjnR3BbEnepUY20EYSpmC.d3euPhW",
+  "user_type": 2,
+  "image_profile": "user.jpg"
+ },
+ {
+  "cod_user": 21,
+  "first_name": "j",
+  "last_name": "b",
+  "email": "q@mail.com",
+  "phone": "23",
+  "password": "$2a$10$ghDd0njX0LmYztv1KXoNbOyNyM595Hi1qcso9FxjRiAg2Hqc98aSK",
+  "user_type": 2,
+  "image_profile": "user.jpg"
+ },
+ {
+  "cod_user": 22,
+  "first_name": "julas",
+  "last_name": "b",
+  "email": "w@mail.com",
+  "phone": "4",
+  "password": "$2a$10$ZdXMuHgJ6jcgHtlrwrxxXezn0Awj9VivRRLIFT9VviJPwZAj4AxLm",
+  "user_type": 2,
+  "image_profile": "user.jpg"
+ },
+ {
+  "cod_user": 23,
+  "first_name": "juser",
+  "last_name": "b",
+  "email": "p@mail.com",
+  "phone": "5",
+  "password": "$2a$10$qH4ZvPmpKlbYcjqeX25K/.YwneifspSw3P7GSPgJ54yhDhGcxWn3S",
+  "user_type": 2,
+  "image_profile": "user.jpg"
+ },
+ {
+  "cod_user": 24,
+  "first_name": "juser",
+  "last_name": "b",
+  "email": "hola@mail.com",
+  "phone": "5",
+  "password": "$2a$10$4/fT6lRUt.HPn9dQrLGSAOUP72.e/LEJfI8cFqMd9PGpNOe/93RGa",
+  "user_type": 2,
+  "image_profile": "user.jpg"
+ },
+ {
+  "cod_user": 25,
+  "first_name": "cosme",
+  "last_name": "fulanito",
+  "email": "cosme@mail.com",
+  "phone": "2",
+  "password": "$2a$10$ffx5vDnkV4GztSfKdiBtpOCZxWb0y0qbnCcW4j4WMANPcwVjY6VPy",
+  "user_type": 2,
+  "image_profile": "user.jpg"
+ },
+ {
+  "cod_user": 26,
+  "first_name": "de",
+  "last_name": "de",
+  "email": "de@mail.com",
+  "phone": "2",
+  "password": "$2a$10$QtXYqXGoozQoHeMrMSsWXOVYChc5kpm75hxr8MvMeecGUvIfDrSNe",
+  "user_type": 2,
+  "image_profile": "user.jpg"
+ },
+ {
+  "cod_user": 27,
+  "first_name": "dee",
+  "last_name": "dee",
+  "email": "jettwu@mail.com",
+  "phone": "3",
+  "password": "$2a$10$xfUrDiXkbVCip9dJB5I7w.FNL6p7Hwv/lk/eS6BdC79113jy4v0Pi",
+  "user_type": 2,
+  "image_profile": "user.jpg"
  }
 ]

@@ -106,18 +106,17 @@ main {
 }
 
 
-.productos-destacados{
+/* .productos-destacados{
     text-align: center;
     font-size: 27px;
-}
+} */
 
 
 .producto-destacado {
-    width: 43%;
-    height: 320px;
+    width: 40%; 
     margin: auto;
     margin-bottom: 30px;
-    box-shadow: 0.5px 0.5px 4px 1px var(--rosa);
+    box-shadow: 0.5px 0.5px 4px 1px #edafa4;
 }
 
 .articulo-pie p {
@@ -178,12 +177,28 @@ main {
     font-size: 10px;
 }
 
+.container-button {
+    width: 110px;
+    padding: 10px;
+    margin: auto;
+}
+
+.boton-carrito{
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 12px;
+    background: #edafa4;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+
 
 @media (min-width:481px) {
     
     .producto-destacado {
         width: 30%;
-        height: 360px;
+        height: 420px;
     }
 
     .dos-articulos {
@@ -227,7 +242,7 @@ main {
 
     .producto-destacado {
         width: 22%;
-        height: 420px;
+        height: 470px;
     }
 
     .div-img{

@@ -196,6 +196,24 @@ form label{
     font-size:40px;
   }
 
+  .sizeProduct{
+    display: flex;
+    align-items: center;
+
+  }
+  .sizeProduct input{
+      width: 20px;
+      margin: 0;
+      margin-right: 10px;
+
+  }
+
+  .sizeProduct label {
+    font-size: 14px;
+    text-align: center;
+}
+
+
 /*BOTON GUARDAR PRODUCTO*/
 .cajaAgregar{
     width: 50px;
@@ -242,6 +260,10 @@ p#texto{
     }
     hr{
         width: 17%;
+    }
+
+    .cajaCapacity{
+        display: flex;
     }
 }
 @media (min-width:769px){

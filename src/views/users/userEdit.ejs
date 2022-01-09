@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--==========================
+            HEAD
+============================-->
+  <%-include('../partials/head', {title:"Users", style:"styles-users"}) %>
+
+  <!--==========================
+            BODY
+============================-->
+  <body>
+    <!-----HEADER------>
+    <%- include('../partials/header') %>
+
+    <!--==========================
+       BORDE ENTRE HEADER Y MAIN
+    ============================-->
+
+    <div class="space-between-header-main"></div>
+
+    <!--############################# LINEA DIVISORA ENTRE EL ENCABEZADO Y EL CUERPO ##############################-->
+
+    <main>
+      <h2>Mis datos</h2>
+      <!--LINEA INFERIOR MIS DATOS-->
+      <hr color="#edafa4" />
+      <section>
+        <div class="cajaPrincipal">
+          <form
+            action="/users/edit/<%= user.id%>?_method=PUT"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            <p class="datosCta">Datos de la cuenta</p>
+            <p class="avatar">Avatar</p>
+            <!--BOTON IMAGEN-->
+            <div class="formulImg">
+              <div class="grid">
+                <div class="form-element">
+                  <input
+                    type="file"
+                    id="file-1"
+                    accept="image/*"
+                    value=""
+                    name="imageEdited1"
+                  />
+                  <label for="file-1" id="file-1-preview">
+                    <img src="/img/users/<%= user.image_profile%>" alt="" />
+                    <div></div>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="cajaMail">
+              <label for="email" class="labelMail">Email</label>
+              <!--Cambiar a etiqueta p, que no sea input-->
+              <input
+                type="text"
+                id="email"
+                name="email"
+                class="form-cajaMail"
+                value="<%= user.email%>"
+              />
+            </div>
+            <p class="datosPerso">Datos personales</p>
+            <div class="cajaNombre">
+              <label for="name" class="labelNombre">Nombre</label>
+              <input
+                type="text"
+                id="name"
+                name="first_name"
+                class="form-cajaNombre"
+                value="<%= user.first_name%>"
+              />
+            </div>
+            <div class="cajaApellido">
+              <label for="last-name" class="labelApellido">Apellido</label>
+              <input
+                type="text"
+                id="last-name"
+                name="last_name"
+                class="form-cajaApellido"
+                value="<%= user.last_name%>"
+              />
+            </div>
+            <div class="cajaTelefono">
+              <label for="phone" class="labelTelefono">Teléfono</label>
+              <input
+                type="text"
+                id="phone"
+                name="phone"
+                class="form-cajaTelefono"
+                value="<%= user.phone%>"
+              />
+            </div>
+            <!--BOTON-->
+            <div class="cajaGuardar">
+      
+              <button type="submit" class="botonGuardar"> Guardar cambios</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      function previewBeforeUpload(id) {
+        document
+          .querySelector("#" + id)
+          .addEventListener("change", function (e) {
+            if (e.target.files.length == 0) {
+              return;
+            }
+            let file = e.target.files[0];
+            let url = URL.createObjectURL(file);
+            document.querySelector("#" + id + "-preview div").innerText =
+              file.name;
+            document.querySelector("#" + id + "-preview img").src = url;
+          });
+      }
+
+      previewBeforeUpload("file-1");
+
+      function confirmar() {
+        let respuesta = confirm("Esta seguro que desea guardar los cambios?");
+        if (respuesta == true) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+    </script>
+
+    <!-- FOOTER -->
+    <%- include('../partials/footer') %>
+  </body>
+</html>
