@@ -130,28 +130,18 @@ const productsControllers={
             {
                 include:['categoria', 'tamaños']
             });
-<<<<<<< HEAD
 
         Promise.all([promCategory, promSize, promProduct])
         .then(([categorys, size, product]) => {
             res.render('./products/productEdit.ejs', {categorys, size, product})
             console.log (product)
-=======
-        Promise.all([promCategory, promSize, promProduct])
-        .then(([categorys, size, product]) => {
-            res.render('./products/productEdit.ejs', {categorys, size, product})
->>>>>>> c6750b9c4324395e439564ea35ea91276429628d
             /* res.send({categorys, size, product}) */
         })
     },
 
     update: (req, res) => {
-<<<<<<< HEAD
-        console.log(req.body)
+       /*  console.log(req.body) */
         db.Product.update({
-=======
-      db.Product.update({
->>>>>>> c6750b9c4324395e439564ea35ea91276429628d
             name: req.body.name,
             description: req.body.description,
             price: req.body.price,
