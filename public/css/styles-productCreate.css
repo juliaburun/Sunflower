@@ -18,8 +18,8 @@ BARRA ENTRE EL HEADER Y EL MAIN
 
 /*############################### LINEA DIVISORA ENTRE EL ENCABEZADO Y EL CUERPO  #########################*/
 main{
-    margin-top: 100px;
-    padding-top: 100px;
+    margin-top: 60px;
+    padding-top: 60px;
     padding-bottom: 30px;
 }
 /*ETIQUETA H2 TEXTO CREAR PRODUCTO*/
@@ -75,14 +75,7 @@ form{
     flex-direction: column;
     width: 200px;
 }
-/*CONTENEDOR SUBCATEGORIA*/
-/*
-.cajaSubcategory{
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-}
-*/
+
 /*ETIQUETA SELECT CATEGORIA Y SUBCATEGORIA*/
 .cajaPrincipal select{
     font-size: 14px;
@@ -98,8 +91,10 @@ form{
 /*CONTENEDOR CAPACIDAD*/
 .cajaCapacity{
     display: flex;
-    flex-direction: column;
+    flex-direction:row;
+    align-items: center;
     width: 200px;
+    margin-right: 10px;
 }
 
 /*CONTENEDOR PRECIO*/
@@ -138,6 +133,7 @@ form{
     display: flex;
     flex-direction: column;
     width: 97%;
+    margin-top: 20px;
 }
 /*ETIQUETA TEXTAREA DESCRIPCION DEL PRODUCTO*/
 .cajaDescription textarea{
@@ -196,23 +192,24 @@ form label{
     font-size:40px;
   }
 
-  .sizeProduct{
-    display: flex;
-    align-items: center;
-
-  }
   .sizeProduct input{
-      width: 20px;
-      margin: 0;
+      width: 25px;
+      margin: 2px;
       margin-right: 10px;
 
   }
 
   .sizeProduct label {
     font-size: 14px;
-    text-align: center;
-}
+    padding-right: 30px;
+    margin-left: 5px;
 
+
+}
+.capasidadProd{
+    padding-right: 10px;
+    margin-bottom: auto;
+}
 
 /*BOTON GUARDAR PRODUCTO*/
 .cajaAgregar{
@@ -250,13 +247,28 @@ p#texto{
     transition: all 1s
 }
 
+        /*ESTILOS PARA VALIDACIONES*/
+.is-valid {
+  color: #198754;
+}
+
+.is-invalid {
+  color: #be0010;
+}
+
+.warning{
+  color:#842029;
+  background-color: #F8D7DA;
+  text-align: center;
+  border-radius: 10px;
+}
 
 /*============================== MEDIA QUERIES ===============================*/
 
 @media (min-width:481px){
 
     main{
-        padding-top: 140px;
+        padding-top: 100px;
     }
     hr{
         width: 17%;
@@ -269,7 +281,7 @@ p#texto{
 @media (min-width:769px){
 
     main{
-        padding-top: 140px;
+        padding-top: 90px;
     }
     hr{
         width: 13%;
