@@ -127,6 +127,11 @@
           </div>
         </div>
     </div>
+    <% if (locals.errors && errors.image_profile) { %>
+        <div class="msgError">
+            <%= errors.image_profile.msg %> 
+        </div>
+    <% } %>
 
                 <div class="caja-botonenviar">
                     <input type="submit" value="Enviar" class="boton-enviar">
