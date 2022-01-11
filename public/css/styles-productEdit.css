@@ -260,6 +260,25 @@ p#texto2{
     transition: all 1s
 }
 
+/*ESTILOS PARA VALIDACIONES*/
+.is-valid {
+    color: #198754;
+  }
+  
+  .is-invalid {
+    color: #be0010;
+  }
+  
+  .warning{
+    color:#842029;
+    background-color: #F8D7DA;
+    text-align: center;
+    border-radius: 5px;
+    width: 70%;
+    margin: auto;
+    font-weight: 600;
+  }
+
 
 /*============================== MEDIA QUERIES ===============================*/
 
