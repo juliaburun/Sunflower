@@ -28,7 +28,7 @@ router.post('/create',uploadFile.single('image1'), productCreateValidattor, prod
 
 /* Ruta modificar el producto */
 router.get('/edit/:id', productsControllers.edit);
-router.put('/edit/:id', uploadFile.single('imageEdited1'), productsControllers.update); 
+router.put('/edit/:id', uploadFile.single('imageEdited1'), productCreateValidattor, productsControllers.update); 
 
 /* Ruta eliminar el producto */
 router.delete('/delete/:id', productsControllers.delete); 

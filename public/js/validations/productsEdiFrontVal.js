@@ -5,21 +5,21 @@ window.onload = function(){
     */
  
  //INICIO DE VALIDACIONES
-     let form = document.querySelector('#formLabel');
-     form.name.focus();
+    let form = document.querySelector('#formLabel');
+    form.name.focus();
  
-     form.addEventListener('submit', function (e){
-         let errors =[];
- 
+    form.addEventListener('submit', function (e){
+        let errors =[];
+        
          //SELECCIONAMOS LOS ELEMENTOS
-     let nombre = document.querySelector('#name');
-     let categoria = document.querySelector('#category');
-     let precio = document.querySelector('#price');
-     let descuento = document.querySelector('#discount');
-     let capacidad = document.querySelector('.capacity');
-     let descripcion = document.querySelector('#description');
-     let imagenUno = document.querySelector('#file-1');
- 
+        let nombre = document.querySelector('#name');
+        let categoria = document.querySelector('#category');
+        let precio = document.querySelector('#price');
+        let descuento = document.querySelector('#discount');
+        let capacidad = document.querySelector('.capacity');
+        let descripcion = document.querySelector('#description');
+        let imagenUno = document.querySelector('#file-1');
+    
          //NOMBRE DEL PRODUCTO
          if (nombre.value == '') {
              errors.push('El nombre del producto no puede estar vacio');

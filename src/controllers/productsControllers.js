@@ -104,6 +104,7 @@ const productsControllers={
                     }
                 }
             }
+            /* console.log(req.body) */
             return res.render('./products/productCreate', {
                 category: await db.Category.findAll()
                 .then(category => {
@@ -160,15 +161,49 @@ const productsControllers={
             });
 
         Promise.all([promCategory, promSize, promProduct])
-        .then(([categorys, size, product]) => {
-            res.render('./products/productEdit.ejs', {categorys, size, product})
-            console.log (product)
+        .then(([categories, size, product]) => {
+            res.render('./products/productEdit.ejs', {categories, size, product})
+            /* console.log (product) */
             /* res.send({categorys, size, product}) */
         })
     },
 
-    update: (req, res) => {
+    update: async (req, res) => {
        /*  console.log(req.body) */
+       const resultValidation = validationResult(req);
+        console.log(resultValidation)
+       if (resultValidation.errors.length > 0) {
+            if (req.file) {
+                if (req.file.filename) {
+                    if (req.file.filename != 'planta.jpg') {
+                        fs.unlinkSync(path.join(__dirname, '../../public/img/products/' + req.file.filename))
+                    }
+                }
+            }
+            return res.render('./products/productEdit', {
+                product: await db.Product.findByPk(req.params.id, 
+                    {
+                        include:['categoria', 'tamaños']
+                    })
+                .then(product => {
+                    data = JSON.parse(JSON.stringify(product));
+                    return data;
+                }),
+                categories: await db.Category.findAll()
+                .then(category => {
+                    data = JSON.parse(JSON.stringify(category));
+                    return data;
+                }),
+                size: await db.Size.findAll()
+                .then(size => {
+                    data = JSON.parse(JSON.stringify(size));
+                    return data;
+                }),
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            });
+        }
+
         db.Product.update({
             name: req.body.name,
             description: req.body.description,

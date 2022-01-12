@@ -58,7 +58,9 @@
 
                   <% for( let i = 0; i < category.length; i++ ) { %>
                     <% if (locals.oldData) { %>
-                        <option value=" <%= category[i].id%>" > 
+                        <option value=" <%= category[i].id%>" 
+                          <%= category[i].id == oldData.category ? 'selected' : null %>
+                          > 
                           <%= category[i].name%> 
                         </option>
                       <% }else{ %>
@@ -113,11 +115,23 @@
              <div class="cajaCapacity">
               <label for="size" class="capasidadProd">Maceta:</label>
               <% for (let i=0; i < size.length; i++) { %> 
-                <div class="sizeProduct">
-                    <input type="checkbox" name="sizeProduct" id="<%= size[i].name %>" value="<%= size[i].id %>" class='capacity'>   
-                    <label for="<%= size[i].name %>"><%= size[i].name %></label>
-                </div>   
+                
+                  <div class="sizeProduct">
+                      <input type="checkbox" 
+                        name="sizeProduct" 
+                        id="<%= size[i].name %>" 
+                        class="capacity"
+                        value="<%= size[i].id %>" 
+                        <% if (locals.oldData) { %> 
+                          <% for (let j = 0; j < oldData.sizeProduct.length; j++) { %>
+                            <%=  size[i].id == oldData.sizeProduct[j] ? 'checked' : null %>                      }
+                          <% } %>
+                        <% } %> 
+                        >   
+                      <label for="<%= size[i].name %>"><%= size[i].name %></label>
+                  </div>   
                 <% } %> 
+              
                 <% if (locals.errors && errors.sizeProduct) { %>
                   <div class="msgError">
                       <%= errors.sizeProduct.msg %> 

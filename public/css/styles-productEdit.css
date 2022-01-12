@@ -269,7 +269,7 @@ p#texto2{
     color: #be0010;
   }
   
-  .warning{
+.warning{
     color:#842029;
     background-color: #F8D7DA;
     text-align: center;
@@ -277,7 +277,13 @@ p#texto2{
     width: 70%;
     margin: auto;
     font-weight: 600;
-  }
+}
+
+.msgError{
+    color: red;
+    font-weight: 600;
+    font-size: 12px;
+}
 
 
 /*============================== MEDIA QUERIES ===============================*/
@@ -289,6 +295,10 @@ p#texto2{
     }
     hr{
         width: 17%;
+    }
+
+    .cajaCapacity{
+        display: flex;
     }
 }
 @media (min-width:769px){

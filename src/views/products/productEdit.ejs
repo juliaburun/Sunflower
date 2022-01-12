@@ -5,6 +5,7 @@
             HEAD
 ============================-->
 <%-include('../partials/head', {title:"products", style:"styles-productEdit"}) %>
+<script src='/js/validations/productsEdiFrontVal.js'></script>
 
 <!--==========================
             BODY
@@ -24,8 +25,8 @@
 
 
 <main>
-<section>
-  <ul class='errores'></ul>
+  <section>
+    <ul class='errores'></ul>
 <!--CONTENEDOR DE TODO EL FORMULARIO-->
   <div class="cajaPrincipal">
     <h2>EDITAR PRODUCTO</h2>
@@ -33,7 +34,7 @@
     <hr color="#edafa4">
     <form action="/products/edit/<%= product.id%>?_method=PUT" method="Post" enctype="multipart/form-data" id='formLabel'>
         <div class="p-editproduct">
-        <p>EDITANDO EL PRODUCTO: <%= product.name%></p>
+          <p>EDITANDO EL PRODUCTO: <%= product.name%></p>
         </div>
           <!--CONTENEDOR DE FORMULARIOS SIN CARGAR IMAGENES NI BOTON-->
           <div class="forlularios">
@@ -41,13 +42,18 @@
               <div class="cajaName">
                   <label for="name" class="nombreProd">Nombre del producto:</label>
                   <input type="text" id="name" name="name" class="form-cajaName" value="<%= product.name%>">
+                  <% if (locals.errors && errors.name) { %>
+                    <div class="msgError">
+                        <%= errors.name.msg %> 
+                    </div>
+                  <% } %>  
               </div>
               <!--CONTENEDOR CATEGORIA-->
               <div class="cajaCategory">
                   <label for="category" class="categoriaProd">Categoría:</label>
                   <select name="category" id="category" class="form-cajaCategory" value="">
                       <option value="">Elegí</option>
-                      <% categorys.forEach(category => { %>
+                      <% categories.forEach(category => { %>
                           <% if (category.id == product.category_id){ %>
                                 <option value= <%= category.id %> selected > <%= category.name%> </option>
                           <% }else{ %>
@@ -55,40 +61,71 @@
                          <% } %>
                       <% }); %>
                   </select>
+                  <% if (locals.errors && errors.category) { %>
+                    <div class="msgError">
+                        <%= errors.category.msg %> 
+                    </div>
+                  <% } %>  
               </div> 
-              <!--CONTENEDOR CAPACIDAD-->
-              <div class="cajaCapacity">
-                <label for="size" class="capasidadProd">Maceta:</label>
-                <select name="size" id="size" class="form-cajaSection">
-                  <option value="">Elegí</option>
-                  <% for (let j=0; j< product.tamaños.length; j++) { %>
-                    <% for (let i = 0; i < size.length; i++) { %>
-                        <% if (size[i].id == product.tamaños[j].id){ %>
-                          <option value= <%= product.tamaños[j].id %> selected > <%= product.tamaños[j].name%> </option>
-                        <% }else{ %>
-                          <option value= <%= size[i].id %>> <%= size[i].name%>  </option>
-                        <% } %>
-                      <% } %>
-                  <% }%>
-                </select>
-              </div>
               <!--CONTENEDOR PRECIO-->
               <div class="cajaPrice">
-                  <label for="price" class="precioProd">Precio del producto $:</label>
-                  <input type="number" id="price" name="price" class="form-cajaPrice" value="<%= product.price%>">
+                <label for="price" class="precioProd">Precio del producto $:</label>
+                <input type="number" id="price" name="price" class="form-cajaPrice" value="<%= product.price%>">
+                <% if (locals.errors && errors.price) { %>
+                  <div class="msgError">
+                      <%= errors.price.msg %> 
+                  </div>
+                <% } %> 
               </div>
-              <!--CONTENEDOR DESCUENTO-->
+            <!--CONTENEDOR DESCUENTO-->
               <div class="cajaDiscount">
                 <label for="discount" class="descuProd">Descuento %:</label>
-                <input type="number" name="discount" class="form-cajaName" value="<%= product.discount%>">
+                <input type="number" name="discount" id="discount" class="form-cajaName" value="<%= product.discount%>">
+                <% if (locals.errors && errors.discount) { %>
+                  <div class="msgError">
+                      <%= errors.discount.msg %> 
+                  </div>
+                <% } %> 
               </div>
+              <!--CONTENEDOR CAPACIDAD-->
+              <div class="cajaCapacity">
+                <label for="size" class="capacidadProd">Maceta:</label>
+                <% for (let j=0; j< product.tamaños.length; j++) { %>
+                  <% for (let i = 0; i < size.length; i++) { %>
+                    <div class="sizeProduct">
+                        <input type="checkbox" 
+                          name="sizeProduct" 
+                          id="<%= product.tamaños[j].id %>" 
+                          class="capacity"
+                          value="<%= product.tamaños[j].name %>" 
+                          <%= size[i].id == product.tamaños[j].id ? 'checked' : null %>    
+                    >
+                  <label for="<%= size[i].name %>"><%= size[i].name %></label>
+                  <% } %>
+                <% } %> 
+                  </div>
+                    
+              
+                <% if (locals.errors && errors.sizeProduct) { %>
+                  <div class="msgError">
+                      <%= errors.sizeProduct.msg %> 
+                  </div>
+              <% } %>
+                  
+              </div>
+              
               
               <!--CONTENEDOR DESCRIPCION DEL PRODUCTO-->
               <div class="cajaDescription">
                   <label for="description" class="descripcionProd">Descripción del producto:</label>
                   <textarea name="description" id="description" class="area-cajaDescription" value=""><%= product.description%></textarea>
+                <% if (locals.errors && errors.description) { %>
+                    <div class="msgError">
+                        <%= errors.description.msg %> 
+                    </div>
+                <% } %>
               </div>
-          </div>
+          
           <!--BOTON AGREGAR IMAGEN-->
           <div class="formulImg">
             <h2>Vista previa</h2>
@@ -102,6 +139,11 @@
                   </div>
                 </label>
               </div>
+              <% if (locals.errors && errors.image1) { %>
+                <div class="msgError">
+                    <%= errors.image1.msg %> 
+                </div>
+            <% } %>
               <div class="form-element">
                 <input type="file" id="file-2" accept="image/*">
                 <label for="file-2" id="file-2-preview">
@@ -123,9 +165,10 @@
             <p id="texto2">Cancelar</p>
             <button type="submit" class="botonCancelar"></button>
           </div>
+          </div>
     </form>
   </div>
-</section>
+  </section>
 </main>
 <!--SECCION JS-->
 <script>
@@ -159,7 +202,6 @@ previewBeforeUpload("file-2");
       <!-- FOOTER -->
 <%- include('../partials/footer') %>
 
-<script src='/js/validations/productsEdiFrontVal.js'></script>
 
 </body>
 </html>
