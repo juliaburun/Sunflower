@@ -2,6 +2,8 @@ const fs = require('fs');
 const path = require ('path');
 const db = require('../database/models');
 const sequelize = db.sequelize;
+const { validationResult } = require('express-validator');
+
 
 //convertir los datos del JSON a objeto literal
 /* const productsFilePath = path.join(__dirname, '../data/products.json');
@@ -91,17 +93,43 @@ const productsControllers={
         .catch((error) => res.send(error));
     },
 
-    store: function async (req, res) {
-       db.Product.create({
-            name: req.body.name,
-            description: req.body.description,
-            price: req.body.price,
-            discount: req.body.discount,
-            image: req.file ? req.file.filename : "planta.jpg",
-            category_id: req.body.category,
-            deleted: 0,
-            date_sale: '2022-02-14'
-        })
+    store: async function (req, res) {
+        const resultValidation = validationResult(req);
+
+        if (resultValidation.errors.length > 0) {
+            if (req.file) {
+                if (req.file.filename) {
+                    if (req.file.filename != 'planta.jpg') {
+                        fs.unlinkSync(path.join(__dirname, '../../public/img/products/' + req.file.filename))
+                    }
+                }
+            }
+            return res.render('./products/productCreate', {
+                category: await db.Category.findAll()
+                .then(category => {
+                    data = JSON.parse(JSON.stringify(category));
+                    return data;
+                }),
+                size: await db.Size.findAll()
+                .then(size => {
+                    data = JSON.parse(JSON.stringify(size));
+                    return data;
+                }),
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            });
+        }
+
+        db.Product.create({
+                name: req.body.name,
+                description: req.body.description,
+                price: req.body.price,
+                discount: req.body.discount,
+                image: req.file ? req.file.filename : "planta.jpg",
+                category_id: req.body.category,
+                deleted: 0,
+                date_sale: '2022-02-14'
+            })
 
         .then (function(newProduct){
            let size_product= req.body.sizeProduct.map(function (idSize){

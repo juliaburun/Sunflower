@@ -263,6 +263,12 @@ p#texto{
   border-radius: 10px;
 }
 
+.msgError{
+    color: red;
+    font-weight: 600;
+    font-size: 12px;
+}
+
 /*============================== MEDIA QUERIES ===============================*/
 
 @media (min-width:481px){

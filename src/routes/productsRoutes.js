@@ -6,43 +6,29 @@ const categoryControllers=require('../controllers/categoryControllers');
 
 const multer = require('multer');
 
+/* ********************* Middlewares  ********************** */
+var productCreateValidattor = require ('../middlewares/productCreateValidattor');
+var uploadFile = require ('../middlewares/multerProducts');
 
 
 // ************ router() ************
 const router=express.Router();
 
-// ************ Multer ************
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        
-        cb (null, './public/img/products');
-    },
-
-    filename: (req, file, cb) =>{
-        const newFileImg ='productImg'+Date.now()+path.extname(file.originalname);
-        cb(null, newFileImg);
-    }
-});
-
-const upload = multer ({storage});
 
 // ************ Rutas ************
-
 /* Ruta listado de Productos */
 router.get('/', productsControllers.index);
-
-
 
 /* Ruta detalle del Producto */
 router.get('/detail/:id', productsControllers.detail);
 
 /* Ruta crear el producto */
 router.get('/create', productsControllers.create);
-router.post('/create', upload.single('image1'),productsControllers.store)
+router.post('/create',uploadFile.single('image1'), productCreateValidattor, productsControllers.store)
 
 /* Ruta modificar el producto */
 router.get('/edit/:id', productsControllers.edit);
-router.put('/edit/:id', upload.single('imageEdited1'), productsControllers.update); 
+router.put('/edit/:id', uploadFile.single('imageEdited1'), productsControllers.update); 
 
 /* Ruta eliminar el producto */
 router.delete('/delete/:id', productsControllers.delete); 

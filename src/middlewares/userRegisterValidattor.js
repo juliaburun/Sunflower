@@ -25,6 +25,7 @@ const validationRegister = [
         if (file){
             let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
             let fileExtensions = path.extname(file.originalname);
+            
             if(!acceptedExtensions.includes(fileExtensions)){
                 throw new Error (`Las extensiones de archivos permitidas son ${acceptedExtensions.join(', ')}`);
             }
