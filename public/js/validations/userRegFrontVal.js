@@ -24,7 +24,7 @@ window.onload = function(){
  
          //NOMBRE DEL USUARIO
          if (nombre.value == '') {
-             errors.push('Debes ingresa un nombre');
+             errors.push('Debes ingresar un nombre');
              nombre.classList.add('is-invalid');
          }else{
             nombre.classList.add('is-valid');
@@ -33,7 +33,7 @@ window.onload = function(){
 
          //APELLIDO DEL USUARIO
          if (apellido.value == '') {
-            errors.push('Debes ingresa un apellido');
+            errors.push('Debes ingresar un apellido');
             apellido.classList.add('is-invalid');
         }else{
             apellido.classList.add('is-valid');
@@ -42,7 +42,7 @@ window.onload = function(){
 
          //CORREO DEL USUARIO
          if (correo.value == '') {
-            errors.push('Debes ingresa un email');
+            errors.push('Debes ingresar un email');
             correo.classList.add('is-invalid');
         }else{
             correo.classList.add('is-valid');
@@ -51,7 +51,7 @@ window.onload = function(){
 
          //TELEFONO DEL USUARIO
          if (telefono.value == '') {
-            errors.push('Debes ingresa un telefono');
+            errors.push('Debes ingresar un telefono');
             telefono.classList.add('is-invalid');
         }else{
             telefono.classList.add('is-valid');
@@ -59,6 +59,9 @@ window.onload = function(){
         };
 
          //CONTRASEÑA DEL USUARIO
+        /* if(contrasena1.length < 8){
+            errors.push('La contraseña debe tener por lo menos 8 caracteres');
+         }*/
          if (contrasena1.value == '') {
              errors.push('Debes ingresar una contraseña');
              contrasena1.classList.add('is-invalid');//FALTA AGREGAR MAS SEGURIDAD DE CARACTERES

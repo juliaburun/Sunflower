@@ -1,0 +1,19 @@
+.ContainerMayor{
+    position: relative;
+    text-align: center;
+    color: rgb(196, 115, 115);
+}
+
+.centered {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4em;
+  }
+
+  .top-left {
+    position: absolute;
+    top: -40px;
+    left: -16px;
+  }

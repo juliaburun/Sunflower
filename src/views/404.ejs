@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--==========================
+            HEAD
+============================-->
+    <%-include('./partials/head', {title:"404", style:"404"}) %>
+
+  <!--==========================
+            BODY
+============================-->
+  <body>
+    <!-----HEADER------>
+    <%- include('./partials/header') %>
+
+    <!--==========================
+       BORDE ENTRE HEADER Y MAIN
+    ============================-->
+
+    <div class="space-between-header-main"></div>
+
+    <!--############################# LINEA DIVISORA ENTRE EL ENCABEZADO Y EL CUERPO ##############################-->
+
+    <main>
+        <div class="ContainerMayor">
+            <img src="/img/plantsVsZombies.jpg">
+            <p class="centered">404</p>
+            <p class="frase404">¡Lo sentimos! No hemos encontrado la página que estás buscando.</p>
+
+        </div>
+
+    </main>
+
+      <!--FOOTER-->
+    <%- include('./partials/footer') %>
+  </body>
+</html>

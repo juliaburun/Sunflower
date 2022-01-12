@@ -28,7 +28,6 @@ const controller = {
             }
         )
             .then((userInDb) => {
-                console.log(userInDb)
                 if (userInDb.length > 0) {
                     return res.render('./users/register', {
                         errors: {
@@ -249,7 +248,6 @@ const controller = {
         emptyPassword = true;
         
     }else{
-        console.log("hollaaaa")
         console.log(resultValidation.errors.length)
         if(resultValidation.errors.length > 0){
            
