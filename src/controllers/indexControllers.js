@@ -28,6 +28,10 @@ const indexControllers={
 
     about: (req, res) => {
         res.render('about');
+    },
+
+    errorView: (req, res) => {
+        res.render('404')
     }
 
 }

@@ -18,7 +18,7 @@ window.onload = function(){
  
          //NOMBRE DEL USUARIO
          if (mailUsuario.value == '') {
-             errors.push('Debes ingresa un usuario');
+             errors.push('Debes ingresar un usuario');
              mailUsuario.classList.add('is-invalid');
          }else{
             mailUsuario.classList.add('is-valid');
