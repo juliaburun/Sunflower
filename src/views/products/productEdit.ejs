@@ -25,12 +25,13 @@
 
 <main>
 <section>
+  <ul class='errores'></ul>
 <!--CONTENEDOR DE TODO EL FORMULARIO-->
   <div class="cajaPrincipal">
     <h2>EDITAR PRODUCTO</h2>
     <!--LINEA BAJO EL TEXTO-->
     <hr color="#edafa4">
-    <form action="/products/edit/<%= product.id%>?_method=PUT" method="Post" enctype="multipart/form-data">
+    <form action="/products/edit/<%= product.id%>?_method=PUT" method="Post" enctype="multipart/form-data" id='formLabel'>
         <div class="p-editproduct">
         <p>EDITANDO EL PRODUCTO: <%= product.name%></p>
         </div>
@@ -144,18 +145,21 @@
 previewBeforeUpload("file-1");
 previewBeforeUpload("file-2");
 
-
-function confirmDelete(){
+//ESTO SE COMENTO PARA PROBAR SI ERA EL ERROR DE VALIDACION FRONT
+/* function confirmDelete(){
     let respuesta = confirm("Esta seguro que desea guardar los cambios?");
     if (respuesta == true){
         return true;
     }else{
         return false;
     }
-}
+} */
 </script>
 
       <!-- FOOTER -->
 <%- include('../partials/footer') %>
+
+<script src='/js/validations/productsEdiFrontVal.js'></script>
+
 </body>
 </html>
