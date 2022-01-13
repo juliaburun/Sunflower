@@ -48,6 +48,12 @@ const { exists } = require('fs');
 const publicPath = path.resolve(__dirname, '../public');
 app.use(express.static(publicPath));
 
+/* ********* Página de Error************* */
+app.use ( (req, res, next) => {
+    res.status(404).render('404');
+})
+
+
 // ***********links Pages************************
 // index
 app.use('/', indexRoutes);
@@ -58,10 +64,6 @@ app.use('/cart', cartRoutes);
 // login
 app.use('/users', usersRoutes);
 
-/* ********* Página de Error************* */
-app.use ( (req, res, next) => {
-    res.status(404).render('404');
-})
 
 // ************ Set the server to listen ************
 app.listen(3000, () => {
