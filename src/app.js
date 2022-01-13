@@ -44,8 +44,6 @@ const cartRoutes=require('./routes/cartRoutes');
 const usersRoutes=require('./routes/usersRoutes');
 const { exists } = require('fs');
 
-
-
 //Colocamos la carpeta pblic como estática
 const publicPath = path.resolve(__dirname, '../public');
 app.use(express.static(publicPath));
@@ -60,7 +58,10 @@ app.use('/cart', cartRoutes);
 // login
 app.use('/users', usersRoutes);
 
-
+/* ********* Página de Error************* */
+app.use ( (req, res, next) => {
+    res.status(404).render('404');
+})
 
 // ************ Set the server to listen ************
 app.listen(3000, () => {

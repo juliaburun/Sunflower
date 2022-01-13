@@ -164,7 +164,7 @@ const productsControllers={
         .then(([categories, size, product]) => {
             res.render('./products/productEdit.ejs', {categories, size, product})
             /* console.log (product) */
-            /* res.send({categorys, size, product}) */
+            /* res.send({product, size}) */
         })
     },
 

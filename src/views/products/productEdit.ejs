@@ -4,8 +4,7 @@
 <!--==========================
             HEAD
 ============================-->
-<%-include('../partials/head', {title:"products", style:"styles-productEdit"}) %>
-<script src='/js/validations/productsEdiFrontVal.js'></script>
+<%-include('../partials/head', {title:"products", style:"styles-productCreate"}) %>
 
 <!--==========================
             BODY
@@ -25,150 +24,162 @@
 
 
 <main>
-  <section>
-    <ul class='errores'></ul>
+<section>
+
+ <ul class='errores'></ul> 
 <!--CONTENEDOR DE TODO EL FORMULARIO-->
   <div class="cajaPrincipal">
-    <h2>EDITAR PRODUCTO</h2>
+    <h2>EDITANDO PRODUCTO</h2>
     <!--LINEA BAJO EL TEXTO-->
     <hr color="#edafa4">
     <form action="/products/edit/<%= product.id%>?_method=PUT" method="Post" enctype="multipart/form-data" id='formLabel'>
-        <div class="p-editproduct">
-          <p>EDITANDO EL PRODUCTO: <%= product.name%></p>
-        </div>
-          <!--CONTENEDOR DE FORMULARIOS SIN CARGAR IMAGENES NI BOTON-->
-          <div class="forlularios">
-              <!--CONTENEDOR NOMBRE DEL PRODUCTO-->
-              <div class="cajaName">
-                  <label for="name" class="nombreProd">Nombre del producto:</label>
-                  <input type="text" id="name" name="name" class="form-cajaName" value="<%= product.name%>">
-                  <% if (locals.errors && errors.name) { %>
-                    <div class="msgError">
-                        <%= errors.name.msg %> 
-                    </div>
-                  <% } %>  
-              </div>
-              <!--CONTENEDOR CATEGORIA-->
-              <div class="cajaCategory">
-                  <label for="category" class="categoriaProd">Categoría:</label>
-                  <select name="category" id="category" class="form-cajaCategory" value="">
-                      <option value="">Elegí</option>
-                      <% categories.forEach(category => { %>
-                          <% if (category.id == product.category_id){ %>
-                                <option value= <%= category.id %> selected > <%= category.name%> </option>
-                          <% }else{ %>
-                              <option value= <%= category.id %>> <%= category.name%>  </option>
-                         <% } %>
-                      <% }); %>
-                  </select>
-                  <% if (locals.errors && errors.category) { %>
-                    <div class="msgError">
-                        <%= errors.category.msg %> 
-                    </div>
-                  <% } %>  
-              </div> 
-              <!--CONTENEDOR PRECIO-->
-              <div class="cajaPrice">
-                <label for="price" class="precioProd">Precio del producto $:</label>
-                <input type="number" id="price" name="price" class="form-cajaPrice" value="<%= product.price%>">
-                <% if (locals.errors && errors.price) { %>
-                  <div class="msgError">
-                      <%= errors.price.msg %> 
-                  </div>
-                <% } %> 
-              </div>
+      <div class="forlularios">
+            <!--CONTENEDOR NOMBRE DEL PRODUCTO-->
+            <div class="cajaName">
+              <label for="name" class="nombreProd">Nombre del producto:</label>
+              <input type="text" 
+              id="name" 
+              name="name" 
+              placeholder="Ej: orquidea" 
+              class="form-cajaName"
+              value="<%= product.name%>"
+              >
+              <% if (locals.errors && errors.name) { %>
+                <div class="msgError">
+                    <%= errors.name.msg %> 
+                </div>
+            <% } %>
+            </div>
+            <!--CONTENEDOR CATEGORIA-->
+            <div class="cajaCategory">
+              <label for="category" class="categoriaProd">Categoría:</label>
+              <select name="category" id="category" class="form-cajaCategory">
+                <option value="" disabled selected>Elige una categoría</option>
+
+                <% categories.forEach(category => { %>
+                  <% if (category.id == product.category_id){ %>
+                        <option value= <%= category.id %> selected > <%= category.name%> </option>
+                  <% }else{ %>
+                      <option value= <%= category.id %>> <%= category.name%>  </option>
+                 <% } %>
+              <% }); %>
+              </select>
+              <% if (locals.errors && errors.category) { %>
+                <div class="msgError">
+                    <%= errors.category.msg %> 
+                </div>
+            <% } %>
+            </div>
+           
+            <!--CONTENEDOR PRECIO-->
+            <div class="cajaPrice">
+              <label for="price" class="precioProd">Precio del producto $:</label>
+              <input type="number" 
+              id="price" 
+              name="price" 
+              placeholder="Ej: 2220 " 
+              class="form-cajaPrice"
+              value="<%= product.price%>"
+              >
+              <% if (locals.errors && errors.price) { %>
+                <div class="msgError">
+                    <%= errors.price.msg %> 
+                </div>
+            <% } %>
+            </div>
+
+                      
             <!--CONTENEDOR DESCUENTO-->
-              <div class="cajaDiscount">
-                <label for="discount" class="descuProd">Descuento %:</label>
-                <input type="number" name="discount" id="discount" class="form-cajaName" value="<%= product.discount%>">
-                <% if (locals.errors && errors.discount) { %>
-                  <div class="msgError">
-                      <%= errors.discount.msg %> 
-                  </div>
+            <div class="cajaDiscount">
+              <label for="discount" class="descuProd">Descuento %:</label>
+              <input type="number" 
+              id="discount" 
+              name="discount" 
+              class="form-cajaName"
+              value="<%= product.discount%>"
+              >
+              <% if (locals.errors && errors.discount) { %>
+                <div class="msgError">
+                    <%= errors.discount.msg %> 
+                </div>
+            <% } %>
+            </div>
+
+             <!--CONTENEDOR CAPACIDAD-->
+             <div class="cajaCapacity">
+              <label for="size" class="capasidadProd">Maceta:</label>
+              <% for (let i=0; i < size.length; i++) { %> 
+                  <div class="sizeProduct">
+                      <input type="checkbox" 
+                        name="sizeProduct" 
+                        id="<%= size[i].name %>" 
+                        class="capacity"
+                        value="<%= size[i].id %>" 
+                          <% for (let j = 0; j < product.tamaños.length; j++) { %>
+                            <%= size[i].id == product.tamaños[j].id ? 'checked' : null %> 
+                          <% } %>
+                        >   
+                      <label for="<%= size[i].name %>"><%= size[i].name %></label>
+                  </div>   
                 <% } %> 
-              </div>
-              <!--CONTENEDOR CAPACIDAD-->
-              <div class="cajaCapacity">
-                <label for="size" class="capacidadProd">Maceta:</label>
-                <% for (let j=0; j< product.tamaños.length; j++) { %>
-                  <% for (let i = 0; i < size.length; i++) { %>
-                    <div class="sizeProduct">
-                        <input type="checkbox" 
-                          name="sizeProduct" 
-                          id="<%= product.tamaños[j].id %>" 
-                          class="capacity"
-                          value="<%= product.tamaños[j].name %>" 
-                          <%= size[i].id == product.tamaños[j].id ? 'checked' : null %>    
-                    >
-                  <label for="<%= size[i].name %>"><%= size[i].name %></label>
-                  <% } %>
-                <% } %> 
-                  </div>
-                    
               
                 <% if (locals.errors && errors.sizeProduct) { %>
                   <div class="msgError">
                       <%= errors.sizeProduct.msg %> 
                   </div>
               <% } %>
-                  
-              </div>
-              
-              
-              <!--CONTENEDOR DESCRIPCION DEL PRODUCTO-->
-              <div class="cajaDescription">
-                  <label for="description" class="descripcionProd">Descripción del producto:</label>
-                  <textarea name="description" id="description" class="area-cajaDescription" value=""><%= product.description%></textarea>
-                <% if (locals.errors && errors.description) { %>
-                    <div class="msgError">
-                        <%= errors.description.msg %> 
-                    </div>
-                <% } %>
-              </div>
-          
-          <!--BOTON AGREGAR IMAGEN-->
-          <div class="formulImg">
-            <h2>Vista previa</h2>
-            <div class="grid">
-              <div class="form-element">
-                <input type="file" id="file-1" accept="image/*" value="<%= product.image %>" name="imageEdited1">
-                <label for="file-1" id="file-1-preview">
-                  <img src="/img/products/<%= product.image %>" alt="">
-                  <div>
-                    <span>+</span>
-                  </div>
-                </label>
-              </div>
-              <% if (locals.errors && errors.image1) { %>
+  
+            </div>
+            <!--CONTENEDOR DESCRIPCION DEL PRODUCTO-->
+            <div class="cajaDescription">
+              <label for="description" class="descripcionProd">Descripción del producto:</label>
+              <textarea name="description" id="description" class="area-cajaDescription"><%= product.description%></textarea>
+              <% if (locals.errors && errors.description) { %>
                 <div class="msgError">
-                    <%= errors.image1.msg %> 
+                    <%= errors.description.msg %> 
                 </div>
             <% } %>
-              <div class="form-element">
-                <input type="file" id="file-2" accept="image/*">
-                <label for="file-2" id="file-2-preview">
-                  <img src="/img/upload-image.png" alt="">
-                  <div>
-                    <span>+</span>
-                  </div>
-                </label>
+
+            </div>
+        </div>
+        <!--BOTON AGREGAR IMAGEN-->
+        <div class="formulImg">
+          <h2>Vista previa</h2>
+          <div class="grid">
+            <div class="form-element">
+              <input type="file" id="file-1" accept="image/*" value="<%= product.image %>" name="imageEdited1">
+              <label for="file-1" id="file-1-preview">
+                <img name="image" src="/img/products/<%= product.image %>" alt="" >
+                <div>
+                  <span>+</span>
+                </div>
+              </label>
+            </div>
+            <% if (locals.errors && errors.image1) { %>
+              <div class="msgError">
+                  <%= errors.image1.msg %> 
               </div>
+          <% } %>
+            <div class="form-element">
+              <input type="file" id="file-2" accept="image/*">
+              <label for="file-2" id="file-2-preview">
+                <img name="image" src="/img/upload-image.png" alt="">
+                <div>
+                  <span>+</span>
+                </div>
+              </label>
             </div>
           </div>
-          <!--BOTON AGREGAR PRODUCTO-->
-          <div class="cajaAgregar">
-            <p id="texto">Guardar</p>
-            <button type="submit" class="botonAgregar" onclick="return confirmDelete()"></button>
-          </div>
-          <!--BOTON CANCELAR-->
-          <div class="cajaCancelar">
-            <p id="texto2">Cancelar</p>
-            <button type="submit" class="botonCancelar"></button>
-          </div>
-          </div>
+        </div>
+        <!--BOTON AGREGAR PRODUCTO-->
+        <div class="cajaAgregar">
+          <p id="texto">Guardar</p>
+          <button type="submit" class="botonAgregar" onclick="return confirmDelete()"></button>
+        </div>
     </form>
   </div>
-  </section>
+
+</section>
 </main>
 <!--SECCION JS-->
 <script>
@@ -182,26 +193,14 @@
     document.querySelector("#"+id+"-preview div").innerText = file.name;
     document.querySelector("#"+id+"-preview img").src = url;
   });
-
 }
 
 previewBeforeUpload("file-1");
 previewBeforeUpload("file-2");
-
-//ESTO SE COMENTO PARA PROBAR SI ERA EL ERROR DE VALIDACION FRONT
-/* function confirmDelete(){
-    let respuesta = confirm("Esta seguro que desea guardar los cambios?");
-    if (respuesta == true){
-        return true;
-    }else{
-        return false;
-    }
-} */
 </script>
 
       <!-- FOOTER -->
 <%- include('../partials/footer') %>
-
-
-</body>
+<!-- <script src='/js/validations/productsEdiFrontVal.js'></script>
+ --></body>
 </html>
