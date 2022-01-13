@@ -17,9 +17,12 @@ window.onload = function(){
 
  
          //NOMBRE DEL USUARIO
+         let emailExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
          if (mailUsuario.value == '') {
              errors.push('Debes ingresar un usuario');
              mailUsuario.classList.add('is-invalid');
+            }else if (!emailExp.test(mailUsuario.value)){
+                errors.push('Debes ingresar un email valido');
          }else{
             mailUsuario.classList.add('is-valid');
             mailUsuario.classList.remove('is-invalid');

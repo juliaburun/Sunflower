@@ -6,7 +6,7 @@ window.onload = function(){
  
  //INICIO DE VALIDACIONES
     let form = document.querySelector('#formLabel');
-    form.name.focus();
+   /*  form.name.focus(); */
  
     form.addEventListener('submit', function (e){
         let errors =[];

@@ -69,7 +69,8 @@ input[type="name"],
 input[type="surname"],
 input[type="email"],
 input[type="phone"],
-input[type="password"]
+input[type="password"],
+input[type="text"]
 {
     font-size: 14px;
     width: 100%;
