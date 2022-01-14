@@ -1,8 +1,5 @@
 window.onload = function(){
 
-   const formulario = document.querySelector('.cajaPrincipal');
-   /* const nombreProducto = document.querySelector=('#name');
-   */
 
 //INICIO DE VALIDACIONES
     let form = document.querySelector('#formLabel');
