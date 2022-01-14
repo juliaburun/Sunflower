@@ -34,7 +34,7 @@ router.put('/edit/:id', uploadFile.single('imageEdited1'), productCreateValidatt
 router.delete('/delete/:id', productsControllers.delete); 
 
 /* Ruta por categoria productos */
-router.get ('/:id', productsControllers.category);
+router.get ('/category/:id', productsControllers.category);
 
 /* Search */
 router.post ('/search', productsControllers.search);

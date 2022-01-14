@@ -77,15 +77,13 @@ window.onload = function(){
         let validExtensions = 
                 /(\.jpg|\.jpeg|\.png|\.gif)$/i;
 
-        if(imagenUno.value.length == 0){
-            errors.push('La imagen no puede estar vacia');           
+        if(imagenUno.value.length != 0){
+            if (!validExtensions.exec(filePath)) {
+                console.log("aca");
+                imagenUno.value = '';
+                errors.push('La extenciones permitidas son: jpg, jpeg, png y gif');
+            }    
         }
-        else if (!validExtensions.exec(filePath)) {
-            console.log("aca");
-            imagenUno.value = '';
-            errors.push('La extenciones permitidas son: jpg, jpeg, png y gif');
-        }    
-
 
 
 if(errors.length > 0) {

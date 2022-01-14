@@ -20,7 +20,7 @@ window.onload = function(){
         let imagenUno = document.querySelector('#file-1');
     
          //NOMBRE DEL PRODUCTO
-         if (body.nombre.value == '') {
+         if (nombre.value == '') {
              errors.push('El nombre del producto no puede estar vacio');
              nombre.classList.add('is-invalid');
              console.log(body.nombre)
