@@ -16,14 +16,14 @@ window.onload = function(){
         let categoria = document.querySelector('#category');
         let precio = document.querySelector('#price');
         let descuento = document.querySelector('#discount');
-        let capacidad = document.querySelector('.capacity');
         let descripcion = document.querySelector('#description');
         let imagenUno = document.querySelector('#file-1');
     
          //NOMBRE DEL PRODUCTO
-         if (nombre.value == '') {
+         if (body.nombre.value == '') {
              errors.push('El nombre del producto no puede estar vacio');
              nombre.classList.add('is-invalid');
+             console.log(body.nombre)
          }else{
              nombre.classList.add('is-valid');
              nombre.classList.remove('is-invalid');
@@ -57,15 +57,7 @@ window.onload = function(){
              descuento.classList.remove('is-invalid');
           
          };
-         //CAPACIDAD DEL PRODUCTO
-  /*        if (capacidad.value != true) {
-             errors.push('La capacidad del producto no puede estar vacia');
-             capacidad.classList.add('is-invalid');
-         }else{
-             capacidad.classList.add('is-valid');
-             capacidad.classList.remove('is-invalid');
-             // FALTA TERMINAR ESTA VALIDACION
-         }; */
+
          //DESCRIPCION DEL PRODUCTO
          if (descripcion.value == '') {
              errors.push('La descripción del producto no puede estar vacia');
@@ -76,7 +68,19 @@ window.onload = function(){
              
          };
          //IMAGEN DEL PRODUCTO
- 
+        let filePath = avatar.value;
+                  
+        // EXTENCIONES PERMITIDAS
+        let validExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+
+        if(avatar.value.length == 0){
+            errors.push('La imagen no puede estar vacia');           
+        }
+        else if (!validExtensions.exec(filePath)) {
+            console.log("aca");
+            avatar.value = '';
+            errors.push('Las extenciones validas son jpg, jpeg, png y gif');
+        }
  
  
  if(errors.length > 0) {

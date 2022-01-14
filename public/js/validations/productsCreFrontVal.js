@@ -16,7 +16,6 @@ window.onload = function(){
     let categoria = document.querySelector('#category');
     let precio = document.querySelector('#price');
     let descuento = document.querySelector('#discount');
-    let capacidad = document.querySelector('.capacity');
     let descripcion = document.querySelector('#description');
     let imagenUno = document.querySelector('#file-1');
 
@@ -24,10 +23,11 @@ window.onload = function(){
         if (nombre.value == '') {
             errors.push('El nombre del producto no puede estar vacio');
             nombre.classList.add('is-invalid');
+        }else if (nombre.value.length < 5){
+            errors.push('El nombre del producto debe tener al menos 5 caracteres');
         }else{
             nombre.classList.add('is-valid');
-            nombre.classList.remove('is-invalid');
-            
+            nombre.classList.remove('is-invalid');   
         };
 
         //CATEGORIA DEL PRODUCTO
@@ -57,25 +57,34 @@ window.onload = function(){
             descuento.classList.remove('is-invalid');
          
         };
-        //CAPACIDAD DEL PRODUCTO
-        if (capacidad.value != true) {
-            errors.push('La capacidad del producto no puede estar vacia');
-            capacidad.classList.add('is-invalid');
-        }else{
-            capacidad.classList.add('is-valid');
-            capacidad.classList.remove('is-invalid');
-            // FALTA TERMINAR ESTA VALIDACION
-        };
+
         //DESCRIPCION DEL PRODUCTO
         if (descripcion.value == '') {
             errors.push('La descripción del producto no puede estar vacia');
             descripcion.classList.add('is-invalid');
+        }else if (descripcion.value.length < 20){
+            errors.push('La descripción debe tener al menos 20 caracteres');
         }else{
             descripcion.classList.add('is-valid');
             descripcion.classList.remove('is-invalid');
             
         };
         //IMAGEN DEL PRODUCTO
+
+        let filePath = imagenUno.value;
+                  
+        // EXTENCIONES PERMITIDAS
+        let validExtensions = 
+                /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+
+        if(imagenUno.value.length == 0){
+            errors.push('La imagen no puede estar vacia');           
+        }
+        else if (!validExtensions.exec(filePath)) {
+            console.log("aca");
+            imagenUno.value = '';
+            errors.push('La extenciones permitidas son: jpg, jpeg, png y gif');
+        }    
 
 
 

@@ -1,9 +1,45 @@
 window.onload = function(){
-
-    const formulario = document.querySelector('.container');
-    /* const nombreProducto = document.querySelector=('#name');
-    */
  
+/* const form = document.querySelector('#login-form'); */
+const inputs = document.querySelectorAll('#login-form input');
+const submitButton = document.querySelector('.boton-enviar');
+const pParaError = document.querySelector('input_error')
+
+let emailExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+
+/* const validarFormulario = (e) =>{
+    switch (e.target.name) {
+        case "email":
+            if (!emailExp.test(e.target.value)){
+                document.getElementById('email').classList.add('is-invalid')
+                document.querySelector('p.input_error').innerText += 'no es valido el formato'
+            }else{
+                passUsuario.classList.add('is-valid');
+                passUsuario.classList.remove('is-invalid');
+            }
+
+        break;
+
+        case "password":
+        
+        break;
+    }
+}
+
+inputs.forEach((input) => {
+    input.addEventListener('keyup', validarFormulario);
+    input.addEventListener('blur', validarFormulario);
+        
+    });
+
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+}); */
+
+
+
  //INICIO DE VALIDACIONES
      let form = document.querySelector('#login-form');
      form.email.focus();
@@ -19,10 +55,10 @@ window.onload = function(){
          //NOMBRE DEL USUARIO
          let emailExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
          if (mailUsuario.value == '') {
-             errors.push('Debes ingresar un usuario');
+             errors.push('Debes ingresar un email de usuario');
              mailUsuario.classList.add('is-invalid');
             }else if (!emailExp.test(mailUsuario.value)){
-                errors.push('Debes ingresar un email valido');
+                errors.push('Debes ingresar un email de usuario valido');
          }else{
             mailUsuario.classList.add('is-valid');
             mailUsuario.classList.remove('is-invalid');

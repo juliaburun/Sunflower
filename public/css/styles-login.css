@@ -154,7 +154,8 @@ input[id="password"]
   }
   
   .is-invalid {
-    color: #be0010;
+    color: red;
+    font-weight: 600;
   }
   
   .warning{

@@ -88,19 +88,19 @@ window.onload = function(){
         };
 
         //AVATAR DEL USUARIO 
-        let fileExtensions = '.' + avatar.value.split('.').pop();
-        let avatarExp = ['.jpg', '.jpeg', '.png','.gif', '.bmp', '.tiff', '.psd'];
-        /* /(\.jpg|\.jpeg|\.png|\.gif)$/i; */
-        if (avatar.value.length == 0){
-            errors.push('Ingresa una imagen de perfil');
-        }else if(fileExtensions != '.'){
-        }else{(!avatarExp.includes(fileExtensions)) 
-        
-        /* if (!avatarExp.test(filepath)) {
-            avatar.value = ""
-              errors.push('Ingresa un archivo de imagen'); */
-        
-        };
+         let filePath = avatar.value;
+                  
+        // EXTENCIONES PERMITIDAS
+        let validExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+
+        if(avatar.value.length == 0){
+            errors.push('La imagen no puede estar vacia');           
+        }
+        else if (!validExtensions.exec(filePath)) {
+            console.log("aca");
+            avatar.value = '';
+            errors.push('Las extenciones permitidas son: jpg, jpeg, png y gif');
+        }
        
                         
  
