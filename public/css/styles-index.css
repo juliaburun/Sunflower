@@ -210,12 +210,6 @@ main {
     background: #edafa4;
     padding: 10px 10px;
 }
-.boton-carrito:hover{
-    background-color: var(--marron);
-    color: var(--rosa);
-    font-weight: 500;
-    transition: all 1s;
-}
 
 
 @media (min-width:481px) {

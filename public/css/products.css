@@ -142,20 +142,23 @@ BARRA ENTRE EL HEADER Y EL MAIN
 }
 
 .container-button {
-    width: 110px;
-    padding: 10px;
-    margin: auto;
+    width: 110px;/*esto*/
+    margin:auto; 
+    margin-top: 10px;/*esto*/
+    margin-bottom: 5px;/*esto*/
 }
 
 .boton-carrito{
     border: none;
+    border-radius: 8px;
     width: 100%;
     color: white;
-    font-size: 12px;
+    font-size: 9px;/*esto*/
+    font-weight: 700;
     background: #edafa4;
     padding: 10px 10px;
-    cursor: pointer;
 }
+
 
 .forms-button{
     text-align: center;
@@ -221,8 +224,6 @@ BARRA ENTRE EL HEADER Y EL MAIN
     .div-img{
         height: 250px;
     }
-    
-
 
 }
 
@@ -251,10 +252,6 @@ BARRA ENTRE EL HEADER Y EL MAIN
         margin-top: 250px;
     }
 
-    
-
-    
-
     .main .bannerLogo{
         font-size: 13px;
         font-weight: normal;
@@ -271,5 +268,17 @@ BARRA ENTRE EL HEADER Y EL MAIN
     .div-img{
         height: 280px;
     }
-
+    .container-button {
+        width: 140px;/*esto*/
+    }
+    .boton-carrito{
+        font-size: 12px;/*fijo*/
+        cursor: pointer;/*fijo*/
+    }
+    .boton-carrito:hover{
+        background-color: var(--marron);
+        color: var(--rosa);
+        font-weight: 500;
+        transition: all 1s;
+    }
 }
