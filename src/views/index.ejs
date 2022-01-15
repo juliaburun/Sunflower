@@ -48,7 +48,13 @@
           <article class="article-div">
             <div class="div-img">
             <a href="/products/detail/<%= products[i].id%>"><img src="/img/products/<%= products[i].image %>"></a>
+            <!--ETIQUETA DE DESCUENTO-->
+            <div class='divDescuento'>
+              <p class='descuento'>Descuento</p>
+              <p class='descuento'><%= products[i].discount %>%</p>       
+            </div>
           </div>
+ 
           <div class="articulo-pie">
             <p ><%= products[i].name %></p>
             <p >Maceta 

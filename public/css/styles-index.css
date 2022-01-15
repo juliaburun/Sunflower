@@ -131,6 +131,19 @@ main {
    margin-top: 17.5px;
     
 }
+.divDescuento{
+    position:relative;
+    left: 0px;/*esto*/
+    bottom: 40px;/*esto*/
+    width: 60px;/*esto*/
+    border: 2px solid red;
+    background-color: red;    
+}
+.descuento{
+    font-size: 10px;/*esto*/
+    color: white;
+    margin: 0px;
+}
 
 .precio p {
     font-size: 22px;
@@ -247,6 +260,13 @@ main {
 
     .div-img{
         height: 300px;
+    }
+    .divDescuento{
+        bottom: 60px;
+        width: 100px;   
+    }
+    .descuento{
+        font-size: 16px;
     }
 
 }
