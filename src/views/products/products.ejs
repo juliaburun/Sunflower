@@ -46,9 +46,9 @@
         </div>
 
 <!--ICONO AGREGAR PRODUCTO-->
-<div class="cajaAgregar">
+<!-- <div class="cajaAgregar">
   <a href="/products/create"><i class="fas fa-dolly-flatbed"></i></a>
-</div>
+</div> -->
 
         <div class="productsList">
           <% for( let i = 0; i< products.length; i++ ) { %>
@@ -57,6 +57,13 @@
             <article class="articleProduct">
                 <div class="div-img">
                   <a href="/products/detail/<%= products[i].id%>"><img src="/img/products/<%= products[i].image %>"></a>
+                  <!--ETIQUETA DE DESCUENTO-->
+                  <% if (products[i].discount> 0) { %>
+                    <div class='divDescuento'>
+                      <p class='descuento'>Descuento</p>
+                      <p class='descuento'><%= products[i].discount %>%</p>       
+                    </div>
+                  <% } %>
                 </div>
                 <div class="productsDescription">
                   <div>
@@ -73,7 +80,10 @@
                       
                   </div>
                     <div class="precio">
-                      <p> $<%= products[i].price %></p>
+                      <% if (products[i].discount> 0) { %>
+                        <p id="precio-sinDescuento">$<%= products[i].price %></p>
+                    <% } %>
+                      <p> $<%= (products[i].price- (products[i].price * (products[i].discount * 0.01)))%></p>
                     </div>
                     <div class="container-button">
                       <button class="boton-carrito" type="button">Agregar al carrito</button>

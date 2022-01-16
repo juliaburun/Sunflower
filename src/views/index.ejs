@@ -62,17 +62,20 @@
                 <% if (j == products[i].tamaños.length - 1) { %>
                   <span><%= products[i].tamaños[j].name %> </span>
                 <% }else{%>
-                  <span><%= products[i].tamaños[j].name %>-</span>
+                  <span><%= products[i].tamaños[j].name %> - </span>
                 <% } %>
               <% } %>
             </p>
           </div>
-          <div class="precio">
-            <p> $<%= products[i].price %></p>
-          </div>
-          <div class="container-button">
-            <button class="boton-carrito" type="button">Agregar al carrito</button>
-          </div>
+            <div class="precio">
+              <% if (products[i].discount> 0) { %>
+                <p id="precio-sinDescuento">$<%= products[i].price %></p>
+            <% } %>
+              <p> $<%= (products[i].price- (products[i].price * (products[i].discount * 0.01)))%></p>
+            </div>
+            <div class="container-button">
+              <button class="boton-carrito" type="button">Agregar al carrito</button>
+            </div>
           </article>
           </div>
         <% } %>

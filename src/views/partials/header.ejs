@@ -12,6 +12,9 @@
                 <ul> 
                     <li> <a href="/">Inicio</a> </li>
                     <li> <a href="/products">Productos</a> </li>
+                    <% if(locals.userLogged && locals.userLogged.rol_id == 1) {%>
+                    <li>  <a href="/products/create"> Crear producto<i class="fas fa-dolly-flatbed"></i></a></li>
+                    <% } %>
                     <li> <a href="/about">Acerca de nosotros</a> </li>
                 </ul>
             </nav>

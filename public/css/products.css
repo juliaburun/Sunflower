@@ -14,9 +14,15 @@ body{
     margin: 0;
 }
 
+p{
+    font-weight: 600;
+}
+
 .main{
     width: 100%;
     margin-top: 88px;
+    color: gray;
+    text-align: center;
 }
 
 /*****************************
@@ -128,15 +134,45 @@ BARRA ENTRE EL HEADER Y EL MAIN
     margin: 10px 0 0 10px;
     text-align: center;
     
-} 
+}
 
-.precio p{
-    font-size: 22px;
+.precio{
+    display: flex;
+    justify-content: center;
+    margin-top: 17.5px;
+}
+
+#precio-sinDescuento{
+    color: var(--grisOscuro1);
+    text-decoration: line-through;
+}
+
+.divDescuento{
+    position:relative;
+    left: 0px;/*esto*/
+    bottom: 50px;/*esto*/
+    width: 70px;/*esto*/
+    height: 35px;
+    border: 2px solid rgb(97, 89, 89);
+    background-color: red;    
+}
+
+.descuento{
+    font-size: 12px;/*esto*/
+    color: white;
+    margin: 0px;
+}
+
+.precio p {
+    font-size: 19px;
     color: var(--marron);
+    margin: 0;
+    margin-left: 10px;
     font-weight: bold;
     font: sans-serif;
-    text-align: center;
 }
+
+
 .nombre-planta{
     text-transform: capitalize;
 }
@@ -151,7 +187,8 @@ BARRA ENTRE EL HEADER Y EL MAIN
 .boton-carrito{
     border: none;
     border-radius: 8px;
-    width: 100%;
+    width: 90%;
+    height: 70%;
     color: white;
     font-size: 9px;/*esto*/
     font-weight: 700;
@@ -225,6 +262,18 @@ BARRA ENTRE EL HEADER Y EL MAIN
         height: 250px;
     }
 
+    .divDescuento{
+        width: 80px;/*esto*/
+        height: 40px;
+        bottom: 60px;
+    }
+    .descuento{
+        font-size: 14px;/*esto*/
+    }
+    .precio p {
+        font-size: 22px;
+    }
+
 }
 
 @media (min-width:769px) {
@@ -281,4 +330,21 @@ BARRA ENTRE EL HEADER Y EL MAIN
         font-weight: 500;
         transition: all 1s;
     }
+    .divDescuento{
+        bottom: 60px;
+        width: 100px; 
+        height: 45px;  
+    }
+    .descuento{
+        font-size: 16px;
+    }
+
+    .producto-destacado:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 0px 20px var(--rosa);
+      }
+      
+    .producto-destacado {
+        transition: transform 0.8s;
+      }
 }

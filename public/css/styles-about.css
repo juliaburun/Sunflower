@@ -15,7 +15,7 @@
 /*CONTIENE TODOS LOS ELEMENTOS DEL CUERPO*/
 
 main{
-    margin-top: 150px;
+    margin-top: 110px;
 }
 .contPrincipal{
     width: 100%;
@@ -88,7 +88,7 @@ hr{
 /*CONTENEDOR DE LOS TEXTOS MEDIO Y FINAL*/
 @media (min-width:481px){
     main{
-        margin-top: 200px;
+        margin-top: 140px;
     }
 
     .textosCentrales,
