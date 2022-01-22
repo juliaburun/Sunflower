@@ -23,8 +23,10 @@
     
         <section class="data-content">
             <article class="user-data">
-                <div class="img-profile">
-                    <img src="/img/users/<%= user.image_profile%>" alt="">
+                <div class="img-container"> 
+                    <div class="img-profile">
+                        <img src="/img/users/<%= user.image_profile%>" alt="">
+                    </div>
                 </div>
                 <div class="rol-profile"> 
                     <% for (let i=0; i<rols.length; i++) {%>

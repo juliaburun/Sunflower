@@ -37,12 +37,28 @@ const indexRoutes=require('./routes/indexRoutes');
 //requiriendo al productsRoutes
 const productsRoutes=require('./routes/productsRoutes');
 
+// requiriendo a la Api de products
+const productsApiRoutes=require('./routes/api/productsApiRoutes')
+
+// requiriendo a la Api de categories
+const categoryApiRoutes=require('./routes/api/categoriesApiRoutes')
+
+// requiriendo a la Api de sizes
+const sizeApiRoutes=require('./routes/api/sizesApiRoutes')
+
 //requiriendo al cartRoutes
 const cartRoutes=require('./routes/cartRoutes');
 
 //requiriendo al loginRoutes
 const usersRoutes=require('./routes/usersRoutes');
 const { exists } = require('fs');
+
+// requiriendo a la Api de users
+const usersApiRoutes=require('./routes/api/usersApiRoutes')
+
+// requiriendo a la Api de roles
+const rolesApiRoutes=require('./routes/api/rolesApiRoutes')
+
 
 //Colocamos la carpeta pblic como estática
 const publicPath = path.resolve(__dirname, '../public');
@@ -58,6 +74,16 @@ app.use('/products', productsRoutes);
 app.use('/cart', cartRoutes);
 // login
 app.use('/users', usersRoutes);
+//api products
+app.use('/api/products', productsApiRoutes);
+//api category
+app.use('/api/categories', categoryApiRoutes);
+//api size
+app.use('/api/sizes', sizeApiRoutes);
+//api users
+app.use('/api/users', usersApiRoutes);
+//api roles
+app.use('/api/roles', rolesApiRoutes);
 
 /* ********* Página de Error************* */
 app.use ( (req, res, next) => {

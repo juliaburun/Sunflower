@@ -59,11 +59,16 @@ const productsControllers={
     },
 
     detail: (req, res) => {
-        let id = req.params.id;
-        db.Product.findByPk(id, 
+        db.Product.findOne( 
             {
+                where:
+                {
+                    id:req.params.id,
+                    deleted:0
+                },
                 include:['categoria', 'tamaños']
-        })
+            }
+        )
         .then (product => {
             /* res.send (product) */
            res.render ('./products/productDetail', {product})

@@ -1,3 +1,77 @@
+create database if not exists  `sunflower_db`;
+use `sunflower_db`;
+
+create TABLE `categories`(
+`id` int(20) unsigned auto_increment,
+`name` varchar(100) not null,
+primary key (`id`));
+
+
+create table `products`(
+`id` int(20) unsigned auto_increment,
+`name` varchar(100) not null,
+`description` text not null,
+`price` int(20) unsigned not null,
+`discount` int unsigned  not null,
+`image` varchar(255),
+`category_id` int(20) unsigned,
+`deleted` int unsigned not null default 0,
+`date_sale` date,
+primary key(`id`),
+constraint `fk_products_category_id` foreign key (`category_id`) references `categories`(`id`) on delete cascade on update cascade);
+
+
+create TABLE `sizes`(
+`id` int(20) unsigned auto_increment,
+`name` varchar(100) not null,
+primary key (`id`));
+
+create TABLE `sizesProducts`(
+`id` int(20) unsigned auto_increment,
+`product_id` int(20) unsigned,
+`size_id` int(20)  unsigned,
+primary key (`id`),
+constraint `fk_sizesProducts_product_id` foreign key (`product_id`) references `products`(`id`) on delete cascade on update cascade,
+constraint `fk_sizesProducts_size_id` foreign key (`size_id`) references `sizes`(`id`) on delete cascade on update cascade);
+
+create TABLE `roles`(
+`id` int(20) unsigned auto_increment,
+`name` varchar(100) not null,
+primary key (`id`));
+
+create table `users`(
+`id` int(20) unsigned auto_increment,
+`first_name` varchar(100) not null,
+`last_name` varchar(100) not null,
+`email` varchar(255) not null,
+`phone` varchar(60) not null,
+`password` varchar(255) not null,
+`image_profile` varchar(255),
+`rol_id` int(20) unsigned,
+`deleted` int unsigned not null default 0,
+primary key(`id`),
+constraint `fk_users_rol_id` foreign key (`rol_id`) references `roles`(`id`) on delete cascade on update cascade);
+
+create TABLE `carts`(
+`id` int(20) unsigned auto_increment,
+`date_cart` date,
+`user_id` int(20) unsigned,
+`total` int(100) unsigned not null,
+`finished` int unsigned not null default 0, 
+primary key (`id`),
+constraint `fk_carts_user_id` foreign key (`user_id`) references `users`(`id`) on delete cascade on update cascade);
+
+create TABLE `productsCarts`(
+`id` int(20) unsigned auto_increment,
+`product_id` int(20) unsigned,
+`cart_id` int(20) unsigned,
+`amount` int(50) unsigned not null,
+`subtotal` int(100) unsigned not null,
+primary key (`id`),
+constraint `fk_productsCarts_product_id` foreign key (`product_id`) references `products`(`id`) on delete cascade on update cascade,
+constraint `fk_productsCarts_cart_id` foreign key (`cart_id`) references `carts`(`id`) on delete cascade on update cascade);
+
+
 use `sunflower_db`;
 delete from `carts`;
 delete from `categories`;
@@ -17,6 +91,8 @@ insert into sizes (name) values ('10');
 insert into sizes (name) values ('20');
 
 insert into sizes (name) values ('30');
+
+insert into sizes (name) values ('40');
 
 
 insert into products (name, description, price, discount, image, category_id, deleted, date_sale) values 
@@ -64,10 +140,16 @@ insert into sizesproducts (product_id, size_id)
 values (1, 2);
 
 insert into sizesproducts (product_id, size_id)
+values ( 1 , 3);
+
+insert into sizesproducts (product_id, size_id)
 values (2, 2);
 
 insert into sizesproducts (product_id, size_id)
 values (3, 2);
+
+insert into sizesproducts (product_id, size_id)
+values (3, 3);
 
 insert into sizesproducts (product_id, size_id)
 values (4, 3);
@@ -77,6 +159,9 @@ values (5, 3);
 
 insert into sizesproducts (product_id, size_id)
 values ( 6, 1);
+
+insert into sizesproducts (product_id, size_id)
+values ( 6, 4);
 
 insert into sizesproducts (product_id, size_id)
 values ( 7, 3);
@@ -90,29 +175,20 @@ values ( 9, 1);
 insert into sizesproducts (product_id, size_id)
 values ( 10, 1);
 
-insert into sizesproducts (product_id, size_id)
-values ( 1 , 3);
-
 
 insert into roles (name) values ('administrador');
 insert into roles (name) values ('usuario');
 
-INSERT INTO users(first_name,last_name,email,phone,password,rol_id,image_profile) VALUES ('Valentine','Deakin','vdeakin0@homestead.com','(818) 2737727','Idt0OriW',2,'user.jpg');
-INSERT INTO users(first_name,last_name,email,phone,password,rol_id,image_profile) VALUES ('Olvan','Hritzko','ohritzko1@amazonaws.com','(426) 4398099','cuyutyOAi',2,'user.jpg');
-INSERT INTO users(first_name,last_name,email,phone,password,rol_id,image_profile) VALUES ('Jereme','Schimon','jschimon2@senate.gov','(708) 5122350','VGqMK4Qa1vh',2,'user.jpg');
-INSERT INTO users(first_name,last_name,email,phone,password,rol_id,image_profile) VALUES ('Katti','Eagling','keagling3@nyu.edu','(277) 8201593','IT9qtC1accN',2,'user.jpg');
-INSERT INTO users(first_name,last_name,email,phone,password,rol_id,image_profile) VALUES ('Eliot','Neilus','eneilus4@tumblr.com','(513) 4434897','lifBQKUX',2,'user.jpg');
-INSERT INTO users(first_name,last_name,email,phone,password,rol_id,image_profile) VALUES ('Johanna','Niño','hanni.file@gmail.com','3017082187','123456',1,'user.jpg');
-INSERT INTO users(first_name,last_name,email,phone,password,rol_id,image_profile) VALUES ('Ariel','cruz','ariel@gmail.com','12344','$2a$10$N7mMvg5zil1/zxevMrWobOWl8oor5NXzJcVL.pR8Sij79kzUXXzhS',2,'user.jpg');
-INSERT INTO users(first_name,last_name,email,phone,password,rol_id,image_profile) VALUES ('Johanna','sdfsdf','jn@gmail.com','12123213','$2a$10$Bc7zu8vHYgw/d.VABF5fBu82h5OcblhVocMSU7p7sH5/EyjwjToCG',2,'user.jpg');
-INSERT INTO users(first_name,last_name,email,phone,password,rol_id,image_profile) VALUES ('Linda','Niño','linda@gmail.com','12344','$2a$10$KE3bBb4m5vd4OUb6cHIwAuGkDvYUM.uz1SEdvJAvixV/QeGxxYZmy',2,'userImg1637651645731.jpg');
-INSERT INTO users(first_name,last_name,email,phone,password,rol_id,image_profile) VALUES ('ju','bu','hj@mail.com','3','$2a$10$dH7cHyg6UHX9XSW3gvU6R.F6ZkNbSwMvCmUAURYy4sPZ.xcykpKty',2,'userImg1637754399875.png');
-INSERT INTO users(first_name,last_name,email,phone,password,rol_id,image_profile) VALUES ('julia','bu','g@mail.com','2','$2a$10$PxLsYUiFW7HD/Tvie2daguSKDhGFK4Mg9IIJVC4C3CbfJm7J3TJkK',2,'userImg1637756165414.png');
-INSERT INTO users(first_name,last_name,email,phone,password,rol_id,image_profile) VALUES ('julias','bu','j@mail.com','2','$2a$10$yiBDRR8nUelVJat.1IcWp.eQR8tY6v9R798ej0T5.pylkLqmlPXLG',2,'user.jpg');
-INSERT INTO users(first_name,last_name,email,phone,password,rol_id,image_profile) VALUES ('jules','bu','gh@mail.com','2','$2a$10$VVszDkySZLpB8b327j/jtO1I9IvD6aOE4cfZLho2Y4q2O.1CAk2J2',2,'user.jpg');
-INSERT INTO users(first_name,last_name,email,phone,password,rol_id,image_profile) VALUES ('juli','bur','ju@mail.com','2','$2a$10$MbsQV7RMrr0Q0/bglJqcxOygnTZszLYIfPHtGydXAcGBoKlGtmBCm',2,'user.jpg');
-INSERT INTO users(first_name,last_name,email,phone,password,rol_id,image_profile) VALUES ('Prueba25','nov','prueba25@mail.com','3017082187','$2a$10$BEeDMFjhOFpQiE63uc5f9eh6nZFsA5pX/BfkSzSXXbEiuumbJiigC',2,'user.jpg');
-INSERT INTO users(first_name,last_name,email,phone,password,rol_id,image_profile) VALUES ('Johanna','Niño','johy@gmail.com','3017082187','$2a$10$NXhtKT6S9125ntKhEq24H.FTMe/A7y0KFLED.5BT34Q1e2lNzZyFm',1,'johanna.jfif');
-INSERT INTO users(first_name,last_name,email,phone,password,rol_id,image_profile) VALUES ('pruebaCliente','Cliente','cliente@gmail.com','3017082187','$2a$10$sLaruLeJCTpdV1IQtzMs.e4IY.DqK5/FWg.avFxNHyFc.LB6Ep71e',2,'userImg1637975090982.webp');
+INSERT INTO users (first_name,last_name,email,phone,password,image_profile,rol_id,deleted) VALUES
+	 ('Ariel','Cruz','arielc@mail.com','65473456','$2a$10$0DnhdmF3QWF7qbRy1yuJjevF68QgUOQRqy.witt4Nm92L2l/PuJGu','userImg1642821769129.jpg',1,0),
+	 ('Julia','Burundarena','juliab@mail.com','634523348','$2a$10$Zs6jM5CuhQ2R1sptH2JRvuBAQKv3l1gPQjoUMu2r48w86..Jjc9SK','userImg1642822079572.jpeg',1,0),
+	 ('Mike','Wazowski','mikew@mail.com','45567853345','$2a$10$/BACF0zW10OpkJ6Ts3pv3eHx97bl/393/5eM5lPtMjTg2UCtHFbxO','userImg1642822203814.png',2,0),
+	 ('Johanna','Niño','johy@gmail.com','3017082187','$2a$10$3bnzEwUDeOeYDEK0XyPOm.XTJQAV1Ozuw7lD1qd5V18wzpPsvjCdO','userImg1642821424273.jpg',1,0),
+	 ('pruebaCliente','Cliente','cliente@gmail.com','3017082187','$2a$10$qLzf.sI2eRqAodUclbJBjOhg4S2Rg3gxiZvTNoxFJ90VxQs067vHC','user.jpg',2,0);
+
+
+
+
+
 
 

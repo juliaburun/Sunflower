@@ -30,11 +30,15 @@
     font-size: 16px;
 }
 
+.img-container{
+    background-image: url('/img/fondo.jpeg') ;
+
+}
+
 .img-profile {
-    background-color: white;
-    border: 0;
-    width: 150px;
-    height: 150px;
+    background-color:rgba(255, 255, 255, 0.523);
+    width: 200px;
+    height: 180px;
     margin: auto;
     margin-bottom: 15px;
     padding: 10px;
