@@ -12,6 +12,10 @@ router.get('/', productsApiControllers.list);
 /* Ruta detalle del Producto */
 router.get('/detail/:id', productsApiControllers.detail);
 
+/* Ruta página del Producto */
+router.get('/page', productsApiControllers.page);
+
+
 /* Ruta crear el producto */
 // router.get('/create', productsControllers.create);
 // router.post('/create',uploadFile.single('image1'), productCreateValidattor, productsControllers.store)

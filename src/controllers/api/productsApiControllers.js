@@ -43,7 +43,27 @@ const productsApiControllers={
             })
         })
         .catch(error => console.log(error))
+    },
+    page: (req, res) => {
+            const { page, size } = req.query;
+            let pages = parseInt(page);
+            let sizes = parseInt(size);
+            db.Product.findAll({
+                limit : sizes,
+                offset : pages * sizes,
+                include:['categoria', 'tamaños']
+            })
+            .then( product =>{
+                res.status(200).json({
+                    meta:{
+                        status:200,
+                        url:"api/products/page"
+                    },
+                    data: product
+                })
+            })
     }
+
 }
 
 module.exports = productsApiControllers;

@@ -10,5 +10,9 @@ const router=express.Router();
 /* Ruta listado de usuarios */
 router.get('/', usersApiControllers.list);
 
+/* Ruta user */
+router.get('/userEmail/:email', usersApiControllers.detail);
+
+
 
 module.exports=router;
