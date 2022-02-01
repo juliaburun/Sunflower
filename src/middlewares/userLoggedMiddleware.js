@@ -5,8 +5,10 @@ const db = require('../database/models');
 /*==================================================*/
 async function userLoggedMiddleware(req, res, next) {
     res.locals.isLogged = false;
+
     let emailInCookie = req.cookies.userEmail;
     let userFromCookie;
+    
     if(emailInCookie) {
         userFromCookie = await db.User.findOne({
             where: {

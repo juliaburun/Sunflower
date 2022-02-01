@@ -216,7 +216,6 @@ const productsControllers={
             discount: req.body.discount,
             image: req.file ? req.file.filename : db.Product.image,
             category_id: req.body.category,
-            size_id: req.body.size
         },{
             where: {
                 id : req.params.id

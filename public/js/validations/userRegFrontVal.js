@@ -39,7 +39,7 @@ window.onload = function(){
             const phoneValue = phone.value.trim();
             const passwordValue = password.value.trim();
             const password2Value = password2.value.trim();
-            const avatarValue = avatar.value.trim();
+            let avatarValue = avatar.value.trim();
             
             /*VALIDACION NAME */
             if(nameValue === '') {
@@ -88,16 +88,17 @@ window.onload = function(){
                 setSuccess(password2);
             }
             /*VALIDACION AVATAR */
- /*            let validExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+            let validExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
 
             if(avatarValue.length === 0){
                 setError(avatar, 'Debes ingresar una imagen');
             }else if(!validExtensions.exec(avatarValue)) {
+                console.log('error archivo')
                 avatarValue = '';
                 setError(avatar, 'las extenciones permitidas son jpg, jpeg, png y gif' )
             }else {
                 setSuccess(avatar);
-            } */
+            }
         };
 
         validateInputs();
