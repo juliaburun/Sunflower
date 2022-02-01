@@ -93,7 +93,7 @@ input[id="password"]
     padding: 10px;
     cursor: pointer;
     border-radius: 3px;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 /*MANITO CUANDO PASAS SOBRE EL BOTON ENVIAR*/
 .boton-enviar:hover{
@@ -156,16 +156,11 @@ input[id="password"]
   .is-invalid {
     color: red;
     font-weight: 600;
+    text-align: center;
   }
   
-  .warning{
-    color:#842029;
-    background-color: #F8D7DA;
-    text-align: center;
-    border-radius: 5px;
-    width: 70%;
-    margin: auto;
-    font-weight: 600;
+  .errors{
+      margin-top: 40px;
   }
 
 /*============================== MEDIA QUERIES ===============================*/

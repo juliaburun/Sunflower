@@ -24,7 +24,7 @@
 <!--CONTENEDOR DE TODOS LOS ELEMENTOS DE CUERPO-->
         <div class="container">
 
-            <ul class='errores'></ul>
+            
             <h3>REGÍSTRATE</h3>
                 <hr color="#edafa4">
             <form action="/users/register" method="POST" enctype="multipart/form-data" id="register_form">
@@ -42,6 +42,7 @@
                                 <%= errors.first_name.msg %> 
                             </div>
                         <% } %>
+                        <spam class='error'></spam>
                     </div>
                     
                     <div class="individual-box">   
@@ -56,6 +57,7 @@
                                 <%= errors.last_name.msg %> 
                             </div>
                         <% } %>
+                        <spam class='error'></spam>
                     </div>
 
                     <div class="individual-box">   
@@ -70,6 +72,7 @@
                                 <%= errors.email.msg %> 
                             </div>
                         <% } %>
+                        <spam class='error'></spam>
                     </div>
 
                     <div class="individual-box">
@@ -85,6 +88,7 @@
                                 <%= errors.phone.msg %> 
                             </div>
                         <% } %>
+                        <spam class='error'></spam>
                     </div>
 
                     <div class="individual-box">   
@@ -99,6 +103,7 @@
                                 <%= errors.password.msg %> 
                             </div>
                         <% } %>
+                        <spam class='error'></spam>
                     </div>
 
                     <div class="individual-box">
@@ -108,6 +113,7 @@
                                 <%= errors.repassword.msg %> 
                             </div>
                         <% } %>
+                        <spam class='error'></spam>
                     </div>
                     <!-- <div class="individual-box">
                         <label for="user_type" class="etiqueta-tUsuario">Tipo de usuario:</label>
@@ -127,10 +133,8 @@
             <input type="file" id="file-1" name="image_profile">
             <label for="file-1" id="file-1-preview">
               <img src="/img/upload-image.png" alt="">
-              <div>
-                <span>+</span>
-              </div>
             </label>
+            <spam class='error'></spam>
           </div>
         </div>
     </div>

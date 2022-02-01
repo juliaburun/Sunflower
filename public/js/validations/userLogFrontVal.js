@@ -1,93 +1,55 @@
 window.onload = function(){
  
-/* const form = document.querySelector('#login-form'); */
-const inputs = document.querySelectorAll('#login-form input');
-const submitButton = document.querySelector('.boton-enviar');
-const pParaError = document.querySelector('input_error')
+    const form = document.querySelector('#login-form');
+    const email = document.querySelector('#email');
+    const password = document.querySelector('#password');
 
-let emailExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    form.addEventListener('submit', e => {
+
+        const setError = (element, message) => {
+            const inputControl = element.parentElement;
+            const errorDisplay = inputControl.querySelector('.error');
+        
+            e.preventDefault();
+            errorDisplay.innerText = message;
+            inputControl.classList.add('is-invalid');
+            inputControl.classList.remove('.is-valid')
+        }
+
+        const setSuccess = element => {
+            const inputControl = element.parentElement;
+            const errorDisplay = inputControl.querySelector('.error');
+        
+            errorDisplay.innerText = '';
+            inputControl.classList.add('.is-valid');
+            inputControl.classList.remove('is-invalid');
+        };
 
 
-/* const validarFormulario = (e) =>{
-    switch (e.target.name) {
-        case "email":
-            if (!emailExp.test(e.target.value)){
-                document.getElementById('email').classList.add('is-invalid')
-                document.querySelector('p.input_error').innerText += 'no es valido el formato'
-            }else{
-                passUsuario.classList.add('is-valid');
-                passUsuario.classList.remove('is-invalid');
+        const validateInputs = () => {
+
+            const emailValue = email.value.trim();
+            const passwordValue = password.value.trim();
+
+            if( emailValue === '') {
+                setError(email, 'Debe ingresar un email');
+            }else if(!validaEmail(emailValue)) {
+                setError(email, 'El e-mail no es válido')
+            } else {
+                setSuccess(email);
             }
+            
+            if( passwordValue === '') {
+                setError(password, 'Debe ingresar una contraseña');
+            } else {
+                setSuccess(password);
+            }
+        };
 
-        break;
-
-        case "password":
+        validateInputs();
         
-        break;
+    })
+    const validaEmail = (email) => {
+        return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);        
     }
-}
-
-inputs.forEach((input) => {
-    input.addEventListener('keyup', validarFormulario);
-    input.addEventListener('blur', validarFormulario);
-        
-    });
-
-
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-}); */
-
-
-
- //INICIO DE VALIDACIONES
-     let form = document.querySelector('#login-form');
-     form.email.focus();
- 
-     form.addEventListener('submit', function (e){
-         let errors =[];
- 
-         //SELECCIONAMOS LOS ELEMENTOS
-     let mailUsuario = document.querySelector('#email');
-     let passUsuario = document.querySelector('#password');
-
- 
-         //NOMBRE DEL USUARIO
-         let emailExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-         if (mailUsuario.value == '') {
-             errors.push('Debes ingresar un email de usuario');
-             mailUsuario.classList.add('is-invalid');
-            }else if (!emailExp.test(mailUsuario.value)){
-                errors.push('Debes ingresar un email de usuario valido');
-         }else{
-            mailUsuario.classList.add('is-valid');
-            mailUsuario.classList.remove('is-invalid');
-             
-         };
- 
-         //CONTRASEÑA DEL USUARIO
-         if (passUsuario.value == '') {
-             errors.push('Debes ingresar una contraseña');
-             passUsuario.classList.add('is-invalid');
-         }else{
-            passUsuario.classList.add('is-valid');
-            passUsuario.classList.remove('is-invalid');
-             
-         };
-        
- 
- 
- if(errors.length > 0) {
- e.preventDefault();
- let ulErrors = document.querySelector('.errores');
- ulErrors.classList.add('warning');
- ulErrors.innerHTML = '';
-     for(let i = 0; i < errors.length; i++){
-         ulErrors.innerHTML += '<li>' + errors[i] + '</li>';
-     }
- }else{
-         form.submit();
-     }
- });
- 
  }

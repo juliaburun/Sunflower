@@ -1,120 +1,113 @@
 window.onload = function(){
-
-    const formulario = document.querySelector('.container');
-    /* const nombreProducto = document.querySelector=('#name');
-    */
  
- //INICIO DE VALIDACIONES
-     let form = document.querySelector('#register_form');
-     form.first_name.focus();
- 
-     form.addEventListener('submit', function (e){
-         let errors =[];
- 
-         //SELECCIONAMOS LOS ELEMENTOS
-     let nombre = document.querySelector('#first_name');
-     let apellido = document.querySelector('#last_name');
-     let correo = document.querySelector('#email');
-     let telefono = document.querySelector('#phone');
-     let contrasena1 = document.querySelector('#password');
-     let contrasena2 = document.querySelector('#repassword');
-     let avatar = document.querySelector('#file-1');
+    const form = document.querySelector('#register_form'); 
+    const name = document.querySelector('#first_name');
+    const surname = document.querySelector('#last_name');
+    const email = document.querySelector('#email');
+    const phone = document.querySelector('#phone');
+    const password = document.querySelector('#password');
+    const password2 = document.querySelector('#repassword');
+    const avatar = document.querySelector('#file-1')
+    
+    form.addEventListener('submit', e => {
 
-
- 
-         //NOMBRE DEL USUARIO OK
-        if (nombre.value == '') {
-            errors.push('Debes ingresar un nombre');
-             nombre.classList.add('is-invalid');
-        }else if (nombre.value.length < 2){
-            errors.push('El nombre debe tener al menos 2 caracteres')
-        }else{
-            nombre.classList.add('is-valid');
-            nombre.classList.remove('is-invalid');     
-        };
-
-         //APELLIDO DEL USUARIO OK
-        if (apellido.value == '') {
-            errors.push('Debes ingresar un apellido');
-            apellido.classList.add('is-invalid');
-        }else if (nombre.value.length < 2){
-            errors.push('El nombre debe tener al menos 2 caracteres')   
-        }else{
-            apellido.classList.add('is-valid');
-            apellido.classList.remove('is-invalid');           
-        };
-
-         //CORREO DEL USUARIO OK
-         let emailExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-         if (correo.value == '') {
-            errors.push('Debes ingresar un email');
-            correo.classList.add('is-invalid');
-        }else if (!emailExp.test(correo.value)){
-            errors.push('Debes ingresar un email valido');
-        }else{
-            correo.classList.add('is-valid');
-            correo.classList.remove('is-invalid');           
-        };
-
-         //TELEFONO DEL USUARIO
-         if (telefono.value == '') {
-            errors.push('Debes ingresar un telefono');
-            telefono.classList.add('is-invalid');
-        }else{
-            telefono.classList.add('is-valid');
-            telefono.classList.remove('is-invalid');           
-        };
-
-        //CONTRASEÑA DEL USUARIO
-         if (contrasena1.value == '') {
-             errors.push('Debes ingresar una contraseña');
-             contrasena1.classList.add('is-invalid');
-        }else if (contrasena1.value.length < 8){
-            errors.push('La contraseña debe tener al menos 8 caracteres')
-        }else{
-            contrasena1.classList.add('is-valid');
-            contrasena1.classList.remove('is-invalid');            
-        };
-
-        //REPITE CONTRASEÑA DEL USUARIO
-        if (contrasena2.value == '') {
-            errors.push('Debes confirmar tu contraseña');
-            contrasena2.classList.add('is-invalid');
-        }else if (contrasena2.value !== contrasena1.value){
-            errors.push('Las contraseñas no coinciden')
-        }else{
-           contrasena2.classList.add('is-valid');
-           contrasena2.classList.remove('is-invalid');            
-        };
-
-        //AVATAR DEL USUARIO 
-         let filePath = avatar.value;
-                  
-        // EXTENCIONES PERMITIDAS
-        let validExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
-
-        if(avatar.value.length == 0){
-            errors.push('La imagen no puede estar vacia');           
+        const setError = (element, message) => {
+            const inputControl = element.parentElement;
+            const errorDisplay = inputControl.querySelector('.error');
+        
+            e.preventDefault();
+            errorDisplay.innerText = message;
+            inputControl.classList.add('is-invalid');
+            inputControl.classList.remove('.is-valid')
         }
-        else if (!validExtensions.exec(filePath)) {
-            console.log("aca");
-            avatar.value = '';
-            errors.push('Las extenciones permitidas son: jpg, jpeg, png y gif');
-        }
-       
-                        
- 
-        if(errors.length > 0) {
-        e.preventDefault();
-        let ulErrors = document.querySelector('.errores');
-        ulErrors.classList.add('warning');
-        ulErrors.innerHTML = '';
-            for(let i = 0; i < errors.length; i++){
-                ulErrors.innerHTML += '<li>' + errors[i] + '</li>';
+
+        const setSuccess = element => {
+            const inputControl = element.parentElement;
+            const errorDisplay = inputControl.querySelector('.error');
+        
+            errorDisplay.innerText = '';
+            inputControl.classList.add('.is-valid');
+            inputControl.classList.remove('is-invalid');
+        };
+
+
+        const validateInputs = () => {
+            /*CAPTURA VALORES DE INPUT */
+            const nameValue = name.value.trim();
+            const surNameValue = surname.value.trim();
+            const emailValue = email.value.trim();
+            const phoneValue = phone.value.trim();
+            const passwordValue = password.value.trim();
+            const password2Value = password2.value.trim();
+            const avatarValue = avatar.value.trim();
+            
+            /*VALIDACION NAME */
+            if(nameValue === '') {
+                setError(name, 'Debe ingresar un nombre')
+            }else if(nameValue.length < 2){
+                setError(name, 'El nombre debe tener al menos 2 caracteres')
+            }else{
+                setSuccess(name);
             }
-        }else{
-                form.submit();
-     }
- });
- 
+            /*VALIDACION SURNAME */
+            if(surNameValue === '') {
+                setError(surname, 'Debe ingresar un apellido')
+            }else if(surNameValue.length < 2){
+                setError(surname, 'El apellido debe tener al menos 2 caracteres')
+            }else{
+                setSuccess(surname);
+            }
+            /*VALIDACION EMAIL */            
+            if( emailValue === '') {
+                setError(email, 'Debe ingresar un email');
+            }else if(!validaEmail(emailValue)) {
+                setError(email, 'El e-mail no es válido')
+            } else {
+                setSuccess(email);
+            }
+            /*VALIDACION PHONE */            
+            if( phoneValue === '') {
+                setError(phone, 'Debe ingresar un teléfono');    
+            } else {
+                setSuccess(phone);
+            }
+            /*VALIDACION PASSWORD */            
+            if( passwordValue === '') {
+                setError(password, 'Debe ingresar una contraseña');
+            }else if(passwordValue.length < 8){
+                setError(password, 'La contraseña debe tener al menos 8 caracteres')
+            } else {
+                setSuccess(password);
+            }
+            /*VALIDACION PASSWORD DOS */
+            if( password2Value === '') {
+                setError(password, 'Debe ingresar una contraseña');
+            }else if(password2Value !== passwordValue){
+                setError(password2, 'Las contraseñas no coinciden')
+            } else {
+                setSuccess(password2);
+            }
+            /*VALIDACION AVATAR */
+ /*            let validExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+
+            if(avatarValue.length === 0){
+                setError(avatar, 'Debes ingresar una imagen');
+            }else if(!validExtensions.exec(avatarValue)) {
+                avatarValue = '';
+                setError(avatar, 'las extenciones permitidas son jpg, jpeg, png y gif' )
+            }else {
+                setSuccess(avatar);
+            } */
+        };
+
+        validateInputs();
+        
+    })
+    const validaEmail = (email) => {
+        return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);        
+    }
+
+
+
+
  }

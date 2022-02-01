@@ -29,7 +29,7 @@
 <!--CONTIENE TODOS LOS ELEMENTOS DEL CUERPO-->
         <div class="container">
             
-            <ul class='errores'></ul> 
+           
             <!--TEXTO DEL LOGIN-->
             <h3>LOGIN</h3>
             <!--LINEA INFERIOR DEL LOGIN-->
@@ -50,9 +50,10 @@
                            <div class="text-danger">
                              <%= errors.email.msg %> 
                          </div>   
-                        <% } %> 
+                        <% } %>
+                        <spam class='error'></spam> 
                     </div>
-                    <p class="input_error"></p>
+
                     <!--CAMPO CONTRASEÑA-->
                     <div class="individual-box">   
                         <input type="password"
@@ -66,6 +67,7 @@
                              <%= errors.password.msg %> 
                          </div>   
                         <% } %> 
+                        <spam class='error'></spam>
                     </div>
                     <!--CAJA CONTENEDORA RECUERDAME-->
                     <div class="minicaja">
@@ -73,6 +75,7 @@
                         <label for="minibox">Recuérdame</label>
                     </div>
                 </div>
+                <ul class='errores'></ul> 
                 <!--CAJA CONTENEDORA DEL BOTON ENVIAR-->
                     <div class="caja-botonenviar">
                         <input type="submit" value="Enviar" class="boton-enviar">

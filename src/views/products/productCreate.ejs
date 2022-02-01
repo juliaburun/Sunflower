@@ -49,6 +49,7 @@
                     <%= errors.name.msg %> 
                 </div>
             <% } %>
+            <spam class='error'></spam>
             </div>
             <!--CONTENEDOR CATEGORIA-->
             <div class="cajaCategory">
@@ -75,6 +76,7 @@
                     <%= errors.category.msg %> 
                 </div>
             <% } %>
+            <spam class='error'></spam>
             </div>
            
             <!--CONTENEDOR PRECIO-->
@@ -92,6 +94,7 @@
                     <%= errors.price.msg %> 
                 </div>
             <% } %>
+            <spam class='error'></spam>
             </div>
 
                       
@@ -109,6 +112,7 @@
                     <%= errors.discount.msg %> 
                 </div>
             <% } %>
+            <spam class='error'></spam>
             </div>
 
              <!--CONTENEDOR CAPACIDAD-->
@@ -128,6 +132,7 @@
                         <% } %> 
                         >   
                       <label for="<%= size[i].name %>"><%= size[i].name %></label>
+                      <spam class='error'></spam>
                   </div>   
                 <% } %> 
               
@@ -136,7 +141,7 @@
                       <%= errors.sizeProduct.msg %> 
                   </div>
               <% } %>
-  
+              <spam class='error'></spam>
             </div>
             <!--CONTENEDOR DESCRIPCION DEL PRODUCTO-->
             <div class="cajaDescription">
@@ -147,7 +152,7 @@
                     <%= errors.description.msg %> 
                 </div>
             <% } %>
-
+            <spam class='error'></spam>
             </div>
         </div>
         <!--BOTON AGREGAR IMAGEN-->
