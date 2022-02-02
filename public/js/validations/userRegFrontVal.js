@@ -90,9 +90,7 @@ window.onload = function(){
             /*VALIDACION AVATAR */
             let validExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
 
-            if(avatarValue.length === 0){
-                setError(avatar, 'Debes ingresar una imagen');
-            }else if(!validExtensions.exec(avatarValue)) {
+            if(!validExtensions.exec(avatarValue)) {
                 console.log('error archivo')
                 avatarValue = '';
                 setError(avatar, 'las extenciones permitidas son jpg, jpeg, png y gif' )

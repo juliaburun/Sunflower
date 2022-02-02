@@ -70,6 +70,17 @@ window.onload = function(){
             } else {
                 setSuccess(descripcion);
             }
+
+            /*VALIDACION AVATAR */
+            let validExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+
+            if(!validExtensions.exec(imagenUnoValue)) {
+                console.log('error archivo')
+                imagenUnoValue = '';
+                setError(imagenUno, 'las extenciones permitidas son jpg, jpeg, png y gif' )
+            }else {
+                setSuccess(imagenUno);
+            }
         };
 
         validateInputs();
