@@ -167,8 +167,9 @@
                   <span>+</span>
                 </div>
               </label>
+              <spam class='error'></spam>
             </div>
-            <spam class='error'></spam>
+
             <% if (locals.errors && errors.image1) { %>
               <div class="msgError">
                   <%= errors.image1.msg %> 
@@ -187,7 +188,7 @@
         </div>
         <!--BOTON AGREGAR PRODUCTO-->
         <div class="cajaAgregar">
-          <p id="texto">Guardar producto</p>
+          <p id="texto">Guardar</p>
           <button type="submit" class="botonAgregar"></button>
         </div>
     </form>

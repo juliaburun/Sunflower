@@ -1,11 +1,11 @@
 window.onload = function(){
 
     const form = document.querySelector('#formLabel')
-    let nombre = document.querySelector('#name');
-    let precio = document.querySelector('#price');
-    let descuento = document.querySelector('#discount');
-    let descripcion = document.querySelector('#description');
-    let imagenUno = document.querySelector('#file-1');
+    const nombre = document.querySelector('#name');
+    const precio = document.querySelector('#price');
+    const descuento = document.querySelector('#discount');
+    const descripcion = document.querySelector('#description');
+    const imagenUno = document.querySelector('#file-1');
 
  
 
@@ -33,24 +33,17 @@ window.onload = function(){
 
         const validateInputs = () => {
 
-            const nombreValue = nombre.value.trim();
-            const cateoriaValue = categoria.value.trim();
-            const precioValue = precio.value.trim();
-            const descuentoValue = descuento.value.trim();
-            const descripcionValue = descripcion.value.trim();
-            const imagenUnoValue = imagenUno.value.trim();
+            let nombreValue = nombre.value.trim();
+            let precioValue = precio.value.trim();
+            let descuentoValue = descuento.value.trim();
+            let descripcionValue = descripcion.value.trim();
+            let imagenUnoValue = imagenUno.value.trim();
 
             /**VALIDACION NOMBRE PRODUCTO */
             if( nombreValue === '') {
                 setError(nombre, 'Debes ingresar un nombre');
             } else {
                 setSuccess(nombre);
-            }
-            /**VALIDACION CATEGORIA */
-            if( cateoriaValue === '') {
-                setError(categoria, 'Debes ingresar una categoría');
-            } else {
-                setSuccess(categoria);
             }
             /**VALIDACION PRECIO */
             if( precioValue === '') {
@@ -69,6 +62,15 @@ window.onload = function(){
                 setError(descripcion, 'Debes ingresar una descripción');
             } else {
                 setSuccess(descripcion);
+            }
+            /*VALIDACION AVATAR */
+            let validExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+
+            if(!validExtensions.exec(imagenUnoValue)) {
+                imagenUnoValue = '';
+                setError(imagenUno, 'las extenciones permitidas son jpg, jpeg, png y gif' )
+            }else {
+                setSuccess(imagenUno);
             }
         };
 

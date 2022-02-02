@@ -38,7 +38,7 @@ window.onload = function(){
             const precioValue = precio.value.trim();
             const descuentoValue = descuento.value.trim();
             const descripcionValue = descripcion.value.trim();
-            const imagenUnoValue = imagenUno.value.trim();
+            let imagenUnoValue = imagenUno.value.trim();
 
             /**VALIDACION NOMBRE PRODUCTO */
             if( nombreValue === '') {
@@ -75,7 +75,6 @@ window.onload = function(){
             let validExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
 
             if(!validExtensions.exec(imagenUnoValue)) {
-                console.log('error archivo')
                 imagenUnoValue = '';
                 setError(imagenUno, 'las extenciones permitidas son jpg, jpeg, png y gif' )
             }else {
