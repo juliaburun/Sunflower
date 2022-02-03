@@ -56,10 +56,50 @@
 /************************
    Menú de navegación 
  ***********************/
-.main-navbar{
+ .main-menu {
+    position: fixed;
+    /* padding: 20px; */
+    left: -100%;
+    width:80%;
+    height: 150px;
+    /* width: 200px; */
+    top: 81px;
+    right: 32px;
+    background-color: rgb(197, 192, 192);
+    /* transition: all 0.7s; */
+}
+
+
+.main-menu.open {
+    left: 60px;
+}
+
+
+.main-menu > nav ul li {
+/*     display: none;*/
+margin: 7px 20px;
+/* text-align: center; */
+/* margin-left: 20px;
+margin-right: 20px; */
+} 
+
+.main-menu > nav ul li:hover {
+    background-color: #FF5672;
+}
+
+.main-menu > nav ul li:hover a {
+    color: white;
+}
+
+
+
+
+
+
+/* .main-navbar{
     display: none;
     margin: auto;
-}
+} */
 
 .main-navbar ul{
     list-style: none;
@@ -247,9 +287,32 @@
 } */
 
 
+@media (min-width: 375px) {
+    .main-menu {
+        top: 96px;
+    }
+    .main-menu.open {
+        left: 70px;
+    }
+}
 
+@media (min-width: 425px) {
+    .main-menu {
+        top: 109px;
+    }
+    .main-menu.open {
+        left: 80px;
+    }
+}
 /*BREAKPOINT TABLET*/
 @media (min-width:481px){
+
+    .main-menu {
+        top: 126px;
+    }
+    .main-menu.open {
+        left: 117px;
+    }
 
     .main-header-div{
         justify-content: space-between;
@@ -325,9 +388,26 @@
 /*BREAKPOINT LAPTOP*/
 @media (min-width:769px){
 
-    .main-navbar{
-        margin-bottom: 10px;
+    .main-menu{
+        position: static;
+        width: 700px;
+        background-color: inherit;
+        height: 80px;
+        margin: auto;
     }
+
+    .main-menu > nav ul li:hover {
+        background-color: inherit;
+        
+    }
+    .main-menu > nav ul li a:hover {
+        color: var(--rosa);
+       transition: all 1s;
+    }
+
+    /* .main-navbar{
+        margin-bottom: 20px;
+    } */
 
     .main-header-div .div-main-logo{
         width: 10%;
@@ -336,26 +416,27 @@
 
     .main-header-div .main-navbar{
         display: flex;
-        width: 50%;
+        width: 100%;
        justify-content: center;
+       margin-top: 40px;
    }
 
    .main-navbar ul{
-       width: 70%;
+       width: 90%;
        text-align: end;
        display: flex;
-       justify-content: space-between;
+       justify-content: center;
        
    }
 
    .main-navbar ul li{
-       margin-right: 10px;
+       margin-right: 30px;
    }
 
-   .main-navbar ul li a:hover{
+  /*  .main-navbar ul li a:hover{
        color: var(--rosa);
        transition: all 1s;
-   }
+   } */
 
    .main-navbar a{
        font-size: 15px;
