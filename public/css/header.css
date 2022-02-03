@@ -65,7 +65,7 @@
     /* width: 200px; */
     top: 81px;
     right: 32px;
-    background-color: rgb(197, 192, 192);
+    background-color: rgba(235, 225, 225, 0.972);
     /* transition: all 0.7s; */
 }
 
@@ -84,7 +84,7 @@ margin-right: 20px; */
 } 
 
 .main-menu > nav ul li:hover {
-    background-color: #FF5672;
+    background-color: var(--rosa);
 }
 
 .main-menu > nav ul li:hover a {

@@ -66,11 +66,13 @@ window.onload = function(){
             /*VALIDACION AVATAR */
             let validExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
 
-            if(!validExtensions.exec(imagenUnoValue)) {
-                imagenUnoValue = '';
-                setError(imagenUno, 'las extenciones permitidas son jpg, jpeg, png y gif' )
-            }else {
-                setSuccess(imagenUno);
+            if (imagenUnoValue != ''){
+                if(!validExtensions.exec(imagenUnoValue)) {
+                    imagenUnoValue = '';
+                    setError(imagenUno, 'las extenciones permitidas son jpg, jpeg, png y gif' )
+                }else {
+                    setSuccess(imagenUno);
+                }
             }
         };
 

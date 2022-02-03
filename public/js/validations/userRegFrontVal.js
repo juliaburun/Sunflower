@@ -89,13 +89,14 @@ window.onload = function(){
             }
             /*VALIDACION AVATAR */
             let validExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
-
-            if(!validExtensions.exec(avatarValue)) {
-                console.log('error archivo')
-                avatarValue = '';
-                setError(avatar, 'las extenciones permitidas son jpg, jpeg, png y gif' )
-            }else {
-                setSuccess(avatar);
+            if (avatarValue != ''){
+                if(!validExtensions.exec(avatarValue)) {
+                    console.log('error archivo')
+                    avatarValue = '';
+                    setError(avatar, 'las extenciones permitidas son jpg, jpeg, png y gif' )
+                }else {
+                    setSuccess(avatar);
+                }
             }
         };
 

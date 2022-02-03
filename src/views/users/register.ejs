@@ -127,17 +127,21 @@
 
     <!--BOTON AGREGAR AVATAR-->
     <div class="formulImg">
-        <h2>Imagen de perfil</h2>
         <div class="grid">
           <div class="form-element">
-            <input type="file" id="file-1" name="image_profile">
+            <input
+              type="file"
+              id="file-1"
+              name="image_profile"
+            />
             <label for="file-1" id="file-1-preview">
-              <img src="/img/upload-image.png" alt="">
+                <img src="/img/users/user.jpg" alt="">
+                <div></div>
             </label>
-            <spam class='error'></spam>
           </div>
         </div>
     </div>
+
     <% if (locals.errors && errors.image_profile) { %>
         <div class="msgError">
             <%= errors.image_profile.msg %> 
@@ -153,20 +157,23 @@
 
 <!--SECCION JS-->
 <script>
-    function previewBeforeUpload(id){
-    document.querySelector("#"+id).addEventListener("change",function(e){
-      if(e.target.files.length == 0){
-        return;
-      }
-      let file = e.target.files[0];
-      let url = URL.createObjectURL(file);
-      document.querySelector("#"+id+"-preview div").innerText = file.name;
-      document.querySelector("#"+id+"-preview img").src = url;
-    });
-  }
-  
-  previewBeforeUpload("file-1");
-  </script>
+    function previewBeforeUpload(id) {
+      document
+        .querySelector("#" + id)
+        .addEventListener("change", function (e) {
+          if (e.target.files.length == 0) {
+            return;
+          }
+          let file = e.target.files[0];
+          let url = URL.createObjectURL(file);
+          document.querySelector("#" + id + "-preview div").innerText =
+            file.name;
+          document.querySelector("#" + id + "-preview img").src = url;
+        });
+    }
+
+    previewBeforeUpload("file-1");
+</script>
 
 <!--############################# LINEA DIVISORA ENTRE EL CUERPO Y EL FOOTER ##############################-->
 
