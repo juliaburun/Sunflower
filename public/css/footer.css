@@ -189,6 +189,20 @@ footer {
     text-decoration: underline; 
 }
 
+.redes {
+    display: flex;
+    justify-content:space-around;
+    font-size: 20px;
+}
+
+.contacto{
+    display: none;
+}
+
+.sobreNos{
+    display: none;
+}
+
 /****************************
    BREAKPOINT FOOTER
 ****************************/
@@ -208,3 +222,17 @@ footer {
 
 }
 
+@media (min-width:769px){
+    .contacto{
+        display: block;
+    }
+    
+    .sobreNos{
+        display: block;
+    }
+
+    #nosotros{
+        display: flex;
+        flex-direction: column;
+    }
+}
