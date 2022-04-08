@@ -36,13 +36,13 @@ BARRA ENTRE EL HEADER Y EL MAIN
     margin: auto;  
     overflow: hidden;
     margin-top: 95px;
+    height: 450px;
 }
 .slider ul{
     padding: 0;
     display: flex;
     width: 400%;
-  
-    animation: cambio 20s infinite;
+    animation: cambio 10s infinite;
     animation-direction: alternate;
     animation-timing-function: linear;
 }
